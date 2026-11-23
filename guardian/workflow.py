@@ -1,11 +1,12 @@
 import operator
 import traceback
+from collections import Counter
 from pathlib import Path
 from typing import Annotated, Any, Optional, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from guardian.agents import discovery, graph, report, sbom, suspicious, vulnerability
+from guardian.agents import dependency_review, discovery, graph, report, sbom, suspicious, vulnerability
 from guardian.models import AgentLog
 
 
@@ -19,6 +20,7 @@ class GuardianState(TypedDict, total=False):
     graph: Any
     graph_obj: Any
     vulnerabilities: list
+    offline_review: dict
     scanner: Optional[str]
     scanner_notes: list
     suspicious: list
@@ -68,12 +70,23 @@ def graph_node(state, repo, out):
 
 @agent("4. Vulnerability Detection Agent")
 def vuln_node(state, repo, out):
-    if state.get("graph_obj") is None:
-        raise RuntimeError("dependency graph missing")
-    vulns, used, notes = vulnerability.scan(repo, out, state["inventory"], state["graph_obj"],
-                                            state.get("scanner_choice", "auto"))
-    msg = f"{len(vulns)} findings via {used}" + (f" (fallback used: {', '.join(n.split(':')[0] for n in notes)} unavailable)" if notes else "")
-    return {"vulnerabilities": vulns, "scanner": used, "scanner_notes": notes}, msg
+    try:
+        local = dependency_review.scan(repo, out)
+    except OSError as err:
+        local = {"status": "error", "diagnostics": [{"message": str(err)}]}
+    local_findings = local.get("findings", [])
+    offline = {"status": local["status"], "findings": len(local_findings),
+               "rules": dict(Counter(row["rule"] for row in local_findings)),
+               "coverage": local.get("coverage", {})}
+    if local["status"] == "error":
+        offline["message"] = local["diagnostics"][0]["message"]
+    vulns, used, notes = vulnerability.scan(repo, out, state["inventory"], state.get("graph_obj"),
+                                             state.get("scanner_choice", "auto"))
+    online = f"{len(vulns)} advisories via {used}" if used else "Online advisories unavailable"
+    msg = f"{online}. Offline rules: {offline['findings']} findings ({offline['status']})."
+    errors = ["Neither advisory lookup nor offline dependency review completed."] if not used and local["status"] == "error" else []
+    return {"vulnerabilities": vulns, "scanner": used, "scanner_notes": notes,
+            "offline_review": offline, "errors": errors}, msg
 
 
 @agent("5. Anomaly Detection Agent")

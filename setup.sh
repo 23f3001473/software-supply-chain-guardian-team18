@@ -8,6 +8,8 @@ ARCH=$(uname -m); [[ "$ARCH" == "x86_64" ]] && ARCH=amd64; [[ "$ARCH" == "aarch6
 
 echo "==> Python dependencies"
 python3 -m pip install -r requirements.txt
+npm --prefix frontend ci
+npm ci --prefix guardian/source_scanner --ignore-scripts --no-audit --no-fund
 
 echo "==> Scanners into ./tools"
 mkdir -p tools
@@ -26,4 +28,4 @@ echo "==> Resolve dependency tree (no install scripts are run)"
 (cd target/juice-shop && npm install --package-lock-only --ignore-scripts --package-lock=true --no-audit --no-fund)
 
 
-echo "Done. Next: python3 -m guardian.cli   |   streamlit run app.py"
+echo "Done. Next: npm --prefix frontend run build && python3 app.py"

@@ -39,13 +39,22 @@ def metrics(inv, sbom, graph, vulns, suspicious):
             "baseline_observations": sum(f.kind == "baseline" for f in suspicious)}
 
 
-def template_summary(m, trace, vulns, suspicious, scanner):
+def template_summary(m, trace, vulns, suspicious, scanner, offline=None):
     lines = [f"**Scope:** {m['npm_packages']} npm packages ({m['direct_dependencies']} direct, "
-             f"{m['transitive_dependencies']} transitive) from package-lock.json.",
-             f"**Vulnerabilities ({scanner}):** {m['vulnerabilities']} findings — "
-             + ", ".join(f"{k}: {v}" for k, v in sorted(m["vulnerabilities_by_severity"].items(),
-                                                        key=lambda kv: SEV_RANK.get(kv[0], 9)))
-             + f". {m['vulnerable_prod']} affect production (shipped) packages."]
+             f"{m['transitive_dependencies']} transitive) from package-lock.json."]
+    if scanner:
+        lines.append(f"**Advisories ({scanner}):** {m['vulnerabilities']} findings. "
+                     f"{m['vulnerable_prod']} affect production packages.")
+    else:
+        lines.append("**Advisories:** Lookup unavailable for this inspection.")
+    if offline:
+        if offline["status"] == "error":
+            lines.append("**Offline rules:** Dependency review unavailable for this inspection.")
+        else:
+            coverage = offline["coverage"]
+            lines.append(f"**Offline rules:** {offline['findings']} matches. Code reviewed for "
+                         f"{coverage['packages_reviewed']} of {coverage['packages']} dependencies "
+                         f"({offline['status']} coverage).")
     top = [v for v in vulns if v.severity in ("critical", "high") and v.scope == "prod"][:5]
     if top:
         lines.append("**Highest-priority shipped findings:**")
@@ -80,20 +89,25 @@ def build_report(state: dict, out_dir: Path) -> dict:
     if vulns and deps_file.exists():
         recs = recommend.recommend([v.model_dump() for v in vulns],
                                    json.loads(deps_file.read_text(encoding="utf-8"))["dependencies"], out_dir / "raw")
-        recommend.write(out_dir, recs)
+    recommend.write(out_dir, recs)
 
+    offline = state.get("offline_review")
     evidence = {"metrics": m, "trace": trace, "scanner": state.get("scanner"),
+                "offline_review": offline,
                 "top_vulnerabilities": [v.model_dump(include={"id", "package", "installed_version", "severity",
-                                        "direct", "scope", "fixed_version", "introduced_via", "title"})
+                                        "direct", "scope", "fixed_version", "introduced_via", "title", "evidence_source"})
                                         for v in vulns[:15]],
                 "suspicious_changes": [f.model_dump() for f in suspicious]}
-    fallback = template_summary(m, trace, vulns, suspicious, state.get("scanner"))
+    fallback = template_summary(m, trace, vulns, suspicious, state.get("scanner"), offline)
     ai = llm.interpret(evidence, "Write an executive security summary: key risks, the traced transitive "
-                       "vulnerability, and each suspicious change with why it matters. Max 350 words.", fallback)
+                       "vulnerability, and each suspicious change with why it matters. State the advisory "
+                       "source and summarize offline rule matches and coverage using the evidence. "
+                       "Treat rule matches as signals for review. Max 350 words.", fallback)
 
     report = {"generated_at": datetime.now(timezone.utc).isoformat(), "repo": inv.repo,
               "commit": inv.commit, "metrics": m, "trace": trace, "interpretation": ai,
               "scanner": state.get("scanner"), "scanner_notes": state.get("scanner_notes", []),
+              "offline_review": offline,
               "sbom": sbom.model_dump() if sbom else None, "agent_log": [a.model_dump() for a in state.get("log", [])],
               "errors": state.get("errors", []),
               "fix_summary": {k: sum(r["action"] == k for r in recs) for k in sorted({r["action"] for r in recs})}}

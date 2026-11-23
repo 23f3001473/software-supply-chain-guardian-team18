@@ -1,21 +1,19 @@
 @echo off
-REM Scans Juice Shop, runs the tests, then opens the dashboard.
+REM Builds and serves the React dashboard using the local Guardian API.
 setlocal
 cd /d "%~dp0"
 call .venv\Scripts\activate.bat || (echo Run setup.bat first. & exit /b 1)
 set PYTHONUTF8=1
 
-if exist target\juice-shop-scenario rmdir /s /q target\juice-shop-scenario
-if exist reports\scenario rmdir /s /q reports\scenario
-
-echo ==^> Scan: OWASP Juice Shop
-python -m guardian.cli --repo target\juice-shop --out reports
-
-echo.
-echo ==^> Tests
-python -m pytest -q
+if not exist frontend\node_modules\.bin\vite.cmd (
+  call npm --prefix frontend ci || exit /b 1
+)
+if not exist guardian\source_scanner\node_modules\typescript\lib\typescript.js (
+  call npm ci --prefix guardian/source_scanner --ignore-scripts --no-audit --no-fund || exit /b 1
+)
+call npm --prefix frontend run build || exit /b 1
 
 echo.
 echo ==^> Dashboard on http://localhost:8501  (Ctrl+C to stop)
-streamlit run app.py
+python app.py
 endlocal

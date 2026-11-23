@@ -1,6 +1,6 @@
 # Software Supply Chain Guardian
 
-Five LangGraph agents scan **OWASP Juice Shop**. Together they produce an inventory, a CycloneDX SBOM, a dependency graph, real vulnerability findings and anomaly findings. A Streamlit dashboard presents the results.
+Five LangGraph agents scan **OWASP Juice Shop** and other npm repositories. Together they produce an inventory, a CycloneDX SBOM, a dependency graph, real vulnerability findings and anomaly findings. A React dashboard presents the results through a local Python API.
 Facts come from tools (lockfile parser, Syft, OSV-Scanner / npm audit, git diff). The LLM only explains them.
 
 ## Architecture
@@ -31,15 +31,17 @@ run.bat
 
 `setup.bat` handles the whole setup:
 - creates `.venv` and installs the Python requirements
+- installs the React dashboard dependencies
+- installs the TypeScript parser for offline dependency rules
 - downloads `syft.exe` and `osv-scanner.exe` into `tools\`
 - enables git long paths
 - clones Juice Shop and generates its lockfile with `npm install --package-lock-only --ignore-scripts`, which runs no install scripts
 
-`run.bat` scans Juice Shop, runs the tests, then starts the dashboard at http://localhost:8501.
+`run.bat` builds React and starts the dashboard at http://127.0.0.1:8501. It opens the bundled Juice Shop report. Select **Inspect again** to refresh the report once the local clone is available.
 
 ## Scan any public GitHub repo
 
-**Dashboard:** paste a link such as `https://github.com/expressjs/express` into **Scan a GitHub repository**, then click **Fetch & scan**. You'll see each agent finish live, and the repo is added to the list and to the **All repositories** comparison.
+**Dashboard:** choose **Add repository**, paste a link such as `https://github.com/expressjs/express`, then click **Fetch and inspect**. The **Agent run** page shows each step as it finishes. The repository appears in the selector and under **All repositories**.
 
 **CMD:** `python -m guardian.cli --github https://github.com/expressjs/express` (add `--refresh` to re-clone).
 
@@ -63,11 +65,20 @@ Limits: public repos only, with `package.json` at the repo root (monorepos aren'
 ```bash
 python3 -m guardian.cli                                    # baseline Juice Shop → reports/
 python3 -m guardian.cli --base-ref HEAD~49                 # anomalies in the last 49 real commits
-python3 -m pytest                                          # 23 tests
-streamlit run app.py                                       # dashboard on http://localhost:8501
+python3 -m pytest                                          # run the Python tests
+npm --prefix frontend run build                            # build React
+python3 app.py                                             # dashboard on http://127.0.0.1:8501
 ```
 
-Pick a scanner with `--scanner auto|osv|npm-audit`. `auto` tries OSV first and records why if it falls back.
+Every inspection reviews local dependency code with offline rules and looks up lockfile versions in OSV by default. If OSV is unavailable, `auto` tries npm audit and records the fallback. Use `--scanner osv` to use OSV for the advisory lookup without the npm audit fallback. The offline review still runs.
+
+Open **Vulnerabilities** and use **Found by** to filter by **OSV**, **Offline rules**, or **npm audit** when used. Advisory rows include the published ID and any available fixed version. Offline matches include the rule, file and line, context, and suggested remediation. Check the coverage above the table to see how many dependencies had code available locally. Existing saved reports gain offline results after a new inspection.
+
+The offline rules use installed dependencies and npm-cache tarballs that match the lockfile's integrity values. Set `GUARDIAN_NPM_CACHE` to use another cache directory containing `_cacache`. For an existing installation, run `npm ci --prefix guardian/source_scanner --ignore-scripts` once to install the local parser.
+
+For frontend development, start `python app.py` in one terminal and run `npm --prefix frontend run dev` in another. Vite prints the development URL and proxies API requests to the Python server.
+
+To browse checked-in reports before downloading scanner tools or cloning Juice Shop, install `requirements.txt`, run `npm --prefix frontend ci` and `npm --prefix frontend run build`, then start `python app.py`.
 
 ## Fix recommendations and the vulnerability map
 
@@ -82,7 +93,7 @@ Every scan also writes:
 | Summary | Inspection stamp (grade A–F, formula shown), "needs attention first" list, where advisories come from |
 | Packages | Look up any package: versions, why it's installed, licence, install scripts, advisories. Full filterable list. Packages installed in several versions |
 | Dependency map | Radial vulnerability map (project in the centre, red vulnerable packages, orange paths), heaviest direct dependencies, depth chart, trace any package, full tree browser |
-| Vulnerabilities | Advisories with filters (severity, prod/dev, fix available), fix availability per direct dependency, and a prioritised fix recommendation for every vulnerable package |
+| Vulnerabilities | Advisory and offline rule findings with source labels and coverage, advisory filters, and prioritised fix recommendations |
 | Changes | What changed in manifests, lockfile, Dockerfiles and CI since a chosen real commit, plus standing observations |
 | Licences | Licence mix from the lockfile; copyleft and undeclared licences to review |
 | SBOM | CycloneDX file, match against the lockfile, download |
@@ -105,7 +116,7 @@ The risk grade starts at 100 and subtracts points for real findings. Each deduct
 
 ## Honesty notes
 
-- Vulnerabilities come only from the scanner's raw output, saved in `reports/raw/`. A test checks that every reported ID appears there.
+- Published advisories come from scanner output in `reports/raw/`. Offline rule matches and coverage are saved in `dependency_review.json` in the inspection's report directory.
 - In `npm audit` mode, IDs are GHSA (no CVE aliases). The fixed version is derived from the advisory's `<X` upper bound and labeled as derived. OSV mode adds CVE aliases and explicit fixed versions.
 - Anomalies come only from real git history: `git show <baseline>:file` compared with the current files. No changes are injected, and scripts are only read, never run.
 - The unit tests build small throwaway repos in a temp folder to check the detectors. These are never written to `reports/` and never appear in the dashboard.

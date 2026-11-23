@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 .env
 reports/history.jsonl
+frontend/node_modules/
+frontend/dist/

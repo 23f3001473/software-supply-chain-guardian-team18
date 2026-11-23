@@ -12,6 +12,8 @@ if not exist .venv python -m venv .venv
 call .venv\Scripts\activate.bat || exit /b 1
 python -m pip install --upgrade pip -q
 python -m pip install -r requirements.txt || exit /b 1
+call npm --prefix frontend ci || exit /b 1
+call npm ci --prefix guardian/source_scanner --ignore-scripts --no-audit --no-fund || exit /b 1
 
 echo ==^> 2/5 Scanners into tools\
 if not exist tools mkdir tools
