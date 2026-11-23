@@ -1,0 +1,194 @@
+{
+  "repo": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day1 (2)\\software-supply-chain-guardian\\target\\juice-shop",
+  "base_ref": "HEAD",
+  "change_findings": 0,
+  "baseline_findings": 12,
+  "notes": [
+    "No package-lock.json at HEAD; lockfile diff skipped."
+  ],
+  "findings": [
+    {
+      "id": "SC-001",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "Dockerfile",
+      "title": "Container image not digest-pinned: node:24",
+      "before": null,
+      "after": "node:24",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-002",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "Dockerfile",
+      "title": "Container image not digest-pinned: gcr.io/distroless/nodejs24-debian13:latest",
+      "before": null,
+      "after": "gcr.io/distroless/nodejs24-debian13:latest",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag (implicit latest)"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-003",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "docker-compose.test.yml",
+      "title": "Container image not digest-pinned: bkimminich/juice-shop:latest",
+      "before": null,
+      "after": "bkimminich/juice-shop:latest",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag (latest)"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-004",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "infrastructure/Dockerfile",
+      "title": "Container image not digest-pinned: node:20.19.2-bookworm-slim",
+      "before": null,
+      "after": "node:20.19.2-bookworm-slim",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-005",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "infrastructure/Dockerfile",
+      "title": "Container image not digest-pinned: node:20.19.2-bookworm",
+      "before": null,
+      "after": "node:20.19.2-bookworm",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-006",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "infrastructure/docker-compose.yml",
+      "title": "Container image not digest-pinned: nginx:1.28.0-alpine",
+      "before": null,
+      "after": "nginx:1.28.0-alpine",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-007",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "infrastructure/docker-compose.yml",
+      "title": "Container image not digest-pinned: juice-shop:latest",
+      "before": null,
+      "after": "juice-shop:latest",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag (latest)"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-008",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "infrastructure/docker-compose.yml",
+      "title": "Container image not digest-pinned: redis:7.4.4-alpine",
+      "before": null,
+      "after": "redis:7.4.4-alpine",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-009",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "infrastructure/docker-compose.yml",
+      "title": "Container image not digest-pinned: mongo:4.4.29",
+      "before": null,
+      "after": "mongo:4.4.29",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-010",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "test/smoke/Dockerfile",
+      "title": "Container image not digest-pinned: alpine:latest",
+      "before": null,
+      "after": "alpine:latest",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag (implicit latest)"
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-011",
+      "category": "unexpected_ci_dependency",
+      "severity": "low",
+      "file": ".github/workflows",
+      "title": "7 CI actions not SHA-pinned",
+      "before": null,
+      "after": null,
+      "why_suspicious": "Tag-pinned actions can be changed by their owners.",
+      "evidence": {
+        "actions": [
+          "actions/checkout@v6",
+          "calibreapp/image-actions@main",
+          "coverallsapp/github-action@v2",
+          "github/codeql-action/analyze@v3",
+          "github/codeql-action/autobuild@v3",
+          "github/codeql-action/init@v3",
+          "peter-evans/create-pull-request@v8"
+        ]
+      },
+      "kind": "baseline"
+    },
+    {
+      "id": "SC-012",
+      "category": "lifecycle_script",
+      "severity": "info",
+      "file": "package-lock.json",
+      "title": "6 dependencies declare install scripts",
+      "before": null,
+      "after": null,
+      "why_suspicious": "Inventory of packages that execute code at install time (review list).",
+      "evidence": {
+        "packages": [
+          "@scarf/scarf@1.4.0",
+          "cypress@16.3.0",
+          "esbuild@0.28.2",
+          "fsevents@2.3.3",
+          "libxmljs2@0.37.0",
+          "sqlite3@5.1.7"
+        ]
+      },
+      "kind": "baseline"
+    }
+  ]
+}

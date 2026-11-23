@@ -1,0 +1,8 @@
+.venv/
+target/
+tools/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+reports/history.jsonl
