@@ -1,0 +1,502 @@
+[
+  {
+    "package": "crypto-js",
+    "installed_version": "3.3.0",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-rg76-677x-56q9",
+      "GHSA-xwcq-pm8m-c4vf"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "pdfkit@0.11.0"
+    ],
+    "fixed_in": "4.2.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade pdfkit 0.11.0 \u2192 0.21.0 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade pdfkit from 0.11.0 to 0.21.0; that release no longer pulls in a vulnerable crypto-js (major version: test carefully).",
+      "If pdfkit can't move yet, force crypto-js to 4.2.0 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "jsonwebtoken",
+    "installed_version": "0.1.0",
+    "worst_severity": "critical",
+    "advisories": 4,
+    "ids": [
+      "GHSA-8cf7-32gw-wr33",
+      "GHSA-c7hr-j4mj-j2w6",
+      "GHSA-hjrf-2m68-5959",
+      "GHSA-qwph-4952-7xr6"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express-jwt@0.1.3"
+    ],
+    "fixed_in": "9.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade express-jwt 0.1.3 \u2192 8.5.1 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "This copy of jsonwebtoken (0.1.0) comes from express-jwt. Upgrade express-jwt from 0.1.3 to 8.5.1, which no longer uses the vulnerable version (major version: test carefully).",
+      "Or force jsonwebtoken to 9.0.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "jsonwebtoken",
+    "installed_version": "0.4.0",
+    "worst_severity": "critical",
+    "advisories": 4,
+    "ids": [
+      "GHSA-8cf7-32gw-wr33",
+      "GHSA-c7hr-j4mj-j2w6",
+      "GHSA-hjrf-2m68-5959",
+      "GHSA-qwph-4952-7xr6"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "jsonwebtoken@0.4.0"
+    ],
+    "fixed_in": "9.0.0",
+    "action": "Upgrade the package",
+    "headline": "Upgrade jsonwebtoken 0.4.0 \u2192 9.0.3 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade jsonwebtoken from 0.4.0 to 9.0.3 in package.json (major version: check its changelog for breaking changes)."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "lodash",
+    "installed_version": "2.4.2",
+    "worst_severity": "critical",
+    "advisories": 4,
+    "ids": [
+      "GHSA-35jh-r3h4-6jhm",
+      "GHSA-4xc9-xhrj-v574",
+      "GHSA-fvqr-27wr-82fm",
+      "GHSA-jf85-cpcp-j695"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "sanitize-html@1.4.2"
+    ],
+    "fixed_in": "4.17.21",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade sanitize-html 1.4.2 \u2192 2.18.2 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade sanitize-html from 1.4.2 to 2.18.2; that release no longer pulls in a vulnerable lodash (major version: test carefully).",
+      "If sanitize-html can't move yet, force lodash to 4.17.21 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "marsdb",
+    "installed_version": "0.6.11",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-5mrr-rgp6-x4gr"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "marsdb@0.6.11"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched marsdb exists. Replace or remove it",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "No fixed version of marsdb exists for these advisories.",
+      "Replace marsdb with a maintained alternative, or remove it (it's listed in package.json).",
+      "Until then, keep untrusted input away from the affected functions described in the advisories."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "tar",
+    "installed_version": "6.2.1",
+    "worst_severity": "critical",
+    "advisories": 12,
+    "ids": [
+      "GHSA-23hp-3jrh-7fpw",
+      "GHSA-34x7-hfp2-rc4v",
+      "GHSA-83g3-92jg-28cx",
+      "GHSA-8qq5-rm4j-mr97",
+      "GHSA-8x88-c5mf-7j5w",
+      "GHSA-9ppj-qmqm-q256",
+      "GHSA-gvwx-54wh-qm9j",
+      "GHSA-qffp-2rhf-9h96",
+      "GHSA-r292-9mhp-454m",
+      "GHSA-r6q2-hw4h-h46w",
+      "GHSA-vmf3-w455-68vh",
+      "GHSA-w8wr-v893-vjvp"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "sqlite3@5.1.7"
+    ],
+    "fixed_in": "7.5.21",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade sqlite3 5.1.7 \u2192 6.0.1 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade sqlite3 from 5.1.7 to 6.0.1; that release no longer pulls in a vulnerable tar (major version: test carefully).",
+      "If sqlite3 can't move yet, force tar to 7.5.21 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "express-jwt",
+    "installed_version": "0.1.3",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-6g6m-m6h5-w9gf"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "express-jwt@0.1.3"
+    ],
+    "fixed_in": "6.0.0",
+    "action": "Upgrade the package",
+    "headline": "Upgrade express-jwt 0.1.3 \u2192 8.5.1 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade express-jwt from 0.1.3 to 8.5.1 in package.json (major version: check its changelog for breaking changes)."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "jws",
+    "installed_version": "0.2.6",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-869p-cjfg-cm3x",
+      "GHSA-gjcw-v447-2w7q"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express-jwt@0.1.3",
+      "jsonwebtoken@0.4.0"
+    ],
+    "fixed_in": "3.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade jsonwebtoken 0.4.0 \u2192 9.0.3 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade jsonwebtoken from 0.4.0 to 9.0.3; that release no longer pulls in a vulnerable jws (major version: test carefully).",
+      "If jsonwebtoken can't move yet, force jws to 3.2.3 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "moment",
+    "installed_version": "2.0.0",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-446m-mv8f-q348",
+      "GHSA-87vv-r9j6-g5qv",
+      "GHSA-8hfj-j24r-96c4"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express-jwt@0.1.3"
+    ],
+    "fixed_in": "2.29.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade jsonwebtoken 0.4.0 \u2192 9.0.3 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade jsonwebtoken from 0.4.0 to 9.0.3; that release no longer pulls in a vulnerable moment (major version: test carefully).",
+      "If jsonwebtoken can't move yet, force moment to 2.29.2 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "sanitize-html",
+    "installed_version": "1.4.2",
+    "worst_severity": "high",
+    "advisories": 10,
+    "ids": [
+      "GHSA-3j7m-hmh3-9jmp",
+      "GHSA-cgfm-xwp7-2cvr",
+      "GHSA-cv27-6wvh-8x7j",
+      "GHSA-jxwj-j7wr-gfrw",
+      "GHSA-mjxr-4v3x-q3m4",
+      "GHSA-qhxp-v273-g94h",
+      "GHSA-rjqq-98f6-6j3r",
+      "GHSA-rm97-x556-q36h",
+      "GHSA-x3q4-9hxx-gx8m",
+      "GHSA-xc6g-ggrc-qq4r"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "sanitize-html@1.4.2"
+    ],
+    "fixed_in": "2.18.0",
+    "action": "Upgrade the package",
+    "headline": "Upgrade sanitize-html 1.4.2 \u2192 2.18.2 (major)",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade sanitize-html from 1.4.2 to 2.18.2 in package.json (major version: check its changelog for breaking changes)."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "@cyclonedx/cyclonedx-npm",
+    "installed_version": "4.2.1",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-q69g-4hcv-6jg4",
+      "GHSA-v75r-vx73-82pj"
+    ],
+    "scope": "dev",
+    "direct": true,
+    "introduced_via": [
+      "@cyclonedx/cyclonedx-npm@4.2.1"
+    ],
+    "fixed_in": "6.0.0",
+    "action": "Upgrade the package",
+    "headline": "Upgrade @cyclonedx/cyclonedx-npm 4.2.1 \u2192 6.0.0",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade @cyclonedx/cyclonedx-npm from 4.2.1 to 6.0.0 or later in package.json. npm audit only offers a downgrade to 2.0.0, which would undo other fixes.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "base64url",
+    "installed_version": "0.0.6",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-rvg8-pwq2-xj7q"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express-jwt@0.1.3",
+      "jsonwebtoken@0.4.0"
+    ],
+    "fixed_in": "3.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade jsonwebtoken 0.4.0 \u2192 9.0.3 (major)",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade jsonwebtoken from 0.4.0 to 9.0.3; that release no longer pulls in a vulnerable base64url (major version: test carefully).",
+      "If jsonwebtoken can't move yet, force base64url to 3.0.0 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "file-type",
+    "installed_version": "16.5.4",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-5v7r-6r5c-r473"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "file-type@16.5.4"
+    ],
+    "fixed_in": "21.3.1",
+    "action": "Upgrade the package",
+    "headline": "Upgrade file-type 16.5.4 \u2192 22.3.0 (major)",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade file-type from 16.5.4 to 22.3.0 in package.json (major version: check its changelog for breaking changes)."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "hbs",
+    "installed_version": "4.4.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-7f5c-rpf4-86p8"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "hbs@4.4.0"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched hbs exists. Replace or remove it",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "No fixed version of hbs exists for these advisories.",
+      "Replace hbs with a maintained alternative, or remove it (it's listed in package.json).",
+      "Until then, keep untrusted input away from the affected functions described in the advisories."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "notevil",
+    "installed_version": "1.3.3",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-8g4m-cjm2-96wq"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "notevil@1.3.3"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched notevil exists. Replace or remove it",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "No fixed version of notevil exists for these advisories.",
+      "Replace notevil with a maintained alternative, or remove it (it's listed in package.json).",
+      "Until then, keep untrusted input away from the affected functions described in the advisories."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "uuid",
+    "installed_version": "8.3.2",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-w5hq-g745-h8pq"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "@istanbuljs/nyc-config-typescript@1.0.2",
+      "nyc@15.1.0",
+      "sequelize@6.37.8"
+    ],
+    "fixed_in": "11.1.1",
+    "action": "No safe automatic fix",
+    "headline": "Pin uuid to 11.1.1 or later via overrides",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "npm audit's only automatic fix is downgrading sequelize from 6.37.8 to 3.30.0. Don't do that: it rolls back other fixes.",
+      "Force uuid to 11.1.1 or later with an \"overrides\" entry in package.json, then run the tests.",
+      "Watch for a sequelize release that depends on a fixed uuid."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "messageformat",
+    "installed_version": "2.3.0",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-xfqm-j7pc-xrfc"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "i18n@0.11.1"
+    ],
+    "fixed_in": "3.0.0-beta.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade i18n@0.11.1 or pin messageformat 3.0.0-beta.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade i18n@0.11.1 to a release that depends on messageformat 3.0.0-beta.0 or later.",
+      "Or force messageformat to 3.0.0-beta.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "glob",
+    "installed_version": "10.5.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-3g3m-2fjr-6pw4"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "@cyclonedx/cyclonedx-npm@4.2.1"
+    ],
+    "fixed_in": "14.0.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade sqlite3 5.1.7 \u2192 6.0.1 (major)",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade sqlite3 from 5.1.7 to 6.0.1; that release no longer pulls in a vulnerable glob (major version: test carefully).",
+      "If sqlite3 can't move yet, force glob to 14.0.2 or later with an \"overrides\" entry.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "minimatch",
+    "installed_version": "9.0.9",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-g3hv-75wg-m249"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "@cyclonedx/cyclonedx-npm@4.2.1"
+    ],
+    "fixed_in": "11.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade sqlite3 5.1.7 \u2192 6.0.1 (major)",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade sqlite3 from 5.1.7 to 6.0.1; that release no longer pulls in a vulnerable minimatch (major version: test carefully).",
+      "If sqlite3 can't move yet, force minimatch to 11.0.1 or later with an \"overrides\" entry.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  },
+  {
+    "package": "@tootallnate/once",
+    "installed_version": "1.1.2",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-vpq2-c234-7xj6"
+    ],
+    "scope": "optional",
+    "direct": false,
+    "introduced_via": [
+      "sqlite3@5.1.7"
+    ],
+    "fixed_in": "3.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade sqlite3 5.1.7 \u2192 6.0.1 (major)",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade sqlite3 from 5.1.7 to 6.0.1; that release no longer pulls in a vulnerable @tootallnate/once (major version: test carefully).",
+      "If sqlite3 can't move yet, force @tootallnate/once to 3.0.1 or later with an \"overrides\" entry."
+    ],
+    "source": "npm audit fixAvailable + advisory data"
+  }
+]
