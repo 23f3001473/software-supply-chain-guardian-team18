@@ -1,9 +1,7 @@
-# Software Supply Chain Guardian — Day 1: The Guardian's Eyes
-
-> Know what you build. Trust what you ship.
+# Software Supply Chain Guardian
 
 Five LangGraph agents scan **OWASP Juice Shop**. Together they produce an inventory, a CycloneDX SBOM, a dependency graph, real vulnerability findings and anomaly findings. A Streamlit dashboard presents the results.
-Facts come from tools (lockfile parser, Syft, OSV-Scanner / npm audit, git diff). The LLM (optional) only explains them.
+Facts come from tools (lockfile parser, Syft, OSV-Scanner / npm audit, git diff). The LLM only explains them.
 
 ## Architecture
 
