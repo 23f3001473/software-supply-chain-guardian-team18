@@ -1474,7 +1474,7 @@
       "scope": "dev",
       "label": "@eslint-community/eslint-utils@4.10.1",
       "parents": [
-        "@typescript-eslint/utils@8.73.0",
+        "@typescript-eslint/utils@8.74.0",
         "eslint@9.39.5",
         "eslint-plugin-es-x@7.8.0",
         "eslint-plugin-n@17.24.0",
@@ -1489,7 +1489,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1512,7 +1512,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1523,7 +1523,7 @@
       "scope": "dev",
       "label": "@eslint-community/regexpp@4.12.3",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
         "eslint@9.39.5",
         "eslint-plugin-es-x@7.8.0"
       ],
@@ -1536,7 +1536,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1558,7 +1558,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1581,7 +1581,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1605,7 +1605,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1627,7 +1627,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1651,7 +1651,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1673,7 +1673,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1696,7 +1696,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1720,7 +1720,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1743,7 +1743,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1766,7 +1766,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1789,7 +1789,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1813,7 +1813,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1837,7 +1837,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1880,7 +1880,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1902,7 +1902,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -1988,7 +1988,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -2010,7 +2010,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -2034,7 +2034,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -2076,7 +2076,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -2099,7 +2099,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -2275,14 +2275,14 @@
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "minimatch@11.0.9",
         "@isaacs/nonrecursive-glob-match@1.1.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -3918,7 +3918,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4119,7 +4119,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4787,22 +4787,22 @@
     {
       "id": "node_modules/@typescript-eslint/eslint-plugin",
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/eslint-plugin@8.73.0",
+      "label": "@typescript-eslint/eslint-plugin@8.74.0",
       "parents": [
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ],
       "children": 11,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4813,40 +4813,40 @@
       "scope": "dev",
       "label": "ignore@7.0.16",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0"
       ],
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
         "ignore@7.0.16"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/parser",
       "name": "@typescript-eslint/parser",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/parser@8.73.0",
+      "label": "@typescript-eslint/parser@8.74.0",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "typescript-eslint@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "typescript-eslint@8.74.0"
       ],
       "children": 7,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/parser@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/parser@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4857,18 +4857,18 @@
       "scope": "dev",
       "label": "debug@4.4.3",
       "parents": [
-        "@typescript-eslint/parser@8.73.0"
+        "@typescript-eslint/parser@8.74.0"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
         "debug@4.4.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4884,36 +4884,36 @@
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
         "debug@4.4.3",
         "ms@2.1.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/project-service",
       "name": "@typescript-eslint/project-service",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/project-service@8.73.0",
+      "label": "@typescript-eslint/project-service@8.74.0",
       "parents": [
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "children": 4,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
-        "@typescript-eslint/project-service@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
+        "@typescript-eslint/project-service@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4924,19 +4924,19 @@
       "scope": "dev",
       "label": "debug@4.4.3",
       "parents": [
-        "@typescript-eslint/project-service@8.73.0"
+        "@typescript-eslint/project-service@8.74.0"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
-        "@typescript-eslint/project-service@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
+        "@typescript-eslint/project-service@8.74.0",
         "debug@4.4.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -4952,84 +4952,84 @@
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
-        "@typescript-eslint/project-service@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
+        "@typescript-eslint/project-service@8.74.0",
         "debug@4.4.3",
         "ms@2.1.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/scope-manager",
       "name": "@typescript-eslint/scope-manager",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/scope-manager@8.73.0",
+      "label": "@typescript-eslint/scope-manager@8.74.0",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/utils@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/utils@8.74.0"
       ],
       "children": 2,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/scope-manager@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/scope-manager@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/tsconfig-utils",
       "name": "@typescript-eslint/tsconfig-utils",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/tsconfig-utils@8.73.0",
+      "label": "@typescript-eslint/tsconfig-utils@8.74.0",
       "parents": [
-        "@typescript-eslint/project-service@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "@typescript-eslint/project-service@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
-        "@typescript-eslint/tsconfig-utils@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
+        "@typescript-eslint/tsconfig-utils@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/type-utils",
       "name": "@typescript-eslint/type-utils",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/type-utils@8.73.0",
+      "label": "@typescript-eslint/type-utils@8.74.0",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0"
       ],
       "children": 7,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5040,19 +5040,19 @@
       "scope": "dev",
       "label": "debug@4.4.3",
       "parents": [
-        "@typescript-eslint/type-utils@8.73.0"
+        "@typescript-eslint/type-utils@8.74.0"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
         "debug@4.4.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5068,67 +5068,67 @@
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
         "debug@4.4.3",
         "ms@2.1.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/types",
       "name": "@typescript-eslint/types",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/types@8.73.0",
+      "label": "@typescript-eslint/types@8.74.0",
       "parents": [
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/project-service@8.73.0",
-        "@typescript-eslint/scope-manager@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
-        "@typescript-eslint/utils@8.73.0",
-        "@typescript-eslint/visitor-keys@8.73.0"
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/project-service@8.74.0",
+        "@typescript-eslint/scope-manager@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
+        "@typescript-eslint/utils@8.74.0",
+        "@typescript-eslint/visitor-keys@8.74.0"
       ],
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/types@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/types@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/typescript-estree",
       "name": "@typescript-eslint/typescript-estree",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/typescript-estree@8.73.0",
+      "label": "@typescript-eslint/typescript-estree@8.74.0",
       "parents": [
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
-        "@typescript-eslint/utils@8.73.0",
-        "typescript-eslint@8.73.0"
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
+        "@typescript-eslint/utils@8.74.0",
+        "typescript-eslint@8.74.0"
       ],
       "children": 10,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5139,43 +5139,43 @@
       "scope": "dev",
       "label": "balanced-match@4.0.4",
       "parents": [
-        "brace-expansion@5.0.13"
+        "brace-expansion@5.1.0"
       ],
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "minimatch@11.0.9",
-        "brace-expansion@5.0.13",
+        "brace-expansion@5.1.0",
         "balanced-match@4.0.4"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion",
       "name": "brace-expansion",
-      "version": "5.0.13",
+      "version": "5.1.0",
       "direct": false,
       "scope": "dev",
-      "label": "brace-expansion@5.0.13",
+      "label": "brace-expansion@5.1.0",
       "parents": [
         "minimatch@11.0.9"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "minimatch@11.0.9",
-        "brace-expansion@5.0.13"
+        "brace-expansion@5.1.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5186,18 +5186,18 @@
       "scope": "dev",
       "label": "debug@4.4.3",
       "parents": [
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "debug@4.4.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5208,18 +5208,18 @@
       "scope": "dev",
       "label": "minimatch@11.0.9",
       "parents": [
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "children": 2,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "minimatch@11.0.9"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5235,63 +5235,63 @@
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "debug@4.4.3",
         "ms@2.1.3"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/utils",
       "name": "@typescript-eslint/utils",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/utils@8.73.0",
+      "label": "@typescript-eslint/utils@8.74.0",
       "parents": [
         "@stylistic/eslint-plugin@2.11.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
-        "typescript-eslint@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
+        "typescript-eslint@8.74.0"
       ],
       "children": 6,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/utils@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/utils@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
       "id": "node_modules/@typescript-eslint/visitor-keys",
       "name": "@typescript-eslint/visitor-keys",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": false,
       "scope": "dev",
-      "label": "@typescript-eslint/visitor-keys@8.73.0",
+      "label": "@typescript-eslint/visitor-keys@8.74.0",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/scope-manager@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/scope-manager@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "children": 2,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/visitor-keys@8.73.0"
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/visitor-keys@8.74.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5302,19 +5302,19 @@
       "scope": "dev",
       "label": "eslint-visitor-keys@5.0.1",
       "parents": [
-        "@typescript-eslint/visitor-keys@8.73.0"
+        "@typescript-eslint/visitor-keys@8.74.0"
       ],
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/visitor-keys@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/visitor-keys@8.74.0",
         "eslint-visitor-keys@5.0.1"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5461,7 +5461,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -5484,7 +5484,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -6470,7 +6470,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -6732,7 +6732,7 @@
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5",
+        "tar-fs@2.1.6",
         "tar-stream@2.2.0",
         "bl@4.1.0"
       ],
@@ -6756,7 +6756,7 @@
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5",
+        "tar-fs@2.1.6",
         "tar-stream@2.2.0",
         "bl@4.1.0",
         "readable-stream@3.6.2"
@@ -6880,7 +6880,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -7259,7 +7259,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -8203,7 +8203,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -8544,7 +8544,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "nyc@15.1.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -9098,7 +9098,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -9863,10 +9863,10 @@
     {
       "id": "node_modules/electron-to-chromium",
       "name": "electron-to-chromium",
-      "version": "1.5.492",
+      "version": "1.5.493",
       "direct": false,
       "scope": "dev",
-      "label": "electron-to-chromium@1.5.492",
+      "label": "electron-to-chromium@1.5.493",
       "parents": [
         "browserslist@4.29.6"
       ],
@@ -9878,7 +9878,7 @@
         "@babel/core@7.29.13",
         "@babel/helper-compilation-targets@7.29.13",
         "browserslist@4.29.6",
-        "electron-to-chromium@1.5.492"
+        "electron-to-chromium@1.5.493"
       ],
       "introduced_via": [
         "@istanbuljs/nyc-config-typescript@1.0.2",
@@ -10863,17 +10863,17 @@
       "parents": [
         "@eslint-community/eslint-utils@4.10.1",
         "@stylistic/eslint-plugin@2.11.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
-        "@typescript-eslint/utils@8.73.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
+        "@typescript-eslint/utils@8.74.0",
         "eslint-compat-utils@0.5.1",
         "eslint-plugin-es-x@7.8.0",
         "eslint-plugin-n@17.24.0",
         "eslint-plugin-promise@7.3.0",
         "eslint-plugin-react@7.37.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0",
+        "typescript-eslint@8.74.0",
         "juice-shop@20.4.0-SNAPSHOT"
       ],
       "children": 34,
@@ -11049,7 +11049,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11073,7 +11073,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11095,7 +11095,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11118,7 +11118,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11140,7 +11140,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11164,7 +11164,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11189,7 +11189,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11211,7 +11211,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11233,7 +11233,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11257,7 +11257,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11280,7 +11280,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11303,7 +11303,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11326,7 +11326,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11350,7 +11350,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11397,7 +11397,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11420,7 +11420,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11449,7 +11449,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "proxy-agent@8.0.3",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -11474,7 +11474,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "proxy-agent@8.0.3",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12063,7 +12063,7 @@
         "@cyclonedx/cyclonedx-npm@4.2.1",
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12087,7 +12087,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12110,7 +12110,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12188,15 +12188,15 @@
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "tinyglobby@0.2.17",
         "fdir@6.5.0"
       ],
       "introduced_via": [
         "@cyclonedx/cyclonedx-npm@4.2.1",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12258,7 +12258,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12403,7 +12403,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12426,7 +12426,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12450,7 +12450,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -12746,7 +12746,7 @@
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5",
+        "tar-fs@2.1.6",
         "tar-stream@2.2.0",
         "fs-constants@1.0.0"
       ],
@@ -13448,7 +13448,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -14508,7 +14508,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -14531,7 +14531,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -14560,7 +14560,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -15181,7 +15181,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -15280,7 +15280,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -15815,7 +15815,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -16332,7 +16332,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -16421,7 +16421,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -16639,7 +16639,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -16684,7 +16684,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -16808,7 +16808,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -16879,7 +16879,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -17892,7 +17892,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -18285,7 +18285,7 @@
       "label": "mkdirp-classic@0.5.3",
       "parents": [
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5"
+        "tar-fs@2.1.6"
       ],
       "children": 0,
       "shortest_path": [
@@ -18505,7 +18505,7 @@
       "scope": "dev",
       "label": "natural-compare@1.4.0",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
         "eslint@9.39.5"
       ],
       "children": 0,
@@ -18517,7 +18517,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -19891,7 +19891,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -19978,7 +19978,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -20002,7 +20002,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -20343,7 +20343,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -20419,7 +20419,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "nyc@15.1.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -20473,7 +20473,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "nyc@15.1.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -20720,7 +20720,7 @@
       "introduced_via": [
         "@cyclonedx/cyclonedx-npm@4.2.1",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -20954,7 +20954,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -21712,7 +21712,7 @@
       "parents": [
         "get-stream@5.2.0",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5"
+        "tar-fs@2.1.6"
       ],
       "children": 2,
       "shortest_path": [
@@ -21749,7 +21749,7 @@
         "@cyclonedx/cyclonedx-npm@4.2.1",
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -22461,7 +22461,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -23159,7 +23159,7 @@
       "parents": [
         "juice-shop@20.4.0-SNAPSHOT",
         "@npmcli/fs@4.0.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "eslint-compat-utils@0.5.1",
         "eslint-plugin-n@17.24.0",
         "make-dir@4.0.0",
@@ -23559,7 +23559,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "nyc@15.1.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -23587,7 +23587,7 @@
         "eslint@9.39.5",
         "neostandard@0.13.0",
         "nyc@15.1.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -23897,10 +23897,10 @@
     {
       "id": "node_modules/socket.io-adapter",
       "name": "socket.io-adapter",
-      "version": "2.5.8",
+      "version": "2.5.9",
       "direct": false,
       "scope": "prod",
-      "label": "socket.io-adapter@2.5.8",
+      "label": "socket.io-adapter@2.5.9",
       "parents": [
         "socket.io@4.8.4"
       ],
@@ -23908,7 +23908,7 @@
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "socket.io@4.8.4",
-        "socket.io-adapter@2.5.8"
+        "socket.io-adapter@2.5.9"
       ],
       "introduced_via": [
         "socket.io@4.8.4"
@@ -23922,13 +23922,13 @@
       "scope": "prod",
       "label": "debug@4.4.3",
       "parents": [
-        "socket.io-adapter@2.5.8"
+        "socket.io-adapter@2.5.9"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "socket.io@4.8.4",
-        "socket.io-adapter@2.5.8",
+        "socket.io-adapter@2.5.9",
         "debug@4.4.3"
       ],
       "introduced_via": [
@@ -23949,7 +23949,7 @@
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "socket.io@4.8.4",
-        "socket.io-adapter@2.5.8",
+        "socket.io-adapter@2.5.9",
         "debug@4.4.3",
         "ms@2.1.3"
       ],
@@ -23960,19 +23960,19 @@
     {
       "id": "node_modules/socket.io-adapter/node_modules/ws",
       "name": "ws",
-      "version": "8.21.3",
+      "version": "8.23.0",
       "direct": false,
       "scope": "prod",
-      "label": "ws@8.21.3",
+      "label": "ws@8.23.0",
       "parents": [
-        "socket.io-adapter@2.5.8"
+        "socket.io-adapter@2.5.9"
       ],
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "socket.io@4.8.4",
-        "socket.io-adapter@2.5.8",
-        "ws@8.21.3"
+        "socket.io-adapter@2.5.9",
+        "ws@8.23.0"
       ],
       "introduced_via": [
         "socket.io@4.8.4"
@@ -25755,7 +25755,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -26008,10 +26008,10 @@
     {
       "id": "node_modules/systeminformation",
       "name": "systeminformation",
-      "version": "5.33.23",
+      "version": "5.33.24",
       "direct": false,
       "scope": "dev",
-      "label": "systeminformation@5.33.23",
+      "label": "systeminformation@5.33.24",
       "parents": [
         "cypress@16.3.0"
       ],
@@ -26019,7 +26019,7 @@
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "cypress@16.3.0",
-        "systeminformation@5.33.23"
+        "systeminformation@5.33.24"
       ],
       "introduced_via": [
         "cypress@16.3.0"
@@ -26073,10 +26073,10 @@
     {
       "id": "node_modules/tar-fs",
       "name": "tar-fs",
-      "version": "2.1.5",
+      "version": "2.1.6",
       "direct": false,
       "scope": "prod",
-      "label": "tar-fs@2.1.5",
+      "label": "tar-fs@2.1.6",
       "parents": [
         "prebuild-install@7.1.3"
       ],
@@ -26085,7 +26085,7 @@
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5"
+        "tar-fs@2.1.6"
       ],
       "introduced_via": [
         "@cyclonedx/cyclonedx-npm@4.2.1",
@@ -26100,14 +26100,14 @@
       "scope": "prod",
       "label": "chownr@1.1.4",
       "parents": [
-        "tar-fs@2.1.5"
+        "tar-fs@2.1.6"
       ],
       "children": 0,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5",
+        "tar-fs@2.1.6",
         "chownr@1.1.4"
       ],
       "introduced_via": [
@@ -26123,14 +26123,14 @@
       "scope": "prod",
       "label": "tar-stream@2.2.0",
       "parents": [
-        "tar-fs@2.1.5"
+        "tar-fs@2.1.6"
       ],
       "children": 5,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5",
+        "tar-fs@2.1.6",
         "tar-stream@2.2.0"
       ],
       "introduced_via": [
@@ -26153,7 +26153,7 @@
         "juice-shop@20.4.0-SNAPSHOT",
         "sqlite3@5.1.7",
         "prebuild-install@7.1.3",
-        "tar-fs@2.1.5",
+        "tar-fs@2.1.6",
         "tar-stream@2.2.0",
         "readable-stream@3.6.2"
       ],
@@ -26300,20 +26300,20 @@
       "scope": "dev",
       "label": "tinyglobby@0.2.17",
       "parents": [
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "node-gyp@11.5.0"
       ],
       "children": 2,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
         "tinyglobby@0.2.17"
       ],
       "introduced_via": [
         "@cyclonedx/cyclonedx-npm@4.2.1",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -26561,20 +26561,20 @@
       "scope": "dev",
       "label": "ts-api-utils@2.5.0",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0"
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0"
       ],
       "children": 1,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0",
-        "@typescript-eslint/eslint-plugin@8.73.0",
+        "typescript-eslint@8.74.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
         "ts-api-utils@2.5.0"
       ],
       "introduced_via": [
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -26770,7 +26770,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -26945,16 +26945,16 @@
       "scope": "dev",
       "label": "typescript@6.0.3",
       "parents": [
-        "@typescript-eslint/eslint-plugin@8.73.0",
-        "@typescript-eslint/parser@8.73.0",
-        "@typescript-eslint/project-service@8.73.0",
-        "@typescript-eslint/tsconfig-utils@8.73.0",
-        "@typescript-eslint/type-utils@8.73.0",
-        "@typescript-eslint/typescript-estree@8.73.0",
-        "@typescript-eslint/utils@8.73.0",
+        "@typescript-eslint/eslint-plugin@8.74.0",
+        "@typescript-eslint/parser@8.74.0",
+        "@typescript-eslint/project-service@8.74.0",
+        "@typescript-eslint/tsconfig-utils@8.74.0",
+        "@typescript-eslint/type-utils@8.74.0",
+        "@typescript-eslint/typescript-estree@8.74.0",
+        "@typescript-eslint/utils@8.74.0",
         "ts-api-utils@2.5.0",
         "ts-declaration-location@1.0.7",
-        "typescript-eslint@8.73.0",
+        "typescript-eslint@8.74.0",
         "juice-shop@20.4.0-SNAPSHOT"
       ],
       "children": 0,
@@ -26969,10 +26969,10 @@
     {
       "id": "node_modules/typescript-eslint",
       "name": "typescript-eslint",
-      "version": "8.73.0",
+      "version": "8.74.0",
       "direct": true,
       "scope": "dev",
-      "label": "typescript-eslint@8.73.0",
+      "label": "typescript-eslint@8.74.0",
       "parents": [
         "neostandard@0.13.0",
         "juice-shop@20.4.0-SNAPSHOT"
@@ -26980,10 +26980,10 @@
       "children": 6,
       "shortest_path": [
         "juice-shop@20.4.0-SNAPSHOT",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ],
       "introduced_via": [
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -27386,7 +27386,7 @@
         "@cyclonedx/cyclonedx-npm@4.2.1",
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -27670,7 +27670,7 @@
         "neostandard@0.13.0",
         "nyc@15.1.0",
         "sqlite3@5.1.7",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -27961,7 +27961,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -28756,7 +28756,7 @@
       "introduced_via": [
         "eslint@9.39.5",
         "neostandard@0.13.0",
-        "typescript-eslint@8.73.0"
+        "typescript-eslint@8.74.0"
       ]
     },
     {
@@ -31398,25 +31398,25 @@
     {
       "from": "node_modules/@typescript-eslint/eslint-plugin",
       "to": "node_modules/@typescript-eslint/scope-manager",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/eslint-plugin",
       "to": "node_modules/@typescript-eslint/type-utils",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/eslint-plugin",
       "to": "node_modules/@typescript-eslint/utils",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/eslint-plugin",
       "to": "node_modules/@typescript-eslint/visitor-keys",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -31440,7 +31440,7 @@
     {
       "from": "node_modules/@typescript-eslint/eslint-plugin",
       "to": "node_modules/@typescript-eslint/parser",
-      "range": "^8.73.0",
+      "range": "^8.74.0",
       "type": "peerDependencies"
     },
     {
@@ -31458,25 +31458,25 @@
     {
       "from": "node_modules/@typescript-eslint/parser",
       "to": "node_modules/@typescript-eslint/scope-manager",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/parser",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/parser",
       "to": "node_modules/@typescript-eslint/typescript-estree",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/parser",
       "to": "node_modules/@typescript-eslint/visitor-keys",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -31506,13 +31506,13 @@
     {
       "from": "node_modules/@typescript-eslint/project-service",
       "to": "node_modules/@typescript-eslint/tsconfig-utils",
-      "range": "^8.73.0",
+      "range": "^8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/project-service",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "^8.73.0",
+      "range": "^8.74.0",
       "type": "dependencies"
     },
     {
@@ -31536,13 +31536,13 @@
     {
       "from": "node_modules/@typescript-eslint/scope-manager",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/scope-manager",
       "to": "node_modules/@typescript-eslint/visitor-keys",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -31554,19 +31554,19 @@
     {
       "from": "node_modules/@typescript-eslint/type-utils",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/type-utils",
       "to": "node_modules/@typescript-eslint/typescript-estree",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/type-utils",
       "to": "node_modules/@typescript-eslint/utils",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -31602,25 +31602,25 @@
     {
       "from": "node_modules/@typescript-eslint/typescript-estree",
       "to": "node_modules/@typescript-eslint/project-service",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/typescript-estree",
       "to": "node_modules/@typescript-eslint/tsconfig-utils",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/typescript-estree",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/typescript-estree",
       "to": "node_modules/@typescript-eslint/visitor-keys",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -31692,19 +31692,19 @@
     {
       "from": "node_modules/@typescript-eslint/utils",
       "to": "node_modules/@typescript-eslint/scope-manager",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/utils",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/@typescript-eslint/utils",
       "to": "node_modules/@typescript-eslint/typescript-estree",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -31722,7 +31722,7 @@
     {
       "from": "node_modules/@typescript-eslint/visitor-keys",
       "to": "node_modules/@typescript-eslint/types",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
@@ -40068,7 +40068,7 @@
     {
       "from": "node_modules/socket.io-adapter",
       "to": "node_modules/socket.io-adapter/node_modules/ws",
-      "range": "~8.21.0",
+      "range": "^8.23.0",
       "type": "dependencies"
     },
     {
@@ -41610,25 +41610,25 @@
     {
       "from": "node_modules/typescript-eslint",
       "to": "node_modules/@typescript-eslint/eslint-plugin",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/typescript-eslint",
       "to": "node_modules/@typescript-eslint/parser",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/typescript-eslint",
       "to": "node_modules/@typescript-eslint/typescript-estree",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {
       "from": "node_modules/typescript-eslint",
       "to": "node_modules/@typescript-eslint/utils",
-      "range": "8.73.0",
+      "range": "8.74.0",
       "type": "dependencies"
     },
     {

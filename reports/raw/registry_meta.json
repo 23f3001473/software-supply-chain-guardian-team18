@@ -1,0 +1,768 @@
+{
+ "@ai-sdk/openai-compatible@2.0.94": {
+  "integrity": "sha512-Qybn5qAtHjJbwKtxepS/BSxFwYC+z9YXhgtZ/1oiYeFjVOkRYE6rL5u/8feG7ivpFTbUe607D/eS+PXhdoyBOA==",
+  "shasum": "448a3efe6467d1fe4b4d9b6dd71ab9711b7d7437",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/@ai-sdk/openai-compatible/2.0.94"
+ },
+ "@cyclonedx/cyclonedx-npm@4.2.1": {
+  "integrity": "sha512-SOA/96sf0wsgUYCRtFkLFm6WoFhG+q1BxdC84hPSn9J3xWlH1e7OnTPJT+WNUzTqzX1nSm5JhjRX4krozu2X+g==",
+  "shasum": "4df05c3dd177e59556ca5c8e9b526727b6f6629f",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/@cyclonedx/cyclonedx-npm/4.2.1"
+ },
+ "@fontsource/roboto@5.3.0": {
+  "integrity": "sha512-BapRJOWYP+LZ21zp+wBQjfpPYKRoxc4LspJ/RLuI+HSMBD5u/X4O+ESDrSvEqDSy0rAl7GwBJ+09mdc16cVQ1Q==",
+  "shasum": "fd0dcdaa0c6ef3a1621253ea702db933ca1b573a",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "lotusdevshack",
+  "url": "https://registry.npmjs.org/@fontsource/roboto/5.3.0"
+ },
+ "@scarf/scarf@1.4.0": {
+  "integrity": "sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==",
+  "shasum": "3bbb984085dbd6d982494538b523be1ce6562972",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "postinstall": "node ./report.js"
+  },
+  "deprecated": null,
+  "publisher": "aviaviavi",
+  "url": "https://registry.npmjs.org/@scarf/scarf/1.4.0"
+ },
+ "@simplewebauthn/server@14.1.0": {
+  "integrity": "sha512-HPRRBR4Vzr45+RVvbmf6JuCfGdYYcSs4Pnnnp9YSY2IABa4JKnG+wxybczoB7rmdLCOMS/mbBa2ZL/Bcz58UlA==",
+  "shasum": "780b386188ba1300584d539b0851abb41eaa51ed",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/@simplewebauthn/server/14.1.0"
+ },
+ "@tootallnate/once@1.1.2": {
+  "integrity": "sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==",
+  "shasum": "ccb91445360179a04e7fe6aff78c00ffc1eeaf82",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "tootallnate",
+  "url": "https://registry.npmjs.org/@tootallnate/once/1.1.2"
+ },
+ "@types/cors@2.8.19": {
+  "integrity": "sha512-mFNylyeyqN93lfe/9CSxOGREz8cpzAhH+E93xJ4xWQf62V8sQ/24reV2nyzUWM6H6Xji+GGHpkbLe7pVoUEskg==",
+  "shasum": "d93ea2673fd8c9f697367f5eeefc2bbfa94f0342",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "types",
+  "url": "https://registry.npmjs.org/@types/cors/2.8.19"
+ },
+ "@types/node@26.6.6": {
+  "integrity": "sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==",
+  "shasum": "9ed7b5817e728ed9216ef7c5b7d373fe3b777104",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "types",
+  "url": "https://registry.npmjs.org/@types/node/26.6.6"
+ },
+ "ai@6.0.336": {
+  "integrity": "sha512-QI/goioS6Y+chX/lyuiNb8zX0je9QVlV0rKH8KOeQ4Uv22AXeOM1awfHLp3LeMUWUWPiNcfPxnNox1su7W4sjQ==",
+  "shasum": "3a0d0bdff7e905c1fa42c1465f5f3e8ed7dc66f9",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/ai/6.0.336"
+ },
+ "base64url@0.0.6": {
+  "integrity": "sha512-Nm33N5/uniFmlIxqu7wyfwUkAVhKdlY4wFHAnT6P+TJxPoaIASuAN7uyS1wUPsRTiv8yCT93p5P54txD7PRkVg==",
+  "shasum": "9597b36b330db1c42477322ea87ea8027499b82b",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "brianloveswords",
+  "url": "https://registry.npmjs.org/base64url/0.0.6"
+ },
+ "beercss@4.0.23": {
+  "integrity": "sha512-NFG3ZP1zmLkSGrA22GjvR/bftvzzxffhoTxEZz6uRvKZHJSRaH5mKQ4yY6bLdD76cQ3oZHX8ci6SDbjXsIsz3g==",
+  "shasum": "38d0c42db9110e775fa11939e1b28cfb43e01c74",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/beercss/4.0.23"
+ },
+ "clarinet@0.12.6": {
+  "integrity": "sha512-0FR+TrvLbYHLjhzs9oeIbd3yfZmd4u2DzYQEjUTm2dNfh4Y/9RIRWPjsm3aBtrVEpjKI7+lWa4ouqEXoml84mQ==",
+  "shasum": "81ad20f33caee27bbbcb862c96dd925f1f57778e",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "evan-king",
+  "url": "https://registry.npmjs.org/clarinet/0.12.6"
+ },
+ "compression@1.8.2": {
+  "integrity": "sha512-o8vI5RE5A6EVVOd9o41jKp41aJom+QTEO/Bx8MYNjexMo/Bv2WOjUfZr+aL0WnYSgymUy6zeguqLTsIhV0gMvQ==",
+  "shasum": "781397127ae2da00c0c5f7c76bda5b2a9b32a49f",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/compression/1.8.2"
+ },
+ "config@3.3.12": {
+  "integrity": "sha512-Vmx389R/QVM3foxqBzXO8t2tUikYZP64Q6vQxGrsMpREeJc/aWRnPRERXWsYzOHAumx/AOoILWe6nU3ZJL+6Sw==",
+  "shasum": "a10ae66efcc3e48c1879fbb657c86c4ef6c7b25e",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "lorenwest",
+  "url": "https://registry.npmjs.org/config/3.3.12"
+ },
+ "cookie-parser@1.4.7": {
+  "integrity": "sha512-nGUvgXnotP3BsjiLX2ypbQnWoGUPIIfHQNZkkC668ntrzGWEZVW70HDEB1qnNGMicPje6EttlIgzo51YSwNQGw==",
+  "shasum": "e2125635dfd766888ffe90d60c286404fa0e7b26",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ulisesgascon",
+  "url": "https://registry.npmjs.org/cookie-parser/1.4.7"
+ },
+ "cookieconsent@3.1.1": {
+  "integrity": "sha512-v8JWLJcI7Zs9NWrs8hiVldVtm3EBF70TJI231vxn6YToBGj0c9dvdnYwltydkAnrbBMOM/qX1xLFrnTfm5wTag==",
+  "shasum": "f90bfadcaeef7d2bdcdd8278257f7264cb5d6819",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "arlogilbert",
+  "url": "https://registry.npmjs.org/cookieconsent/3.1.1"
+ },
+ "cors@2.8.6": {
+  "integrity": "sha512-tJtZBBHA6vjIAaF6EnIaq6laBBP9aq/Y3ouVJjEfoHbRBcHBAHYcMh/w8LDrk2PvIMMq8gmopa5D4V8RmbrxGw==",
+  "shasum": "ff5dd69bd95e547503820d29aba4f8faf8dfec96",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ulisesgascon",
+  "url": "https://registry.npmjs.org/cors/2.8.6"
+ },
+ "crypto-js@3.3.0": {
+  "integrity": "sha512-DIT51nX0dCfKltpRiXV+/TVZq+Qq2NgF4644+K7Ttnla7zEzqc+kjJyiB96BHNyUTBxyjzRcZYpUdZa+QAqi6Q==",
+  "shasum": "846dd1cce2f68aacfa156c8578f926a609b7976b",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Active development of CryptoJS has been discontinued. This library is no longer maintained.",
+  "publisher": "evanvosberg",
+  "url": "https://registry.npmjs.org/crypto-js/3.3.0"
+ },
+ "cypress@16.3.0": {
+  "integrity": "sha512-h5qq6G9wgNEMWEUFejeBwj7fzwJljrO54n3wAa7yW2Q/8ORnkq4tQBqUhY4g9UM5uOazKmr4ay8YcKi+SJJ1ng==",
+  "shasum": "c1335704442ea67effe0643bf1ee098e1f690eda",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "postinstall": "node dist/index.js --exec install"
+  },
+  "deprecated": null,
+  "publisher": "cypress-npm-publisher",
+  "url": "https://registry.npmjs.org/cypress/16.3.0"
+ },
+ "errorhandler@1.5.2": {
+  "integrity": "sha512-kNAL7hESndBCrWwS72QyV3IVOTrVmj9D062FV5BQswNL5zEdeRmz/WJFyh6Aj/plvvSOrzddkxW57HgkZcR9Fw==",
+  "shasum": "dd0aa3952eca44aff7c2985e7d246c5932d70444",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ulisesgascon",
+  "url": "https://registry.npmjs.org/errorhandler/1.5.2"
+ },
+ "esbuild@0.28.2": {
+  "integrity": "sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA==",
+  "shasum": "0f43bd1bad955b72d24e2261e3abe5957ccf0816",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {
+   "postinstall": "node install.js"
+  },
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/esbuild/0.28.2"
+ },
+ "ethers@6.17.0": {
+  "integrity": "sha512-BpyrpIPJ3ydEVow8zGaz1DuPS7YU8DcWxuBnY9a0UA/lvAPwrMr+EPXsfrul628SRaekPNeIM4UFh/91GWZang==",
+  "shasum": "ad85ee1fc45fe2d95cb1e21c4e3ff9f7f1b093cc",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ricmoo",
+  "url": "https://registry.npmjs.org/ethers/6.17.0"
+ },
+ "express@4.22.3": {
+  "integrity": "sha512-Bdcs4+3qlpVlx2NRn6fgX2Ue2/gGRaPeawebgclM0ERSCqDpA+owF1fdPwjJUTAJWMTuAaxjDf+hzb0/4eKvvw==",
+  "shasum": "e8f898d3c17582b1e311dd2c5cd6d8deff84724b",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/express/4.22.3"
+ },
+ "express-ipfilter@1.4.0": {
+  "integrity": "sha512-Q6+ufo30/gLk7DTe3HEPTkx1LGNyWAt8I5wN8w3W4OIhhzoyNokBp5U4SSjFFcyVZ4USYvMeFNs49v4gBV9U/A==",
+  "shasum": "b71703d4226b33ae610d32bbddc211c9a96fc886",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {
+   "prepare": "husky"
+  },
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/express-ipfilter/1.4.0"
+ },
+ "express-jwt@0.1.3": {
+  "integrity": "sha512-CGSB0b3bNVXI6T0CF5f/55ZKYrIg/b0617EPmXKK9E4y1q2W1w9JTgjPfhsWwuPiCtk5soBgm5ZkgqxghsfaHg==",
+  "shasum": "7c78221f8b9d72106aff556a8a5b8e852d41b12f",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "jfromaniello",
+  "url": "https://registry.npmjs.org/express-jwt/0.1.3"
+ },
+ "express-rate-limit@7.5.1": {
+  "integrity": "sha512-7iN8iPMDzOMHPUYllBEsQdWVB6fPDMPqwjBaFrgr4Jgr/+okjvzAy+UHlYYL/Vs0OsOrMkwS6PJDkFlJwoxUnw==",
+  "shasum": "8c3a42f69209a3a1c969890070ece9e20a879dec",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {
+   "prepare": "run-s compile && husky install config/husky"
+  },
+  "deprecated": null,
+  "publisher": "nfriedly",
+  "url": "https://registry.npmjs.org/express-rate-limit/7.5.1"
+ },
+ "express-robots-txt@0.5.0": {
+  "integrity": "sha512-ISyI++3Yy1lZ982/gQK3RVbghxe2R+/+VDQ8EWrmAmNncyD4VITJR9jYiSbvfxRSVqcGjKWndKkYbgY6fVFdOA==",
+  "shasum": "fba93a96777d817d12cca0be4264ae1a4708bfc4",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "modosc",
+  "url": "https://registry.npmjs.org/express-robots-txt/0.5.0"
+ },
+ "express-security.txt@2.0.0": {
+  "integrity": "sha512-DwjS7MssPbqTFddZfTqNqyfsq6AUP1A/BytamSeoL0Ai7/alHYsAgxE4zhvoPt6MjoroXkSqq1gStQqxsiaF7A==",
+  "shasum": "e5b825109ea88ccfb3001c1558a4739528d1fde0",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "gergelyke",
+  "url": "https://registry.npmjs.org/express-security.txt/2.0.0"
+ },
+ "feature-policy@0.6.0": {
+  "integrity": "sha512-l7+bg0ThDVR9s7JIg0NfUZvbSMRCQL4iPyPXVH6uUwCHh8tQ6kVgVybOTvkcMAzQeXevHnSrNlaXUK8m770HsA==",
+  "shasum": "4d1ee7e8fa615e023d1cdb884a1777a99220febf",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "evanhahn",
+  "url": "https://registry.npmjs.org/feature-policy/0.6.0"
+ },
+ "file-stream-rotator@1.0.0": {
+  "integrity": "sha512-qg5mQO7o+vhS7NPqkrkfJS8qqhz0d17Tnewmb5sUTUKwYe27LKaDtbTuRAtQWkBn6jROuFPVIDF5DtckzokFTQ==",
+  "shasum": "de58379321a1ea6d2938ed5f5a2eff3b7f8b2780",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "rogerc",
+  "url": "https://registry.npmjs.org/file-stream-rotator/1.0.0"
+ },
+ "file-type@16.5.4": {
+  "integrity": "sha512-/yFHK0aGjFEgDJjEKP0pWCplsPFPhwyfwevf/pVxiN0tmE4L9LmwWxWukdJSHdoCli4VgQLehjJtwQBnqmsKcw==",
+  "shasum": "474fb4f704bee427681f98dd390058a172a6c2fd",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "sindresorhus",
+  "url": "https://registry.npmjs.org/file-type/16.5.4"
+ },
+ "finale-rest@1.2.2": {
+  "integrity": "sha512-Yq5W9gex2XuYZwlW0lyslmILV92rYODCJ6YH/8OEQiXZNNbNaih8XLvIhB7V1L6zz40c0nsgWPg6QQqRcZQOww==",
+  "shasum": "a8cb5e63ecdd1e8e8c65d8e16fd8eae50941a7a3",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "tommybananas",
+  "url": "https://registry.npmjs.org/finale-rest/1.2.2"
+ },
+ "fsevents@2.3.3": {
+  "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
+  "shasum": "cac6407785d03675a2a5e1a5305c697b347d90d6",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "install": "node-gyp rebuild"
+  },
+  "deprecated": null,
+  "publisher": "pipobscure",
+  "url": "https://registry.npmjs.org/fsevents/2.3.3"
+ },
+ "glob@10.5.0": {
+  "integrity": "sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==",
+  "shasum": "8ec0355919cd3338c28428a23d4f24ecc5fe738c",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "tshy"
+  },
+  "deprecated": "Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
+  "publisher": "isaacs",
+  "url": "https://registry.npmjs.org/glob/10.5.0"
+ },
+ "hashids@2.3.0": {
+  "integrity": "sha512-ljM73TE/avEhNnazxaj0Dw3BbEUuLC5yYCQ9RSkSUcT4ZSU6ZebdKCIBJ+xT/DnSYW36E9k82GH1Q6MydSIosQ==",
+  "shasum": "af92c9cdb093c0ed3542cf0dcbd6c289125df387",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "rrun husky install .config/husky && yarn beemo create-config"
+  },
+  "deprecated": null,
+  "publisher": "niieani",
+  "url": "https://registry.npmjs.org/hashids/2.3.0"
+ },
+ "hbs@4.4.0": {
+  "integrity": "sha512-e39jgToUl8kFB3h2ewHYSXzfbazNVxja2PQlfH/7aYR8GRsGugSEzDJtZA78ga/zXfCpxR8bBNvNVQcloIPUwg==",
+  "shasum": "eedd4b40684909e2ebf57c3514241a4ad8590b3e",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/hbs/4.4.0"
+ },
+ "helmet@4.6.0": {
+  "integrity": "sha512-HVqALKZlR95ROkrnesdhbbZJFi/rIVSoNq6f3jA/9u6MIbTsPh3xZwihjeI5+DO/2sOV6HMHooXcEOuwskHpTg==",
+  "shasum": "579971196ba93c5978eb019e4e8ec0e50076b4df",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "evanhahn",
+  "url": "https://registry.npmjs.org/helmet/4.6.0"
+ },
+ "html-entities@1.4.0": {
+  "integrity": "sha512-8nxjcBcd8wovbeKx7h3wTji4e6+rhaVuPNpMqwWgnHh+N9ToqsCs6XztWRBPQ+UtzsoMAdKZtUENoVzU/EMtZA==",
+  "shasum": "cfbd1b01d2afaf9adca1b10ae7dffab98c71d2dc",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "mdevils",
+  "url": "https://registry.npmjs.org/html-entities/1.4.0"
+ },
+ "i18n@0.11.1": {
+  "integrity": "sha512-j9JGOlvbUatVU5cXua+AHilotkt0wRI4ZEhkyh/v/tKcwbtMjpauxjrBcFBqTCz+Ew6Xr7cCJkA+4DLYQB1YUg==",
+  "shasum": "f06a37afbb37bd3e9714ce15f436dccc6146ded2",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "mashpie",
+  "url": "https://registry.npmjs.org/i18n/0.11.1"
+ },
+ "js-yaml@3.15.2": {
+  "integrity": "sha512-6EuL879VkRA+1Cz578mKMiKvjPNEuk6+r1JaFzoSWejZmtf7xWbIyw1e3KkxlkzTIt9Taw6JBhEppG7utc1P+w==",
+  "shasum": "3f83823ac6be17f570f23b2ecdef3777ff5ea364",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "vitaly",
+  "url": "https://registry.npmjs.org/js-yaml/3.15.2"
+ },
+ "jsonwebtoken@0.1.0": {
+  "integrity": "sha512-F+cS4nX8se0apNdOo4zOjrwPj/nQy2EgG/CPVJB/z0juS+apEuHoow1ZuG0gZN4zFjkUcYuOAcU5FbY5KyjgmA==",
+  "shasum": "505628492092fe35d08b600fa6768cd06711aaa2",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/",
+  "publisher": "woloski",
+  "url": "https://registry.npmjs.org/jsonwebtoken/0.1.0"
+ },
+ "jsonwebtoken@0.4.0": {
+  "integrity": "sha512-VQlZ5j/m478UhkmopShghzepWmar8tKEXYWuDX0V64rd8a45ANQop6RqHWAkHypQ7DYh4nuqgS1tD+9uSnvqvw==",
+  "shasum": "7dfa44ac8a588e16e0453c81f11ab6addd0742fe",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/",
+  "publisher": "woloski",
+  "url": "https://registry.npmjs.org/jsonwebtoken/0.4.0"
+ },
+ "jws@0.2.6": {
+  "integrity": "sha512-ZjMgMG4UIf1KKjjYY4fKdB6X9W5fyrkFCTC35XgsrIvQGk088xiwGSsGI88e9oadSp+yZ/aRVQ7Cy1CS4SC/hA==",
+  "shasum": "e9b7e9ac8d2ac1067413233bc6c20fbd8868e9ba",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Security update: Versions below 3.0.0 are deprecated.",
+  "publisher": "brianloveswords",
+  "url": "https://registry.npmjs.org/jws/0.2.6"
+ },
+ "libxml2-wasm@0.7.2": {
+  "integrity": "sha512-Ek8Fdb8fIl6mBCvrMGImkOP02aDpANwus0PV827v4gobV9jnoYEHNoPTwWokt71egUBl+sng53fjZ5y2PexLqQ==",
+  "shasum": "d4884e107385a738568cc82902921b78e45a4c1e",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/libxml2-wasm/0.7.2"
+ },
+ "libxmljs2@0.37.0": {
+  "integrity": "sha512-Xb78V8GZouoZFrq8cCwx7+G3WYOcJG0xb3YUbweSyE4z2EIrQCZMr3Ye/dHn4mESs6YxUMeQeUZm5IXg+iLHog==",
+  "shasum": "ee637d6220b348b74ef2697d1a9d2b2007628643",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "install": "prebuild-install || node-gyp rebuild"
+  },
+  "deprecated": null,
+  "publisher": "marudor",
+  "url": "https://registry.npmjs.org/libxmljs2/0.37.0"
+ },
+ "lodash@2.4.2": {
+  "integrity": "sha512-Kak1hi6/hYHGVPmdyiZijoQyz5x2iGVzs6w9GYB/HiXEtylY7tIoYEROMjvM1d9nXJqPOrG2MNPMn01bJ+S0Rw==",
+  "shasum": "fadd834b9683073da179b3eae6d9c0d15053f73e",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "jdalton",
+  "url": "https://registry.npmjs.org/lodash/2.4.2"
+ },
+ "marsdb@0.6.11": {
+  "integrity": "sha512-kZzVOZh62OL6s2XWrlbI7NmSlLJEeXpmttXasFwFqvbKmFtmhth3LlaxH4/Ompkh6SQ22M8Jr8peaV2c7T9SVA==",
+  "shasum": "005b4af67e41df4efe73efed577adf29135d9712",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "a.artemev",
+  "url": "https://registry.npmjs.org/marsdb/0.6.11"
+ },
+ "material-icons@1.13.14": {
+  "integrity": "sha512-kZOfc7xCC0rAT8Q3DQixYAeT+tBqZnxkseQtp2bxBxz7q5pMAC+wmit7vJn1g/l7wRU+HEPq23gER4iPjGs5Cg==",
+  "shasum": "65ae8693550b9f789036bd4cf29e775f1bd389ed",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "marella",
+  "url": "https://registry.npmjs.org/material-icons/1.13.14"
+ },
+ "minimatch@9.0.9": {
+  "integrity": "sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg==",
+  "shasum": "9b0cb9fcb78087f6fd7eababe2511c4d3d60574e",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "tshy"
+  },
+  "deprecated": null,
+  "publisher": "isaacs",
+  "url": "https://registry.npmjs.org/minimatch/9.0.9"
+ },
+ "moment@2.0.0": {
+  "integrity": "sha512-l3jCjCJfC6pIuca13GMpCU4liEYvYk17XpFgpJSyLp8RX+dwdgrZBvtkaofmIigplezbG1VZFUgQbDFRSd37YA==",
+  "shasum": "2bbc5b44c321837693ab6efcadbd46ed946211fe",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "timrwood",
+  "url": "https://registry.npmjs.org/moment/2.0.0"
+ },
+ "morgan@1.12.1": {
+  "integrity": "sha512-tljKC0ex20AjO58Ob/eZ53JloycbVswbVNCHx6V6VLGzqt/w8dIynVGL0G8qVjNKwiA7sYSogCrN6QtJ82IV+g==",
+  "shasum": "a6b29a9db7edf55256c560a1ae614c1c03619217",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/morgan/1.12.1"
+ },
+ "multer@2.5.0": {
+  "integrity": "sha512-BsqOzYGVq49JcW2IzoSAxeKYRevb+dGGPPWleOR8Lrlk4igwxu1/9pwSXlByhCb7MVZDrNJFC0IBP5/O5nLYRw==",
+  "shasum": "92e08d5015b53fb554d5d623398d67b8b146ded2",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/multer/2.5.0"
+ },
+ "notevil@1.3.3": {
+  "integrity": "sha512-y4gR18Z2lIHeBREaZu788iii4/KLLe2jNPoZA8aEg4NWK1JwjmtjVyI3eypQKPEkOIPc++8C+byUUDc+SJDJgg==",
+  "shasum": "56b8a935d8978e0c000749621aca3928b823cb01",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+  "publisher": "mmckegg",
+  "url": "https://registry.npmjs.org/notevil/1.3.3"
+ },
+ "otplib@13.6.0": {
+  "integrity": "sha512-PCx6+14PYndCRk0G3JuJHmlExzENs43gafqMUVmSFmzMbEweVhBiYcBCL8B32ZMEDPZA4OsMxFEeAob1H+YFZg==",
+  "shasum": "aa462e7e2c0370278666a608144c3194c7b2f7fe",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/otplib/13.6.0"
+ },
+ "pdfkit@0.11.0": {
+  "integrity": "sha512-1s9gaumXkYxcVF1iRtSmLiISF2r4nHtsTgpwXiK8Swe+xwk/1pm8FJjYqN7L3x13NsWnGyUFntWcO8vfqq+wwA==",
+  "shasum": "9cdb2fc42bd2913587fe3ddf48cc5bbb3c36f7de",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "devongovett",
+  "url": "https://registry.npmjs.org/pdfkit/0.11.0"
+ },
+ "prom-client@15.1.3": {
+  "integrity": "sha512-6ZiOBfCywsD4k1BN9IX0uZhF+tJkV8q8llP64G5Hajs4JOeVLPCwpPVcpXy3BwYiUGgyJzsJJQeOIv7+hDSq8g==",
+  "shasum": "69fa8de93a88bc9783173db5f758dc1c69fa8fc2",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "husky"
+  },
+  "deprecated": "prom-client has been replaced by @prometheus-io/client",
+  "publisher": "simenb",
+  "url": "https://registry.npmjs.org/prom-client/15.1.3"
+ },
+ "proxy-agent@8.0.3": {
+  "integrity": "sha512-SYjxPOWaz3CrRZxqgj3A/261L3ZSCcWzM0dFsxNP27m43/KiHWtUmtHZFsHvh7fn11E/SmBfcNsWcWqMhZ6fAw==",
+  "shasum": "c46bd7efcefd8c5bbab106dae321ba8fc08cc243",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/proxy-agent/8.0.3"
+ },
+ "pug@3.0.4": {
+  "integrity": "sha512-kFfq5mMzrS7+wrl5pLJzZEzemx34OQ0w4SARfhy/3yxTlhbstsudDwJzhf1hP02yHzbjoVMSXUj/Sz6RNfMyXg==",
+  "shasum": "9043ae8dd85fc8beb5becf09dd8e4b754b94b29f",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/pug/3.0.4"
+ },
+ "sanitize-filename@1.6.5": {
+  "integrity": "sha512-+dVApt46/oAFWRP0KBSnYNLRw1peY7o/b12tmpllPNFpjfwkPuZut1+DiKaD9zYx5r2SHwc+XMLSBaDiyUJw3g==",
+  "shasum": "169cd02f71b5f894ac9c120ba845904f35af8dd1",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "parshap",
+  "url": "https://registry.npmjs.org/sanitize-filename/1.6.5"
+ },
+ "sanitize-html@1.4.2": {
+  "integrity": "sha512-TGXNBr/YKQMFUZ0FPsbPLPm3tB2+IrgsW7M5tDsJxMfhYnglHZ/ZTDoy/X1t+XnJy0WGbPzmw00I5TaTBPcR9Q==",
+  "shasum": "0bcc3dc92ba79d8b5dbea8b851c13d50d5ed3d58",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "boutell",
+  "url": "https://registry.npmjs.org/sanitize-html/1.4.2"
+ },
+ "semver@7.8.6": {
+  "integrity": "sha512-9lpSSU4Mly3mrtruwLs1eLK6+gzbzqeBFwRNjIjE+9LuDpWdYctrQlQ3ej1Ilgi7gknpsTRnPoLP8DpCHqHIJw==",
+  "shasum": "67c0cda133a3ceb6f70b803e67625bf969000424",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/semver/7.8.6"
+ },
+ "sequelize@6.37.8": {
+  "integrity": "sha512-HJ0IQFqcTsTiqbEgiuioYFMSD00TP6Cz7zoTti+zVVBwVe9fEhev9cH6WnM3XU31+ABS356durAb99ZuOthnKw==",
+  "shasum": "70e62c9e682a2009005093104591e59ec2d0ed2c",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "npm run build && husky install"
+  },
+  "deprecated": null,
+  "publisher": "wikirik",
+  "url": "https://registry.npmjs.org/sequelize/6.37.8"
+ },
+ "serve-index@1.9.2": {
+  "integrity": "sha512-KDj11HScOaLmrPxl70KYNW1PksP4Nb/CLL2yvC+Qd2kHMPEEpfc4Re2e4FOay+bC/+XQl/7zAcWON3JVo5v3KQ==",
+  "shasum": "2988e3612106d78a5e4849ddff552ce7bd3d9bcb",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ulisesgascon",
+  "url": "https://registry.npmjs.org/serve-index/1.9.2"
+ },
+ "socket.io@4.8.4": {
+  "integrity": "sha512-9ZV9zg8vN8hO3Y25DhR7nUkJ1VDnBhq5O/JrXhFT9s6+F0gqytSASTHVfCFc2mJXaTfARroErplXlzFWwETZqQ==",
+  "shasum": "24bbb030792ce328ec3b73578b0dd8e63db7bbb7",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/socket.io/4.8.4"
+ },
+ "sqlite3@5.1.7": {
+  "integrity": "sha512-GGIyOiFaG+TUra3JIfkI/zGP8yZYLPQ0pl1bH+ODjiX57sPhrLU5sQJn1y9bDKZUFYkX1crlrPfSYt0BKKdkog==",
+  "shasum": "59ca1053c1ab38647396586edad019b1551041b7",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "install": "prebuild-install -r napi || node-gyp rebuild"
+  },
+  "deprecated": null,
+  "publisher": "daniellockyer",
+  "url": "https://registry.npmjs.org/sqlite3/5.1.7"
+ },
+ "svg-captcha@1.4.0": {
+  "integrity": "sha512-/fkkhavXPE57zRRCjNqAP3txRCSncpMx3NnNZL7iEoyAtYwUjPhJxW6FQTQPG5UPEmCrbFoXS10C3YdJlW7PDg==",
+  "shasum": "32ead3c6463936c218bb3bc9ed04fea4eeffe492",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "lichaozhy",
+  "url": "https://registry.npmjs.org/svg-captcha/1.4.0"
+ },
+ "swagger-ui-express@5.0.1": {
+  "integrity": "sha512-SrNU3RiBGTLLmFU8GIJdOdanJTl4TOmT27tt3bWWHppqYmAZ6IDuEuBvMU6nZq0zLEe6b/1rACXCgLZqO6ZfrA==",
+  "shasum": "fb8c1b781d2793a6bd2f8a205a3f4bd6fa020dd8",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "scottie1984",
+  "url": "https://registry.npmjs.org/swagger-ui-express/5.0.1"
+ },
+ "tar@6.2.1": {
+  "integrity": "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==",
+  "shasum": "717549c541bc3c2af15751bea94b1dd068d4b03a",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
+  "publisher": "isaacs",
+  "url": "https://registry.npmjs.org/tar/6.2.1"
+ },
+ "unzipper@0.12.5": {
+  "integrity": "sha512-tXYOi9R57Uj/2Z25SOs5RRSzq886MBQj2gY8dPL+xl/kv6s6SvByoKfAtvfVeEuhntWDgjd2o9p2lb4TVPAz0A==",
+  "shasum": "7fc6b4862f3832202d1f5cc3adbee2679deaaf6c",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "zjonsson",
+  "url": "https://registry.npmjs.org/unzipper/0.12.5"
+ },
+ "uuid@8.3.2": {
+  "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+  "shasum": "80d5b5ced271bb9af6c445f21a1a04c606cefbe2",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).",
+  "publisher": "ctavan",
+  "url": "https://registry.npmjs.org/uuid/8.3.2"
+ },
+ "winston@3.19.0": {
+  "integrity": "sha512-LZNJgPzfKR+/J3cHkxcpHKpKKvGfDZVPS4hfJCc4cCG0CgYzvlD6yE/S3CIL/Yt91ak327YCpiF/0MyeZHEHKA==",
+  "shasum": "cc1d1262f5f45946904085cfffe73efb4b7a581d",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "dabh",
+  "url": "https://registry.npmjs.org/winston/3.19.0"
+ },
+ "z85@0.0.2": {
+  "integrity": "sha512-OCDw4Haz4xA10b9SBVXxJYbQHlCyUGDJc+aR0AOPWRSqXeZVmbRHL/50lIhQx23UEUBnWipAlLTBAIQzYT1cgA==",
+  "shasum": "45d353b13e4ee3d376c3fbd37dcda85feed8b0d3",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "msealand",
+  "url": "https://registry.npmjs.org/z85/0.0.2"
+ },
+ "zod@4.6.7": {
+  "integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==",
+  "shasum": "e806cf64a7f4e37635ce9f2f52c04c3766f75e5b",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/zod/4.6.7"
+ },
+ "messageformat@2.3.0": {
+  "integrity": "sha512-uTzvsv0lTeQxYI2y1NPa1lItL5VRI8Gb93Y2K2ue5gBPyrbJxfDi/EYWxh2PKv5yO42AJeeqblS9MJSh/IEk4w==",
+  "shasum": "de263c49029d5eae65d7ee25e0754f57f425ad91",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": "Package renamed as '@messageformat/core', see messageformat.github.io for more details. 'messageformat@4' will eventually provide a polyfill for Intl.MessageFormat, once it's been defined by Unicode & ECMA.",
+  "publisher": "eemeli",
+  "url": "https://registry.npmjs.org/messageformat/2.3.0"
+ }
+}

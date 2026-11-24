@@ -1,0 +1,868 @@
+{
+  "actions": [
+    {
+      "id": "ACT-001",
+      "type": "upgrade",
+      "title": "Upgrade express-jwt 0.1.3 \u2192 8.5.1 and jsonwebtoken 0.4.0 \u2192 9.0.3 (also clears base64url, jws, moment)",
+      "covers_packages": [
+        "base64url@0.0.6",
+        "express-jwt@0.1.3",
+        "jsonwebtoken@0.1.0",
+        "jsonwebtoken@0.4.0",
+        "jws@0.2.6",
+        "moment@2.0.0"
+      ],
+      "covers_risks": [
+        "RISK-001",
+        "RISK-002",
+        "RISK-006",
+        "RISK-007",
+        "RISK-009",
+        "RISK-016"
+      ],
+      "advisories_cleared": 15,
+      "severity_cleared": {
+        "critical": 2,
+        "high": 7,
+        "moderate": 6
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "express-jwt",
+          "value": "8.5.1",
+          "section": "dependencies"
+        },
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "jsonwebtoken",
+          "value": "9.0.3",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 15,
+        "risk_points_removed": 496.4,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 15 advisories (2 critical, 7 high, 6 moderate) in 6 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "lib/insecurity.ts",
+          "routes/authenticatedUsers.ts",
+          "routes/passkey.ts",
+          "routes/verify.ts"
+        ],
+        "summary": "express-jwt: major version jump, imported by application code in 1 file(s) (lib/insecurity.ts). jsonwebtoken: major version jump, imported by application code in 4 file(s) (lib/insecurity.ts, routes/authenticatedUsers.ts, routes/passkey.ts).",
+        "check": "Read the changelogs of express-jwt, jsonwebtoken for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "Upgrading express-jwt and jsonwebtoken removes 15 known vulnerabilities (2 critical, 7 high, 6 moderate) and eliminates 496.4 risk points. Because both packages have a major version jump, the API may have changed; the application imports them in lib/insecurity.ts, routes/authenticatedUsers.ts, and routes/passkey.ts, so the reviewer should run the sandbox build and tests and verify that token handling still works. If the upgrade breaks any authentication logic, the risk reduction will not be realized.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Critical",
+      "confidence": 0.65,
+      "hash": "146686d5b484f671"
+    },
+    {
+      "id": "ACT-002",
+      "type": "upgrade",
+      "title": "Upgrade sanitize-html 1.4.2 \u2192 2.18.2 (also clears lodash)",
+      "covers_packages": [
+        "lodash@2.4.2",
+        "sanitize-html@1.4.2"
+      ],
+      "covers_risks": [
+        "RISK-003",
+        "RISK-004"
+      ],
+      "advisories_cleared": 14,
+      "severity_cleared": {
+        "critical": 1,
+        "high": 3,
+        "moderate": 10
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "sanitize-html",
+          "value": "2.18.2",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 14,
+        "risk_points_removed": 174.2,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 14 advisories (1 critical, 3 high, 10 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "lib/challengeUtils.ts",
+          "lib/insecurity.ts"
+        ],
+        "summary": "sanitize-html: major version jump, imported by application code in 2 file(s) (lib/challengeUtils.ts, lib/insecurity.ts).",
+        "check": "Read the changelogs of sanitize-html for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "Moving sanitize-html from 1.4.2 to 2.18.2 clears 14 vulnerabilities (1 critical, 3 high, 10 moderate) and removes 174.2 risk points. The major upgrade could alter the sanitization options used in lib/challengeUtils.ts and lib/insecurity.ts, so the reviewer should check the changelog for breaking changes and confirm that the output still meets the application's security requirements. Successful integration will reduce the overall risk by 174.2 points.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Critical",
+      "confidence": 0.99,
+      "hash": "55b4822d2d154987"
+    },
+    {
+      "id": "ACT-003",
+      "type": "upgrade-parent",
+      "title": "Upgrade pdfkit 0.11.0 \u2192 0.21.0 (also clears crypto-js)",
+      "covers_packages": [
+        "crypto-js@3.3.0"
+      ],
+      "covers_risks": [
+        "RISK-008"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "pdfkit",
+          "value": "^0.21.0",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 80.7,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 critical) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "routes/order.ts"
+        ],
+        "summary": "pdfkit: major version jump, imported by application code in 1 file(s) (routes/order.ts).",
+        "check": "Read the changelogs of pdfkit for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "Updating pdfkit to 0.21.0 removes 2 critical advisories and cuts 80.7 risk points. The change is a major version bump and the only place pdfkit is used is routes/order.ts, so the reviewer should ensure that PDF generation still functions correctly after the upgrade. If the PDF output remains unchanged, the project will benefit from the 80.7-point risk reduction.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Critical",
+      "confidence": 0.99,
+      "hash": "25ebc8290773eb9d"
+    },
+    {
+      "id": "ACT-004",
+      "type": "upgrade-parent",
+      "title": "Upgrade sqlite3 5.1.7 \u2192 6.0.1 (also clears @tootallnate/once, tar)",
+      "covers_packages": [
+        "@tootallnate/once@1.1.2",
+        "tar@6.2.1"
+      ],
+      "covers_risks": [
+        "RISK-011",
+        "RISK-027"
+      ],
+      "advisories_cleared": 13,
+      "severity_cleared": {
+        "critical": 1,
+        "high": 8,
+        "moderate": 3,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "sqlite3",
+          "value": "^6.0.1",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 13,
+        "risk_points_removed": 112.2,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 13 advisories (1 critical, 8 high, 3 moderate, 1 low) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "sqlite3: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of sqlite3 for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "Upgrading sqlite3 to 6.0.1 clears 13 advisories (1 critical, 8 high, 3 moderate, 1 low) and reduces risk by 112.2 points. Although sqlite3 is not imported directly by application code, its major version change could affect the underlying driver used by other dependencies; the reviewer should review the changelog and run the sandbox build to confirm no runtime errors. A successful upgrade will lower the overall risk by 112.2 points.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "High",
+      "confidence": 0.85,
+      "hash": "b99688cedc124570"
+    },
+    {
+      "id": "ACT-005",
+      "type": "pin-override",
+      "title": "Pin uuid to 11.1.1 with npm overrides",
+      "covers_packages": [
+        "uuid@8.3.2"
+      ],
+      "covers_risks": [
+        "RISK-012"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "uuid",
+          "value": "11.1.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 71.0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of uuid to 11.1.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of uuid for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "@istanbuljs/nyc-config-typescript, sequelize have no safe upgrade that drops uuid 8.3.2 (npm audit would downgrade it), so uuid is pinned to 11.1.1 with npm overrides instead. Pinning uuid to 11.1.1 with an npm override removes the known vulnerability in uuid 8.3.2 by forcing every copy of the package to use the patched version. The override may break if any code in the project relies on the old API or behavior of uuid 8.x; the changelog should be reviewed and the sandbox build and tests run to confirm no regressions. The reviewer should verify that all unit and integration tests pass after the override and that no import paths are affected. This action clears one moderate advisory and removes 71 risk points, reducing the overall risk score.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "b0e28f8b1b7cc8d1"
+    },
+    {
+      "id": "ACT-006",
+      "type": "harden-config",
+      "title": "Turn off Scarf install telemetry",
+      "covers_packages": [
+        "@scarf/scarf@1.4.0"
+      ],
+      "covers_risks": [
+        "RISK-014"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-json",
+          "target": "scarfSettings.enabled",
+          "value": "false",
+          "section": null
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 68.0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Removes a non-CVE supply-chain risk; the rescan confirms the finding disappears."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "config",
+        "files_using": [],
+        "summary": "Only stops the install-time analytics call; no application code changes.",
+        "check": "None beyond a normal install."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "Disabling Scarf\u2019s install\u2011time telemetry stops a non\u2011CVE supply\u2011chain risk that sends analytics data during npm install. Because this change only touches a configuration flag, it should not affect any application code or runtime behavior. The reviewer should simply confirm that the package still installs correctly and that the flag is set to false. This removes 68 risk points, eliminating the telemetry\u2011related risk.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "High",
+      "confidence": 0.9,
+      "hash": "4c13e175098bb7d4"
+    },
+    {
+      "id": "ACT-007",
+      "type": "upgrade",
+      "title": "Upgrade file-type 16.5.4 \u2192 22.3.0",
+      "covers_packages": [
+        "file-type@16.5.4"
+      ],
+      "covers_risks": [
+        "RISK-015"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "file-type",
+          "value": "^22.3.0",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 67.5,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "routes/profileImageFileUpload.ts"
+        ],
+        "summary": "file-type: major version jump, imported by application code in 1 file(s) (routes/profileImageFileUpload.ts).",
+        "check": "Read the changelogs of file-type for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "Upgrading file\u2011type from 16.5.4 to 22.3.0 eliminates a moderate advisory in the old version. The major version jump could break code that imports file\u2011type in routes/profileImageFileUpload.ts, so the changelog must be checked for breaking changes and the sandbox build and tests should be run to confirm compatibility. The reviewer should ensure that the file\u2011type API usage in that file still works and that all tests pass. This upgrade removes 67.5 risk points and clears one advisory.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "High",
+      "confidence": 0.99,
+      "hash": "31c0918fffb2471d"
+    },
+    {
+      "id": "ACT-008",
+      "type": "update-base-image",
+      "title": "Pin 8 container image(s) by digest",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-017"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:24",
+          "value": "node:24@sha256:9d266751ca3d7fdbe651c878ffd5ad0a42fed49a18c283509267c97f025b7496",
+          "section": null
+        },
+        {
+          "file": "docker-compose.test.yml",
+          "op": "replace-text",
+          "target": "bkimminich/juice-shop:latest",
+          "value": "bkimminich/juice-shop:latest@sha256:adaf6a6ca50f772dff7d2fe56972c659e81a61e0dbbe607c2b39fefd436e6153",
+          "section": null
+        },
+        {
+          "file": "infrastructure/Dockerfile",
+          "op": "replace-text",
+          "target": "node:20.19.2-bookworm-slim",
+          "value": "node:20.19.2-bookworm-slim@sha256:7cd3fbc830c75c92256fe1122002add9a1c025831af8770cd0bf8e45688ef661",
+          "section": null
+        },
+        {
+          "file": "infrastructure/Dockerfile",
+          "op": "replace-text",
+          "target": "node:20.19.2-bookworm",
+          "value": "node:20.19.2-bookworm@sha256:ba077fe891ce516b24bdbbd66d27d1e8e8c5a6e6b31ec7e7e559b45c3fca0643",
+          "section": null
+        },
+        {
+          "file": "infrastructure/docker-compose.yml",
+          "op": "replace-text",
+          "target": "nginx:1.28.0-alpine",
+          "value": "nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284",
+          "section": null
+        },
+        {
+          "file": "infrastructure/docker-compose.yml",
+          "op": "replace-text",
+          "target": "redis:7.4.4-alpine",
+          "value": "redis:7.4.4-alpine@sha256:ee9e8748ace004102a267f7b8265dab2c618317df22507b89d16a8add7154273",
+          "section": null
+        },
+        {
+          "file": "infrastructure/docker-compose.yml",
+          "op": "replace-text",
+          "target": "mongo:4.4.29",
+          "value": "mongo:4.4.29@sha256:52c42cbab240b3c5b1748582cc13ef46d521ddacae002bbbda645cebed270ec0",
+          "section": null
+        },
+        {
+          "file": "test/smoke/Dockerfile",
+          "op": "replace-text",
+          "target": "alpine:latest",
+          "value": "alpine:latest@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf",
+          "section": null
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 61.0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Removes a non-CVE supply-chain risk; the rescan confirms the finding disappears."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Same image as today, but frozen: future base-image security patches need a deliberate digest update.",
+        "check": "Rebuild the container; schedule digest refreshes (e.g. Renovate/Dependabot)."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore Dockerfile, docker-compose.test.yml, infrastructure/Dockerfile, infrastructure/docker-compose.yml, test/smoke/Dockerfile from the baseline commit.",
+      "rationale": "Digest could not be looked up for: gcr.io/distroless/nodejs24-debian13:latest, juice-shop:latest. Run `docker buildx imagetools inspect <image>` and add @sha256:<digest> by hand. Pinning the eight container images to their SHA256 digests guarantees that the exact image layers used today are always deployed, preventing accidental upgrades that could introduce new vulnerabilities. The change does not alter application code, but the containers must be rebuilt to verify that the digests are correct and that the application still functions. The reviewer should rebuild the images, run the test suite, and schedule regular digest refreshes (e.g., via Renovate). This action removes 61 risk points by eliminating the non\u2011CVE supply\u2011chain risk of image drift.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Medium",
+      "confidence": 0.8,
+      "hash": "a883139be732c96e"
+    },
+    {
+      "id": "ACT-009",
+      "type": "pin-override",
+      "title": "Pin messageformat to 3.0.0-beta.0 with npm overrides",
+      "covers_packages": [
+        "messageformat@2.3.0"
+      ],
+      "covers_risks": [
+        "RISK-020"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "messageformat",
+          "value": "3.0.0-beta.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 47.8,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of messageformat to 3.0.0-beta.0 although its parent asks for \"^2.3.0\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of messageformat for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "i18n has no safe upgrade that drops messageformat 2.3.0 (npm audit would downgrade it), so messageformat is pinned to 3.0.0-beta.0 with npm overrides instead. Pinning messageformat to 3.0.0\u2011beta.0 removes a low\u2011severity advisory and eliminates 47.8 risk points, but it forces every copy of the library to a newer major version that the parent package originally requested as ^2.3.0. The parent may rely on older behavior, so the reviewer should read the messageformat changelog and run the sandbox build and tests to confirm i18n still works. If the override breaks functionality, the risk reduction would be lost, but the current plan keeps the project at grade F (0).",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "018783dfdc7f2ff0"
+    },
+    {
+      "id": "ACT-010",
+      "type": "upgrade",
+      "title": "Upgrade @cyclonedx/cyclonedx-npm 4.2.1 \u2192 6.0.0",
+      "covers_packages": [
+        "@cyclonedx/cyclonedx-npm@4.2.1"
+      ],
+      "covers_risks": [
+        "RISK-021"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "@cyclonedx/cyclonedx-npm",
+          "value": "6.0.0",
+          "section": "devDependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 46.9,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "@cyclonedx/cyclonedx-npm: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of @cyclonedx/cyclonedx-npm for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "npm audit's automatic fix would downgrade @cyclonedx/cyclonedx-npm to 2.0.0; upgrading to 6.0.0 instead. Upgrading @cyclonedx/cyclonedx\u2011npm from 4.2.1 to 6.0.0 clears two high\u2011severity advisories and removes 46.9 risk points, yet it is a major version jump. Because the package is only a devDependency and not imported by application code, the main risk is a potential API change that could break the build or the CycloneDX generation. The reviewer should check the changelog for breaking changes and run the sandbox build and tests to ensure the tool still functions. The expected risk reduction is 46.9 points, keeping the overall grade at F (0).",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "b6053ad9899b3e9c"
+    },
+    {
+      "id": "ACT-011",
+      "type": "pin-override",
+      "title": "Pin minimatch to 11.0.1 with npm overrides",
+      "covers_packages": [
+        "minimatch@9.0.9"
+      ],
+      "covers_risks": [
+        "RISK-022"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "minimatch",
+          "value": "11.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 44.8,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of minimatch to 11.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of minimatch for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "@cyclonedx/cyclonedx-npm has no safe upgrade that drops minimatch 9.0.9 (npm audit would downgrade it), so minimatch is pinned to 11.0.1 with npm overrides instead. Pinning minimatch to 11.0.1 eliminates a moderate advisory and cuts 44.8 risk points. This override forces all instances of minimatch to a newer major version that the parent package originally depended on as 9.0.9, which could alter pattern matching behavior. The reviewer should review the minimatch changelog and run the sandbox build and tests to confirm that @cyclonedx/cyclonedx\u2011npm still operates correctly. The risk reduction is 44.8 points, maintaining the project grade at F (0).",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "be5b3ff2199b863a"
+    },
+    {
+      "id": "ACT-012",
+      "type": "pin-override",
+      "title": "Pin glob to 14.0.2 with npm overrides",
+      "covers_packages": [
+        "glob@10.5.0"
+      ],
+      "covers_risks": [
+        "RISK-023"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "glob",
+          "value": "14.0.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 43.4,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of glob to 14.0.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of glob for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "@cyclonedx/cyclonedx-npm has no safe upgrade that drops glob 10.5.0 (npm audit would downgrade it), so glob is pinned to 14.0.2 with npm overrides instead. Pinning glob to 14.0.2 removes a moderate advisory and reduces risk by 43.4 points. The override replaces the 10.5.0 version that @cyclonedx/cyclonedx\u2011npm originally required, potentially changing globbing semantics. The reviewer should examine the glob changelog and execute the sandbox build and tests to verify that CycloneDX generation remains unaffected. The expected risk reduction is 43.4 points, with the overall grade staying at F (0).",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "6841e73d85698ac5"
+    },
+    {
+      "id": "ACT-013",
+      "type": "replace-remove",
+      "title": "Replace or remove marsdb (no fixed version exists)",
+      "covers_packages": [
+        "marsdb@0.6.11"
+      ],
+      "covers_risks": [
+        "RISK-005"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "replacement",
+        "files_using": [
+          "data/mongodb.ts"
+        ],
+        "summary": "No patched marsdb has been published. Replacing it means code changes in data/mongodb.ts.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Replacing or removing marsdb eliminates an unpatched dependency that could be exploited. The change will require updating the code in data/mongodb.ts to use a new database library; if the replacement does not expose the same API, database queries may fail. The reviewer should verify that the new library supports the required features and that all integration tests pass. Risk reduction is only achieved after a human replaces or removes the package; the score remains unchanged until that action is taken.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Critical",
+      "confidence": 0.65,
+      "hash": "a7b80033b542ca28"
+    },
+    {
+      "id": "ACT-014",
+      "type": "replace-remove",
+      "title": "Replace or remove hbs (no fixed version exists)",
+      "covers_packages": [
+        "hbs@4.4.0"
+      ],
+      "covers_risks": [
+        "RISK-013"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "replacement",
+        "files_using": [],
+        "summary": "No patched hbs has been published. Replacing it means code changes.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Replacing or removing hbs removes a vulnerable templating engine that has no fixed version. The fix will necessitate code changes wherever hbs is used; if the new engine has a different API, rendering logic may break. The reviewer should confirm that the replacement engine can process the existing templates and that tests validate the output. Risk reduction is only achieved after a human replaces or removes the package; the score remains unchanged until that action is taken.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "High",
+      "confidence": 0.99,
+      "hash": "17b77aa3b2d3e9ad"
+    },
+    {
+      "id": "ACT-015",
+      "type": "replace-remove",
+      "title": "Replace or remove notevil (no fixed version exists)",
+      "covers_packages": [
+        "notevil@1.3.3"
+      ],
+      "covers_risks": [
+        "RISK-010"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "replacement",
+        "files_using": [
+          "routes/b2bOrder.ts"
+        ],
+        "summary": "No patched notevil has been published. Replacing it means code changes in routes/b2bOrder.ts.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Replacing or removing notevil removes an unpatched package that could be exploited. The change will require modifications to routes/b2bOrder.ts to use a different validation library; incompatibilities could cause request handling to fail. The reviewer should ensure the new library provides the same validation semantics and that all related tests succeed. Risk reduction is only achieved after a human replaces or removes the package; the score remains unchanged until that action is taken.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "High",
+      "confidence": 0.99,
+      "hash": "c72d0ef7f5d550d1"
+    },
+    {
+      "id": "ACT-016",
+      "type": "pin-action",
+      "title": "Pin 7 CI action(s) to a commit SHA",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-019"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Runs the exact same action code as today, but it can no longer change underneath you.",
+        "check": "Let a bot (Dependabot) propose SHA updates."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "SHA lookup unavailable for: actions/checkout@v6, calibreapp/image-actions@main, coverallsapp/github-action@v2, github/codeql-action/analyze@v3, github/codeql-action/autobuild@v3, github/codeql-action/init@v3, peter-evans/create-pull-request@v8. Pin by hand from each action's release page. Pinning the seven CI actions to a specific commit SHA locks the action code, preventing unintentional updates that could introduce bugs or security issues. This change does not alter the current behavior but ensures reproducibility; the only risk is that the pinned commit may become outdated. The reviewer should confirm that the pinned SHA is the latest stable release for each action and that the bot can propose updates when new releases appear. Risk reduction is only achieved after a human updates the SHA; the score remains unchanged until that action is taken.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Medium",
+      "confidence": 0.6,
+      "hash": "1b90f18b55c7c7b4"
+    },
+    {
+      "id": "ACT-017",
+      "type": "escalate",
+      "title": "Security review: install script in cypress@16.3.0",
+      "covers_packages": [
+        "cypress@16.3.0"
+      ],
+      "covers_risks": [
+        "RISK-025"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed. Pinning Cypress to a specific binary version and verifying its checksum guarantees that the exact code you expect is installed, preventing tampering. Building with --ignore-scripts in CI stops any install\u2011time scripts from running, which mitigates the risk of malicious code but may break native modules that rely on those scripts (e.g., sqlite3). The reviewer should confirm that Cypress can still build and run without its install scripts and that any required native modules are either pre\u2011built or have alternative build steps. This action does not automatically remove risk points; the risk only decreases once a human reviews, removes, or accepts the scripts.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "72813e82e7bd049f"
+    },
+    {
+      "id": "ACT-018",
+      "type": "escalate",
+      "title": "Security review: install script in esbuild@0.28.2",
+      "covers_packages": [
+        "esbuild@0.28.2"
+      ],
+      "covers_risks": [
+        "RISK-026"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1772.3,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed. Pinning esbuild to a specific binary version and checking its checksum guarantees the integrity of the package. Using --ignore\u2011scripts in CI blocks install scripts, reducing the attack surface, but may prevent native modules from compiling, which could break esbuild\u2019s functionality. The reviewer should verify that esbuild can still be built and used without its install scripts and that any native dependencies are handled separately. The risk reduction is only achieved after a human review; the current risk points remain unchanged.",
+      "rationale_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "88f12317883ccef8"
+    }
+  ],
+  "baseline": {
+    "grade": "F (0)",
+    "risk_points_total": 1772.3,
+    "advisories": 54
+  }
+}

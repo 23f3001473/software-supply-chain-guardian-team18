@@ -1,0 +1,182 @@
+{
+ "@vitest/mocker@3.2.4": {
+  "integrity": "sha512-46ryTE9RZO/rfDd7pEqFl7etuyzekzEhUbTW3BvmeO/BcCMEgq59BKhek3dXDWgAj4oMK6OZi+vRr1wPW6qjEQ==",
+  "shasum": "4471c4efbd62db0d4fa203e65cc6b058a85cabd3",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "vitestbot",
+  "url": "https://registry.npmjs.org/@vitest/mocker/3.2.4"
+ },
+ "brace-expansion@1.1.15": {
+  "integrity": "sha512-EwOCDEex4quD37XhqM3omwtMoJjr//isUZz1JopUNWms+4Z2ViyM/k1YIRePpoVNnQhENnxtFjLaxNHrT7xIUg==",
+  "shasum": "a6d90d54067236e5f42570a3b7378d594d9b7738",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "juliangruber",
+  "url": "https://registry.npmjs.org/brace-expansion/1.1.15"
+ },
+ "brace-expansion@5.0.6": {
+  "integrity": "sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g==",
+  "shasum": "ec68fe0a641a29d8711579caf641d05bae1f2285",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "tshy"
+  },
+  "deprecated": null,
+  "publisher": "juliangruber",
+  "url": "https://registry.npmjs.org/brace-expansion/5.0.6"
+ },
+ "commander@12.1.0": {
+  "integrity": "sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==",
+  "shasum": "01423b36f501259fdaac4d0e4d60c96c991585d3",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "abetomo",
+  "url": "https://registry.npmjs.org/commander/12.1.0"
+ },
+ "esbuild@0.27.7": {
+  "integrity": "sha512-IxpibTjyVnmrIQo5aqNpCgoACA/dTKLTlhMHihVHhdkxKyPO1uBBthumT0rdHmcsk9uMonIWS0m4FljWzILh3w==",
+  "shasum": "bcadce22b2f3fd76f257e3a64f83a64986fea11f",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {
+   "postinstall": "node install.js"
+  },
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/esbuild/0.27.7"
+ },
+ "esbuild@0.28.0": {
+  "integrity": "sha512-sNR9MHpXSUV/XB4zmsFKN+QgVG82Cc7+/aaxJ8Adi8hyOac+EXptIp45QBPaVyX3N70664wRbTcLTOemCAnyqw==",
+  "shasum": "5dee347ffb3e3874212a35a69836b077b1ce6d96",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {
+   "postinstall": "node install.js"
+  },
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/esbuild/0.28.0"
+ },
+ "fsevents@2.3.3": {
+  "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
+  "shasum": "cac6407785d03675a2a5e1a5305c697b347d90d6",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "install": "node-gyp rebuild"
+  },
+  "deprecated": null,
+  "publisher": "pipobscure",
+  "url": "https://registry.npmjs.org/fsevents/2.3.3"
+ },
+ "js-yaml@4.1.1": {
+  "integrity": "sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==",
+  "shasum": "854c292467705b699476e1a2decc0c8a3458806b",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "vitaly",
+  "url": "https://registry.npmjs.org/js-yaml/4.1.1"
+ },
+ "minimatch@10.2.5": {
+  "integrity": "sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==",
+  "shasum": "bd48687a0be38ed2961399105600f832095861d1",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {
+   "prepare": "tshy"
+  },
+  "deprecated": null,
+  "publisher": "isaacs",
+  "url": "https://registry.npmjs.org/minimatch/10.2.5"
+ },
+ "nanoid@3.3.12": {
+  "integrity": "sha512-ZB9RH/39qpq5Vu6Y+NmUaFhQR6pp+M2Xt76XBnEwDaGcVAqhlvxrl3B2bKS5D3NH3QR76v3aSrKaF/Kiy7lEtQ==",
+  "shasum": "ab3d912e217a6d0a514f00a72a16543a28982c05",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ai",
+  "url": "https://registry.npmjs.org/nanoid/3.3.12"
+ },
+ "picomatch@4.0.4": {
+  "integrity": "sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==",
+  "shasum": "fd6f5e00a143086e074dffe4c924b8fb293b0589",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "danez",
+  "url": "https://registry.npmjs.org/picomatch/4.0.4"
+ },
+ "postcss@8.5.15": {
+  "integrity": "sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==",
+  "shasum": "d1eaf677a324e9ec02196da2d3fecf4a0b9a735c",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ai",
+  "url": "https://registry.npmjs.org/postcss/8.5.15"
+ },
+ "source-map-js@1.2.1": {
+  "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==",
+  "shasum": "1ce5650fddd87abc099eda37dcff024c2667ae46",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "7rulnik",
+  "url": "https://registry.npmjs.org/source-map-js/1.2.1"
+ },
+ "tinypool@1.1.1": {
+  "integrity": "sha512-Zba82s87IFq9A9XmjiX5uZA/ARWDrB03OHlq+Vw1fSdt0I+4/Kutwy8BP4Y/y/aORMo61FQ0vIb5j44vSo5Pkg==",
+  "shasum": "059f2d042bd37567fbc017d3d426bdd2a2612591",
+  "attestations": false,
+  "provenance": null,
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "ariperkkio",
+  "url": "https://registry.npmjs.org/tinypool/1.1.1"
+ },
+ "vite@7.3.3": {
+  "integrity": "sha512-/4XH147Ui7OGTjg3HbdWe5arnZQSbfuRzdr9Ec7TQi5I7R+ir0Rlc9GIvD4v0XZurELqA035KVXJXpR61xhiTA==",
+  "shasum": "d7e07a52b5873fb86f902a3f4b3d17410337450f",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "GitHub Actions",
+  "url": "https://registry.npmjs.org/vite/7.3.3"
+ },
+ "vitest@3.2.4": {
+  "integrity": "sha512-LUCP5ev3GURDysTWiP47wRRUpLKMOfPh+yKTx3kVIEiu5KOMeqzpnYNsKyOoVrULivR8tLcks4+lga33Whn90A==",
+  "shasum": "0637b903ad79d1539a25bc34c0ed54b5c67702ea",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "vitestbot",
+  "url": "https://registry.npmjs.org/vitest/3.2.4"
+ },
+ "zod@3.25.76": {
+  "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==",
+  "shasum": "26841c3f6fd22a6a2760e7ccb719179768471e34",
+  "attestations": true,
+  "provenance": "https://slsa.dev/provenance/v1",
+  "scripts": {},
+  "deprecated": null,
+  "publisher": "colinhacks",
+  "url": "https://registry.npmjs.org/zod/3.25.76"
+ }
+}

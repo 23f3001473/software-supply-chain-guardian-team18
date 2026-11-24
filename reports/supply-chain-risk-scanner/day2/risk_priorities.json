@@ -1,0 +1,2213 @@
+{
+  "exploitability_notes": [
+    "GHSA-only advisories could not be mapped to CVEs (GitHub advisory API unreachable).",
+    "EPSS fetched for 27 of 28 CVEs from api.first.org.",
+    "CISA KEV catalogue checked: 0 of these CVEs are known to be exploited."
+  ],
+  "network_service": false,
+  "imports_scanned": 4,
+  "method": {
+    "severity": "CVSS base score x 4 (max 40); rating mapped when no CVSS",
+    "exploitability": "CISA KEV = 25; else EPSS percentile (5-25); else CVSS vector AV/AC/PR/UI (4-18); else 12",
+    "reachability": "imported by app code 20; via an imported dependency 14; shipped but not imported 6; dev only 2",
+    "exposure": "production + web server 15; production 10; development 3",
+    "tiers": "Critical >= 80, High >= 65, Medium >= 45, Low < 45"
+  },
+  "items": [
+    {
+      "id": "RISK-001",
+      "kind": "vulnerability",
+      "subject": "zod@3.25.76",
+      "package": "zod",
+      "version": "3.25.76",
+      "lock_path": "node_modules/zod",
+      "advisories": [
+        "GHSA-mrhx-c7xc-m3w5"
+      ],
+      "worst_severity": "high",
+      "score": 66.8,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 32.8,
+          "max_points": 40.0,
+          "reason": "CVSS 8.2 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 18.0,
+          "max_points": 25.0,
+          "reason": "CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction"
+        },
+        {
+          "factor": "reachability",
+          "points": 6.0,
+          "max_points": 20.0,
+          "reason": "shipped, but no import from application code was found"
+        },
+        {
+          "factor": "exposure",
+          "points": 10.0,
+          "max_points": 15.0,
+          "reason": "shipped in production"
+        }
+      ],
+      "confidence": 0.7,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "no import found; package could still be loaded dynamically",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "zod@3.25.76",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "zod@3.25.76"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "zod@3.25.76"
+        ],
+        "reachability": {
+          "level": "not-imported",
+          "label": "shipped, but no import from application code was found",
+          "files": [],
+          "via": [],
+          "decided": false
+        },
+        "advisories": [
+          {
+            "id": "GHSA-mrhx-c7xc-m3w5",
+            "aliases": [
+              "CVE-2023-54404"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-770"
+            ],
+            "title": "Zod can exhaust memory while validating oversized constrained collections",
+            "fixed_version": "4.6.6",
+            "reference": "https://osv.dev/vulnerability/GHSA-mrhx-c7xc-m3w5"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-770",
+            "name": "Allocation without limits",
+            "impact": "an attacker can make the service use unbounded memory or disk"
+          }
+        ],
+        "exploitability": "CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction"
+      },
+      "reasoning": "zod@3.25.76 is rated High because its worst advisory (GHSA-mrhx-c7xc-m3w5: Zod can exhaust memory while validating oversized constrained collections) means an attacker can make the service use unbounded memory or disk. CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction. It is shipped, but no import from application code was found, and shipped in production.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-002",
+      "kind": "vulnerability",
+      "subject": "vitest@3.2.4",
+      "package": "vitest",
+      "version": "3.2.4",
+      "lock_path": "node_modules/vitest",
+      "advisories": [
+        "GHSA-5xrq-8626-4rwp",
+        "GHSA-82fw-gwwq-j7x9"
+      ],
+      "worst_severity": "critical",
+      "score": 62.1,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 39.2,
+          "max_points": 40.0,
+          "reason": "CVSS 9.8 (critical) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 17.9,
+          "max_points": 25.0,
+          "reason": "EPSS 1.03% chance of exploitation in 30 days (higher than 65% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only (used in 1 test or tooling files)"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "vitest@3.2.4",
+        "direct": true,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only (used in 1 test or tooling files)",
+          "files": [
+            "tests/scanner.test.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-5xrq-8626-4rwp",
+            "aliases": [
+              "CVE-2026-47429"
+            ],
+            "severity": "critical",
+            "cvss": 9.8,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "cwe": [
+              "CWE-22",
+              "CWE-862"
+            ],
+            "title": "When Vitest UI server is listening, arbitrary file can be read and executed",
+            "fixed_version": "4.1.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-5xrq-8626-4rwp"
+          },
+          {
+            "id": "GHSA-82fw-gwwq-j7x9",
+            "aliases": [
+              "CVE-2026-84373"
+            ],
+            "severity": "moderate",
+            "cvss": 5.9,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock",
+            "fixed_version": "4.1.11",
+            "reference": "https://osv.dev/vulnerability/GHSA-82fw-gwwq-j7x9"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-22",
+            "name": "Path traversal",
+            "impact": "an attacker can read or write files outside the intended folder"
+          },
+          {
+            "cwe": "CWE-862",
+            "name": "Missing authorisation",
+            "impact": "an action has no permission check"
+          }
+        ],
+        "exploitability": "EPSS 1.03% chance of exploitation in 30 days (higher than 65% of all CVEs)"
+      },
+      "reasoning": "vitest@3.2.4 is rated Medium because its worst advisory (GHSA-5xrq-8626-4rwp: When Vitest UI server is listening, arbitrary file can be read and executed) means an attacker can read or write files outside the intended folder. EPSS 1.03% chance of exploitation in 30 days (higher than 65% of all CVEs). It is development/test tooling only (used in 1 test or tooling files), and not shipped: development dependency. 1 more advisory affects the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-003",
+      "kind": "supply-chain",
+      "subject": "2 container images are referenced by tag, not by digest",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "medium",
+      "score": 61.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "Needs review (medium) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "a mutable tag can be repointed by whoever controls the upstream image or action"
+        },
+        {
+          "factor": "reachability",
+          "points": 15.0,
+          "max_points": 20.0,
+          "reason": "decides what goes into the shipped container"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-002",
+        "category": "unpinned_container_image",
+        "facts": [
+          {
+            "fact": "node:22-slim (tag)",
+            "source": "Dockerfile"
+          },
+          {
+            "fact": "node:22-slim (tag)",
+            "source": "Dockerfile"
+          }
+        ]
+      },
+      "reasoning": "Mutable tags can be repointed upstream. A tag such as 'latest' or '24' can be moved to a different image at any time, so two builds of the same commit may ship different operating-system packages.",
+      "reasoning_source": "rule-based inference (Agent 5 rule)"
+    },
+    {
+      "id": "RISK-004",
+      "kind": "vulnerability",
+      "subject": "tinypool@1.1.1",
+      "package": "tinypool",
+      "version": "1.1.1",
+      "lock_path": "node_modules/tinypool",
+      "advisories": [
+        "GHSA-5gmw-xhrv-c9v3",
+        "GHSA-85c8-ppgw-ccpr"
+      ],
+      "worst_severity": "critical",
+      "score": 56.7,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 38.0,
+          "max_points": 40.0,
+          "reason": "CVSS 9.5 (critical) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 13.7,
+          "max_points": 25.0,
+          "reason": "EPSS 0.50% chance of exploitation in 30 days (higher than 43% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "tinypool@1.1.1",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "tinypool@1.1.1"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-5gmw-xhrv-c9v3",
+            "aliases": [
+              "CVE-2026-104848"
+            ],
+            "severity": "critical",
+            "cvss": 9.5,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "title": "Tinypool: Prototype Pollution gadget in worker options leads to Remote Code Execution",
+            "fixed_version": "2.1.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-5gmw-xhrv-c9v3"
+          },
+          {
+            "id": "GHSA-85c8-ppgw-ccpr",
+            "aliases": [
+              "CVE-2026-104849"
+            ],
+            "severity": "critical",
+            "cvss": 9.5,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+            "cwe": [
+              "CWE-1321",
+              "CWE-94"
+            ],
+            "title": "Tinypool: Prototype Pollution Gadget to RCE in run() options",
+            "fixed_version": "2.1.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-85c8-ppgw-ccpr"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1321",
+            "name": "Prototype pollution",
+            "impact": "an attacker can change properties of every object in the app, leading to bypasses or code execution"
+          }
+        ],
+        "exploitability": "EPSS 0.50% chance of exploitation in 30 days (higher than 43% of all CVEs)"
+      },
+      "reasoning": "tinypool@1.1.1 is rated Medium because its worst advisory (GHSA-5gmw-xhrv-c9v3: Tinypool: Prototype Pollution gadget in worker options leads to Remote Code Execution) means an attacker can change properties of every object in the app, leading to bypasses or code execution. EPSS 0.50% chance of exploitation in 30 days (higher than 43% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-005",
+      "kind": "vulnerability",
+      "subject": "vite@7.3.3",
+      "package": "vite",
+      "version": "7.3.3",
+      "lock_path": "node_modules/vite",
+      "advisories": [
+        "GHSA-587h-7wmj-h5pm",
+        "GHSA-fx2h-pf6j-xcff",
+        "GHSA-698v-4r3x-3vcv",
+        "GHSA-r825-w8mm-5pxw",
+        "GHSA-rq7h-c2jc-7f22",
+        "GHSA-v6wh-96g9-6wx3",
+        "GHSA-9jrq-w75r-8gcw"
+      ],
+      "worst_severity": "high",
+      "score": 55.5,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 20.5,
+          "max_points": 25.0,
+          "reason": "EPSS 1.69% chance of exploitation in 30 days (higher than 78% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "vite@7.3.3",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "vite@7.3.3"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-587h-7wmj-h5pm",
+            "aliases": [
+              "CVE-2026-112942"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-77"
+            ],
+            "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+            "fixed_version": "8.3.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-587h-7wmj-h5pm"
+          },
+          {
+            "id": "GHSA-fx2h-pf6j-xcff",
+            "aliases": [
+              "CVE-2026-53571"
+            ],
+            "severity": "moderate",
+            "cvss": 6.9,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:N/SA:N",
+            "cwe": [
+              "CWE-200",
+              "CWE-22"
+            ],
+            "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
+            "fixed_version": "8.0.16",
+            "reference": "https://osv.dev/vulnerability/GHSA-fx2h-pf6j-xcff"
+          },
+          {
+            "id": "GHSA-698v-4r3x-3vcv",
+            "aliases": [
+              "CVE-2026-112943"
+            ],
+            "severity": "moderate",
+            "cvss": 6.3,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-78"
+            ],
+            "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+            "fixed_version": "8.3.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-698v-4r3x-3vcv"
+          },
+          {
+            "id": "GHSA-r825-w8mm-5pxw",
+            "aliases": [
+              "CVE-2026-112944"
+            ],
+            "severity": "moderate",
+            "cvss": 6.3,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-88"
+            ],
+            "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+            "fixed_version": "8.3.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-r825-w8mm-5pxw"
+          },
+          {
+            "id": "GHSA-rq7h-c2jc-7f22",
+            "aliases": [
+              "CVE-2026-112946"
+            ],
+            "severity": "moderate",
+            "cvss": 6.3,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-22",
+              "CWE-284"
+            ],
+            "title": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+            "fixed_version": "8.3.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-rq7h-c2jc-7f22"
+          },
+          {
+            "id": "GHSA-v6wh-96g9-6wx3",
+            "aliases": [
+              "CVE-2026-53632"
+            ],
+            "severity": "moderate",
+            "cvss": 5.5,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H",
+            "cwe": [
+              "CWE-522",
+              "CWE-73"
+            ],
+            "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
+            "fixed_version": "8.0.16",
+            "reference": "https://osv.dev/vulnerability/GHSA-v6wh-96g9-6wx3"
+          },
+          {
+            "id": "GHSA-9jrq-w75r-8gcw",
+            "aliases": [
+              "CVE-2026-112945"
+            ],
+            "severity": "low",
+            "cvss": 2.1,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-80"
+            ],
+            "title": "Vite: Cross origin script execution through Vite custom middleware",
+            "fixed_version": "8.3.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-9jrq-w75r-8gcw"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-77",
+            "name": "Command injection",
+            "impact": "an attacker can run commands through the affected function"
+          }
+        ],
+        "exploitability": "EPSS 1.69% chance of exploitation in 30 days (higher than 78% of all CVEs)"
+      },
+      "reasoning": "vite@7.3.3 is rated Medium because its worst advisory (GHSA-587h-7wmj-h5pm: launch-editor: `fs.existsSync()` existence check can be bypassed on Windows) means an attacker can run commands through the affected function. EPSS 1.69% chance of exploitation in 30 days (higher than 78% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 6 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-006",
+      "kind": "vulnerability",
+      "subject": "js-yaml@4.1.1",
+      "package": "js-yaml",
+      "version": "4.1.1",
+      "lock_path": "node_modules/js-yaml",
+      "advisories": [
+        "GHSA-2883-xcg3-v3hh",
+        "GHSA-52cp-r559-cp3m",
+        "GHSA-5p4m-2wfm-xmqj",
+        "GHSA-h67p-54hq-rp68"
+      ],
+      "worst_severity": "high",
+      "score": 53.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 18.0,
+          "max_points": 25.0,
+          "reason": "CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "js-yaml@4.1.1",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "eslint@9.39.4",
+          "typescript-eslint@8.60.0"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "eslint@9.39.4",
+          "@eslint/eslintrc@3.3.5",
+          "js-yaml@4.1.1"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-2883-xcg3-v3hh",
+            "aliases": [
+              "CVE-2026-84375"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+            "fixed_version": "4.3.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-2883-xcg3-v3hh"
+          },
+          {
+            "id": "GHSA-52cp-r559-cp3m",
+            "aliases": [
+              "CVE-2026-59869"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
+            "fixed_version": "3.15.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-52cp-r559-cp3m"
+          },
+          {
+            "id": "GHSA-5p4m-2wfm-xmqj",
+            "aliases": [],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-407"
+            ],
+            "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+            "fixed_version": "4.3.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-5p4m-2wfm-xmqj"
+          },
+          {
+            "id": "GHSA-h67p-54hq-rp68",
+            "aliases": [
+              "CVE-2026-53550"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-407"
+            ],
+            "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+            "fixed_version": "4.2.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-h67p-54hq-rp68"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-407",
+            "name": "Inefficient algorithmic complexity",
+            "impact": "crafted input makes processing extremely slow"
+          }
+        ],
+        "exploitability": "CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction"
+      },
+      "reasoning": "js-yaml@4.1.1 is rated Medium because its worst advisory (GHSA-5p4m-2wfm-xmqj: JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported) means crafted input makes processing extremely slow. CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction. It is development/test tooling only, and not shipped: development dependency. 3 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-007",
+      "kind": "vulnerability",
+      "subject": "source-map-js@1.2.1",
+      "package": "source-map-js",
+      "version": "1.2.1",
+      "lock_path": "node_modules/source-map-js",
+      "advisories": [
+        "GHSA-68fv-2mgg-jv7q"
+      ],
+      "worst_severity": "high",
+      "score": 52.9,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 34.8,
+          "max_points": 40.0,
+          "reason": "CVSS 8.7 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 13.1,
+          "max_points": 25.0,
+          "reason": "EPSS 0.46% chance of exploitation in 30 days (higher than 40% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "source-map-js@1.2.1",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "vite@7.3.3",
+          "postcss@8.5.15",
+          "source-map-js@1.2.1"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-68fv-2mgg-jv7q",
+            "aliases": [
+              "CVE-2026-93749"
+            ],
+            "severity": "high",
+            "cvss": 8.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-1284"
+            ],
+            "title": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+            "fixed_version": "1.2.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-68fv-2mgg-jv7q"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1284",
+            "name": "see the advisory",
+            "impact": "see the advisory for impact"
+          }
+        ],
+        "exploitability": "EPSS 0.46% chance of exploitation in 30 days (higher than 40% of all CVEs)"
+      },
+      "reasoning": "source-map-js@1.2.1 is rated Medium because its worst advisory (GHSA-68fv-2mgg-jv7q: source-map-js allows event-loop denial of service through indexed source-map section offsets) means the advisory describes the impact. EPSS 0.46% chance of exploitation in 30 days (higher than 40% of all CVEs). It is development/test tooling only, and not shipped: development dependency.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-008",
+      "kind": "supply-chain",
+      "subject": "236 lockfile entries resolve outside registry.npmjs.org",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "medium",
+      "score": 52.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "Needs review (medium) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 8.0,
+          "max_points": 25.0,
+          "reason": "indirect: weakens the ability to detect tampering"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "affects how packages are trusted"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-003",
+        "category": "lockfile_modified",
+        "facts": [
+          {
+            "fact": "236 lockfile entries resolve outside registry.npmjs.org",
+            "source": "package-lock.json"
+          },
+          {
+            "fact": "node_modules/@esbuild/aix-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/aix-ppc64/-/aix-ppc64-0.28.0.tgz, node_modules/@esbuild/android-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm/-/android-arm-0.28.0.tgz, node_modules/@esbuild/android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm64/-/android-arm64-0.28.0.tgz, node_modules/@esbuild/android-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-x64/-/android-x64-0.28.0.tgz, node_modules/@esbuild/darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-arm64/-/darwin-arm64-0.28.0.tgz, node_modules/@esbuild/darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-x64/-/darwin-x64-0.28.0.tgz, node_modules/@esbuild/freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-arm64/-/freebsd-arm64-0.28.0.tgz, node_modules/@esbuild/freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-x64/-/freebsd-x64-0.28.0.tgz, node_modules/@esbuild/linux-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm/-/linux-arm-0.28.0.tgz, node_modules/@esbuild/linux-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm64/-/linux-arm64-0.28.0.tgz, node_modules/@esbuild/linux-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ia32/-/linux-ia32-0.28.0.tgz, node_modules/@esbuild/linux-loong64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-loong64/-/linux-loong64-0.28.0.tgz, node_modules/@esbuild/linux-mips64el -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-mips64el/-/linux-mips64el-0.28.0.tgz, node_modules/@esbuild/linux-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ppc64/-/linux-ppc64-0.28.0.tgz, node_modules/@esbuild/linux-riscv64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-riscv64/-/linux-riscv64-0.28.0.tgz, node_modules/@esbuild/linux-s390x -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-s390x/-/linux-s390x-0.28.0.tgz, node_modules/@esbuild/linux-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-x64/-/linux-x64-0.28.0.tgz, node_modules/@esbuild/netbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-arm64/-/netbsd-arm64-0.28.0.tgz, node_modules/@esbuild/netbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-x64/-/netbsd-x64-0.28.0.tgz, node_modules/@esbuild/openbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-arm64/-/openbsd-arm64-0.28.0.tgz, node_modules/@esbuild/openbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-x64/-/openbsd-x64-0.28.0.tgz, node_modules/@esbuild/openharmony-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openharmony-arm64/-/openharmony-arm64-0.28.0.tgz, node_modules/@esbuild/sunos-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/sunos-x64/-/sunos-x64-0.28.0.tgz, node_modules/@esbuild/win32-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-arm64/-/win32-arm64-0.28.0.tgz, node_modules/@esbuild/win32-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-ia32/-/win32-ia32-0.28.0.tgz, node_modules/@esbuild/win32-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz, node_modules/@eslint-community/eslint-utils -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/eslint-utils/-/eslint-utils-4.9.1.tgz, node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz, node_modules/@eslint-community/regexpp -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/regexpp/-/regexpp-4.12.2.tgz, node_modules/@eslint/config-array -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-array/-/config-array-0.21.2.tgz, node_modules/@eslint/config-helpers -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-helpers/-/config-helpers-0.4.2.tgz, node_modules/@eslint/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/core/-/core-0.17.0.tgz, node_modules/@eslint/eslintrc -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/eslintrc/-/eslintrc-3.3.5.tgz, node_modules/@eslint/js -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/js/-/js-9.39.4.tgz, node_modules/@eslint/object-schema -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/object-schema/-/object-schema-2.1.7.tgz, node_modules/@eslint/plugin-kit -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz, node_modules/@humanfs/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/core/-/core-0.19.2.tgz, node_modules/@humanfs/node -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/node/-/node-0.16.8.tgz, node_modules/@humanfs/types -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/types/-/types-0.15.0.tgz, node_modules/@humanwhocodes/module-importer -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz, node_modules/@humanwhocodes/retry -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/retry/-/retry-0.4.3.tgz, node_modules/@jridgewell/sourcemap-codec -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz, node_modules/@rollup/rollup-android-arm-eabi -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.60.4.tgz, node_modules/@rollup/rollup-android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.60.4.tgz, node_modules/@rollup/rollup-darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.60.4.tgz, node_modules/@rollup/rollup-darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.60.4.tgz, node_modules/@rollup/rollup-freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.60.4.tgz, node_modules/@rollup/rollup-freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.60.4.tgz, node_modules/@rollup/rollup-linux-arm-gnueabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.60.4.tgz, node_modules/@rollup/rollup-linux-arm-musleabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.60.4.tgz",
+            "source": "package-lock.json"
+          }
+        ]
+      },
+      "reasoning": "Non-registry sources bypass registry integrity guarantees.",
+      "reasoning_source": "rule-based inference (Agent 5 rule)"
+    },
+    {
+      "id": "RISK-009",
+      "kind": "supply-chain",
+      "subject": "Where every package is downloaded from \u2014 non-registry sources found",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "medium",
+      "score": 52.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "Needs review (medium) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 8.0,
+          "max_points": 25.0,
+          "reason": "indirect: weakens the ability to detect tampering"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "affects how packages are trusted"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-001",
+        "category": "provenance",
+        "facts": [
+          {
+            "fact": "Download sources in the lockfile: packages.applied-caas-gateway1.internal.api.openai.org (236)",
+            "source": "package-lock.json resolved fields"
+          },
+          {
+            "fact": "0 packages have no integrity hash; 0 only have a SHA-1 hash",
+            "source": "package-lock.json integrity fields"
+          }
+        ]
+      },
+      "reasoning": "Packages from git URLs, other hosts or without integrity hashes bypass the registry's checks, so a changed upstream repo or a compromised host could swap the code without the lockfile noticing.",
+      "reasoning_source": "rule-based inference"
+    },
+    {
+      "id": "RISK-010",
+      "kind": "vulnerability",
+      "subject": "brace-expansion@1.1.15",
+      "package": "brace-expansion",
+      "version": "1.1.15",
+      "lock_path": "node_modules/brace-expansion",
+      "advisories": [
+        "GHSA-3jxr-9vmj-r5cp",
+        "GHSA-6j4f-fj2g-mc7p",
+        "GHSA-mh99-v99m-4gvg",
+        "GHSA-qhr7-859c-m2p7",
+        "GHSA-rgw5-rvv9-x895",
+        "GHSA-q2hr-2g5m-vwhr"
+      ],
+      "worst_severity": "high",
+      "score": 50.4,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 15.4,
+          "max_points": 25.0,
+          "reason": "EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "brace-expansion@1.1.15",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "eslint@9.39.4",
+          "typescript-eslint@8.60.0"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "eslint@9.39.4",
+          "minimatch@3.1.5",
+          "brace-expansion@1.1.15"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-3jxr-9vmj-r5cp",
+            "aliases": [
+              "CVE-2026-13149"
+            ],
+            "severity": "high",
+            "cvss": 7.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+            "fixed_version": "5.0.7",
+            "reference": "https://osv.dev/vulnerability/GHSA-3jxr-9vmj-r5cp"
+          },
+          {
+            "id": "GHSA-6j4f-fj2g-mc7p",
+            "aliases": [
+              "CVE-2026-102276"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-674"
+            ],
+            "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+            "fixed_version": "5.0.10",
+            "reference": "https://osv.dev/vulnerability/GHSA-6j4f-fj2g-mc7p"
+          },
+          {
+            "id": "GHSA-mh99-v99m-4gvg",
+            "aliases": [
+              "CVE-2026-14257"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+            "fixed_version": "5.0.8",
+            "reference": "https://osv.dev/vulnerability/GHSA-mh99-v99m-4gvg"
+          },
+          {
+            "id": "GHSA-qhr7-859c-m2p7",
+            "aliases": [
+              "CVE-2026-102278"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-674"
+            ],
+            "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+            "fixed_version": "5.0.11",
+            "reference": "https://osv.dev/vulnerability/GHSA-qhr7-859c-m2p7"
+          },
+          {
+            "id": "GHSA-rgw5-rvv9-x895",
+            "aliases": [
+              "CVE-2026-69152"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+            "fixed_version": "1.1.18",
+            "reference": "https://osv.dev/vulnerability/GHSA-rgw5-rvv9-x895"
+          },
+          {
+            "id": "GHSA-q2hr-2g5m-vwhr",
+            "aliases": [
+              "CVE-2026-102277"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+            "fixed_version": "5.0.12",
+            "reference": "https://osv.dev/vulnerability/GHSA-q2hr-2g5m-vwhr"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-400",
+            "name": "Uncontrolled resource consumption",
+            "impact": "a crafted request can exhaust CPU or memory (denial of service)"
+          },
+          {
+            "cwe": "CWE-770",
+            "name": "Allocation without limits",
+            "impact": "an attacker can make the service use unbounded memory or disk"
+          }
+        ],
+        "exploitability": "EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs)"
+      },
+      "reasoning": "brace-expansion@1.1.15 is rated Medium because its worst advisory (GHSA-mh99-v99m-4gvg: brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash) means a crafted request can exhaust CPU or memory (denial of service). EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 5 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-011",
+      "kind": "vulnerability",
+      "subject": "brace-expansion@5.0.6",
+      "package": "brace-expansion",
+      "version": "5.0.6",
+      "lock_path": "node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion",
+      "advisories": [
+        "GHSA-3jxr-9vmj-r5cp",
+        "GHSA-6j4f-fj2g-mc7p",
+        "GHSA-mh99-v99m-4gvg",
+        "GHSA-qhr7-859c-m2p7",
+        "GHSA-rgw5-rvv9-x895",
+        "GHSA-q2hr-2g5m-vwhr"
+      ],
+      "worst_severity": "high",
+      "score": 50.4,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 15.4,
+          "max_points": 25.0,
+          "reason": "EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "brace-expansion@5.0.6",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "typescript-eslint@8.60.0"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "typescript-eslint@8.60.0",
+          "@typescript-eslint/typescript-estree@8.60.0",
+          "minimatch@10.2.5",
+          "brace-expansion@5.0.6"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-3jxr-9vmj-r5cp",
+            "aliases": [
+              "CVE-2026-13149"
+            ],
+            "severity": "high",
+            "cvss": 7.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+            "fixed_version": "5.0.7",
+            "reference": "https://osv.dev/vulnerability/GHSA-3jxr-9vmj-r5cp"
+          },
+          {
+            "id": "GHSA-6j4f-fj2g-mc7p",
+            "aliases": [
+              "CVE-2026-102276"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-674"
+            ],
+            "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+            "fixed_version": "5.0.10",
+            "reference": "https://osv.dev/vulnerability/GHSA-6j4f-fj2g-mc7p"
+          },
+          {
+            "id": "GHSA-mh99-v99m-4gvg",
+            "aliases": [
+              "CVE-2026-14257"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+            "fixed_version": "5.0.8",
+            "reference": "https://osv.dev/vulnerability/GHSA-mh99-v99m-4gvg"
+          },
+          {
+            "id": "GHSA-qhr7-859c-m2p7",
+            "aliases": [
+              "CVE-2026-102278"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-674"
+            ],
+            "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+            "fixed_version": "5.0.11",
+            "reference": "https://osv.dev/vulnerability/GHSA-qhr7-859c-m2p7"
+          },
+          {
+            "id": "GHSA-rgw5-rvv9-x895",
+            "aliases": [
+              "CVE-2026-69152"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+            "fixed_version": "1.1.18",
+            "reference": "https://osv.dev/vulnerability/GHSA-rgw5-rvv9-x895"
+          },
+          {
+            "id": "GHSA-q2hr-2g5m-vwhr",
+            "aliases": [
+              "CVE-2026-102277"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+            "fixed_version": "5.0.12",
+            "reference": "https://osv.dev/vulnerability/GHSA-q2hr-2g5m-vwhr"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-400",
+            "name": "Uncontrolled resource consumption",
+            "impact": "a crafted request can exhaust CPU or memory (denial of service)"
+          },
+          {
+            "cwe": "CWE-770",
+            "name": "Allocation without limits",
+            "impact": "an attacker can make the service use unbounded memory or disk"
+          }
+        ],
+        "exploitability": "EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs)"
+      },
+      "reasoning": "brace-expansion@5.0.6 is rated Medium because its worst advisory (GHSA-mh99-v99m-4gvg: brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash) means a crafted request can exhaust CPU or memory (denial of service). EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 5 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-012",
+      "kind": "vulnerability",
+      "subject": "postcss@8.5.15",
+      "package": "postcss",
+      "version": "8.5.15",
+      "lock_path": "node_modules/postcss",
+      "advisories": [
+        "GHSA-r28c-9q8g-f849",
+        "GHSA-fxqj-rqcc-2cmp"
+      ],
+      "worst_severity": "high",
+      "score": 49.1,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.1,
+          "max_points": 25.0,
+          "reason": "EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "postcss@8.5.15",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "vite@7.3.3",
+          "postcss@8.5.15"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-r28c-9q8g-f849",
+            "aliases": [
+              "CVE-2026-73646"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
+            "fixed_version": "8.5.18",
+            "reference": "https://osv.dev/vulnerability/GHSA-r28c-9q8g-f849"
+          },
+          {
+            "id": "GHSA-fxqj-rqcc-2cmp",
+            "aliases": [
+              "CVE-2026-69153"
+            ],
+            "severity": "moderate",
+            "cvss": 6.3,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-200",
+              "CWE-22"
+            ],
+            "title": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q \u2014 attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
+            "fixed_version": "8.5.23",
+            "reference": "https://osv.dev/vulnerability/GHSA-fxqj-rqcc-2cmp"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-22",
+            "name": "Path traversal",
+            "impact": "an attacker can read or write files outside the intended folder"
+          }
+        ],
+        "exploitability": "EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs)"
+      },
+      "reasoning": "postcss@8.5.15 is rated Medium because its worst advisory (GHSA-r28c-9q8g-f849: PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File\u2026) means an attacker can read or write files outside the intended folder. EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-013",
+      "kind": "vulnerability",
+      "subject": "nanoid@3.3.12",
+      "package": "nanoid",
+      "version": "3.3.12",
+      "lock_path": "node_modules/nanoid",
+      "advisories": [
+        "GHSA-28wg-ghj8-5hjv",
+        "GHSA-2v37-7h3g-55p8"
+      ],
+      "worst_severity": "high",
+      "score": 48.1,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 32.8,
+          "max_points": 40.0,
+          "reason": "CVSS 8.2 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 10.3,
+          "max_points": 25.0,
+          "reason": "EPSS 0.33% chance of exploitation in 30 days (higher than 27% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "nanoid@3.3.12",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "vite@7.3.3",
+          "postcss@8.5.15",
+          "nanoid@3.3.12"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-28wg-ghj8-5hjv",
+            "aliases": [
+              "CVE-2026-67214"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-835"
+            ],
+            "title": "nanoid: non-secure generators can loop indefinitely with negative size",
+            "fixed_version": "3.3.16",
+            "reference": "https://osv.dev/vulnerability/GHSA-28wg-ghj8-5hjv"
+          },
+          {
+            "id": "GHSA-2v37-7h3g-55p8",
+            "aliases": [
+              "CVE-2026-67213"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-835"
+            ],
+            "title": "nanoid: custom generators can loop indefinitely when size is zero",
+            "fixed_version": "3.3.18",
+            "reference": "https://osv.dev/vulnerability/GHSA-2v37-7h3g-55p8"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-835",
+            "name": "Infinite loop",
+            "impact": "crafted input hangs the process"
+          }
+        ],
+        "exploitability": "EPSS 0.33% chance of exploitation in 30 days (higher than 27% of all CVEs)"
+      },
+      "reasoning": "nanoid@3.3.12 is rated Medium because its worst advisory (GHSA-28wg-ghj8-5hjv: nanoid: non-secure generators can loop indefinitely with negative size) means crafted input hangs the process. EPSS 0.33% chance of exploitation in 30 days (higher than 27% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-014",
+      "kind": "supply-chain",
+      "subject": "2 CI actions not SHA-pinned",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 48.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "a mutable tag can be repointed by whoever controls the upstream image or action"
+        },
+        {
+          "factor": "reachability",
+          "points": 12.0,
+          "max_points": 20.0,
+          "reason": "runs in CI with the repository's token"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-007",
+        "category": "unexpected_ci_dependency",
+        "facts": [
+          {
+            "fact": "2 CI actions not SHA-pinned",
+            "source": ".github/workflows"
+          },
+          {
+            "fact": "actions/checkout@v4, actions/setup-node@v4",
+            "source": ".github/workflows"
+          }
+        ]
+      },
+      "reasoning": "Tag-pinned actions can be changed by their owners.",
+      "reasoning_source": "rule-based inference (Agent 5 rule)"
+    },
+    {
+      "id": "RISK-015",
+      "kind": "vulnerability",
+      "subject": "minimatch@10.2.5",
+      "package": "minimatch",
+      "version": "10.2.5",
+      "lock_path": "node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch",
+      "advisories": [
+        "GHSA-g3hv-75wg-m249"
+      ],
+      "worst_severity": "moderate",
+      "score": 44.8,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 27.6,
+          "max_points": 40.0,
+          "reason": "CVSS 6.9 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.2,
+          "max_points": 25.0,
+          "reason": "EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "minimatch@10.2.5",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "typescript-eslint@8.60.0"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "typescript-eslint@8.60.0",
+          "@typescript-eslint/typescript-estree@8.60.0",
+          "minimatch@10.2.5"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-g3hv-75wg-m249",
+            "aliases": [
+              "CVE-2026-118764"
+            ],
+            "severity": "moderate",
+            "cvss": 6.9,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-405"
+            ],
+            "title": "minimatch has potential denial of service via globparts amplification",
+            "fixed_version": "11.0.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-g3hv-75wg-m249"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-405",
+            "name": "Asymmetric resource consumption",
+            "impact": "a small request causes a lot of work (denial of service)"
+          }
+        ],
+        "exploitability": "EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs)"
+      },
+      "reasoning": "minimatch@10.2.5 is rated Low because its worst advisory (GHSA-g3hv-75wg-m249: minimatch has potential denial of service via globparts amplification) means a small request causes a lot of work (denial of service). EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs). It is development/test tooling only, and not shipped: development dependency.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-016",
+      "kind": "vulnerability",
+      "subject": "@vitest/mocker@3.2.4",
+      "package": "@vitest/mocker",
+      "version": "3.2.4",
+      "lock_path": "node_modules/@vitest/mocker",
+      "advisories": [
+        "GHSA-82fw-gwwq-j7x9",
+        "GHSA-qxg6-89mg-rqv8"
+      ],
+      "worst_severity": "moderate",
+      "score": 42.7,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 23.6,
+          "max_points": 40.0,
+          "reason": "CVSS 5.9 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.1,
+          "max_points": 25.0,
+          "reason": "EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "@vitest/mocker@3.2.4",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "@vitest/mocker@3.2.4"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-82fw-gwwq-j7x9",
+            "aliases": [
+              "CVE-2026-84373"
+            ],
+            "severity": "moderate",
+            "cvss": 5.9,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock",
+            "fixed_version": "4.1.11",
+            "reference": "https://osv.dev/vulnerability/GHSA-82fw-gwwq-j7x9"
+          },
+          {
+            "id": "GHSA-qxg6-89mg-rqv8",
+            "aliases": [
+              "CVE-2026-112949"
+            ],
+            "severity": "moderate",
+            "cvss": 4.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "cwe": [
+              "CWE-116",
+              "CWE-306",
+              "CWE-94"
+            ],
+            "title": "Vitest: Code injection via unauthenticated manual mock registration",
+            "fixed_version": "4.1.12",
+            "reference": "https://osv.dev/vulnerability/GHSA-qxg6-89mg-rqv8"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-22",
+            "name": "Path traversal",
+            "impact": "an attacker can read or write files outside the intended folder"
+          }
+        ],
+        "exploitability": "EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs)"
+      },
+      "reasoning": "@vitest/mocker@3.2.4 is rated Low because its worst advisory (GHSA-82fw-gwwq-j7x9: Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock) means an attacker can read or write files outside the intended folder. EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-017",
+      "kind": "supply-chain",
+      "subject": "2 of 3 production dependencies have no build provenance",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 42.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 8.0,
+          "max_points": 25.0,
+          "reason": "indirect: weakens the ability to detect tampering"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "affects how packages are trusted"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-006",
+        "category": "provenance-attestation",
+        "facts": [
+          {
+            "fact": "1 direct production dependencies publish an npm provenance attestation (built by CI from a known repo)",
+            "source": "https://registry.npmjs.org"
+          },
+          {
+            "fact": "Without attestation: commander@12.1.0, picomatch@4.0.4",
+            "source": "https://registry.npmjs.org"
+          }
+        ]
+      },
+      "reasoning": "A package without provenance was uploaded from someone's machine, so nobody can prove the tarball matches the source repository. That is normal for older packages, but it is the gap attackers use when they steal a maintainer's npm token.",
+      "reasoning_source": "rule-based inference"
+    },
+    {
+      "id": "RISK-018",
+      "kind": "supply-chain",
+      "subject": "esbuild@0.27.7 runs code when installed (download)",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 42.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.0,
+          "max_points": 25.0,
+          "reason": "code runs automatically on every npm install, with the installing user's rights"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "runs on developer and CI machines"
+        },
+        {
+          "factor": "exposure",
+          "points": 6.0,
+          "max_points": 15.0,
+          "reason": "development machines only"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-005",
+        "category": "install-script",
+        "facts": [
+          {
+            "fact": "package-lock.json marks esbuild@0.27.7 with hasInstallScript: true",
+            "source": "package-lock.json \u2192 node_modules/vite/node_modules/esbuild"
+          },
+          {
+            "fact": "Used in: development only",
+            "source": "package-lock.json"
+          },
+          {
+            "fact": "Install script published on npm: postinstall: node install.js",
+            "source": "https://registry.npmjs.org/esbuild/0.27.7"
+          },
+          {
+            "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 vitest@3.2.4 \u2192 vite@7.3.3 \u2192 esbuild@0.27.7",
+            "source": "dependency graph (Agent 3)"
+          }
+        ]
+      },
+      "reasoning": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "reasoning_source": "rule-based inference (pattern match on the script text)"
+    },
+    {
+      "id": "RISK-019",
+      "kind": "supply-chain",
+      "subject": "esbuild@0.28.0 runs code when installed (download)",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 42.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.0,
+          "max_points": 25.0,
+          "reason": "code runs automatically on every npm install, with the installing user's rights"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "runs on developer and CI machines"
+        },
+        {
+          "factor": "exposure",
+          "points": 6.0,
+          "max_points": 15.0,
+          "reason": "development machines only"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-004",
+        "category": "install-script",
+        "facts": [
+          {
+            "fact": "package-lock.json marks esbuild@0.28.0 with hasInstallScript: true",
+            "source": "package-lock.json \u2192 node_modules/esbuild"
+          },
+          {
+            "fact": "Used in: development only",
+            "source": "package-lock.json"
+          },
+          {
+            "fact": "Install script published on npm: postinstall: node install.js",
+            "source": "https://registry.npmjs.org/esbuild/0.28.0"
+          },
+          {
+            "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 tsx@4.22.3 \u2192 esbuild@0.28.0",
+            "source": "dependency graph (Agent 3)"
+          }
+        ]
+      },
+      "reasoning": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "reasoning_source": "rule-based inference (pattern match on the script text)"
+    },
+    {
+      "id": "RISK-020",
+      "kind": "vulnerability",
+      "subject": "esbuild@0.27.7",
+      "package": "esbuild",
+      "version": "0.27.7",
+      "lock_path": "node_modules/vite/node_modules/esbuild",
+      "advisories": [
+        "GHSA-g7r4-m6w7-qqqr"
+      ],
+      "worst_severity": "low",
+      "score": 22.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 10.0,
+          "max_points": 40.0,
+          "reason": "CVSS 2.5 (low) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 7.0,
+          "max_points": 25.0,
+          "reason": "CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "esbuild@0.27.7",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "vitest@3.2.4",
+          "vite@7.3.3",
+          "esbuild@0.27.7"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-g7r4-m6w7-qqqr",
+            "aliases": [],
+            "severity": "low",
+            "cvss": 2.5,
+            "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "esbuild allows arbitrary file read when running the development server on Windows",
+            "fixed_version": "0.28.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-g7r4-m6w7-qqqr"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-22",
+            "name": "Path traversal",
+            "impact": "an attacker can read or write files outside the intended folder"
+          }
+        ],
+        "exploitability": "CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction"
+      },
+      "reasoning": "esbuild@0.27.7 is rated Low because its worst advisory (GHSA-g7r4-m6w7-qqqr: esbuild allows arbitrary file read when running the development server on Windows) means an attacker can read or write files outside the intended folder. CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction. It is development/test tooling only, and not shipped: development dependency.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    },
+    {
+      "id": "RISK-021",
+      "kind": "vulnerability",
+      "subject": "esbuild@0.28.0",
+      "package": "esbuild",
+      "version": "0.28.0",
+      "lock_path": "node_modules/esbuild",
+      "advisories": [
+        "GHSA-g7r4-m6w7-qqqr"
+      ],
+      "worst_severity": "low",
+      "score": 22.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 10.0,
+          "max_points": 40.0,
+          "reason": "CVSS 2.5 (low) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 7.0,
+          "max_points": 25.0,
+          "reason": "CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "esbuild@0.28.0",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "tsx@4.22.3",
+          "vitest@3.2.4"
+        ],
+        "dependency_path": [
+          "supply-chain-risk-scanner@0.1.0",
+          "tsx@4.22.3",
+          "esbuild@0.28.0"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-g7r4-m6w7-qqqr",
+            "aliases": [],
+            "severity": "low",
+            "cvss": 2.5,
+            "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "esbuild allows arbitrary file read when running the development server on Windows",
+            "fixed_version": "0.28.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-g7r4-m6w7-qqqr"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-22",
+            "name": "Path traversal",
+            "impact": "an attacker can read or write files outside the intended folder"
+          }
+        ],
+        "exploitability": "CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction"
+      },
+      "reasoning": "esbuild@0.28.0 is rated Low because its worst advisory (GHSA-g7r4-m6w7-qqqr: esbuild allows arbitrary file read when running the development server on Windows) means an attacker can read or write files outside the intended folder. CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction. It is development/test tooling only, and not shipped: development dependency.",
+      "reasoning_source": "rule-based reasoning (LLM call failed: HTTPError)"
+    }
+  ]
+}

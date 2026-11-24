@@ -1,0 +1,35 @@
+diff --git a/package.json b/package.json
+index 35556b7..ff7f91a 100644
+--- a/package.json
++++ b/package.json
+@@ -5,9 +5,18 @@
+   "type": "module",
+   "license": "MIT",
+   "author": "Sergey Chekriy",
+-  "engines": { "node": ">=20" },
+-  "bin": { "scrs": "./dist/cli.js", "supply-chain-risk-scanner": "./dist/cli.js" },
+-  "files": ["dist", "README.md", "LICENSE"],
++  "engines": {
++    "node": ">=20"
++  },
++  "bin": {
++    "scrs": "./dist/cli.js",
++    "supply-chain-risk-scanner": "./dist/cli.js"
++  },
++  "files": [
++    "dist",
++    "README.md",
++    "LICENSE"
++  ],
+   "scripts": {
+     "dev": "tsx src/cli.ts",
+     "build": "tsc",
+@@ -23,7 +32,7 @@
+   "dependencies": {
+     "commander": "^12.1.0",
+     "picomatch": "^4.0.2",
+-    "zod": "^3.25.28"
++    "zod": "^4.6.6"
+   },
+   "devDependencies": {
+     "@eslint/js": "^9.27.0",

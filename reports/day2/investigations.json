@@ -1,0 +1,403 @@
+{
+  "registry": "npm registry metadata read for 74 of 74 packages",
+  "items": [
+    {
+      "id": "INV-001",
+      "category": "install-script",
+      "title": "@scarf/scarf@1.4.0 runs code when installed (telemetry)",
+      "subject": "@scarf/scarf@1.4.0",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks @scarf/scarf@1.4.0 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/@scarf/scarf"
+        },
+        {
+          "fact": "Used in: production",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node ./report.js",
+          "source": "https://registry.npmjs.org/@scarf/scarf/1.4.0"
+        },
+        {
+          "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 swagger-ui-express@5.0.1 \u2192 swagger-ui-dist@5.36.0 \u2192 @scarf/scarf@1.4.0",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "@scarf/scarf@1.4.0 is installed in production and has an install script that runs a file called report.js. The script could be used for telemetry or, if malicious, could exfiltrate data from the host. The evidence does not prove malicious intent, but the presence of a post\u2011install script in a production dependency is a risk that should be examined. A reviewer should inspect the contents of report.js, verify its source and intent, and confirm that the telemetry is expected and safe.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Disable the telemetry (for Scarf: add \"scarfSettings\": {\"enabled\": false} to package.json, or set SCARF_ANALYTICS=false) or install with --ignore-scripts.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-002",
+      "category": "deprecated",
+      "title": "10 installed packages are deprecated by their maintainers",
+      "subject": "npm registry",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "crypto-js@3.3.0: \"Active development of CryptoJS has been discontinued. This library is no longer maintained.\"",
+          "source": "https://registry.npmjs.org/crypto-js"
+        },
+        {
+          "fact": "glob@10.5.0: \"Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version\"",
+          "source": "https://registry.npmjs.org/glob"
+        },
+        {
+          "fact": "jsonwebtoken@0.1.0: \"Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\"",
+          "source": "https://registry.npmjs.org/jsonwebtoken"
+        },
+        {
+          "fact": "jsonwebtoken@0.4.0: \"Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\"",
+          "source": "https://registry.npmjs.org/jsonwebtoken"
+        },
+        {
+          "fact": "jws@0.2.6: \"Security update: Versions below 3.0.0 are deprecated.\"",
+          "source": "https://registry.npmjs.org/jws"
+        },
+        {
+          "fact": "notevil@1.3.3: \"Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.\"",
+          "source": "https://registry.npmjs.org/notevil"
+        },
+        {
+          "fact": "prom-client@15.1.3: \"prom-client has been replaced by @prometheus-io/client\"",
+          "source": "https://registry.npmjs.org/prom-client"
+        },
+        {
+          "fact": "tar@6.2.1: \"Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version.\"",
+          "source": "https://registry.npmjs.org/tar"
+        },
+        {
+          "fact": "uuid@8.3.2: \"uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this\"",
+          "source": "https://registry.npmjs.org/uuid"
+        },
+        {
+          "fact": "messageformat@2.3.0: \"Package renamed as '@messageformat/core', see messageformat.github.io for more details. 'messageformat@4' will eventually provide a polyfill\"",
+          "source": "https://registry.npmjs.org/messageformat"
+        }
+      ],
+      "inference": "Using 10 deprecated npm packages means the application relies on libraries that are no longer maintained or have known security issues. An attacker could exploit the documented vulnerabilities in these packages to inject malicious code or compromise data. The evidence indicates that the maintainers have discontinued support or fixed critical bugs in newer releases, so this is a risky-but-normal finding that requires remediation. A reviewer should first verify whether the deprecated packages are actually used in the code, check for available newer versions, and assess if any known vulnerabilities still affect the current usage.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Replace each with the alternative its maintainer recommends in the deprecation message.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-003",
+      "category": "unpinned_container_image",
+      "title": "10 container images are referenced by tag, not by digest",
+      "subject": "Dockerfile, docker-compose.test.yml, infrastructure/Dockerfile, infrastructure/docker-compose.yml, test/smoke/Dockerfile",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "node:24 (tag)",
+          "source": "Dockerfile"
+        },
+        {
+          "fact": "gcr.io/distroless/nodejs24-debian13:latest (tag (implicit latest))",
+          "source": "Dockerfile"
+        },
+        {
+          "fact": "bkimminich/juice-shop:latest (tag (latest))",
+          "source": "docker-compose.test.yml"
+        },
+        {
+          "fact": "node:20.19.2-bookworm-slim (tag)",
+          "source": "infrastructure/Dockerfile"
+        },
+        {
+          "fact": "node:20.19.2-bookworm (tag)",
+          "source": "infrastructure/Dockerfile"
+        },
+        {
+          "fact": "nginx:1.28.0-alpine (tag)",
+          "source": "infrastructure/docker-compose.yml"
+        },
+        {
+          "fact": "juice-shop:latest (tag (latest))",
+          "source": "infrastructure/docker-compose.yml"
+        },
+        {
+          "fact": "redis:7.4.4-alpine (tag)",
+          "source": "infrastructure/docker-compose.yml"
+        },
+        {
+          "fact": "mongo:4.4.29 (tag)",
+          "source": "infrastructure/docker-compose.yml"
+        },
+        {
+          "fact": "alpine:latest (tag (implicit latest))",
+          "source": "test/smoke/Dockerfile"
+        }
+      ],
+      "inference": "Referencing container images by tag rather than by digest allows the image content to change without notice, which can introduce malicious code if the registry is compromised or the image is updated. The evidence lists tags such as node:24, latest, and nginx:1.28.0-alpine, all of which could point to different image layers over time. This is a risky-but-normal observation that could be exploited if an attacker pushes a malicious image under the same tag. A reviewer should first confirm the source of each image, consider pinning to a specific digest, and verify that the images come from trusted registries.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Pin the image by digest (image@sha256:...) so the same bytes are used every build, and update the digest deliberately.",
+      "day1_ref": "SC-001, SC-002, SC-003, SC-004, SC-005, SC-006, SC-007, SC-008, SC-009, SC-010"
+    },
+    {
+      "id": "INV-004",
+      "category": "install-script",
+      "title": "cypress@16.3.0 runs code when installed (download)",
+      "subject": "cypress@16.3.0",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks cypress@16.3.0 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/cypress"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node dist/index.js --exec install",
+          "source": "https://registry.npmjs.org/cypress/16.3.0"
+        },
+        {
+          "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 cypress@16.3.0",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "cypress@16.3.0 is a development\u2011only dependency that runs a post\u2011install script (dist/index.js --exec install). This script typically downloads Cypress binaries, but an attacker could alter it to fetch malicious code. The evidence suggests a normal pattern for Cypress, yet the script execution introduces a potential attack vector. A reviewer should review the script\u2019s contents, confirm it only downloads the intended binaries, and check the integrity of the downloaded files.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-005",
+      "category": "install-script",
+      "title": "esbuild@0.28.2 runs code when installed (download)",
+      "subject": "esbuild@0.28.2",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks esbuild@0.28.2 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/esbuild"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node install.js",
+          "source": "https://registry.npmjs.org/esbuild/0.28.2"
+        },
+        {
+          "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 tsx@4.23.15 \u2192 esbuild@0.28.2",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "esbuild@0.28.2 is used only in development and executes an install.js script during installation. This script usually compiles native binaries for esbuild, but could be modified to run arbitrary code. The evidence indicates a typical build\u2011time activity, yet any install script can be a risk. A reviewer should examine install.js, verify its checksum, and ensure it performs only the expected compilation steps.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-006",
+      "category": "provenance-attestation",
+      "title": "36 of 56 production dependencies have no build provenance",
+      "subject": "package.json",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "20 direct production dependencies publish an npm provenance attestation (built by CI from a known repo)",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "Without attestation: @types/cors@2.8.19, @types/node@26.6.6, clarinet@0.12.6, config@3.3.12, cookie-parser@1.4.7, cookieconsent@3.1.1, cors@2.8.6, errorhandler@1.5.2, ethers@6.17.0, express-jwt@0.1.3, express-robots-txt@0.5.0, express-security.txt@2.0.0, feature-policy@0.6.0, file-stream-rotator@1.0.0, file-type@16.5.4\u2026",
+          "source": "https://registry.npmjs.org"
+        }
+      ],
+      "inference": "Out of 56 production dependencies, 36 lack npm provenance attestations, meaning their build provenance is not publicly documented. This absence could allow an attacker to supply a tampered package without detection. The evidence indicates a significant risk, though it does not confirm malicious activity. A reviewer should verify the integrity of each missing\u2011provenance package (e.g., via checksums or lockfile hashes), consider adding provenance where possible, and assess whether the missing attestations affect critical components.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Prefer versions with provenance when upgrading; for critical packages, compare the tarball with the tagged source.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-007",
+      "category": "unexpected_ci_dependency",
+      "title": "7 CI actions not SHA-pinned",
+      "subject": ".github/workflows",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "7 CI actions not SHA-pinned",
+          "source": ".github/workflows"
+        },
+        {
+          "fact": "actions/checkout@v6, calibreapp/image-actions@main, coverallsapp/github-action@v2, github/codeql-action/analyze@v3, github/codeql-action/autobuild@v3, github/codeql-action/init@v3, peter-evans/create-pull-request@v8",
+          "source": ".github/workflows"
+        }
+      ],
+      "inference": "Using CI actions that are not SHA-pinned means the workflow could automatically pull a newer, potentially malicious version of an action at each run. The evidence lists actions like actions/checkout@v6 and github/codeql-action/analyze@v3, which are not tied to a specific commit. This is a risky-but-normal finding because the actions could be compromised if the publisher is malicious or the action repository is hijacked. A reviewer should first check that each action comes from a reputable source, consider adding SHA pinning, and review the action code for any suspicious behavior.",
+      "inference_source": "AI inference (openai/gpt-oss-20b), grounding check passed",
+      "remedy": "Review the action's source, pin it to a full commit SHA, and give the workflow the minimum token permissions it needs.",
+      "day1_ref": "SC-011"
+    },
+    {
+      "id": "INV-008",
+      "category": "install-script",
+      "title": "fsevents@2.3.3 runs code when installed (native build)",
+      "subject": "fsevents@2.3.3",
+      "verdict": "Expected",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks fsevents@2.3.3 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/fsevents"
+        },
+        {
+          "fact": "Used in: development only, optional (only installed on some platforms)",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: install: node-gyp rebuild",
+          "source": "https://registry.npmjs.org/fsevents/2.3.3"
+        },
+        {
+          "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 tsx@4.23.15 \u2192 fsevents@2.3.3",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script compiles native code (normal for database or XML drivers), but it still runs arbitrary build commands on the machine.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Allow-list it explicitly (e.g. npm's --ignore-scripts plus a reviewed rebuild step) and keep it updated.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-009",
+      "category": "install-script",
+      "title": "libxmljs2@0.37.0 runs code when installed (native build)",
+      "subject": "libxmljs2@0.37.0",
+      "verdict": "Expected",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks libxmljs2@0.37.0 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/libxmljs2"
+        },
+        {
+          "fact": "Used in: development only, optional (only installed on some platforms)",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: install: prebuild-install || node-gyp rebuild",
+          "source": "https://registry.npmjs.org/libxmljs2/0.37.0"
+        },
+        {
+          "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 @cyclonedx/cyclonedx-npm@4.2.1 \u2192 libxmljs2@0.37.0",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script compiles native code (normal for database or XML drivers), but it still runs arbitrary build commands on the machine.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Allow-list it explicitly (e.g. npm's --ignore-scripts plus a reviewed rebuild step) and keep it updated.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-010",
+      "category": "install-script",
+      "title": "sqlite3@5.1.7 runs code when installed (native build)",
+      "subject": "sqlite3@5.1.7",
+      "verdict": "Expected",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks sqlite3@5.1.7 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/sqlite3"
+        },
+        {
+          "fact": "Used in: production",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: install: prebuild-install -r napi || node-gyp rebuild",
+          "source": "https://registry.npmjs.org/sqlite3/5.1.7"
+        },
+        {
+          "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 sqlite3@5.1.7",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script compiles native code (normal for database or XML drivers), but it still runs arbitrary build commands on the machine.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Allow-list it explicitly (e.g. npm's --ignore-scripts plus a reviewed rebuild step) and keep it updated.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-011",
+      "category": "provenance",
+      "title": "Where every package is downloaded from",
+      "subject": "package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "Download sources in the lockfile: registry.npmjs.org (1249)",
+          "source": "package-lock.json resolved fields"
+        },
+        {
+          "fact": "0 packages have no integrity hash; 0 only have a SHA-1 hash",
+          "source": "package-lock.json integrity fields"
+        }
+      ],
+      "inference": "Every package comes from the official npm registry with a SHA-512 integrity hash, so npm will refuse any download whose bytes differ from what was locked.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed; keep using npm ci so integrity is enforced.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-012",
+      "category": "integrity",
+      "title": "Lockfile hashes match the registry (74 packages checked)",
+      "subject": "package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "Compared the integrity hash of 74 locked packages with the hash the npm registry publishes",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "0 mismatches",
+          "source": "package-lock.json vs registry"
+        }
+      ],
+      "inference": "The locked bytes are exactly what the registry published for these versions; no sign of lockfile tampering.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-013",
+      "category": "manifest-lockfile",
+      "title": "package.json and the lockfile agree",
+      "subject": "package.json \u2194 package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "56 production and 42 development dependencies declared",
+          "source": "package.json"
+        },
+        {
+          "fact": "Every declared dependency is locked",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Installs are reproducible: every declared dependency is pinned by the lockfile.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    }
+  ]
+}

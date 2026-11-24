@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T12:02:35.446748+00:00",
-  "repo": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day1 (1)\\software-supply-chain-guardian\\target\\juice-shop",
+  "generated_at": "2026-11-24T05:44:14.392477+00:00",
+  "repo": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\target\\juice-shop",
   "commit": "c9f99228d9d56afb5f5ca7925376292f7fa44b13",
   "metrics": {
     "total_components": 1353,
     "npm_packages": 1249,
     "direct_dependencies": 98,
     "transitive_dependencies": 1151,
-    "sbom_components": 585,
+    "sbom_components": 584,
     "graph_nodes": 1250,
     "graph_edges": 2269,
     "vulnerabilities": 54,
@@ -51,17 +51,17 @@
   "scanner": "osv",
   "scanner_notes": [],
   "sbom": {
-    "path": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day1 (1)\\software-supply-chain-guardian\\reports\\juice-shop-sbom.json",
+    "path": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\reports\\juice-shop-sbom.json",
     "tool": "syft",
     "format": "CycloneDX",
     "spec_version": "1.6",
-    "component_count": 585,
-    "npm_component_count": 534,
-    "matched_inventory": 533,
+    "component_count": 584,
+    "npm_component_count": 533,
+    "matched_inventory": 532,
     "sbom_only": [
       "juice-shop@20.4.0-SNAPSHOT"
     ],
-    "note": "SBOM lists shipped (non-dev) npm packages. Inventory has 533 unique non-dev name@version pairs; 533 match the SBOM."
+    "note": "SBOM lists shipped (non-dev) npm packages. Inventory has 532 unique non-dev name@version pairs; 532 match the SBOM."
   },
   "agent_log": [
     {
@@ -72,7 +72,7 @@
     {
       "agent": "2. SBOM Agent",
       "status": "ok",
-      "message": "CycloneDX 1.6 via syft: 585 components"
+      "message": "CycloneDX 1.6 via syft: 584 components"
     },
     {
       "agent": "3. Dependency Analysis Agent",

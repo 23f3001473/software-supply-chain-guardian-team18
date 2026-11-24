@@ -1,0 +1,3093 @@
+{
+  "exploitability_notes": [
+    "0 of 2 GHSA-only advisories mapped to a CVE via the GitHub advisory API",
+    "EPSS fetched for 48 of 49 CVEs from api.first.org.",
+    "CISA KEV catalogue checked: 0 of these CVEs are known to be exploited."
+  ],
+  "network_service": true,
+  "imports_scanned": 58,
+  "method": {
+    "severity": "CVSS base score x 4 (max 40); rating mapped when no CVSS",
+    "exploitability": "CISA KEV = 25; else EPSS percentile (5-25); else CVSS vector AV/AC/PR/UI (4-18); else 12",
+    "reachability": "imported by app code 20; via an imported dependency 14; shipped but not imported 6; dev only 2",
+    "exposure": "production + web server 15; production 10; development 3",
+    "tiers": "Critical >= 80, High >= 65, Medium >= 45, Low < 45"
+  },
+  "items": [
+    {
+      "id": "RISK-001",
+      "kind": "vulnerability",
+      "subject": "jsonwebtoken@0.4.0",
+      "package": "jsonwebtoken",
+      "version": "0.4.0",
+      "lock_path": "node_modules/jsonwebtoken",
+      "advisories": [
+        "GHSA-c7hr-j4mj-j2w6",
+        "GHSA-8cf7-32gw-wr33",
+        "GHSA-qwph-4952-7xr6",
+        "GHSA-hjrf-2m68-5959"
+      ],
+      "worst_severity": "critical",
+      "score": 97.0,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 38.0,
+          "max_points": 40.0,
+          "reason": "no CVSS score published; 'critical' rating counted as 9.5"
+        },
+        {
+          "factor": "exploitability",
+          "points": 24.0,
+          "max_points": 25.0,
+          "reason": "EPSS 8.37% chance of exploitation in 30 days (higher than 95% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "imported by application code in 4 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.8,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "no CVSS vector: severity taken from the rating",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "jsonwebtoken@0.4.0",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "jsonwebtoken@0.4.0"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "jsonwebtoken@0.4.0"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "imported by application code in 4 file(s)",
+          "files": [
+            "lib/insecurity.ts",
+            "routes/authenticatedUsers.ts",
+            "routes/passkey.ts",
+            "routes/verify.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-c7hr-j4mj-j2w6",
+            "aliases": [
+              "CVE-2015-9235"
+            ],
+            "severity": "critical",
+            "cvss": null,
+            "cvss_vector": null,
+            "cwe": [
+              "CWE-20"
+            ],
+            "title": "Verification Bypass in jsonwebtoken",
+            "fixed_version": "4.2.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-c7hr-j4mj-j2w6"
+          },
+          {
+            "id": "GHSA-8cf7-32gw-wr33",
+            "aliases": [
+              "CVE-2022-23539"
+            ],
+            "severity": "high",
+            "cvss": 8.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "cwe": [
+              "CWE-327"
+            ],
+            "title": "jsonwebtoken unrestricted key type could lead to legacy keys usage ",
+            "fixed_version": "9.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-8cf7-32gw-wr33"
+          },
+          {
+            "id": "GHSA-qwph-4952-7xr6",
+            "aliases": [
+              "CVE-2022-23540"
+            ],
+            "severity": "moderate",
+            "cvss": 6.4,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L",
+            "cwe": [
+              "CWE-287",
+              "CWE-327",
+              "CWE-347"
+            ],
+            "title": "jsonwebtoken vulnerable to signature validation bypass due to insecure default algorithm in jwt.verify()",
+            "fixed_version": "9.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-qwph-4952-7xr6"
+          },
+          {
+            "id": "GHSA-hjrf-2m68-5959",
+            "aliases": [
+              "CVE-2022-23541"
+            ],
+            "severity": "moderate",
+            "cvss": 5.0,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "cwe": [
+              "CWE-1259",
+              "CWE-287"
+            ],
+            "title": "jsonwebtoken's insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+            "fixed_version": "9.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-hjrf-2m68-5959"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-20",
+            "name": "Improper input validation",
+            "impact": "input the code does not check can push it into unintended behaviour"
+          }
+        ],
+        "exploitability": "EPSS 8.37% chance of exploitation in 30 days (higher than 95% of all CVEs)"
+      },
+      "reasoning": "jsonwebtoken@0.4.0 is rated Critical because its worst advisory (GHSA-c7hr-j4mj-j2w6: Verification Bypass in jsonwebtoken) means input the code does not check can push it into unintended behaviour. EPSS 8.37% chance of exploitation in 30 days (higher than 95% of all CVEs). It is imported by application code in 4 file(s), and shipped in production in an internet-facing web server. 3 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-002",
+      "kind": "vulnerability",
+      "subject": "jsonwebtoken@0.1.0",
+      "package": "jsonwebtoken",
+      "version": "0.1.0",
+      "lock_path": "node_modules/express-jwt/node_modules/jsonwebtoken",
+      "advisories": [
+        "GHSA-c7hr-j4mj-j2w6",
+        "GHSA-8cf7-32gw-wr33",
+        "GHSA-qwph-4952-7xr6",
+        "GHSA-hjrf-2m68-5959"
+      ],
+      "worst_severity": "critical",
+      "score": 91.0,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 38.0,
+          "max_points": 40.0,
+          "reason": "no CVSS score published; 'critical' rating counted as 9.5"
+        },
+        {
+          "factor": "exploitability",
+          "points": 24.0,
+          "max_points": 25.0,
+          "reason": "EPSS 8.37% chance of exploitation in 30 days (higher than 95% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through express-jwt, which application code imports in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.8,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "no CVSS vector: severity taken from the rating",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "jsonwebtoken@0.1.0",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "express-jwt@0.1.3"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "express-jwt@0.1.3",
+          "jsonwebtoken@0.1.0"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through express-jwt, which application code imports in 1 file(s)",
+          "files": [
+            "lib/insecurity.ts"
+          ],
+          "via": [
+            "express-jwt"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-c7hr-j4mj-j2w6",
+            "aliases": [
+              "CVE-2015-9235"
+            ],
+            "severity": "critical",
+            "cvss": null,
+            "cvss_vector": null,
+            "cwe": [
+              "CWE-20"
+            ],
+            "title": "Verification Bypass in jsonwebtoken",
+            "fixed_version": "4.2.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-c7hr-j4mj-j2w6"
+          },
+          {
+            "id": "GHSA-8cf7-32gw-wr33",
+            "aliases": [
+              "CVE-2022-23539"
+            ],
+            "severity": "high",
+            "cvss": 8.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "cwe": [
+              "CWE-327"
+            ],
+            "title": "jsonwebtoken unrestricted key type could lead to legacy keys usage ",
+            "fixed_version": "9.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-8cf7-32gw-wr33"
+          },
+          {
+            "id": "GHSA-qwph-4952-7xr6",
+            "aliases": [
+              "CVE-2022-23540"
+            ],
+            "severity": "moderate",
+            "cvss": 6.4,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L",
+            "cwe": [
+              "CWE-287",
+              "CWE-327",
+              "CWE-347"
+            ],
+            "title": "jsonwebtoken vulnerable to signature validation bypass due to insecure default algorithm in jwt.verify()",
+            "fixed_version": "9.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-qwph-4952-7xr6"
+          },
+          {
+            "id": "GHSA-hjrf-2m68-5959",
+            "aliases": [
+              "CVE-2022-23541"
+            ],
+            "severity": "moderate",
+            "cvss": 5.0,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "cwe": [
+              "CWE-1259",
+              "CWE-287"
+            ],
+            "title": "jsonwebtoken's insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+            "fixed_version": "9.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-hjrf-2m68-5959"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-20",
+            "name": "Improper input validation",
+            "impact": "input the code does not check can push it into unintended behaviour"
+          }
+        ],
+        "exploitability": "EPSS 8.37% chance of exploitation in 30 days (higher than 95% of all CVEs)"
+      },
+      "reasoning": "jsonwebtoken@0.1.0 is rated Critical because its worst advisory (GHSA-c7hr-j4mj-j2w6: Verification Bypass in jsonwebtoken) means input the code does not check can push it into unintended behaviour. EPSS 8.37% chance of exploitation in 30 days (higher than 95% of all CVEs). It is loaded through express-jwt, which application code imports in 1 file(s), and shipped in production in an internet-facing web server. 3 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-003",
+      "kind": "vulnerability",
+      "subject": "lodash@2.4.2",
+      "package": "lodash",
+      "version": "2.4.2",
+      "lock_path": "node_modules/sanitize-html/node_modules/lodash",
+      "advisories": [
+        "GHSA-jf85-cpcp-j695",
+        "GHSA-35jh-r3h4-6jhm",
+        "GHSA-4xc9-xhrj-v574",
+        "GHSA-fvqr-27wr-82fm"
+      ],
+      "worst_severity": "critical",
+      "score": 88.9,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 36.4,
+          "max_points": 40.0,
+          "reason": "CVSS 9.1 (critical) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 23.5,
+          "max_points": 25.0,
+          "reason": "EPSS 5.01% chance of exploitation in 30 days (higher than 92% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through sanitize-html, which application code imports in 2 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "lodash@2.4.2",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "sanitize-html@1.4.2"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "sanitize-html@1.4.2",
+          "lodash@2.4.2"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through sanitize-html, which application code imports in 2 file(s)",
+          "files": [
+            "lib/challengeUtils.ts",
+            "lib/insecurity.ts"
+          ],
+          "via": [
+            "sanitize-html"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-jf85-cpcp-j695",
+            "aliases": [
+              "CVE-2019-10744",
+              "SNYK-JS-LODASH-450202"
+            ],
+            "severity": "critical",
+            "cvss": 9.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+            "cwe": [
+              "CWE-1321",
+              "CWE-20"
+            ],
+            "title": "Prototype Pollution in lodash",
+            "fixed_version": "4.17.12",
+            "reference": "https://osv.dev/vulnerability/GHSA-jf85-cpcp-j695"
+          },
+          {
+            "id": "GHSA-35jh-r3h4-6jhm",
+            "aliases": [
+              "CVE-2021-23337"
+            ],
+            "severity": "high",
+            "cvss": 7.2,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "cwe": [
+              "CWE-77",
+              "CWE-94"
+            ],
+            "title": "Command Injection in lodash",
+            "fixed_version": "4.17.21",
+            "reference": "https://osv.dev/vulnerability/GHSA-35jh-r3h4-6jhm"
+          },
+          {
+            "id": "GHSA-4xc9-xhrj-v574",
+            "aliases": [
+              "CVE-2018-16487"
+            ],
+            "severity": "high",
+            "cvss": null,
+            "cvss_vector": null,
+            "cwe": [
+              "CWE-400"
+            ],
+            "title": "Prototype Pollution in lodash",
+            "fixed_version": "4.17.11",
+            "reference": "https://osv.dev/vulnerability/GHSA-4xc9-xhrj-v574"
+          },
+          {
+            "id": "GHSA-fvqr-27wr-82fm",
+            "aliases": [
+              "CVE-2018-3721"
+            ],
+            "severity": "moderate",
+            "cvss": 6.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "cwe": [
+              "CWE-1321",
+              "CWE-471"
+            ],
+            "title": "Prototype Pollution in lodash",
+            "fixed_version": "4.17.5",
+            "reference": "https://osv.dev/vulnerability/GHSA-fvqr-27wr-82fm"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1321",
+            "name": "Prototype pollution",
+            "impact": "an attacker can change properties of every object in the app, leading to bypasses or code execution"
+          },
+          {
+            "cwe": "CWE-20",
+            "name": "Improper input validation",
+            "impact": "input the code does not check can push it into unintended behaviour"
+          }
+        ],
+        "exploitability": "EPSS 5.01% chance of exploitation in 30 days (higher than 92% of all CVEs)"
+      },
+      "reasoning": "lodash@2.4.2 is rated Critical because its worst advisory (GHSA-jf85-cpcp-j695: Prototype Pollution in lodash) means an attacker can change properties of every object in the app, leading to bypasses or code execution. EPSS 5.01% chance of exploitation in 30 days (higher than 92% of all CVEs). It is loaded through sanitize-html, which application code imports in 2 file(s), and shipped in production in an internet-facing web server. 3 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-004",
+      "kind": "vulnerability",
+      "subject": "sanitize-html@1.4.2",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "lock_path": "node_modules/sanitize-html",
+      "advisories": [
+        "GHSA-cgfm-xwp7-2cvr",
+        "GHSA-3j7m-hmh3-9jmp",
+        "GHSA-jxwj-j7wr-gfrw",
+        "GHSA-qhxp-v273-g94h",
+        "GHSA-cv27-6wvh-8x7j",
+        "GHSA-mjxr-4v3x-q3m4",
+        "GHSA-rjqq-98f6-6j3r",
+        "GHSA-rm97-x556-q36h",
+        "GHSA-x3q4-9hxx-gx8m",
+        "GHSA-xc6g-ggrc-qq4r"
+      ],
+      "worst_severity": "high",
+      "score": 85.3,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 20.3,
+          "max_points": 25.0,
+          "reason": "EPSS 1.60% chance of exploitation in 30 days (higher than 76% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "imported by application code in 2 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "sanitize-html@1.4.2",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "sanitize-html@1.4.2"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "sanitize-html@1.4.2"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "imported by application code in 2 file(s)",
+          "files": [
+            "lib/challengeUtils.ts",
+            "lib/insecurity.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-cgfm-xwp7-2cvr",
+            "aliases": [
+              "CVE-2022-25887"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "title": "Sanitize-html Vulnerable To REDoS Attacks",
+            "fixed_version": "2.7.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-cgfm-xwp7-2cvr"
+          },
+          {
+            "id": "GHSA-3j7m-hmh3-9jmp",
+            "aliases": [
+              "CVE-2016-1000237"
+            ],
+            "severity": "moderate",
+            "cvss": 6.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "cwe": [
+              "CWE-79"
+            ],
+            "title": "Cross-Site Scripting in sanitize-html",
+            "fixed_version": "1.4.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-3j7m-hmh3-9jmp"
+          },
+          {
+            "id": "GHSA-jxwj-j7wr-gfrw",
+            "aliases": [
+              "CVE-2026-63670"
+            ],
+            "severity": "moderate",
+            "cvss": 6.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "cwe": [
+              "CWE-79"
+            ],
+            "title": "ApostropheCMS: Mutation-XSS / allowedTags bypass via literal `</textarea/>` solidus close",
+            "fixed_version": "2.17.6",
+            "reference": "https://osv.dev/vulnerability/GHSA-jxwj-j7wr-gfrw"
+          },
+          {
+            "id": "GHSA-qhxp-v273-g94h",
+            "aliases": [
+              "CVE-2019-25225"
+            ],
+            "severity": "moderate",
+            "cvss": 6.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "cwe": [
+              "CWE-79"
+            ],
+            "title": "sanitize-html is vulnerable to XSS through incomprehensive sanitization",
+            "fixed_version": "2.0.0-beta",
+            "reference": "https://osv.dev/vulnerability/GHSA-qhxp-v273-g94h"
+          },
+          {
+            "id": "GHSA-cv27-6wvh-8x7j",
+            "aliases": [
+              "CVE-2026-113661"
+            ],
+            "severity": "moderate",
+            "cvss": 5.4,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+            "cwe": [
+              "CWE-79"
+            ],
+            "title": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs",
+            "fixed_version": "2.18.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-cv27-6wvh-8x7j"
+          },
+          {
+            "id": "GHSA-mjxr-4v3x-q3m4",
+            "aliases": [
+              "CVE-2021-26540"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "cwe": [
+              "CWE-20"
+            ],
+            "title": "Improper Input Validation in sanitize-html",
+            "fixed_version": "2.3.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-mjxr-4v3x-q3m4"
+          },
+          {
+            "id": "GHSA-rjqq-98f6-6j3r",
+            "aliases": [
+              "CVE-2021-26539"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "cwe": [
+              "CWE-20"
+            ],
+            "title": "Improper Input Validation in sanitize-html",
+            "fixed_version": "2.3.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-rjqq-98f6-6j3r"
+          },
+          {
+            "id": "GHSA-rm97-x556-q36h",
+            "aliases": [
+              "CVE-2024-21501"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "cwe": [
+              "CWE-200",
+              "CWE-538"
+            ],
+            "title": "sanitize-html Information Exposure vulnerability",
+            "fixed_version": "2.12.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-rm97-x556-q36h"
+          },
+          {
+            "id": "GHSA-x3q4-9hxx-gx8m",
+            "aliases": [
+              "CVE-2026-113654"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-79"
+            ],
+            "title": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+            "fixed_version": "2.18.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-x3q4-9hxx-gx8m"
+          },
+          {
+            "id": "GHSA-xc6g-ggrc-qq4r",
+            "aliases": [
+              "CVE-2017-16016"
+            ],
+            "severity": "moderate",
+            "cvss": null,
+            "cvss_vector": null,
+            "cwe": [
+              "CWE-79"
+            ],
+            "title": "Cross-Site Scripting in sanitize-html",
+            "fixed_version": "1.11.4",
+            "reference": "https://osv.dev/vulnerability/GHSA-xc6g-ggrc-qq4r"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1333",
+            "name": "Regular expression denial of service (ReDoS)",
+            "impact": "a crafted string makes a regex run for seconds or minutes and stalls the server"
+          }
+        ],
+        "exploitability": "EPSS 1.60% chance of exploitation in 30 days (higher than 76% of all CVEs)"
+      },
+      "reasoning": "sanitize-html@1.4.2 is rated Critical because its worst advisory (GHSA-cgfm-xwp7-2cvr: Sanitize-html Vulnerable To REDoS Attacks) means a crafted string makes a regex run for seconds or minutes and stalls the server. EPSS 1.60% chance of exploitation in 30 days (higher than 76% of all CVEs). It is imported by application code in 2 file(s), and shipped in production in an internet-facing web server. 9 more advisories affect the same version.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-005",
+      "kind": "vulnerability",
+      "subject": "marsdb@0.6.11",
+      "package": "marsdb",
+      "version": "0.6.11",
+      "lock_path": "node_modules/marsdb",
+      "advisories": [
+        "GHSA-5mrr-rgp6-x4gr"
+      ],
+      "worst_severity": "critical",
+      "score": 85.0,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 38.0,
+          "max_points": 40.0,
+          "reason": "no CVSS score published; 'critical' rating counted as 9.5"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "no exploit data or CVSS vector published; assumed moderate"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "imported by application code in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "no CVSS vector: severity taken from the rating",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "marsdb@0.6.11",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "marsdb@0.6.11"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "marsdb@0.6.11"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "imported by application code in 1 file(s)",
+          "files": [
+            "data/mongodb.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-5mrr-rgp6-x4gr",
+            "aliases": [],
+            "severity": "critical",
+            "cvss": null,
+            "cvss_vector": null,
+            "cwe": [
+              "CWE-77"
+            ],
+            "title": "Command Injection in marsdb",
+            "fixed_version": null,
+            "reference": "https://osv.dev/vulnerability/GHSA-5mrr-rgp6-x4gr"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-77",
+            "name": "Command injection",
+            "impact": "an attacker can run commands through the affected function"
+          }
+        ],
+        "exploitability": "no exploit data or CVSS vector published; assumed moderate"
+      },
+      "reasoning": "The marsdb package contains a command injection flaw (CWE\u201177) that allows an attacker to execute arbitrary OS commands through the affected function. The application imports marsdb directly in data/mongodb.ts, so the code can reach the vulnerable function. The package is shipped in a production, internet\u2011facing web server, making the vulnerability exploitable from the outside. **Most important reason: it enables arbitrary command execution on the server.**",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-006",
+      "kind": "vulnerability",
+      "subject": "express-jwt@0.1.3",
+      "package": "express-jwt",
+      "version": "0.1.3",
+      "lock_path": "node_modules/express-jwt",
+      "advisories": [
+        "GHSA-6g6m-m6h5-w9gf"
+      ],
+      "worst_severity": "high",
+      "score": 84.0,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.8,
+          "max_points": 40.0,
+          "reason": "CVSS 7.7 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 18.2,
+          "max_points": 25.0,
+          "reason": "EPSS 1.08% chance of exploitation in 30 days (higher than 66% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "imported by application code in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "express-jwt@0.1.3",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "express-jwt@0.1.3"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "express-jwt@0.1.3"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "imported by application code in 1 file(s)",
+          "files": [
+            "lib/insecurity.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-6g6m-m6h5-w9gf",
+            "aliases": [
+              "CVE-2020-15084"
+            ],
+            "severity": "high",
+            "cvss": 7.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
+            "cwe": [
+              "CWE-285",
+              "CWE-863"
+            ],
+            "title": "Authorization bypass in express-jwt",
+            "fixed_version": "6.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-6g6m-m6h5-w9gf"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-285",
+            "name": "Improper authorisation",
+            "impact": "requests are allowed without the right permission check"
+          },
+          {
+            "cwe": "CWE-863",
+            "name": "Incorrect authorisation",
+            "impact": "the permission check exists but can be bypassed"
+          }
+        ],
+        "exploitability": "EPSS 1.08% chance of exploitation in 30 days (higher than 66% of all CVEs)"
+      },
+      "reasoning": "Express\u2011jwt has an authorization bypass issue (CWE\u2011285 and CWE\u2011863) that lets attackers gain access to protected resources without proper permission checks. The code imports express\u2011jwt directly in lib/insecurity.ts, so the vulnerability is reachable from the application. The package is exposed on an internet\u2011facing server, giving attackers a direct attack surface. **Most important reason: it allows attackers to bypass authentication and access sensitive endpoints.**",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-007",
+      "kind": "vulnerability",
+      "subject": "moment@2.0.0",
+      "package": "moment",
+      "version": "2.0.0",
+      "lock_path": "node_modules/express-jwt/node_modules/moment",
+      "advisories": [
+        "GHSA-446m-mv8f-q348",
+        "GHSA-8hfj-j24r-96c4",
+        "GHSA-87vv-r9j6-g5qv"
+      ],
+      "worst_severity": "high",
+      "score": 82.6,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 23.6,
+          "max_points": 25.0,
+          "reason": "EPSS 5.34% chance of exploitation in 30 days (higher than 93% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through express-jwt, which application code imports in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "moment@2.0.0",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "express-jwt@0.1.3"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "express-jwt@0.1.3",
+          "jsonwebtoken@0.1.0",
+          "moment@2.0.0"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through express-jwt, which application code imports in 1 file(s)",
+          "files": [
+            "lib/insecurity.ts"
+          ],
+          "via": [
+            "express-jwt"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-446m-mv8f-q348",
+            "aliases": [
+              "CVE-2017-18214"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400"
+            ],
+            "title": "Regular Expression Denial of Service in moment",
+            "fixed_version": "2.19.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-446m-mv8f-q348"
+          },
+          {
+            "id": "GHSA-8hfj-j24r-96c4",
+            "aliases": [
+              "CVE-2022-24785"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "cwe": [
+              "CWE-22",
+              "CWE-27"
+            ],
+            "title": "Path Traversal: 'dir/../../filename' in moment.locale",
+            "fixed_version": "2.29.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-8hfj-j24r-96c4"
+          },
+          {
+            "id": "GHSA-87vv-r9j6-g5qv",
+            "aliases": [
+              "CVE-2016-4055"
+            ],
+            "severity": "moderate",
+            "cvss": 6.5,
+            "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400"
+            ],
+            "title": "Regular Expression Denial of Service in moment",
+            "fixed_version": "2.11.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-87vv-r9j6-g5qv"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-22",
+            "name": "Path traversal",
+            "impact": "an attacker can read or write files outside the intended folder"
+          },
+          {
+            "cwe": "CWE-27",
+            "name": "see the advisory",
+            "impact": "see the advisory for impact"
+          }
+        ],
+        "exploitability": "EPSS 5.34% chance of exploitation in 30 days (higher than 93% of all CVEs)"
+      },
+      "reasoning": "Moment 2.0.0 is loaded through express\u2011jwt and contains several high\u2011severity vulnerabilities, including a path traversal flaw (CWE\u201122) that can expose arbitrary files and a regular expression denial\u2011of\u2011service (CWE\u2011400). The application imports express\u2011jwt in lib/insecurity.ts, making moment reachable via that import. The package is part of a production, internet\u2011facing web server, so the flaw can be triggered remotely. **Most important reason: it permits reading arbitrary files on the server.**",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-008",
+      "kind": "vulnerability",
+      "subject": "crypto-js@3.3.0",
+      "package": "crypto-js",
+      "version": "3.3.0",
+      "lock_path": "node_modules/crypto-js",
+      "advisories": [
+        "GHSA-xwcq-pm8m-c4vf",
+        "GHSA-rg76-677x-56q9"
+      ],
+      "worst_severity": "critical",
+      "score": 80.7,
+      "tier": "Critical",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 36.4,
+          "max_points": 40.0,
+          "reason": "CVSS 9.1 (critical) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 15.3,
+          "max_points": 25.0,
+          "reason": "EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through pdfkit, which application code imports in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "crypto-js@3.3.0",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "pdfkit@0.11.0"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "pdfkit@0.11.0",
+          "crypto-js@3.3.0"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through pdfkit, which application code imports in 1 file(s)",
+          "files": [
+            "routes/order.ts"
+          ],
+          "via": [
+            "pdfkit"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-xwcq-pm8m-c4vf",
+            "aliases": [
+              "CVE-2023-46233"
+            ],
+            "severity": "critical",
+            "cvss": 9.1,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "cwe": [
+              "CWE-327",
+              "CWE-328",
+              "CWE-916"
+            ],
+            "title": "crypto-js PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard",
+            "fixed_version": "4.2.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-xwcq-pm8m-c4vf"
+          },
+          {
+            "id": "GHSA-rg76-677x-56q9",
+            "aliases": [
+              "CVE-2026-71851"
+            ],
+            "severity": "critical",
+            "cvss": 9.0,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "cwe": [
+              "CWE-331",
+              "CWE-334",
+              "CWE-338"
+            ],
+            "title": "crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain",
+            "fixed_version": "4.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-rg76-677x-56q9"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-327",
+            "name": "Broken or risky crypto algorithm",
+            "impact": "protected data or signatures can be forged or decrypted"
+          },
+          {
+            "cwe": "CWE-328",
+            "name": "Weak hash",
+            "impact": "hashes can be reversed or collided, e.g. cracked passwords"
+          },
+          {
+            "cwe": "CWE-916",
+            "name": "Weak password hashing",
+            "impact": "stolen password hashes can be cracked quickly"
+          }
+        ],
+        "exploitability": "EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs)"
+      },
+      "reasoning": "Crypto\u2011js 3.3.0 is used indirectly through pdfkit and has critical weaknesses in its PBKDF2 implementation (CWE\u2011327, CWE\u2011328, CWE\u2011916) and insufficient entropy for secret generation (CWE\u2011331, CWE\u2011334, CWE\u2011338). The code imports pdfkit in routes/order.ts, so the vulnerable crypto functions are reachable. The application is deployed on an internet\u2011facing server, exposing the weakness to external attackers. **Most important reason: it compromises password hashing and data integrity.**",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-009",
+      "kind": "vulnerability",
+      "subject": "jws@0.2.6",
+      "package": "jws",
+      "version": "0.2.6",
+      "lock_path": "node_modules/jws",
+      "advisories": [
+        "GHSA-gjcw-v447-2w7q",
+        "GHSA-869p-cjfg-cm3x"
+      ],
+      "worst_severity": "high",
+      "score": 78.8,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 34.8,
+          "max_points": 40.0,
+          "reason": "CVSS 8.7 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 15.0,
+          "max_points": 25.0,
+          "reason": "CVSS vector: exploitable over the network, high complexity, no login needed, no user interaction"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through express-jwt, which application code imports in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "jws@0.2.6",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "express-jwt@0.1.3",
+          "jsonwebtoken@0.4.0"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "jsonwebtoken@0.4.0",
+          "jws@0.2.6"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through express-jwt, which application code imports in 1 file(s)",
+          "files": [
+            "lib/insecurity.ts"
+          ],
+          "via": [
+            "express-jwt",
+            "jsonwebtoken"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-gjcw-v447-2w7q",
+            "aliases": [
+              "CVE-2016-1000223"
+            ],
+            "severity": "high",
+            "cvss": 8.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+            "cwe": [],
+            "title": "Forgeable Public/Private Tokens in jws",
+            "fixed_version": "3.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-gjcw-v447-2w7q"
+          },
+          {
+            "id": "GHSA-869p-cjfg-cm3x",
+            "aliases": [
+              "CVE-2025-65945"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "cwe": [
+              "CWE-347"
+            ],
+            "title": "auth0/node-jws Improperly Verifies HMAC Signature",
+            "fixed_version": "3.2.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-869p-cjfg-cm3x"
+          }
+        ],
+        "cwe_meaning": [],
+        "exploitability": "CVSS vector: exploitable over the network, high complexity, no login needed, no user interaction"
+      },
+      "reasoning": "The jws package (v0.2.6) is loaded via express-jwt, which the application imports in lib/insecurity.ts. Advisories GHSA-gjcw-v447-2w7q and GHSA-869p-cjfg-cm3x describe that an attacker can forge public/private tokens or bypass HMAC signature verification, enabling authentication bypass. The CVSS score of 8.7 indicates a high severity and the vector shows it is exploitable over the network with no login or user interaction required. The most important reason is that the application imports this vulnerable package, giving an attacker the ability to forge tokens and bypass authentication.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-010",
+      "kind": "vulnerability",
+      "subject": "notevil@1.3.3",
+      "package": "notevil",
+      "version": "1.3.3",
+      "lock_path": "node_modules/notevil",
+      "advisories": [
+        "GHSA-8g4m-cjm2-96wq"
+      ],
+      "worst_severity": "moderate",
+      "score": 78.8,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 26.0,
+          "max_points": 40.0,
+          "reason": "CVSS 6.5 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 17.8,
+          "max_points": 25.0,
+          "reason": "EPSS 1.01% chance of exploitation in 30 days (higher than 64% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "imported by application code in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "notevil@1.3.3",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "notevil@1.3.3"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "notevil@1.3.3"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "imported by application code in 1 file(s)",
+          "files": [
+            "routes/b2bOrder.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-8g4m-cjm2-96wq",
+            "aliases": [
+              "CVE-2021-23771"
+            ],
+            "severity": "moderate",
+            "cvss": 6.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "title": "Sandbox escape in notevil and argencoders-notevil",
+            "fixed_version": null,
+            "reference": "https://osv.dev/vulnerability/GHSA-8g4m-cjm2-96wq"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1321",
+            "name": "Prototype pollution",
+            "impact": "an attacker can change properties of every object in the app, leading to bypasses or code execution"
+          }
+        ],
+        "exploitability": "EPSS 1.01% chance of exploitation in 30 days (higher than 64% of all CVEs)"
+      },
+      "reasoning": "The notevil package (v1.3.3) is directly imported by the application in routes/b2bOrder.ts. Advisory GHSA-8g4m-cjm2-96wq indicates prototype pollution, allowing an attacker to modify properties of every object in the app, potentially leading to bypasses or code execution. The CVSS score of 6.5 and an EPSS of 1.01% suggest a moderate severity with a realistic chance of exploitation within 30 days. The most important reason is that the package is directly imported, making prototype pollution a realistic threat to the application.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-011",
+      "kind": "vulnerability",
+      "subject": "tar@6.2.1",
+      "package": "tar",
+      "version": "6.2.1",
+      "lock_path": "node_modules/sqlite3/node_modules/tar",
+      "advisories": [
+        "GHSA-23hp-3jrh-7fpw",
+        "GHSA-r6q2-hw4h-h46w",
+        "GHSA-8x88-c5mf-7j5w",
+        "GHSA-34x7-hfp2-rc4v",
+        "GHSA-8qq5-rm4j-mr97",
+        "GHSA-9ppj-qmqm-q256",
+        "GHSA-qffp-2rhf-9h96",
+        "GHSA-r292-9mhp-454m",
+        "GHSA-83g3-92jg-28cx",
+        "GHSA-vmf3-w455-68vh",
+        "GHSA-gvwx-54wh-qm9j",
+        "GHSA-w8wr-v893-vjvp"
+      ],
+      "worst_severity": "critical",
+      "score": 72.5,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 36.8,
+          "max_points": 40.0,
+          "reason": "CVSS 9.2 (critical) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.7,
+          "max_points": 25.0,
+          "reason": "EPSS 0.58% chance of exploitation in 30 days (higher than 49% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 6.0,
+          "max_points": 20.0,
+          "reason": "shipped, but no import from application code was found"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "no import found; package could still be loaded dynamically",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "tar@6.2.1",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "sqlite3@5.1.7"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "sqlite3@5.1.7",
+          "tar@6.2.1"
+        ],
+        "reachability": {
+          "level": "not-imported",
+          "label": "shipped, but no import from application code was found",
+          "files": [],
+          "via": [],
+          "decided": false
+        },
+        "advisories": [
+          {
+            "id": "GHSA-23hp-3jrh-7fpw",
+            "aliases": [
+              "CVE-2026-59873"
+            ],
+            "severity": "critical",
+            "cvss": 9.2,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-770"
+            ],
+            "title": "node-tar: Decompression/parse DoS via unlimited input",
+            "fixed_version": "7.5.19",
+            "reference": "https://osv.dev/vulnerability/GHSA-23hp-3jrh-7fpw"
+          },
+          {
+            "id": "GHSA-r6q2-hw4h-h46w",
+            "aliases": [
+              "CVE-2026-23950"
+            ],
+            "severity": "high",
+            "cvss": 8.8,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L",
+            "cwe": [
+              "CWE-176",
+              "CWE-367"
+            ],
+            "title": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+            "fixed_version": "7.5.4",
+            "reference": "https://osv.dev/vulnerability/GHSA-r6q2-hw4h-h46w"
+          },
+          {
+            "id": "GHSA-8x88-c5mf-7j5w",
+            "aliases": [
+              "CVE-2026-59874"
+            ],
+            "severity": "high",
+            "cvss": 8.7,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-835"
+            ],
+            "title": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+            "fixed_version": "7.5.18",
+            "reference": "https://osv.dev/vulnerability/GHSA-8x88-c5mf-7j5w"
+          },
+          {
+            "id": "GHSA-34x7-hfp2-rc4v",
+            "aliases": [
+              "CVE-2026-24842"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+            "cwe": [
+              "CWE-22",
+              "CWE-59"
+            ],
+            "title": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+            "fixed_version": "7.5.7",
+            "reference": "https://osv.dev/vulnerability/GHSA-34x7-hfp2-rc4v"
+          },
+          {
+            "id": "GHSA-8qq5-rm4j-mr97",
+            "aliases": [
+              "CVE-2026-23745"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+            "fixed_version": "7.5.3",
+            "reference": "https://osv.dev/vulnerability/GHSA-8qq5-rm4j-mr97"
+          },
+          {
+            "id": "GHSA-9ppj-qmqm-q256",
+            "aliases": [
+              "CVE-2026-31802"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+            "fixed_version": "7.5.11",
+            "reference": "https://osv.dev/vulnerability/GHSA-9ppj-qmqm-q256"
+          },
+          {
+            "id": "GHSA-qffp-2rhf-9h96",
+            "aliases": [
+              "CVE-2026-29786"
+            ],
+            "severity": "high",
+            "cvss": 8.2,
+            "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:H/SA:L",
+            "cwe": [
+              "CWE-22",
+              "CWE-59"
+            ],
+            "title": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+            "fixed_version": "7.5.10",
+            "reference": "https://osv.dev/vulnerability/GHSA-qffp-2rhf-9h96"
+          },
+          {
+            "id": "GHSA-r292-9mhp-454m",
+            "aliases": [
+              "CVE-2026-73566"
+            ],
+            "severity": "high",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cwe": [
+              "CWE-400",
+              "CWE-674"
+            ],
+            "title": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+            "fixed_version": "7.5.21",
+            "reference": "https://osv.dev/vulnerability/GHSA-r292-9mhp-454m"
+          },
+          {
+            "id": "GHSA-83g3-92jg-28cx",
+            "aliases": [
+              "CVE-2026-26960"
+            ],
+            "severity": "high",
+            "cvss": 7.1,
+            "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+            "cwe": [
+              "CWE-22"
+            ],
+            "title": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+            "fixed_version": "7.5.8",
+            "reference": "https://osv.dev/vulnerability/GHSA-83g3-92jg-28cx"
+          },
+          {
+            "id": "GHSA-vmf3-w455-68vh",
+            "aliases": [
+              "CVE-2026-53655"
+            ],
+            "severity": "moderate",
+            "cvss": 6.9,
+            "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-436"
+            ],
+            "title": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+            "fixed_version": "7.5.16",
+            "reference": "https://osv.dev/vulnerability/GHSA-vmf3-w455-68vh"
+          },
+          {
+            "id": "GHSA-gvwx-54wh-qm9j",
+            "aliases": [
+              "CVE-2026-59875"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-248"
+            ],
+            "title": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+            "fixed_version": "7.5.17",
+            "reference": "https://osv.dev/vulnerability/GHSA-gvwx-54wh-qm9j"
+          },
+          {
+            "id": "GHSA-w8wr-v893-vjvp",
+            "aliases": [
+              "CVE-2026-59871"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-704"
+            ],
+            "title": "node-tar: Process crash via PAX numeric path type confusion",
+            "fixed_version": "7.5.18",
+            "reference": "https://osv.dev/vulnerability/GHSA-w8wr-v893-vjvp"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-770",
+            "name": "Allocation without limits",
+            "impact": "an attacker can make the service use unbounded memory or disk"
+          }
+        ],
+        "exploitability": "EPSS 0.58% chance of exploitation in 30 days (higher than 49% of all CVEs)"
+      },
+      "reasoning": "The tar package (v6.2.1) is shipped as a dependency of sqlite3 but is not imported by any application code. Advisory GHSA-23hp-3jrh-7fpw reports a critical DoS vulnerability due to unlimited memory allocation during decompression, with a CVSS of 9.2. Although not directly imported, the package is present in the production image and could be triggered by an attacker if the application indirectly uses sqlite3 or if a malicious user uploads a crafted archive. The most important reason is that the package is shipped in production and could be exploited for a DoS attack even without direct import.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-012",
+      "kind": "vulnerability",
+      "subject": "uuid@8.3.2",
+      "package": "uuid",
+      "version": "8.3.2",
+      "lock_path": "node_modules/uuid",
+      "advisories": [
+        "GHSA-w5hq-g745-h8pq"
+      ],
+      "worst_severity": "moderate",
+      "score": 71.0,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 30.0,
+          "max_points": 40.0,
+          "reason": "CVSS 7.5 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "EPSS 0.40% chance of exploitation in 30 days (higher than 35% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through sequelize, which application code imports in 34 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "uuid@8.3.2",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "@istanbuljs/nyc-config-typescript@1.0.2",
+          "nyc@15.1.0",
+          "sequelize@6.37.8"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "sequelize@6.37.8",
+          "uuid@8.3.2"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through sequelize, which application code imports in 34 file(s)",
+          "files": [
+            "data/datacreator.ts",
+            "lib/challengeUtils.ts",
+            "lib/noUpdate.ts",
+            "lib/noUpdate.ts",
+            "lib/noUpdate.ts",
+            "models/address.ts",
+            "models/basket.ts",
+            "models/basketitem.ts"
+          ],
+          "via": [
+            "sequelize"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-w5hq-g745-h8pq",
+            "aliases": [
+              "CVE-2026-41907",
+              "CVE-2026-41988"
+            ],
+            "severity": "moderate",
+            "cvss": 7.5,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "cwe": [
+              "CWE-1285",
+              "CWE-787"
+            ],
+            "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+            "fixed_version": "11.1.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-w5hq-g745-h8pq"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1285",
+            "name": "see the advisory",
+            "impact": "see the advisory for impact"
+          },
+          {
+            "cwe": "CWE-787",
+            "name": "Out-of-bounds write",
+            "impact": "memory corruption, possibly code execution"
+          }
+        ],
+        "exploitability": "EPSS 0.40% chance of exploitation in 30 days (higher than 35% of all CVEs)"
+      },
+      "reasoning": "The uuid package (v8.3.2) is loaded through sequelize, which the application imports in 34 files such as data/datacreator.ts and models/address.ts. Advisory GHSA-w5hq-g745-h8pq highlights missing buffer bounds checks in v3/v5/v6 when a buffer is provided, leading to out-of-bounds writes and potential memory corruption. The CVSS score of 7.5 and an EPSS of 0.40% indicate a moderate severity with a realistic chance of exploitation. The most important reason is that the package is widely used by the application, making the out-of-bounds write a realistic risk for memory corruption or code execution.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-013",
+      "kind": "vulnerability",
+      "subject": "hbs@4.4.0",
+      "package": "hbs",
+      "version": "4.4.0",
+      "lock_path": "node_modules/hbs",
+      "advisories": [
+        "GHSA-7f5c-rpf4-86p8"
+      ],
+      "worst_severity": "moderate",
+      "score": 68.6,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 16.0,
+          "max_points": 40.0,
+          "reason": "CVSS 4.0 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 17.6,
+          "max_points": 25.0,
+          "reason": "EPSS 0.98% chance of exploitation in 30 days (higher than 63% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "loaded by name at run time in 1 file(s) (no import statement)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "hbs@4.4.0",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "hbs@4.4.0"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "hbs@4.4.0"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "loaded by name at run time in 1 file(s) (no import statement)",
+          "files": [
+            "server.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-7f5c-rpf4-86p8",
+            "aliases": [
+              "CVE-2021-32822"
+            ],
+            "severity": "moderate",
+            "cvss": 4.0,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N",
+            "cwe": [
+              "CWE-200",
+              "CWE-538",
+              "CWE-94"
+            ],
+            "title": "hbs: Insertion of Sensitive Information into Externally-Accessible File or Directory and Exposure of Sensitive Information to an Unauthorized Actor",
+            "fixed_version": null,
+            "reference": "https://osv.dev/vulnerability/GHSA-7f5c-rpf4-86p8"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-200",
+            "name": "Information exposure",
+            "impact": "sensitive data can leak to an attacker"
+          },
+          {
+            "cwe": "CWE-538",
+            "name": "see the advisory",
+            "impact": "see the advisory for impact"
+          },
+          {
+            "cwe": "CWE-94",
+            "name": "Code injection",
+            "impact": "an attacker can make the application execute their code"
+          }
+        ],
+        "exploitability": "EPSS 0.98% chance of exploitation in 30 days (higher than 63% of all CVEs)"
+      },
+      "reasoning": "An attacker could read sensitive data or inject code because hbs has information exposure and code injection vulnerabilities. The EPSS shows a 0.98% chance of exploitation in 30 days, with a moderate CVSS score of 4.0. The application loads hbs by name at runtime in server.ts, so the code can reach it and it is shipped in production on an internet-facing web server. The most important reason is the risk of exposing sensitive information through runtime-loaded hbs.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-014",
+      "kind": "supply-chain",
+      "subject": "@scarf/scarf@1.4.0 runs code when installed (telemetry)",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "medium",
+      "score": 68.0,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "Needs review (medium) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.0,
+          "max_points": 25.0,
+          "reason": "code runs automatically on every npm install, with the installing user's rights"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "runs on every production install"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-001",
+        "category": "install-script",
+        "facts": [
+          {
+            "fact": "package-lock.json marks @scarf/scarf@1.4.0 with hasInstallScript: true",
+            "source": "package-lock.json \u2192 node_modules/@scarf/scarf"
+          },
+          {
+            "fact": "Used in: production",
+            "source": "package-lock.json"
+          },
+          {
+            "fact": "Install script published on npm: postinstall: node ./report.js",
+            "source": "https://registry.npmjs.org/@scarf/scarf/1.4.0"
+          },
+          {
+            "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 swagger-ui-express@5.0.1 \u2192 swagger-ui-dist@5.36.0 \u2192 @scarf/scarf@1.4.0",
+            "source": "dependency graph (Agent 3)"
+          }
+        ]
+      },
+      "reasoning": "@scarf/scarf@1.4.0 is installed in production and has an install script that runs a file called report.js. The script could be used for telemetry or, if malicious, could exfiltrate data from the host. The evidence does not prove malicious intent, but the presence of a post\u2011install script in a production dependency is a risk that should be examined. A reviewer should inspect the contents of report.js, verify its source and intent, and confirm that the telemetry is expected and safe.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-015",
+      "kind": "vulnerability",
+      "subject": "file-type@16.5.4",
+      "package": "file-type",
+      "version": "16.5.4",
+      "lock_path": "node_modules/file-type",
+      "advisories": [
+        "GHSA-5v7r-6r5c-r473"
+      ],
+      "worst_severity": "moderate",
+      "score": 67.5,
+      "tier": "High",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 21.2,
+          "max_points": 40.0,
+          "reason": "CVSS 5.3 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 11.3,
+          "max_points": 25.0,
+          "reason": "EPSS 0.37% chance of exploitation in 30 days (higher than 31% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 20.0,
+          "max_points": 20.0,
+          "reason": "imported by application code in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "file-type@16.5.4",
+        "direct": true,
+        "scope": "prod",
+        "introduced_via": [
+          "file-type@16.5.4"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "file-type@16.5.4"
+        ],
+        "reachability": {
+          "level": "imported",
+          "label": "imported by application code in 1 file(s)",
+          "files": [
+            "routes/profileImageFileUpload.ts"
+          ],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-5v7r-6r5c-r473",
+            "aliases": [
+              "CVE-2026-31808"
+            ],
+            "severity": "moderate",
+            "cvss": 5.3,
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-835"
+            ],
+            "title": "file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header",
+            "fixed_version": "21.3.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-5v7r-6r5c-r473"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-835",
+            "name": "Infinite loop",
+            "impact": "crafted input hangs the process"
+          }
+        ],
+        "exploitability": "EPSS 0.37% chance of exploitation in 30 days (higher than 31% of all CVEs)"
+      },
+      "reasoning": "An attacker could cause a denial of service by sending a crafted file that triggers an infinite loop in file-type's ASF parser. The EPSS indicates a 0.37% chance of exploitation in 30 days, with a moderate CVSS score of 5.3. The application imports file-type in routes/profileImageFileUpload.ts, so the code can reach it and it is shipped in production on an internet-facing web server. The most important reason is the potential denial of service from malformed file uploads.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-016",
+      "kind": "vulnerability",
+      "subject": "base64url@0.0.6",
+      "package": "base64url",
+      "version": "0.0.6",
+      "lock_path": "node_modules/base64url",
+      "advisories": [
+        "GHSA-rvg8-pwq2-xj7q"
+      ],
+      "worst_severity": "moderate",
+      "score": 63.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "no CVSS score published; 'moderate' rating counted as 5.5"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "no exploit data or CVSS vector published; assumed moderate"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through express-jwt, which application code imports in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "no CVSS vector: severity taken from the rating",
+        "no EPSS/KEV data: exploitability estimated from the vector",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "base64url@0.0.6",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "express-jwt@0.1.3",
+          "jsonwebtoken@0.4.0"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "jsonwebtoken@0.4.0",
+          "jws@0.2.6",
+          "base64url@0.0.6"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through express-jwt, which application code imports in 1 file(s)",
+          "files": [
+            "lib/insecurity.ts"
+          ],
+          "via": [
+            "express-jwt",
+            "jsonwebtoken"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-rvg8-pwq2-xj7q",
+            "aliases": [],
+            "severity": "moderate",
+            "cvss": null,
+            "cvss_vector": null,
+            "cwe": [
+              "CWE-125"
+            ],
+            "title": "Out-of-bounds Read in base64url",
+            "fixed_version": "3.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-rvg8-pwq2-xj7q"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-125",
+            "name": "see the advisory",
+            "impact": "see the advisory for impact"
+          }
+        ],
+        "exploitability": "no exploit data or CVSS vector published; assumed moderate"
+      },
+      "reasoning": "An attacker could potentially trigger an out-of-bounds read in base64url, which may lead to memory corruption or a crash, as described in the advisory. No exploit data or CVSS vector is published, but the vulnerability is rated moderate. The application imports express-jwt in lib/insecurity.ts, which in turn loads base64url, so the code can reach it and it is shipped in production on an internet-facing web server. The most important reason is the potential memory corruption during JWT processing.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-017",
+      "kind": "supply-chain",
+      "subject": "10 container images are referenced by tag, not by digest",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "medium",
+      "score": 61.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "Needs review (medium) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "a mutable tag can be repointed by whoever controls the upstream image or action"
+        },
+        {
+          "factor": "reachability",
+          "points": 15.0,
+          "max_points": 20.0,
+          "reason": "decides what goes into the shipped container"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-003",
+        "category": "unpinned_container_image",
+        "facts": [
+          {
+            "fact": "node:24 (tag)",
+            "source": "Dockerfile"
+          },
+          {
+            "fact": "gcr.io/distroless/nodejs24-debian13:latest (tag (implicit latest))",
+            "source": "Dockerfile"
+          },
+          {
+            "fact": "bkimminich/juice-shop:latest (tag (latest))",
+            "source": "docker-compose.test.yml"
+          },
+          {
+            "fact": "node:20.19.2-bookworm-slim (tag)",
+            "source": "infrastructure/Dockerfile"
+          },
+          {
+            "fact": "node:20.19.2-bookworm (tag)",
+            "source": "infrastructure/Dockerfile"
+          },
+          {
+            "fact": "nginx:1.28.0-alpine (tag)",
+            "source": "infrastructure/docker-compose.yml"
+          },
+          {
+            "fact": "juice-shop:latest (tag (latest))",
+            "source": "infrastructure/docker-compose.yml"
+          },
+          {
+            "fact": "redis:7.4.4-alpine (tag)",
+            "source": "infrastructure/docker-compose.yml"
+          },
+          {
+            "fact": "mongo:4.4.29 (tag)",
+            "source": "infrastructure/docker-compose.yml"
+          },
+          {
+            "fact": "alpine:latest (tag (implicit latest))",
+            "source": "test/smoke/Dockerfile"
+          }
+        ]
+      },
+      "reasoning": "Referencing container images by tag rather than by digest allows the image content to change without notice, which can introduce malicious code if the registry is compromised or the image is updated. The evidence lists tags such as node:24, latest, and nginx:1.28.0-alpine, all of which could point to different image layers over time. This is a risky-but-normal observation that could be exploited if an attacker pushes a malicious image under the same tag. A reviewer should first confirm the source of each image, consider pinning to a specific digest, and verify that the images come from trusted registries.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-018",
+      "kind": "supply-chain",
+      "subject": "10 installed packages are deprecated by their maintainers",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "medium",
+      "score": 52.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 22.0,
+          "max_points": 40.0,
+          "reason": "Needs review (medium) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 8.0,
+          "max_points": 25.0,
+          "reason": "indirect: weakens the ability to detect tampering"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "affects how packages are trusted"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-002",
+        "category": "deprecated",
+        "facts": [
+          {
+            "fact": "crypto-js@3.3.0: \"Active development of CryptoJS has been discontinued. This library is no longer maintained.\"",
+            "source": "https://registry.npmjs.org/crypto-js"
+          },
+          {
+            "fact": "glob@10.5.0: \"Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version\"",
+            "source": "https://registry.npmjs.org/glob"
+          },
+          {
+            "fact": "jsonwebtoken@0.1.0: \"Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\"",
+            "source": "https://registry.npmjs.org/jsonwebtoken"
+          },
+          {
+            "fact": "jsonwebtoken@0.4.0: \"Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\"",
+            "source": "https://registry.npmjs.org/jsonwebtoken"
+          },
+          {
+            "fact": "jws@0.2.6: \"Security update: Versions below 3.0.0 are deprecated.\"",
+            "source": "https://registry.npmjs.org/jws"
+          },
+          {
+            "fact": "notevil@1.3.3: \"Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.\"",
+            "source": "https://registry.npmjs.org/notevil"
+          },
+          {
+            "fact": "prom-client@15.1.3: \"prom-client has been replaced by @prometheus-io/client\"",
+            "source": "https://registry.npmjs.org/prom-client"
+          },
+          {
+            "fact": "tar@6.2.1: \"Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version.\"",
+            "source": "https://registry.npmjs.org/tar"
+          },
+          {
+            "fact": "uuid@8.3.2: \"uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this\"",
+            "source": "https://registry.npmjs.org/uuid"
+          },
+          {
+            "fact": "messageformat@2.3.0: \"Package renamed as '@messageformat/core', see messageformat.github.io for more details. 'messageformat@4' will eventually provide a polyfill\"",
+            "source": "https://registry.npmjs.org/messageformat"
+          }
+        ]
+      },
+      "reasoning": "Using 10 deprecated npm packages means the application relies on libraries that are no longer maintained or have known security issues. An attacker could exploit the documented vulnerabilities in these packages to inject malicious code or compromise data. The evidence indicates that the maintainers have discontinued support or fixed critical bugs in newer releases, so this is a risky-but-normal finding that requires remediation. A reviewer should first verify whether the deprecated packages are actually used in the code, check for available newer versions, and assess if any known vulnerabilities still affect the current usage.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-019",
+      "kind": "supply-chain",
+      "subject": "7 CI actions not SHA-pinned",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 48.0,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "a mutable tag can be repointed by whoever controls the upstream image or action"
+        },
+        {
+          "factor": "reachability",
+          "points": 12.0,
+          "max_points": 20.0,
+          "reason": "runs in CI with the repository's token"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-007",
+        "category": "unexpected_ci_dependency",
+        "facts": [
+          {
+            "fact": "7 CI actions not SHA-pinned",
+            "source": ".github/workflows"
+          },
+          {
+            "fact": "actions/checkout@v6, calibreapp/image-actions@main, coverallsapp/github-action@v2, github/codeql-action/analyze@v3, github/codeql-action/autobuild@v3, github/codeql-action/init@v3, peter-evans/create-pull-request@v8",
+            "source": ".github/workflows"
+          }
+        ]
+      },
+      "reasoning": "Using CI actions that are not SHA-pinned means the workflow could automatically pull a newer, potentially malicious version of an action at each run. The evidence lists actions like actions/checkout@v6 and github/codeql-action/analyze@v3, which are not tied to a specific commit. This is a risky-but-normal finding because the actions could be compromised if the publisher is malicious or the action repository is hijacked. A reviewer should first check that each action comes from a reputable source, consider adding SHA pinning, and review the action code for any suspicious behavior.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-020",
+      "kind": "vulnerability",
+      "subject": "messageformat@2.3.0",
+      "package": "messageformat",
+      "version": "2.3.0",
+      "lock_path": "node_modules/messageformat",
+      "advisories": [
+        "GHSA-xfqm-j7pc-xrfc"
+      ],
+      "worst_severity": "low",
+      "score": 47.8,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 6.8,
+          "max_points": 40.0,
+          "reason": "CVSS 1.7 (low) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.0,
+          "max_points": 25.0,
+          "reason": "EPSS 0.40% chance of exploitation in 30 days (higher than 35% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 14.0,
+          "max_points": 20.0,
+          "reason": "loaded through i18n, which application code imports in 1 file(s)"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "reachability confirmed from source imports",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "messageformat@2.3.0",
+        "direct": false,
+        "scope": "prod",
+        "introduced_via": [
+          "i18n@0.11.1"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "i18n@0.11.1",
+          "messageformat@2.3.0"
+        ],
+        "reachability": {
+          "level": "via-import",
+          "label": "loaded through i18n, which application code imports in 1 file(s)",
+          "files": [
+            "server.ts"
+          ],
+          "via": [
+            "i18n"
+          ],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-xfqm-j7pc-xrfc",
+            "aliases": [
+              "CVE-2025-57349"
+            ],
+            "severity": "low",
+            "cvss": 1.7,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:U",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "title": "messageformat has a prototype pollution vulnerability",
+            "fixed_version": "3.0.0-beta.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-xfqm-j7pc-xrfc"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-1321",
+            "name": "Prototype pollution",
+            "impact": "an attacker can change properties of every object in the app, leading to bypasses or code execution"
+          }
+        ],
+        "exploitability": "EPSS 0.40% chance of exploitation in 30 days (higher than 35% of all CVEs)"
+      },
+      "reasoning": "messageformat@2.3.0 is rated Medium because its worst advisory (GHSA-xfqm-j7pc-xrfc: messageformat has a prototype pollution vulnerability) means an attacker can change properties of every object in the app, leading to bypasses or code execution. EPSS 0.40% chance of exploitation in 30 days (higher than 35% of all CVEs). It is loaded through i18n, which application code imports in 1 file(s), and shipped in production in an internet-facing web server.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-021",
+      "kind": "vulnerability",
+      "subject": "@cyclonedx/cyclonedx-npm@4.2.1",
+      "package": "@cyclonedx/cyclonedx-npm",
+      "version": "4.2.1",
+      "lock_path": "node_modules/@cyclonedx/cyclonedx-npm",
+      "advisories": [
+        "GHSA-q69g-4hcv-6jg4",
+        "GHSA-v75r-vx73-82pj"
+      ],
+      "worst_severity": "high",
+      "score": 46.9,
+      "tier": "Medium",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 34.0,
+          "max_points": 40.0,
+          "reason": "CVSS 8.5 (high) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 7.9,
+          "max_points": 25.0,
+          "reason": "EPSS 0.24% chance of exploitation in 30 days (higher than 15% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "@cyclonedx/cyclonedx-npm@4.2.1",
+        "direct": true,
+        "scope": "dev",
+        "introduced_via": [
+          "@cyclonedx/cyclonedx-npm@4.2.1"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "@cyclonedx/cyclonedx-npm@4.2.1"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-q69g-4hcv-6jg4",
+            "aliases": [
+              "CVE-2026-71538"
+            ],
+            "severity": "high",
+            "cvss": 8.5,
+            "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-78"
+            ],
+            "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument on Windows",
+            "fixed_version": "6.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-q69g-4hcv-6jg4"
+          },
+          {
+            "id": "GHSA-v75r-vx73-82pj",
+            "aliases": [
+              "CVE-2026-55849"
+            ],
+            "severity": "high",
+            "cvss": 8.5,
+            "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-78"
+            ],
+            "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument",
+            "fixed_version": "5.0.0",
+            "reference": "https://osv.dev/vulnerability/GHSA-v75r-vx73-82pj"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-78",
+            "name": "OS command injection",
+            "impact": "an attacker can run operating-system commands on the server"
+          }
+        ],
+        "exploitability": "EPSS 0.24% chance of exploitation in 30 days (higher than 15% of all CVEs)"
+      },
+      "reasoning": "@cyclonedx/cyclonedx-npm@4.2.1 is rated Medium because its worst advisory (GHSA-v75r-vx73-82pj: @cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument) means an attacker can run operating-system commands on the server. EPSS 0.24% chance of exploitation in 30 days (higher than 15% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-022",
+      "kind": "vulnerability",
+      "subject": "minimatch@9.0.9",
+      "package": "minimatch",
+      "version": "9.0.9",
+      "lock_path": "node_modules/glob/node_modules/minimatch",
+      "advisories": [
+        "GHSA-g3hv-75wg-m249"
+      ],
+      "worst_severity": "moderate",
+      "score": 44.8,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 27.6,
+          "max_points": 40.0,
+          "reason": "CVSS 6.9 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 12.2,
+          "max_points": 25.0,
+          "reason": "EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "minimatch@9.0.9",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "@cyclonedx/cyclonedx-npm@4.2.1"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "@cyclonedx/cyclonedx-npm@4.2.1",
+          "libxmljs2@0.37.0",
+          "node-gyp@11.5.0",
+          "make-fetch-happen@14.0.3",
+          "cacache@19.0.1",
+          "glob@10.5.0",
+          "minimatch@9.0.9"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-g3hv-75wg-m249",
+            "aliases": [
+              "CVE-2026-118764"
+            ],
+            "severity": "moderate",
+            "cvss": 6.9,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-405"
+            ],
+            "title": "minimatch has potential denial of service via globparts amplification",
+            "fixed_version": "11.0.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-g3hv-75wg-m249"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-405",
+            "name": "Asymmetric resource consumption",
+            "impact": "a small request causes a lot of work (denial of service)"
+          }
+        ],
+        "exploitability": "EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs)"
+      },
+      "reasoning": "minimatch@9.0.9 is rated Low because its worst advisory (GHSA-g3hv-75wg-m249: minimatch has potential denial of service via globparts amplification) means a small request causes a lot of work (denial of service). EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs). It is development/test tooling only, and not shipped: development dependency.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-023",
+      "kind": "vulnerability",
+      "subject": "glob@10.5.0",
+      "package": "glob",
+      "version": "10.5.0",
+      "lock_path": "node_modules/glob",
+      "advisories": [
+        "GHSA-3g3m-2fjr-6pw4"
+      ],
+      "worst_severity": "moderate",
+      "score": 43.4,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 25.2,
+          "max_points": 40.0,
+          "reason": "CVSS 6.3 (moderate) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 13.2,
+          "max_points": 25.0,
+          "reason": "EPSS 0.46% chance of exploitation in 30 days (higher than 41% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 2.0,
+          "max_points": 20.0,
+          "reason": "development/test tooling only"
+        },
+        {
+          "factor": "exposure",
+          "points": 3.0,
+          "max_points": 15.0,
+          "reason": "not shipped: development dependency"
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "dev-only scope confirmed from lockfile",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "glob@10.5.0",
+        "direct": false,
+        "scope": "dev",
+        "introduced_via": [
+          "@cyclonedx/cyclonedx-npm@4.2.1"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "@cyclonedx/cyclonedx-npm@4.2.1",
+          "libxmljs2@0.37.0",
+          "node-gyp@11.5.0",
+          "make-fetch-happen@14.0.3",
+          "cacache@19.0.1",
+          "glob@10.5.0"
+        ],
+        "reachability": {
+          "level": "dev",
+          "label": "development/test tooling only",
+          "files": [],
+          "via": [],
+          "decided": true
+        },
+        "advisories": [
+          {
+            "id": "GHSA-3g3m-2fjr-6pw4",
+            "aliases": [
+              "CVE-2026-118773"
+            ],
+            "severity": "moderate",
+            "cvss": 6.3,
+            "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+            "cwe": [
+              "CWE-400"
+            ],
+            "title": "Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal",
+            "fixed_version": "14.0.2",
+            "reference": "https://osv.dev/vulnerability/GHSA-3g3m-2fjr-6pw4"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-400",
+            "name": "Uncontrolled resource consumption",
+            "impact": "a crafted request can exhaust CPU or memory (denial of service)"
+          }
+        ],
+        "exploitability": "EPSS 0.46% chance of exploitation in 30 days (higher than 41% of all CVEs)"
+      },
+      "reasoning": "glob@10.5.0 is rated Low because its worst advisory (GHSA-3g3m-2fjr-6pw4: Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal) means a crafted request can exhaust CPU or memory (denial of service). EPSS 0.46% chance of exploitation in 30 days (higher than 41% of all CVEs). It is development/test tooling only, and not shipped: development dependency.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    },
+    {
+      "id": "RISK-024",
+      "kind": "supply-chain",
+      "subject": "36 of 56 production dependencies have no build provenance",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 42.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 8.0,
+          "max_points": 25.0,
+          "reason": "indirect: weakens the ability to detect tampering"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "affects how packages are trusted"
+        },
+        {
+          "factor": "exposure",
+          "points": 12.0,
+          "max_points": 15.0,
+          "reason": "build and release pipeline"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-006",
+        "category": "provenance-attestation",
+        "facts": [
+          {
+            "fact": "20 direct production dependencies publish an npm provenance attestation (built by CI from a known repo)",
+            "source": "https://registry.npmjs.org"
+          },
+          {
+            "fact": "Without attestation: @types/cors@2.8.19, @types/node@26.6.6, clarinet@0.12.6, config@3.3.12, cookie-parser@1.4.7, cookieconsent@3.1.1, cors@2.8.6, errorhandler@1.5.2, ethers@6.17.0, express-jwt@0.1.3, express-robots-txt@0.5.0, express-security.txt@2.0.0, feature-policy@0.6.0, file-stream-rotator@1.0.0, file-type@16.5.4\u2026",
+            "source": "https://registry.npmjs.org"
+          }
+        ]
+      },
+      "reasoning": "Out of 56 production dependencies, 36 lack npm provenance attestations, meaning their build provenance is not publicly documented. This absence could allow an attacker to supply a tampered package without detection. The evidence indicates a significant risk, though it does not confirm malicious activity. A reviewer should verify the integrity of each missing\u2011provenance package (e.g., via checksums or lockfile hashes), consider adding provenance where possible, and assess whether the missing attestations affect critical components.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-025",
+      "kind": "supply-chain",
+      "subject": "cypress@16.3.0 runs code when installed (download)",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 42.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.0,
+          "max_points": 25.0,
+          "reason": "code runs automatically on every npm install, with the installing user's rights"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "runs on developer and CI machines"
+        },
+        {
+          "factor": "exposure",
+          "points": 6.0,
+          "max_points": 15.0,
+          "reason": "development machines only"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-004",
+        "category": "install-script",
+        "facts": [
+          {
+            "fact": "package-lock.json marks cypress@16.3.0 with hasInstallScript: true",
+            "source": "package-lock.json \u2192 node_modules/cypress"
+          },
+          {
+            "fact": "Used in: development only",
+            "source": "package-lock.json"
+          },
+          {
+            "fact": "Install script published on npm: postinstall: node dist/index.js --exec install",
+            "source": "https://registry.npmjs.org/cypress/16.3.0"
+          },
+          {
+            "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 cypress@16.3.0",
+            "source": "dependency graph (Agent 3)"
+          }
+        ]
+      },
+      "reasoning": "cypress@16.3.0 is a development\u2011only dependency that runs a post\u2011install script (dist/index.js --exec install). This script typically downloads Cypress binaries, but an attacker could alter it to fetch malicious code. The evidence suggests a normal pattern for Cypress, yet the script execution introduces a potential attack vector. A reviewer should review the script\u2019s contents, confirm it only downloads the intended binaries, and check the integrity of the downloaded files.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-026",
+      "kind": "supply-chain",
+      "subject": "esbuild@0.28.2 runs code when installed (download)",
+      "package": null,
+      "version": null,
+      "lock_path": null,
+      "advisories": [],
+      "worst_severity": "low",
+      "score": 42.0,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 12.0,
+          "max_points": 40.0,
+          "reason": "Needs review (low) from the investigation"
+        },
+        {
+          "factor": "exploitability",
+          "points": 14.0,
+          "max_points": 25.0,
+          "reason": "code runs automatically on every npm install, with the installing user's rights"
+        },
+        {
+          "factor": "reachability",
+          "points": 10.0,
+          "max_points": 20.0,
+          "reason": "runs on developer and CI machines"
+        },
+        {
+          "factor": "exposure",
+          "points": 6.0,
+          "max_points": 15.0,
+          "reason": "development machines only"
+        }
+      ],
+      "confidence": 0.65,
+      "confidence_label": "Medium",
+      "confidence_reasons": [
+        "facts verified from files/registry",
+        "impact is a judgement: no CVSS exists for non-CVE risks"
+      ],
+      "evidence": {
+        "investigation": "INV-005",
+        "category": "install-script",
+        "facts": [
+          {
+            "fact": "package-lock.json marks esbuild@0.28.2 with hasInstallScript: true",
+            "source": "package-lock.json \u2192 node_modules/esbuild"
+          },
+          {
+            "fact": "Used in: development only",
+            "source": "package-lock.json"
+          },
+          {
+            "fact": "Install script published on npm: postinstall: node install.js",
+            "source": "https://registry.npmjs.org/esbuild/0.28.2"
+          },
+          {
+            "fact": "Reaches the app through juice-shop@20.4.0-SNAPSHOT \u2192 tsx@4.23.15 \u2192 esbuild@0.28.2",
+            "source": "dependency graph (Agent 3)"
+          }
+        ]
+      },
+      "reasoning": "esbuild@0.28.2 is used only in development and executes an install.js script during installation. This script usually compiles native binaries for esbuild, but could be modified to run arbitrary code. The evidence indicates a typical build\u2011time activity, yet any install script can be a risk. A reviewer should examine install.js, verify its checksum, and ensure it performs only the expected compilation steps.",
+      "reasoning_source": "AI inference (openai/gpt-oss-20b), grounding check passed"
+    },
+    {
+      "id": "RISK-027",
+      "kind": "vulnerability",
+      "subject": "@tootallnate/once@1.1.2",
+      "package": "@tootallnate/once",
+      "version": "1.1.2",
+      "lock_path": "node_modules/@tootallnate/once",
+      "advisories": [
+        "GHSA-vpq2-c234-7xj6"
+      ],
+      "worst_severity": "low",
+      "score": 39.7,
+      "tier": "Low",
+      "factors": [
+        {
+          "factor": "severity",
+          "points": 13.2,
+          "max_points": 40.0,
+          "reason": "CVSS 3.3 (low) published with the advisory"
+        },
+        {
+          "factor": "exploitability",
+          "points": 5.5,
+          "max_points": 25.0,
+          "reason": "EPSS 0.13% chance of exploitation in 30 days (higher than 2% of all CVEs)"
+        },
+        {
+          "factor": "reachability",
+          "points": 6.0,
+          "max_points": 20.0,
+          "reason": "shipped, but no import from application code was found"
+        },
+        {
+          "factor": "exposure",
+          "points": 15.0,
+          "max_points": 15.0,
+          "reason": "shipped in production in an internet-facing web server"
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_label": "High",
+      "confidence_reasons": [
+        "CVSS vector published",
+        "real-world exploit data (EPSS/KEV) available",
+        "no import found; package could still be loaded dynamically",
+        "dependency path traced in the graph"
+      ],
+      "evidence": {
+        "package": "@tootallnate/once@1.1.2",
+        "direct": false,
+        "scope": "optional",
+        "introduced_via": [
+          "sqlite3@5.1.7"
+        ],
+        "dependency_path": [
+          "juice-shop@20.4.0-SNAPSHOT",
+          "sqlite3@5.1.7",
+          "node-gyp@8.4.1",
+          "make-fetch-happen@9.1.0",
+          "http-proxy-agent@4.0.1",
+          "@tootallnate/once@1.1.2"
+        ],
+        "reachability": {
+          "level": "not-imported",
+          "label": "shipped, but no import from application code was found",
+          "files": [],
+          "via": [],
+          "decided": false
+        },
+        "advisories": [
+          {
+            "id": "GHSA-vpq2-c234-7xj6",
+            "aliases": [
+              "CVE-2026-3449"
+            ],
+            "severity": "low",
+            "cvss": 3.3,
+            "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "cwe": [
+              "CWE-705"
+            ],
+            "title": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
+            "fixed_version": "3.0.1",
+            "reference": "https://osv.dev/vulnerability/GHSA-vpq2-c234-7xj6"
+          }
+        ],
+        "cwe_meaning": [
+          {
+            "cwe": "CWE-705",
+            "name": "see the advisory",
+            "impact": "see the advisory for impact"
+          }
+        ],
+        "exploitability": "EPSS 0.13% chance of exploitation in 30 days (higher than 2% of all CVEs)"
+      },
+      "reasoning": "@tootallnate/once@1.1.2 is rated Low because its worst advisory (GHSA-vpq2-c234-7xj6: @tootallnate/once vulnerable to Incorrect Control Flow Scoping) means the advisory describes the impact. EPSS 0.13% chance of exploitation in 30 days (higher than 2% of all CVEs). It is shipped, but no import from application code was found, and shipped in production in an internet-facing web server.",
+      "reasoning_source": "rule-based reasoning (no LLM)"
+    }
+  ]
+}

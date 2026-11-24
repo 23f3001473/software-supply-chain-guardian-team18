@@ -1,0 +1,13 @@
+target/
+sandbox/
+tools/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+reports/history.jsonl
+reports/benchmark/*/guardian/
+reports/day2/validation/
+reports/day2/llm_log.jsonl

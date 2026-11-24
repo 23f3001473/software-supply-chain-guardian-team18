@@ -1,0 +1,4355 @@
+{
+  "actions": [
+    {
+      "id": "ACT-001",
+      "type": "pin-override",
+      "title": "Pin minimist to 1.2.6 with npm overrides",
+      "covers_packages": [
+        "minimist@0.0.10",
+        "minimist@0.0.8",
+        "minimist@1.2.0",
+        "minimist@1.2.5"
+      ],
+      "covers_risks": [
+        "RISK-001",
+        "RISK-005",
+        "RISK-006",
+        "RISK-033"
+      ],
+      "advisories_cleared": 7,
+      "severity_cleared": {
+        "critical": 4,
+        "moderate": 3
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "minimist",
+          "value": "1.2.6",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 7,
+        "risk_points_removed": 326.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 7 advisories (4 critical, 3 moderate) in 4 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of minimist to 1.2.6; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of minimist for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, swig have no safe upgrade that drops minimist 0.0.10 (npm audit would downgrade it), so minimist is pinned to 1.2.6 with npm overrides instead. cypress, forever, grunt-concurrent, grunt-if, grunt-jsbeautifier, grunt-mocha-test, grunt-npm-install, grunt-retire, grunt, mocha have no safe upgrade that drops minimist 0.0.8 (npm audit would downgrade it), so minimist is pinned to 1.2.6 with npm overrides instead. forever has no safe upgrade that drops minimist 1.2.5 (npm audit would downgrade it), so minimist is pinned to 1.2.6 with npm overrides instead. cypress has no safe upgrade that drops minimist 1.2.0 (npm audit would downgrade it), so minimist is pinned to 1.2.6 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.81,
+      "hash": "a223a1e2337ef7a6"
+    },
+    {
+      "id": "ACT-002",
+      "type": "pin-override",
+      "title": "Pin qs to 6.16.0 with npm overrides",
+      "covers_packages": [
+        "qs@5.2.1",
+        "qs@6.2.1",
+        "qs@6.3.2",
+        "qs@6.5.2"
+      ],
+      "covers_risks": [
+        "RISK-007",
+        "RISK-057",
+        "RISK-058",
+        "RISK-059"
+      ],
+      "advisories_cleared": 14,
+      "severity_cleared": {
+        "high": 6,
+        "moderate": 8
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "qs",
+          "value": "6.16.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 14,
+        "risk_points_removed": 262.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 14 advisories (6 high, 8 moderate) in 4 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of qs to 6.16.0 although its parent asks for \"6.5.2\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of qs for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "body-parser, cypress, express, grunt-contrib-watch have no safe upgrade that drops qs 6.5.2 (npm audit would downgrade it), so qs is pinned to 6.16.0 with npm overrides instead. grunt-retire has no safe upgrade that drops qs 5.2.1 (npm audit would downgrade it), so qs is pinned to 6.16.0 with npm overrides instead. grunt-npm-install has no safe upgrade that drops qs 6.2.1 (npm audit would downgrade it), so qs is pinned to 6.16.0 with npm overrides instead. grunt-if, grunt-retire have no safe upgrade that drops qs 6.3.2 (npm audit would downgrade it), so qs is pinned to 6.16.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.94,
+      "hash": "5379ef4f70a3c7af"
+    },
+    {
+      "id": "ACT-003",
+      "type": "pin-override",
+      "title": "Pin semver to 7.5.2 with npm overrides",
+      "covers_packages": [
+        "semver@5.3.0",
+        "semver@5.6.0",
+        "semver@5.7.0"
+      ],
+      "covers_risks": [
+        "RISK-013",
+        "RISK-024",
+        "RISK-071"
+      ],
+      "advisories_cleared": 3,
+      "severity_cleared": {
+        "high": 3
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "semver",
+          "value": "7.5.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 3,
+        "risk_points_removed": 211.9,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 3 advisories (3 high) in 3 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of semver to 7.5.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of semver for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress, grunt-concurrent, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt, mongodb, nodemon have no safe upgrade that drops semver 5.6.0 (npm audit would downgrade it), so semver is pinned to 7.5.2 with npm overrides instead. forever, nodemon have no safe upgrade that drops semver 5.7.0 (npm audit would downgrade it), so semver is pinned to 7.5.2 with npm overrides instead. grunt-npm-install has no safe upgrade that drops semver 5.3.0 (npm audit would downgrade it), so semver is pinned to 7.5.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.81,
+      "hash": "9e6f86e611ded76a"
+    },
+    {
+      "id": "ACT-004",
+      "type": "pin-override",
+      "title": "Pin set-value to 4.0.1 with npm overrides",
+      "covers_packages": [
+        "set-value@0.4.3",
+        "set-value@2.0.0"
+      ],
+      "covers_risks": [
+        "RISK-011",
+        "RISK-012"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "critical": 2,
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "set-value",
+          "value": "4.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 164.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 4 advisories (2 critical, 2 high) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of set-value to 4.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of set-value for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, grunt-cli, nodemon have no safe upgrade that drops set-value 0.4.3 (npm audit would downgrade it), so set-value is pinned to 4.0.1 with npm overrides instead. forever, grunt-cli, nodemon have no safe upgrade that drops set-value 2.0.0 (npm audit would downgrade it), so set-value is pinned to 4.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.81,
+      "hash": "d327ca6b7388bcbd"
+    },
+    {
+      "id": "ACT-005",
+      "type": "pin-override",
+      "title": "Pin bson to 1.1.4 with npm overrides",
+      "covers_packages": [
+        "bson@1.0.9"
+      ],
+      "covers_risks": [
+        "RISK-002"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "bson",
+          "value": "1.1.4",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 90.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 critical, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of bson to 1.1.4; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of bson for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "mongodb has no safe upgrade that drops bson 1.0.9 (npm audit would downgrade it), so bson is pinned to 1.1.4 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.94,
+      "hash": "ac5c77ec75c0fdbc"
+    },
+    {
+      "id": "ACT-006",
+      "type": "upgrade",
+      "title": "Upgrade marked 0.3.5 \u2192 4.0.10",
+      "covers_packages": [
+        "marked@0.3.5"
+      ],
+      "covers_risks": [
+        "RISK-003"
+      ],
+      "advisories_cleared": 6,
+      "severity_cleared": {
+        "high": 3,
+        "moderate": 3
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "marked",
+          "value": "4.0.10",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 6,
+        "risk_points_removed": 87.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 6 advisories (3 high, 3 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "server.js"
+        ],
+        "summary": "marked: major version jump, imported by application code in 1 file(s) (server.js).",
+        "check": "Read the changelogs of marked for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.99,
+      "hash": "1f23be40aae2c61f"
+    },
+    {
+      "id": "ACT-007",
+      "type": "upgrade",
+      "title": "Upgrade body-parser 1.18.3 \u2192 2.4.0",
+      "covers_packages": [
+        "body-parser@1.18.3"
+      ],
+      "covers_risks": [
+        "RISK-004"
+      ],
+      "advisories_cleared": 3,
+      "severity_cleared": {
+        "high": 2,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "body-parser",
+          "value": "^2.4.0",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 3,
+        "risk_points_removed": 87.3,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 3 advisories (2 high, 1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "server.js"
+        ],
+        "summary": "body-parser: major version jump, imported by application code in 1 file(s) (server.js).",
+        "check": "Read the changelogs of body-parser for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.99,
+      "hash": "f8c1d0815bce75fd"
+    },
+    {
+      "id": "ACT-008",
+      "type": "upgrade",
+      "title": "Upgrade underscore 1.9.1 \u2192 1.13.8",
+      "covers_packages": [
+        "underscore@1.9.1"
+      ],
+      "covers_risks": [
+        "RISK-008"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "underscore",
+          "value": "^1.13.8",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 83.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 critical, 1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "minor",
+        "files_using": [],
+        "summary": "underscore: minor version jump, not imported directly by application code.",
+        "check": "Read the changelogs of underscore for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.99,
+      "hash": "70de4fbaecdb4a70"
+    },
+    {
+      "id": "ACT-009",
+      "type": "pin-override",
+      "title": "Pin mixin-deep to 1.3.2 with npm overrides",
+      "covers_packages": [
+        "mixin-deep@1.3.1"
+      ],
+      "covers_risks": [
+        "RISK-009"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "mixin-deep",
+          "value": "1.3.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 83.2,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 critical) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of mixin-deep to 1.3.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of mixin-deep for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, grunt-cli, nodemon have no safe upgrade that drops mixin-deep 1.3.1 (npm audit would downgrade it), so mixin-deep is pinned to 1.3.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.81,
+      "hash": "cef11d5aabc1123f"
+    },
+    {
+      "id": "ACT-010",
+      "type": "pin-override",
+      "title": "Pin fsevents to 1.2.11 with npm overrides",
+      "covers_packages": [
+        "fsevents@1.2.9"
+      ],
+      "covers_risks": [
+        "RISK-014"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "unknown": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "fsevents",
+          "value": "1.2.11",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 80.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 critical, 1 unknown) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of fsevents to 1.2.11; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of fsevents for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, nodemon have no safe upgrade that drops fsevents 1.2.9 (npm audit would downgrade it), so fsevents is pinned to 1.2.11 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.81,
+      "hash": "d14591a4532a70f7"
+    },
+    {
+      "id": "ACT-011",
+      "type": "pin-override",
+      "title": "Pin uglify-js to 2.6.0 with npm overrides",
+      "covers_packages": [
+        "uglify-js@2.4.24"
+      ],
+      "covers_risks": [
+        "RISK-015"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "uglify-js",
+          "value": "2.6.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 80.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of uglify-js to 2.6.0 although its parent asks for \"~2.4\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of uglify-js for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "swig has no safe upgrade that drops uglify-js 2.4.24 (npm audit would downgrade it), so uglify-js is pinned to 2.6.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.94,
+      "hash": "02899b225a109e5b"
+    },
+    {
+      "id": "ACT-012",
+      "type": "pin-override",
+      "title": "Pin minimatch to 10.2.3 with npm overrides",
+      "covers_packages": [
+        "minimatch@0.3.0",
+        "minimatch@3.0.2",
+        "minimatch@3.0.3",
+        "minimatch@3.0.4"
+      ],
+      "covers_risks": [
+        "RISK-027",
+        "RISK-077",
+        "RISK-078",
+        "RISK-079"
+      ],
+      "advisories_cleared": 17,
+      "severity_cleared": {
+        "high": 17
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "minimatch",
+          "value": "10.2.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 17,
+        "risk_points_removed": 242.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 17 advisories (17 high) in 4 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of minimatch to 10.2.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of minimatch for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress, forever, grunt-concurrent, grunt-contrib-jshint, grunt-contrib-watch, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt, jshint, nodemon, selenium-webdriver have no safe upgrade that drops minimatch 3.0.4 (npm audit would downgrade it), so minimatch is pinned to 10.2.3 with npm overrides instead. grunt-mocha-test, mocha have no safe upgrade that drops minimatch 0.3.0 (npm audit would downgrade it), so minimatch is pinned to 10.2.3 with npm overrides instead. grunt-if has no safe upgrade that drops minimatch 3.0.2 (npm audit would downgrade it), so minimatch is pinned to 10.2.3 with npm overrides instead. grunt-npm-install has no safe upgrade that drops minimatch 3.0.3 (npm audit would downgrade it), so minimatch is pinned to 10.2.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "70ab6c4cef91955c"
+    },
+    {
+      "id": "ACT-013",
+      "type": "pin-override",
+      "title": "Pin nconf to 0.11.4 with npm overrides",
+      "covers_packages": [
+        "nconf@0.10.0",
+        "nconf@0.6.9"
+      ],
+      "covers_risks": [
+        "RISK-028",
+        "RISK-029"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "nconf",
+          "value": "0.11.4",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 142.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 high) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of nconf to 0.11.4 although its parent asks for \"^0.10.0\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of nconf for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever has no safe upgrade that drops nconf 0.10.0 (npm audit would downgrade it), so nconf is pinned to 0.11.4 with npm overrides instead. forever has no safe upgrade that drops nconf 0.6.9 (npm audit would downgrade it), so nconf is pinned to 0.11.4 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "1ebe78a74ca909a3"
+    },
+    {
+      "id": "ACT-014",
+      "type": "pin-override",
+      "title": "Pin tar to 7.5.21 with npm overrides",
+      "covers_packages": [
+        "tar@2.2.1",
+        "tar@4.4.8"
+      ],
+      "covers_risks": [
+        "RISK-018",
+        "RISK-051"
+      ],
+      "advisories_cleared": 34,
+      "severity_cleared": {
+        "critical": 2,
+        "high": 24,
+        "moderate": 8
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "tar",
+          "value": "7.5.21",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 34,
+        "risk_points_removed": 140.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 34 advisories (2 critical, 24 high, 8 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of tar to 7.5.21; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of tar for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, nodemon have no safe upgrade that drops tar 4.4.8 (npm audit would downgrade it), so tar is pinned to 7.5.21 with npm overrides instead. grunt-npm-install has no safe upgrade that drops tar 2.2.1 (npm audit would downgrade it), so tar is pinned to 7.5.21 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "dd2cfdbfcb724a86"
+    },
+    {
+      "id": "ACT-015",
+      "type": "pin-override",
+      "title": "Pin ini to 1.3.6 with npm overrides",
+      "covers_packages": [
+        "ini@1.3.4",
+        "ini@1.3.5"
+      ],
+      "covers_risks": [
+        "RISK-025",
+        "RISK-072"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "ini",
+          "value": "1.3.6",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 130.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 high) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of ini to 1.3.6; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of ini for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress, forever, grunt-cli, grunt-env, grunt-jsbeautifier, nodemon have no safe upgrade that drops ini 1.3.5 (npm audit would downgrade it), so ini is pinned to 1.3.6 with npm overrides instead. grunt-npm-install has no safe upgrade that drops ini 1.3.4 (npm audit would downgrade it), so ini is pinned to 1.3.6 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "fee4c3b0f585c609"
+    },
+    {
+      "id": "ACT-016",
+      "type": "pin-override",
+      "title": "Pin braces to 3.0.3 with npm overrides",
+      "covers_packages": [
+        "braces@1.8.5",
+        "braces@2.3.2"
+      ],
+      "covers_risks": [
+        "RISK-030",
+        "RISK-086"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "braces",
+          "value": "3.0.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 125.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 high) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of braces to 3.0.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of braces for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, nodemon have no safe upgrade that drops braces 2.3.2 (npm audit would downgrade it), so braces is pinned to 3.0.3 with npm overrides instead. grunt-if has no safe upgrade that drops braces 1.8.5 (npm audit would downgrade it), so braces is pinned to 3.0.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "bb89da80e34645d0"
+    },
+    {
+      "id": "ACT-017",
+      "type": "pin-override",
+      "title": "Pin brace-expansion to 5.0.12 with npm overrides",
+      "covers_packages": [
+        "brace-expansion@1.1.11",
+        "brace-expansion@1.1.6"
+      ],
+      "covers_risks": [
+        "RISK-038",
+        "RISK-073"
+      ],
+      "advisories_cleared": 17,
+      "severity_cleared": {
+        "high": 11,
+        "moderate": 4,
+        "low": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "brace-expansion",
+          "value": "5.0.12",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 17,
+        "risk_points_removed": 123.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 17 advisories (11 high, 4 moderate, 2 low) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of brace-expansion to 5.0.12; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of brace-expansion for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress, forever, grunt-concurrent, grunt-contrib-jshint, grunt-contrib-watch, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt, jshint, nodemon, selenium-webdriver have no safe upgrade that drops brace-expansion 1.1.11 (npm audit would downgrade it), so brace-expansion is pinned to 5.0.12 with npm overrides instead. grunt-npm-install has no safe upgrade that drops brace-expansion 1.1.6 (npm audit would downgrade it), so brace-expansion is pinned to 5.0.12 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "a999039901092eb3"
+    },
+    {
+      "id": "ACT-018",
+      "type": "upgrade",
+      "title": "Upgrade mongodb 2.2.36 \u2192 3.1.13",
+      "covers_packages": [
+        "mongodb@2.2.36"
+      ],
+      "covers_risks": [
+        "RISK-017"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "mongodb",
+          "value": "^3.1.13",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 79.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "High",
+        "semver": "major",
+        "files_using": [
+          "artifacts/db-reset.js",
+          "server.js"
+        ],
+        "summary": "mongodb: major version jump, imported by application code in 2 file(s) (artifacts/db-reset.js, server.js).",
+        "check": "Read the changelogs of mongodb for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.65,
+      "hash": "cd9050e2b8befb33"
+    },
+    {
+      "id": "ACT-019",
+      "type": "pin-override",
+      "title": "Pin path-to-regexp to 0.1.13 with npm overrides",
+      "covers_packages": [
+        "path-to-regexp@0.1.7"
+      ],
+      "covers_risks": [
+        "RISK-019"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "path-to-regexp",
+          "value": "0.1.13",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 77.1,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of path-to-regexp to 0.1.13 although its parent asks for \"0.1.7\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of path-to-regexp for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "express has no safe upgrade that drops path-to-regexp 0.1.7 (npm audit would downgrade it), so path-to-regexp is pinned to 0.1.13 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "260d42b2a6914e66"
+    },
+    {
+      "id": "ACT-020",
+      "type": "upgrade",
+      "title": "Upgrade express 4.16.4 \u2192 4.20.0",
+      "covers_packages": [
+        "express@4.16.4"
+      ],
+      "covers_risks": [
+        "RISK-020"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 1,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "express",
+          "value": "^4.20.0",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 75.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 moderate, 1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "minor",
+        "files_using": [
+          "app/routes/tutorial.js",
+          "server.js"
+        ],
+        "summary": "express: minor version jump, imported by application code in 2 file(s) (app/routes/tutorial.js, server.js).",
+        "check": "Read the changelogs of express for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.99,
+      "hash": "251b058c5872ade3"
+    },
+    {
+      "id": "ACT-021",
+      "type": "pin-override",
+      "title": "Pin decode-uri-component to 0.5.1 with npm overrides",
+      "covers_packages": [
+        "decode-uri-component@0.2.0"
+      ],
+      "covers_risks": [
+        "RISK-021"
+      ],
+      "advisories_cleared": 3,
+      "severity_cleared": {
+        "high": 2,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "decode-uri-component",
+          "value": "0.5.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 3,
+        "risk_points_removed": 75.6,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 3 advisories (2 high, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of decode-uri-component to 0.5.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of decode-uri-component for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, grunt-cli, nodemon have no safe upgrade that drops decode-uri-component 0.2.0 (npm audit would downgrade it), so decode-uri-component is pinned to 0.5.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "5f9ad39c618a31b8"
+    },
+    {
+      "id": "ACT-022",
+      "type": "pin-override",
+      "title": "Pin y18n to 3.2.2 with npm overrides",
+      "covers_packages": [
+        "y18n@3.2.1"
+      ],
+      "covers_risks": [
+        "RISK-022"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "y18n",
+          "value": "3.2.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 75.1,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of y18n to 3.2.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of y18n for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever has no safe upgrade that drops y18n 3.2.1 (npm audit would downgrade it), so y18n is pinned to 3.2.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "379349c55e880685"
+    },
+    {
+      "id": "ACT-023",
+      "type": "pin-override",
+      "title": "Pin proxy-addr to 2.0.8 with npm overrides",
+      "covers_packages": [
+        "proxy-addr@2.0.4"
+      ],
+      "covers_risks": [
+        "RISK-023"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "proxy-addr",
+          "value": "2.0.8",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 74.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 critical) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of proxy-addr to 2.0.8 although its parent asks for \"~2.0.4\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of proxy-addr for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "express has no safe upgrade that drops proxy-addr 2.0.4 (npm audit would downgrade it), so proxy-addr is pinned to 2.0.8 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "61141d165fb530c9"
+    },
+    {
+      "id": "ACT-024",
+      "type": "pin-override",
+      "title": "Pin helmet-csp to 2.9.1 with npm overrides",
+      "covers_packages": [
+        "helmet-csp@1.2.2"
+      ],
+      "covers_risks": [
+        "RISK-026"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "helmet-csp",
+          "value": "2.9.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 73.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of helmet-csp to 2.9.1 although its parent asks for \"1.2.2\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of helmet-csp for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "helmet has no safe upgrade that drops helmet-csp 1.2.2 (npm audit would downgrade it), so helmet-csp is pinned to 2.9.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "e4db7c210830de9a"
+    },
+    {
+      "id": "ACT-025",
+      "type": "pin-override",
+      "title": "Pin i to 0.3.7 with npm overrides",
+      "covers_packages": [
+        "i@0.3.6"
+      ],
+      "covers_risks": [
+        "RISK-031"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "i",
+          "value": "0.3.7",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 69.9,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of i to 0.3.7; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of i for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever has no safe upgrade that drops i 0.3.6 (npm audit would downgrade it), so i is pinned to 0.3.7 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.81,
+      "hash": "34ebdbffe60fd0f6"
+    },
+    {
+      "id": "ACT-026",
+      "type": "pin-override",
+      "title": "Pin handlebars to 4.7.10 with npm overrides",
+      "covers_packages": [
+        "handlebars@4.0.5"
+      ],
+      "covers_risks": [
+        "RISK-032"
+      ],
+      "advisories_cleared": 20,
+      "severity_cleared": {
+        "critical": 6,
+        "high": 10,
+        "moderate": 3,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "handlebars",
+          "value": "4.7.10",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 20,
+        "risk_points_removed": 68.1,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 20 advisories (6 critical, 10 high, 3 moderate, 1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of handlebars to 4.7.10; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of handlebars for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops handlebars 4.0.5 (npm audit would downgrade it), so handlebars is pinned to 4.7.10 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "0cbdc41a1b643f35"
+    },
+    {
+      "id": "ACT-027",
+      "type": "pin-override",
+      "title": "Pin getobject to 1.0.0 with npm overrides",
+      "covers_packages": [
+        "getobject@0.1.0"
+      ],
+      "covers_risks": [
+        "RISK-034"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "getobject",
+          "value": "1.0.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 67.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 critical) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of getobject to 1.0.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of getobject for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-concurrent, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt have no safe upgrade that drops getobject 0.1.0 (npm audit would downgrade it), so getobject is pinned to 1.0.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "7c9e6d63dd50cdaa"
+    },
+    {
+      "id": "ACT-028",
+      "type": "pin-override",
+      "title": "Pin growl to 1.10.0 with npm overrides",
+      "covers_packages": [
+        "growl@1.9.2"
+      ],
+      "covers_risks": [
+        "RISK-035"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "growl",
+          "value": "1.10.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 67.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 critical) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of growl to 1.10.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of growl for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-mocha-test, mocha have no safe upgrade that drops growl 1.9.2 (npm audit would downgrade it), so growl is pinned to 1.10.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "7eae191a57205f8f"
+    },
+    {
+      "id": "ACT-029",
+      "type": "pin-override",
+      "title": "Pin underscore to 1.13.8 with npm overrides",
+      "covers_packages": [
+        "underscore@1.8.3"
+      ],
+      "covers_risks": [
+        "RISK-036"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "underscore",
+          "value": "1.13.8",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 67.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 critical, 1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of underscore to 1.13.8; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of underscore for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-retire has no safe upgrade that drops underscore 1.8.3 (npm audit would downgrade it), so underscore is pinned to 1.13.8 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "633065114fa76146"
+    },
+    {
+      "id": "ACT-030",
+      "type": "pin-override",
+      "title": "Pin json-schema to 0.4.0 with npm overrides",
+      "covers_packages": [
+        "json-schema@0.2.3"
+      ],
+      "covers_risks": [
+        "RISK-037"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "json-schema",
+          "value": "0.4.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 67.3,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 critical) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of json-schema to 0.4.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of json-schema for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress, grunt-if, grunt-retire have no safe upgrade that drops json-schema 0.2.3 (npm audit would downgrade it), so json-schema is pinned to 0.4.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.94,
+      "hash": "8087ef6b377940f2"
+    },
+    {
+      "id": "ACT-031",
+      "type": "pin-override",
+      "title": "Pin form-data to 2.5.6 with npm overrides",
+      "covers_packages": [
+        "form-data@0.1.4",
+        "form-data@1.0.1",
+        "form-data@2.0.0",
+        "form-data@2.1.4",
+        "form-data@2.3.3"
+      ],
+      "covers_risks": [
+        "RISK-043",
+        "RISK-044",
+        "RISK-045",
+        "RISK-046",
+        "RISK-047"
+      ],
+      "advisories_cleared": 10,
+      "severity_cleared": {
+        "critical": 5,
+        "high": 5
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "form-data",
+          "value": "2.5.6",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 10,
+        "risk_points_removed": 317.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 10 advisories (5 critical, 5 high) in 5 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of form-data to 2.5.6; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of form-data for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops form-data 0.1.4 (npm audit would downgrade it), so form-data is pinned to 2.5.6 with npm overrides instead. grunt-retire has no safe upgrade that drops form-data 1.0.1 (npm audit would downgrade it), so form-data is pinned to 2.5.6 with npm overrides instead. grunt-npm-install has no safe upgrade that drops form-data 2.0.0 (npm audit would downgrade it), so form-data is pinned to 2.5.6 with npm overrides instead. grunt-if, grunt-retire have no safe upgrade that drops form-data 2.1.4 (npm audit would downgrade it), so form-data is pinned to 2.5.6 with npm overrides instead. cypress has no safe upgrade that drops form-data 2.3.3 (npm audit would downgrade it), so form-data is pinned to 2.5.6 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "0868d1e24620a32f"
+    },
+    {
+      "id": "ACT-032",
+      "type": "pin-override",
+      "title": "Pin cross-spawn to 7.0.5 with npm overrides",
+      "covers_packages": [
+        "cross-spawn@4.0.0",
+        "cross-spawn@4.0.2",
+        "cross-spawn@5.1.0",
+        "cross-spawn@6.0.5",
+        "cross-spawn@7.0.3"
+      ],
+      "covers_risks": [
+        "RISK-095",
+        "RISK-096",
+        "RISK-097",
+        "RISK-098",
+        "RISK-099"
+      ],
+      "advisories_cleared": 5,
+      "severity_cleared": {
+        "high": 5
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "cross-spawn",
+          "value": "7.0.5",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 5,
+        "risk_points_removed": 263.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 5 advisories (5 high) in 5 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of cross-spawn to 7.0.5; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of cross-spawn for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops cross-spawn 4.0.0 (npm audit would downgrade it), so cross-spawn is pinned to 7.0.5 with npm overrides instead. grunt-if has no safe upgrade that drops cross-spawn 4.0.2 (npm audit would downgrade it), so cross-spawn is pinned to 7.0.5 with npm overrides instead. nodemon has no safe upgrade that drops cross-spawn 5.1.0 (npm audit would downgrade it), so cross-spawn is pinned to 7.0.5 with npm overrides instead. cypress has no safe upgrade that drops cross-spawn 6.0.5 (npm audit would downgrade it), so cross-spawn is pinned to 7.0.5 with npm overrides instead. cross-env has no safe upgrade that drops cross-spawn 7.0.3 (npm audit would downgrade it), so cross-spawn is pinned to 7.0.5 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "edbfa6c2bb3296c6"
+    },
+    {
+      "id": "ACT-033",
+      "type": "pin-override",
+      "title": "Pin lodash to 4.18.0 with npm overrides",
+      "covers_packages": [
+        "lodash@4.13.1",
+        "lodash@4.17.11",
+        "lodash@4.17.20",
+        "lodash@4.17.21"
+      ],
+      "covers_risks": [
+        "RISK-040",
+        "RISK-041",
+        "RISK-055",
+        "RISK-056"
+      ],
+      "advisories_cleared": 21,
+      "severity_cleared": {
+        "critical": 2,
+        "high": 10,
+        "moderate": 9
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "lodash",
+          "value": "4.18.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 21,
+        "risk_points_removed": 249.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 21 advisories (2 critical, 10 high, 9 moderate) in 4 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of lodash to 4.18.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of lodash for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops lodash 4.13.1 (npm audit would downgrade it), so lodash is pinned to 4.18.0 with npm overrides instead. async, cypress, grunt-concurrent, grunt-contrib-watch, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt have no safe upgrade that drops lodash 4.17.11 (npm audit would downgrade it), so lodash is pinned to 4.18.0 with npm overrides instead. grunt-env has no safe upgrade that drops lodash 4.17.20 (npm audit would downgrade it), so lodash is pinned to 4.18.0 with npm overrides instead. jshint has no safe upgrade that drops lodash 4.17.21 (npm audit would downgrade it), so lodash is pinned to 4.18.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "5920932f97a7e520"
+    },
+    {
+      "id": "ACT-034",
+      "type": "pin-override",
+      "title": "Pin tough-cookie to 4.1.3 with npm overrides",
+      "covers_packages": [
+        "tough-cookie@2.2.2",
+        "tough-cookie@2.3.1",
+        "tough-cookie@2.3.4",
+        "tough-cookie@2.4.3"
+      ],
+      "covers_risks": [
+        "RISK-067",
+        "RISK-068",
+        "RISK-090",
+        "RISK-091"
+      ],
+      "advisories_cleared": 7,
+      "severity_cleared": {
+        "high": 2,
+        "moderate": 5
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "tough-cookie",
+          "value": "4.1.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 7,
+        "risk_points_removed": 222.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 7 advisories (2 high, 5 moderate) in 4 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of tough-cookie to 4.1.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of tough-cookie for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-retire has no safe upgrade that drops tough-cookie 2.2.2 (npm audit would downgrade it), so tough-cookie is pinned to 4.1.3 with npm overrides instead. grunt-npm-install has no safe upgrade that drops tough-cookie 2.3.1 (npm audit would downgrade it), so tough-cookie is pinned to 4.1.3 with npm overrides instead. grunt-if, grunt-retire, zaproxy have no safe upgrade that drops tough-cookie 2.3.4 (npm audit would downgrade it), so tough-cookie is pinned to 4.1.3 with npm overrides instead. cypress has no safe upgrade that drops tough-cookie 2.4.3 (npm audit would downgrade it), so tough-cookie is pinned to 4.1.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "5ffb0d201a21c028"
+    },
+    {
+      "id": "ACT-035",
+      "type": "pin-override",
+      "title": "Pin hoek to 5.0.3 with npm overrides",
+      "covers_packages": [
+        "hoek@0.9.1",
+        "hoek@2.16.3"
+      ],
+      "covers_risks": [
+        "RISK-048",
+        "RISK-049"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "high": 4
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "hoek",
+          "value": "5.0.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 126.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 4 advisories (4 high) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of hoek to 5.0.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of hoek for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops hoek 0.9.1 (npm audit would downgrade it), so hoek is pinned to 5.0.3 with npm overrides instead. grunt-if, grunt-retire have no safe upgrade that drops hoek 2.16.3 (npm audit would downgrade it), so hoek is pinned to 5.0.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "9a9ae37d1b1e0d4b"
+    },
+    {
+      "id": "ACT-036",
+      "type": "pin-override",
+      "title": "Pin hawk to 9.0.1 with npm overrides",
+      "covers_packages": [
+        "hawk@1.0.0",
+        "hawk@3.1.3"
+      ],
+      "covers_risks": [
+        "RISK-066",
+        "RISK-094"
+      ],
+      "advisories_cleared": 3,
+      "severity_cleared": {
+        "high": 3
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "hawk",
+          "value": "9.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 3,
+        "risk_points_removed": 110.7,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 3 advisories (3 high) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of hawk to 9.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of hawk for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops hawk 1.0.0 (npm audit would downgrade it), so hawk is pinned to 9.0.1 with npm overrides instead. grunt-if, grunt-retire have no safe upgrade that drops hawk 3.1.3 (npm audit would downgrade it), so hawk is pinned to 9.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "d0605500eed7539a"
+    },
+    {
+      "id": "ACT-037",
+      "type": "pin-override",
+      "title": "Pin js-yaml to 4.3.2 with npm overrides",
+      "covers_packages": [
+        "js-yaml@3.5.5",
+        "js-yaml@3.6.1"
+      ],
+      "covers_risks": [
+        "RISK-092",
+        "RISK-093"
+      ],
+      "advisories_cleared": 14,
+      "severity_cleared": {
+        "high": 8,
+        "moderate": 6
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "js-yaml",
+          "value": "4.3.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 14,
+        "risk_points_removed": 106.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 14 advisories (8 high, 6 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of js-yaml to 4.3.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of js-yaml for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-concurrent, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt have no safe upgrade that drops js-yaml 3.5.5 (npm audit would downgrade it), so js-yaml is pinned to 4.3.2 with npm overrides instead. grunt-if has no safe upgrade that drops js-yaml 3.6.1 (npm audit would downgrade it), so js-yaml is pinned to 4.3.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.81,
+      "hash": "3b84c7e9afac90a0"
+    },
+    {
+      "id": "ACT-038",
+      "type": "pin-override",
+      "title": "Pin bl to 1.2.3 with npm overrides",
+      "covers_packages": [
+        "bl@1.0.3",
+        "bl@1.1.2"
+      ],
+      "covers_risks": [
+        "RISK-100",
+        "RISK-101"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "bl",
+          "value": "1.2.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 104.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of bl to 1.2.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of bl for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-retire has no safe upgrade that drops bl 1.0.3 (npm audit would downgrade it), so bl is pinned to 1.2.3 with npm overrides instead. grunt-npm-install has no safe upgrade that drops bl 1.1.2 (npm audit would downgrade it), so bl is pinned to 1.2.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "e6e085bdbe620fd1"
+    },
+    {
+      "id": "ACT-039",
+      "type": "pin-override",
+      "title": "Pin request to 2.68.0 with npm overrides",
+      "covers_packages": [
+        "request@2.36.0",
+        "request@2.67.0"
+      ],
+      "covers_risks": [
+        "RISK-107",
+        "RISK-108"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "moderate": 4
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "request",
+          "value": "2.68.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 101.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 4 advisories (4 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of request to 2.68.0 although its parent asks for \"~2.36.0\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of request for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops request 2.36.0 (npm audit would downgrade it), so request is pinned to 2.68.0 with npm overrides instead. grunt-retire has no safe upgrade that drops request 2.67.0 (npm audit would downgrade it), so request is pinned to 2.68.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "6dbe876ef6c90a5d"
+    },
+    {
+      "id": "ACT-040",
+      "type": "pin-override",
+      "title": "Pin debug to 2.6.9 with npm overrides",
+      "covers_packages": [
+        "debug@3.2.6",
+        "debug@4.1.1"
+      ],
+      "covers_risks": [
+        "RISK-063",
+        "RISK-135"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "low": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "debug",
+          "value": "2.6.9",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 100.2,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 low) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of debug to 2.6.9; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of debug for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "forever, nodemon have no safe upgrade that drops debug 4.1.1 (npm audit would downgrade it), so debug is pinned to 2.6.9 with npm overrides instead. cypress has no safe upgrade that drops debug 3.2.6 (npm audit would downgrade it), so debug is pinned to 2.6.9 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.81,
+      "hash": "6195611fee5ed3dd"
+    },
+    {
+      "id": "ACT-041",
+      "type": "pin-override",
+      "title": "Pin jsonpointer to 5.0.0 with npm overrides",
+      "covers_packages": [
+        "jsonpointer@4.0.0",
+        "jsonpointer@4.0.1"
+      ],
+      "covers_risks": [
+        "RISK-110",
+        "RISK-111"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "jsonpointer",
+          "value": "5.0.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 99.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of jsonpointer to 5.0.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of jsonpointer for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops jsonpointer 4.0.0 (npm audit would downgrade it), so jsonpointer is pinned to 5.0.0 with npm overrides instead. grunt-if, grunt-retire have no safe upgrade that drops jsonpointer 4.0.1 (npm audit would downgrade it), so jsonpointer is pinned to 5.0.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "d103d98c957e2406"
+    },
+    {
+      "id": "ACT-042",
+      "type": "pin-override",
+      "title": "Pin hosted-git-info to 2.8.9 with npm overrides",
+      "covers_packages": [
+        "hosted-git-info@2.1.5",
+        "hosted-git-info@2.7.1"
+      ],
+      "covers_risks": [
+        "RISK-115",
+        "RISK-116"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "hosted-git-info",
+          "value": "2.8.9",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 98.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of hosted-git-info to 2.8.9; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of hosted-git-info for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops hosted-git-info 2.1.5 (npm audit would downgrade it), so hosted-git-info is pinned to 2.8.9 with npm overrides instead. grunt-concurrent, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt have no safe upgrade that drops hosted-git-info 2.7.1 (npm audit would downgrade it), so hosted-git-info is pinned to 2.8.9 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "7d572936e34ea2d0"
+    },
+    {
+      "id": "ACT-043",
+      "type": "pin-override",
+      "title": "Pin tmp to 0.2.6 with npm overrides",
+      "covers_packages": [
+        "tmp@0.0.24",
+        "tmp@0.1.0"
+      ],
+      "covers_risks": [
+        "RISK-118",
+        "RISK-119"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "high": 2,
+        "low": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "tmp",
+          "value": "0.2.6",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 97.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 4 advisories (2 high, 2 low) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of tmp to 0.2.6 although its parent asks for \"0.0.24\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of tmp for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "selenium-webdriver has no safe upgrade that drops tmp 0.0.24 (npm audit would downgrade it), so tmp is pinned to 0.2.6 with npm overrides instead. cypress has no safe upgrade that drops tmp 0.1.0 (npm audit would downgrade it), so tmp is pinned to 0.2.6 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "eff0662502e43acf"
+    },
+    {
+      "id": "ACT-044",
+      "type": "pin-override",
+      "title": "Pin micromatch to 4.0.8 with npm overrides",
+      "covers_packages": [
+        "micromatch@2.3.11",
+        "micromatch@3.1.10"
+      ],
+      "covers_risks": [
+        "RISK-126",
+        "RISK-127"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "micromatch",
+          "value": "4.0.8",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 91.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 moderate) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of micromatch to 4.0.8; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of micromatch for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops micromatch 2.3.11 (npm audit would downgrade it), so micromatch is pinned to 4.0.8 with npm overrides instead. grunt-cli has no safe upgrade that drops micromatch 3.1.10 (npm audit would downgrade it), so micromatch is pinned to 4.0.8 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "a29f09d1c0428ecd"
+    },
+    {
+      "id": "ACT-045",
+      "type": "pin-override",
+      "title": "Pin lodash to 4.17.21 with npm overrides",
+      "covers_packages": [
+        "lodash@2.4.2"
+      ],
+      "covers_risks": [
+        "RISK-039"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "critical": 1,
+        "high": 2,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "lodash",
+          "value": "4.17.21",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 64.9,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 4 advisories (1 critical, 2 high, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of lodash to 4.17.21 although its parent asks for \"~2.4.1\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of lodash for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops lodash 2.4.2 (npm audit would downgrade it), so lodash is pinned to 4.17.21 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "1ad3c10026507499"
+    },
+    {
+      "id": "ACT-046",
+      "type": "pin-override",
+      "title": "Pin serve-static to 1.16.0 with npm overrides",
+      "covers_packages": [
+        "serve-static@1.13.2"
+      ],
+      "covers_risks": [
+        "RISK-042"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "serve-static",
+          "value": "1.16.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 64.2,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of serve-static to 1.16.0 although its parent asks for \"1.13.2\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of serve-static for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "express has no safe upgrade that drops serve-static 1.13.2 (npm audit would downgrade it), so serve-static is pinned to 1.16.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "6dc07e618c926023"
+    },
+    {
+      "id": "ACT-047",
+      "type": "pin-override",
+      "title": "Pin send to 0.19.0 with npm overrides",
+      "covers_packages": [
+        "send@0.16.2"
+      ],
+      "covers_risks": [
+        "RISK-050"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "send",
+          "value": "0.19.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 63.3,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of send to 0.19.0 although its parent asks for \"0.16.2\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of send for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "express has no safe upgrade that drops send 0.16.2 (npm audit would downgrade it), so send is pinned to 0.19.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "fa3b859f436b787b"
+    },
+    {
+      "id": "ACT-048",
+      "type": "update-base-image",
+      "title": "Pin 3 container image(s) by digest",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-052"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:12-alpine",
+          "value": "node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d6cbea6f124440895c27db68",
+          "section": null
+        },
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:12-alpine",
+          "value": "node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d6cbea6f124440895c27db68",
+          "section": null
+        },
+        {
+          "file": "docker-compose.yml",
+          "op": "replace-text",
+          "target": "mongo:4.4",
+          "value": "mongo:4.4@sha256:4be76f674fc4b27859816811b8baa3c51830eb1dbf4ca81a51e26b79edd662ef",
+          "section": null
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 61.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Removes a non-CVE supply-chain risk; the rescan confirms the finding disappears."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Same image as today, but frozen: future base-image security patches need a deliberate digest update.",
+        "check": "Rebuild the container; schedule digest refreshes (e.g. Renovate/Dependabot)."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore Dockerfile, docker-compose.yml from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.8,
+      "hash": "1311bbf7a604c284"
+    },
+    {
+      "id": "ACT-049",
+      "type": "pin-override",
+      "title": "Pin qs to 6.14.1 with npm overrides",
+      "covers_packages": [
+        "qs@0.6.6"
+      ],
+      "covers_risks": [
+        "RISK-053"
+      ],
+      "advisories_cleared": 5,
+      "severity_cleared": {
+        "high": 4,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "qs",
+          "value": "6.14.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 5,
+        "risk_points_removed": 61.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 5 advisories (4 high, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of qs to 6.14.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of qs for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops qs 0.6.6 (npm audit would downgrade it), so qs is pinned to 6.14.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.76,
+      "hash": "ea9a73b02ad61dd3"
+    },
+    {
+      "id": "ACT-050",
+      "type": "pin-override",
+      "title": "Pin websocket-extensions to 0.1.4 with npm overrides",
+      "covers_packages": [
+        "websocket-extensions@0.1.3"
+      ],
+      "covers_risks": [
+        "RISK-054"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "websocket-extensions",
+          "value": "0.1.4",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 60.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of websocket-extensions to 0.1.4; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of websocket-extensions for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-contrib-watch has no safe upgrade that drops websocket-extensions 0.1.3 (npm audit would downgrade it), so websocket-extensions is pinned to 0.1.4 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "a3da54110460a434"
+    },
+    {
+      "id": "ACT-051",
+      "type": "upgrade",
+      "title": "Upgrade async 2.6.1 \u2192 3.2.2",
+      "covers_packages": [
+        "async@2.6.1"
+      ],
+      "covers_risks": [
+        "RISK-060"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "async",
+          "value": "^3.2.2",
+          "section": "devDependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 59.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "async: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of async for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "78738440f59dfa04"
+    },
+    {
+      "id": "ACT-052",
+      "type": "pin-override",
+      "title": "Pin moment to 2.29.4 with npm overrides",
+      "covers_packages": [
+        "moment@2.24.0"
+      ],
+      "covers_risks": [
+        "RISK-061"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "moment",
+          "value": "2.29.4",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 58.6,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of moment to 2.29.4 although its parent asks for \"2.24.0\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of moment for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress has no safe upgrade that drops moment 2.24.0 (npm audit would downgrade it), so moment is pinned to 2.29.4 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "ed6f8814df6eb87f"
+    },
+    {
+      "id": "ACT-053",
+      "type": "pin-override",
+      "title": "Pin npm to 6.14.6 with npm overrides",
+      "covers_packages": [
+        "npm@3.10.10"
+      ],
+      "covers_risks": [
+        "RISK-062"
+      ],
+      "advisories_cleared": 5,
+      "severity_cleared": {
+        "high": 4,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "npm",
+          "value": "6.14.6",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 5,
+        "risk_points_removed": 58.6,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 5 advisories (4 high, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of npm to 6.14.6 although its parent asks for \"^3.7.2\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of npm for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops npm 3.10.10 (npm audit would downgrade it), so npm is pinned to 6.14.6 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "50cc6d170a6161f3"
+    },
+    {
+      "id": "ACT-054",
+      "type": "pin-override",
+      "title": "Pin ansi-regex to 6.0.1 with npm overrides",
+      "covers_packages": [
+        "ansi-regex@3.0.0"
+      ],
+      "covers_risks": [
+        "RISK-065"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "ansi-regex",
+          "value": "6.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 57.9,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of ansi-regex to 6.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of ansi-regex for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "nodemon has no safe upgrade that drops ansi-regex 3.0.0 (npm audit would downgrade it), so ansi-regex is pinned to 6.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "8ec1a2417d623334"
+    },
+    {
+      "id": "ACT-055",
+      "type": "pin-override",
+      "title": "Pin npm-user-validate to 1.0.1 with npm overrides",
+      "covers_packages": [
+        "npm-user-validate@0.1.5"
+      ],
+      "covers_risks": [
+        "RISK-069"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "npm-user-validate",
+          "value": "1.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 57.7,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of npm-user-validate to 1.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of npm-user-validate for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops npm-user-validate 0.1.5 (npm audit would downgrade it), so npm-user-validate is pinned to 1.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "47b7fc477a8e2578"
+    },
+    {
+      "id": "ACT-056",
+      "type": "pin-override",
+      "title": "Pin trim-newlines to 3.0.1 with npm overrides",
+      "covers_packages": [
+        "trim-newlines@1.0.0"
+      ],
+      "covers_risks": [
+        "RISK-070"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "trim-newlines",
+          "value": "3.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 57.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of trim-newlines to 3.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of trim-newlines for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-concurrent, grunt-if, grunt-jsbeautifier, grunt-npm-install, grunt-retire, grunt have no safe upgrade that drops trim-newlines 1.0.0 (npm audit would downgrade it), so trim-newlines is pinned to 3.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "b71275de153875fc"
+    },
+    {
+      "id": "ACT-057",
+      "type": "pin-override",
+      "title": "Pin fstream to 1.0.12 with npm overrides",
+      "covers_packages": [
+        "fstream@1.0.10"
+      ],
+      "covers_risks": [
+        "RISK-074"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "fstream",
+          "value": "1.0.12",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 56.9,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of fstream to 1.0.12; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of fstream for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops fstream 1.0.10 (npm audit would downgrade it), so fstream is pinned to 1.0.12 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "a241a733f246c3a0"
+    },
+    {
+      "id": "ACT-058",
+      "type": "pin-override",
+      "title": "Pin dot-prop to 4.2.1 with npm overrides",
+      "covers_packages": [
+        "dot-prop@4.2.0"
+      ],
+      "covers_risks": [
+        "RISK-075"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "dot-prop",
+          "value": "4.2.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 56.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of dot-prop to 4.2.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of dot-prop for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "nodemon has no safe upgrade that drops dot-prop 4.2.0 (npm audit would downgrade it), so dot-prop is pinned to 4.2.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "985400cb908c08f0"
+    },
+    {
+      "id": "ACT-059",
+      "type": "pin-override",
+      "title": "Pin kind-of to 6.0.3 with npm overrides",
+      "covers_packages": [
+        "kind-of@6.0.2"
+      ],
+      "covers_risks": [
+        "RISK-076"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "kind-of",
+          "value": "6.0.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 56.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of kind-of to 6.0.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of kind-of for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-cli has no safe upgrade that drops kind-of 6.0.2 (npm audit would downgrade it), so kind-of is pinned to 6.0.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "1a072d31298b9281"
+    },
+    {
+      "id": "ACT-060",
+      "type": "pin-override",
+      "title": "Pin debug to 3.1.0 with npm overrides",
+      "covers_packages": [
+        "debug@2.2.0"
+      ],
+      "covers_risks": [
+        "RISK-080"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 1,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "debug",
+          "value": "3.1.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 56.6,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 high, 1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of debug to 3.1.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of debug for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-mocha-test, mocha have no safe upgrade that drops debug 2.2.0 (npm audit would downgrade it), so debug is pinned to 3.1.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "2d35f2ae29ba7ae8"
+    },
+    {
+      "id": "ACT-061",
+      "type": "pin-override",
+      "title": "Pin mime to 2.0.3 with npm overrides",
+      "covers_packages": [
+        "mime@1.2.11"
+      ],
+      "covers_risks": [
+        "RISK-081"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "mime",
+          "value": "2.0.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 56.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of mime to 2.0.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of mime for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "zaproxy has no safe upgrade that drops mime 1.2.11 (npm audit would downgrade it), so mime is pinned to 2.0.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "d286f1678843780d"
+    },
+    {
+      "id": "ACT-062",
+      "type": "pin-override",
+      "title": "Pin sshpk to 1.13.2 with npm overrides",
+      "covers_packages": [
+        "sshpk@1.10.1"
+      ],
+      "covers_risks": [
+        "RISK-083"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "sshpk",
+          "value": "1.13.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 55.6,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of sshpk to 1.13.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of sshpk for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops sshpk 1.10.1 (npm audit would downgrade it), so sshpk is pinned to 1.13.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "cb4887bb4d2c56ff"
+    },
+    {
+      "id": "ACT-063",
+      "type": "upgrade",
+      "title": "Upgrade grunt 1.0.3 \u2192 1.5.3",
+      "covers_packages": [
+        "grunt@1.0.3"
+      ],
+      "covers_risks": [
+        "RISK-084"
+      ],
+      "advisories_cleared": 3,
+      "severity_cleared": {
+        "high": 2,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "grunt",
+          "value": "^1.5.3",
+          "section": "devDependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 3,
+        "risk_points_removed": 55.2,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 3 advisories (2 high, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "minor",
+        "files_using": [],
+        "summary": "grunt: minor version jump, not imported directly by application code.",
+        "check": "Read the changelogs of grunt for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "b6996cf1fa4f0e9b"
+    },
+    {
+      "id": "ACT-064",
+      "type": "pin-override",
+      "title": "Pin cookie to 0.7.0 with npm overrides",
+      "covers_packages": [
+        "cookie@0.3.1"
+      ],
+      "covers_risks": [
+        "RISK-085"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "cookie",
+          "value": "0.7.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 55.1,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of cookie to 0.7.0 although its parent asks for \"0.3.1\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of cookie for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "csurf, express-session, express have no safe upgrade that drops cookie 0.3.1 (npm audit would downgrade it), so cookie is pinned to 0.7.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.76,
+      "hash": "81e908ab0cefb450"
+    },
+    {
+      "id": "ACT-065",
+      "type": "pin-override",
+      "title": "Pin ws to 5.2.5 with npm overrides",
+      "covers_packages": [
+        "ws@1.1.5"
+      ],
+      "covers_risks": [
+        "RISK-087"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "ws",
+          "value": "5.2.5",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 54.7,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of ws to 5.2.5 although its parent asks for \"^1.0.1\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of ws for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "selenium-webdriver has no safe upgrade that drops ws 1.1.5 (npm audit would downgrade it), so ws is pinned to 5.2.5 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "cb0f052e779ce964"
+    },
+    {
+      "id": "ACT-066",
+      "type": "pin-override",
+      "title": "Pin websocket-driver to 0.7.5 with npm overrides",
+      "covers_packages": [
+        "websocket-driver@0.7.0"
+      ],
+      "covers_risks": [
+        "RISK-089"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "websocket-driver",
+          "value": "0.7.5",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 53.3,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 critical, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of websocket-driver to 0.7.5; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of websocket-driver for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-contrib-watch has no safe upgrade that drops websocket-driver 0.7.0 (npm audit would downgrade it), so websocket-driver is pinned to 0.7.5 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "a117f0add88546e5"
+    },
+    {
+      "id": "ACT-067",
+      "type": "pin-override",
+      "title": "Pin adm-zip to 0.6.1 with npm overrides",
+      "covers_packages": [
+        "adm-zip@0.4.4"
+      ],
+      "covers_risks": [
+        "RISK-106"
+      ],
+      "advisories_cleared": 8,
+      "severity_cleared": {
+        "high": 5,
+        "moderate": 3
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "adm-zip",
+          "value": "0.6.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 8,
+        "risk_points_removed": 51.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 8 advisories (5 high, 3 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of adm-zip to 0.6.1 although its parent asks for \"0.4.4\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of adm-zip for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "selenium-webdriver has no safe upgrade that drops adm-zip 0.4.4 (npm audit would downgrade it), so adm-zip is pinned to 0.6.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "31e5c44a84b21d3b"
+    },
+    {
+      "id": "ACT-068",
+      "type": "pin-override",
+      "title": "Pin stringstream to 0.0.6 with npm overrides",
+      "covers_packages": [
+        "stringstream@0.0.5"
+      ],
+      "covers_risks": [
+        "RISK-109"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "stringstream",
+          "value": "0.0.6",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 50.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of stringstream to 0.0.6; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of stringstream for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops stringstream 0.0.5 (npm audit would downgrade it), so stringstream is pinned to 0.0.6 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.76,
+      "hash": "1f7963ec51d29732"
+    },
+    {
+      "id": "ACT-069",
+      "type": "pin-override",
+      "title": "Pin on-headers to 1.1.0 with npm overrides",
+      "covers_packages": [
+        "on-headers@1.0.1"
+      ],
+      "covers_risks": [
+        "RISK-112"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "on-headers",
+          "value": "1.1.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 49.7,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of on-headers to 1.1.0 although its parent asks for \"~1.0.1\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of on-headers for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "express-session has no safe upgrade that drops on-headers 1.0.1 (npm audit would downgrade it), so on-headers is pinned to 1.1.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "4b4f81dcf4280b3d"
+    },
+    {
+      "id": "ACT-070",
+      "type": "pin-override",
+      "title": "Pin extend to 3.0.2 with npm overrides",
+      "covers_packages": [
+        "extend@3.0.0"
+      ],
+      "covers_risks": [
+        "RISK-113"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "extend",
+          "value": "3.0.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 49.6,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of extend to 3.0.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of extend for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops extend 3.0.0 (npm audit would downgrade it), so extend is pinned to 3.0.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.76,
+      "hash": "b9838999097d5201"
+    },
+    {
+      "id": "ACT-071",
+      "type": "pin-override",
+      "title": "Pin ajv to 8.18.0 with npm overrides",
+      "covers_packages": [
+        "ajv@6.10.0"
+      ],
+      "covers_risks": [
+        "RISK-114"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "ajv",
+          "value": "8.18.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 49.2,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (2 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of ajv to 8.18.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of ajv for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress has no safe upgrade that drops ajv 6.10.0 (npm audit would downgrade it), so ajv is pinned to 8.18.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "72b3b6bde912fcdc"
+    },
+    {
+      "id": "ACT-072",
+      "type": "pin-override",
+      "title": "Pin diff to 8.0.3 with npm overrides",
+      "covers_packages": [
+        "diff@1.4.0"
+      ],
+      "covers_risks": [
+        "RISK-117"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 1,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "diff",
+          "value": "8.0.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 49.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 high, 1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of diff to 8.0.3; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of diff for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if, grunt-mocha-test, mocha have no safe upgrade that drops diff 1.4.0 (npm audit would downgrade it), so diff is pinned to 8.0.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.62,
+      "hash": "8f1305d5c3b61fde"
+    },
+    {
+      "id": "ACT-073",
+      "type": "pin-override",
+      "title": "Pin undefsafe to 2.0.3 with npm overrides",
+      "covers_packages": [
+        "undefsafe@2.0.2"
+      ],
+      "covers_risks": [
+        "RISK-120"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "undefsafe",
+          "value": "2.0.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 48.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of undefsafe to 2.0.3 although its parent asks for \"^2.0.2\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of undefsafe for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "nodemon has no safe upgrade that drops undefsafe 2.0.2 (npm audit would downgrade it), so undefsafe is pinned to 2.0.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "de70b0ab30616f4e"
+    },
+    {
+      "id": "ACT-074",
+      "type": "pin-override",
+      "title": "Pin got to 12.1.0 with npm overrides",
+      "covers_packages": [
+        "got@6.7.1"
+      ],
+      "covers_risks": [
+        "RISK-121"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "got",
+          "value": "12.1.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 48.1,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of got to 12.1.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of got for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "nodemon has no safe upgrade that drops got 6.7.1 (npm audit would downgrade it), so got is pinned to 12.1.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "7d8923556508cadf"
+    },
+    {
+      "id": "ACT-075",
+      "type": "pin-override",
+      "title": "Pin path-parse to 1.0.7 with npm overrides",
+      "covers_packages": [
+        "path-parse@1.0.5"
+      ],
+      "covers_risks": [
+        "RISK-123"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "path-parse",
+          "value": "1.0.7",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 47.8,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of path-parse to 1.0.7; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of path-parse for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops path-parse 1.0.5 (npm audit would downgrade it), so path-parse is pinned to 1.0.7 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "594f2589b5fa4dac"
+    },
+    {
+      "id": "ACT-076",
+      "type": "pin-override",
+      "title": "Pin uuid to 11.1.1 with npm overrides",
+      "covers_packages": [
+        "uuid@3.3.2"
+      ],
+      "covers_risks": [
+        "RISK-124"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "uuid",
+          "value": "11.1.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 47.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of uuid to 11.1.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of uuid for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "cypress, grunt-if, grunt-retire have no safe upgrade that drops uuid 3.3.2 (npm audit would downgrade it), so uuid is pinned to 11.1.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "ab1eea7a52ba4a7d"
+    },
+    {
+      "id": "ACT-077",
+      "type": "pin-override",
+      "title": "Pin shelljs to 0.8.5 with npm overrides",
+      "covers_packages": [
+        "shelljs@0.3.0"
+      ],
+      "covers_risks": [
+        "RISK-125"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "shelljs",
+          "value": "0.8.5",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 46.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 2 advisories (1 high, 1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of shelljs to 0.8.5; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of shelljs for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if, jshint have no safe upgrade that drops shelljs 0.3.0 (npm audit would downgrade it), so shelljs is pinned to 0.8.5 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "553fe179f9f9b09e"
+    },
+    {
+      "id": "ACT-078",
+      "type": "pin-override",
+      "title": "Pin xml2js to 0.5.0 with npm overrides",
+      "covers_packages": [
+        "xml2js@0.4.4"
+      ],
+      "covers_risks": [
+        "RISK-128"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "xml2js",
+          "value": "0.5.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 45.9,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of xml2js to 0.5.0 although its parent asks for \"0.4.4\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of xml2js for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "selenium-webdriver has no safe upgrade that drops xml2js 0.4.4 (npm audit would downgrade it), so xml2js is pinned to 0.5.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "38f0aa26339ea622"
+    },
+    {
+      "id": "ACT-079",
+      "type": "pin-override",
+      "title": "Pin randomatic to 3.0.0 with npm overrides",
+      "covers_packages": [
+        "randomatic@1.1.5"
+      ],
+      "covers_risks": [
+        "RISK-129"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "randomatic",
+          "value": "3.0.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 45.5,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of randomatic to 3.0.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of randomatic for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops randomatic 1.1.5 (npm audit would downgrade it), so randomatic is pinned to 3.0.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "2b1a127954327217"
+    },
+    {
+      "id": "ACT-080",
+      "type": "pin-override",
+      "title": "Pin is-my-json-valid to 2.17.2 with npm overrides",
+      "covers_packages": [
+        "is-my-json-valid@2.15.0"
+      ],
+      "covers_risks": [
+        "RISK-133"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "is-my-json-valid",
+          "value": "2.17.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 45.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of is-my-json-valid to 2.17.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of is-my-json-valid for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops is-my-json-valid 2.15.0 (npm audit would downgrade it), so is-my-json-valid is pinned to 2.17.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "853b57967cb5599c"
+    },
+    {
+      "id": "ACT-081",
+      "type": "pin-override",
+      "title": "Pin ms to 2.0.0 with npm overrides",
+      "covers_packages": [
+        "ms@0.7.1"
+      ],
+      "covers_risks": [
+        "RISK-134"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "ms",
+          "value": "2.0.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 44.3,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of ms to 2.0.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of ms for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-mocha-test, mocha have no safe upgrade that drops ms 0.7.1 (npm audit would downgrade it), so ms is pinned to 2.0.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "a720dcd5c99044db"
+    },
+    {
+      "id": "ACT-082",
+      "type": "pin-override",
+      "title": "Pin yargs-parser to 13.1.2 with npm overrides",
+      "covers_packages": [
+        "yargs-parser@2.4.1"
+      ],
+      "covers_risks": [
+        "RISK-139"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "yargs-parser",
+          "value": "13.1.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 40.1,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of yargs-parser to 13.1.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of yargs-parser for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if has no safe upgrade that drops yargs-parser 2.4.1 (npm audit would downgrade it), so yargs-parser is pinned to 13.1.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "50eef5bebbce8ab5"
+    },
+    {
+      "id": "ACT-083",
+      "type": "pin-override",
+      "title": "Pin tunnel-agent to 0.6.0 with npm overrides",
+      "covers_packages": [
+        "tunnel-agent@0.4.3"
+      ],
+      "covers_risks": [
+        "RISK-140"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "tunnel-agent",
+          "value": "0.6.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 39.0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of tunnel-agent to 0.6.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of tunnel-agent for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-if, grunt-retire, zaproxy have no safe upgrade that drops tunnel-agent 0.4.3 (npm audit would downgrade it), so tunnel-agent is pinned to 0.6.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.62,
+      "hash": "586afadd9c0204f1"
+    },
+    {
+      "id": "ACT-084",
+      "type": "pin-override",
+      "title": "Pin es5-ext to 0.10.63 with npm overrides",
+      "covers_packages": [
+        "es5-ext@0.10.12"
+      ],
+      "covers_risks": [
+        "RISK-141"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "es5-ext",
+          "value": "0.10.63",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 29.3,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of es5-ext to 0.10.63; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of es5-ext for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops es5-ext 0.10.12 (npm audit would downgrade it), so es5-ext is pinned to 0.10.63 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.76,
+      "hash": "62a7c052b1c8d64d"
+    },
+    {
+      "id": "ACT-085",
+      "type": "pin-override",
+      "title": "Pin chownr to 1.1.0 with npm overrides",
+      "covers_packages": [
+        "chownr@1.0.1"
+      ],
+      "covers_risks": [
+        "RISK-142"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "chownr",
+          "value": "1.1.0",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 25.4,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "Clears 1 advisory (1 low) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of chownr to 1.1.0; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of chownr for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "grunt-npm-install has no safe upgrade that drops chownr 1.0.1 (npm audit would downgrade it), so chownr is pinned to 1.1.0 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "4479bb07942deea0"
+    },
+    {
+      "id": "ACT-086",
+      "type": "escalate",
+      "title": "Escalate swig for security review",
+      "covers_packages": [
+        "swig@1.4.2"
+      ],
+      "covers_risks": [
+        "RISK-010"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [
+          "server.js"
+        ],
+        "summary": "No safe automatic fix.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Critical",
+      "confidence": 0.99,
+      "hash": "b9e9a326f12e58aa"
+    },
+    {
+      "id": "ACT-087",
+      "type": "escalate",
+      "title": "Escalate babel-traverse for security review",
+      "covers_packages": [
+        "babel-traverse@6.11.4"
+      ],
+      "covers_risks": [
+        "RISK-082"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "critical": 1
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "No safe automatic fix.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "c5298fd8c10c1439"
+    },
+    {
+      "id": "ACT-088",
+      "type": "escalate",
+      "title": "Escalate extract-zip for security review",
+      "covers_packages": [
+        "extract-zip@1.6.7"
+      ],
+      "covers_risks": [
+        "RISK-088"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "No safe automatic fix.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "d4e0de79f31b4ea0"
+    },
+    {
+      "id": "ACT-089",
+      "type": "escalate",
+      "title": "Escalate request for security review",
+      "covers_packages": [
+        "request@2.75.0",
+        "request@2.79.0",
+        "request@2.88.0"
+      ],
+      "covers_risks": [
+        "RISK-130",
+        "RISK-131",
+        "RISK-132"
+      ],
+      "advisories_cleared": 3,
+      "severity_cleared": {
+        "moderate": 3
+      },
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "No safe automatic fix.",
+        "check": "Pick a maintained alternative, or isolate the code path and accept the risk with a review date."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "f72b70cbb2e5be14"
+    },
+    {
+      "id": "ACT-090",
+      "type": "pin-action",
+      "title": "Pin 4 CI action(s) to a commit SHA",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-122"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Runs the exact same action code as today, but it can no longer change underneath you.",
+        "check": "Let a bot (Dependabot) propose SHA updates."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "SHA lookup unavailable for: actions/cache@v2, actions/checkout@v2, actions/setup-node@v1, actions/upload-artifact@v2. Pin by hand from each action's release page.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.6,
+      "hash": "1b90f18b55c7c7b4"
+    },
+    {
+      "id": "ACT-091",
+      "type": "escalate",
+      "title": "Security review: install script in fsevents@1.2.9",
+      "covers_packages": [
+        "fsevents@1.2.9"
+      ],
+      "covers_risks": [
+        "RISK-064"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Read the script before installing; install with --ignore-scripts until reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.7,
+      "hash": "6a55bc46bdb22226"
+    },
+    {
+      "id": "ACT-092",
+      "type": "escalate",
+      "title": "Security review: install script in cypress@3.3.1",
+      "covers_packages": [
+        "cypress@3.3.1"
+      ],
+      "covers_risks": [
+        "RISK-137"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "ad1c55b3ce00a06a"
+    },
+    {
+      "id": "ACT-093",
+      "type": "escalate",
+      "title": "Security review: install script in nodemon@1.19.1",
+      "covers_packages": [
+        "nodemon@1.19.1"
+      ],
+      "covers_risks": [
+        "RISK-138"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 8470.0,
+        "grade_before": "F (0)",
+        "grade_after_projected": "F (0)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Read the script before installing; install with --ignore-scripts until reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "f833f3f1e4750ba1"
+    }
+  ],
+  "baseline": {
+    "grade": "F (0)",
+    "risk_points_total": 8470.0,
+    "advisories": 311
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "repo": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\target\\supply-chain-risk-scanner",
+  "base_ref": "HEAD",
+  "change_findings": 0,
+  "baseline_findings": 5,
+  "notes": [],
+  "findings": [
+    {
+      "id": "SC-001",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "Dockerfile",
+      "title": "Container image not digest-pinned: node:22-slim",
+      "before": null,
+      "after": "node:22-slim",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline",
+      "remediation": "Pin the image by digest (image@sha256:...) so the same bytes are used every build, and update the digest deliberately."
+    },
+    {
+      "id": "SC-002",
+      "category": "unpinned_container_image",
+      "severity": "medium",
+      "file": "Dockerfile",
+      "title": "Container image not digest-pinned: node:22-slim",
+      "before": null,
+      "after": "node:22-slim",
+      "why_suspicious": "Mutable tags can be repointed upstream.",
+      "evidence": {
+        "pinning": "tag"
+      },
+      "kind": "baseline",
+      "remediation": "Pin the image by digest (image@sha256:...) so the same bytes are used every build, and update the digest deliberately."
+    },
+    {
+      "id": "SC-003",
+      "category": "unexpected_ci_dependency",
+      "severity": "low",
+      "file": ".github/workflows",
+      "title": "2 CI actions not SHA-pinned",
+      "before": null,
+      "after": null,
+      "why_suspicious": "Tag-pinned actions can be changed by their owners.",
+      "evidence": {
+        "actions": [
+          "actions/checkout@v4",
+          "actions/setup-node@v4"
+        ]
+      },
+      "kind": "baseline",
+      "remediation": "Review the action's source, pin it to a full commit SHA, and give the workflow the minimum token permissions it needs."
+    },
+    {
+      "id": "SC-004",
+      "category": "lifecycle_script",
+      "severity": "info",
+      "file": "package-lock.json",
+      "title": "3 dependencies declare install scripts",
+      "before": null,
+      "after": null,
+      "why_suspicious": "Inventory of packages that execute code at install time (review list).",
+      "evidence": {
+        "packages": [
+          "esbuild@0.27.7",
+          "esbuild@0.28.0",
+          "fsevents@2.3.3"
+        ]
+      },
+      "kind": "baseline",
+      "remediation": "Do not install until reviewed. Read the script, remove it if it downloads or runs remote code, and install with --ignore-scripts in CI."
+    },
+    {
+      "id": "SC-005",
+      "category": "lockfile_modified",
+      "severity": "medium",
+      "file": "package-lock.json",
+      "title": "236 lockfile entries resolve outside registry.npmjs.org",
+      "before": null,
+      "after": null,
+      "why_suspicious": "Non-registry sources bypass registry integrity guarantees.",
+      "evidence": {
+        "entries": [
+          "node_modules/@esbuild/aix-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/aix-ppc64/-/aix-ppc64-0.28.0.tgz",
+          "node_modules/@esbuild/android-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm/-/android-arm-0.28.0.tgz",
+          "node_modules/@esbuild/android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm64/-/android-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/android-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-x64/-/android-x64-0.28.0.tgz",
+          "node_modules/@esbuild/darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-arm64/-/darwin-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-x64/-/darwin-x64-0.28.0.tgz",
+          "node_modules/@esbuild/freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-arm64/-/freebsd-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-x64/-/freebsd-x64-0.28.0.tgz",
+          "node_modules/@esbuild/linux-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm/-/linux-arm-0.28.0.tgz",
+          "node_modules/@esbuild/linux-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm64/-/linux-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/linux-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ia32/-/linux-ia32-0.28.0.tgz",
+          "node_modules/@esbuild/linux-loong64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-loong64/-/linux-loong64-0.28.0.tgz",
+          "node_modules/@esbuild/linux-mips64el -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-mips64el/-/linux-mips64el-0.28.0.tgz",
+          "node_modules/@esbuild/linux-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ppc64/-/linux-ppc64-0.28.0.tgz",
+          "node_modules/@esbuild/linux-riscv64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-riscv64/-/linux-riscv64-0.28.0.tgz",
+          "node_modules/@esbuild/linux-s390x -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-s390x/-/linux-s390x-0.28.0.tgz",
+          "node_modules/@esbuild/linux-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-x64/-/linux-x64-0.28.0.tgz",
+          "node_modules/@esbuild/netbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-arm64/-/netbsd-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/netbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-x64/-/netbsd-x64-0.28.0.tgz",
+          "node_modules/@esbuild/openbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-arm64/-/openbsd-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/openbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-x64/-/openbsd-x64-0.28.0.tgz",
+          "node_modules/@esbuild/openharmony-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openharmony-arm64/-/openharmony-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/sunos-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/sunos-x64/-/sunos-x64-0.28.0.tgz",
+          "node_modules/@esbuild/win32-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-arm64/-/win32-arm64-0.28.0.tgz",
+          "node_modules/@esbuild/win32-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-ia32/-/win32-ia32-0.28.0.tgz",
+          "node_modules/@esbuild/win32-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz",
+          "node_modules/@eslint-community/eslint-utils -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/eslint-utils/-/eslint-utils-4.9.1.tgz",
+          "node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz",
+          "node_modules/@eslint-community/regexpp -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/regexpp/-/regexpp-4.12.2.tgz",
+          "node_modules/@eslint/config-array -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-array/-/config-array-0.21.2.tgz",
+          "node_modules/@eslint/config-helpers -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-helpers/-/config-helpers-0.4.2.tgz",
+          "node_modules/@eslint/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/core/-/core-0.17.0.tgz",
+          "node_modules/@eslint/eslintrc -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/eslintrc/-/eslintrc-3.3.5.tgz",
+          "node_modules/@eslint/js -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/js/-/js-9.39.4.tgz",
+          "node_modules/@eslint/object-schema -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/object-schema/-/object-schema-2.1.7.tgz",
+          "node_modules/@eslint/plugin-kit -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz",
+          "node_modules/@humanfs/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/core/-/core-0.19.2.tgz",
+          "node_modules/@humanfs/node -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/node/-/node-0.16.8.tgz",
+          "node_modules/@humanfs/types -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/types/-/types-0.15.0.tgz",
+          "node_modules/@humanwhocodes/module-importer -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz",
+          "node_modules/@humanwhocodes/retry -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/retry/-/retry-0.4.3.tgz",
+          "node_modules/@jridgewell/sourcemap-codec -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz",
+          "node_modules/@rollup/rollup-android-arm-eabi -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.60.4.tgz",
+          "node_modules/@rollup/rollup-android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.60.4.tgz",
+          "node_modules/@rollup/rollup-darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.60.4.tgz",
+          "node_modules/@rollup/rollup-darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.60.4.tgz",
+          "node_modules/@rollup/rollup-freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.60.4.tgz",
+          "node_modules/@rollup/rollup-freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.60.4.tgz",
+          "node_modules/@rollup/rollup-linux-arm-gnueabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.60.4.tgz",
+          "node_modules/@rollup/rollup-linux-arm-musleabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.60.4.tgz"
+        ]
+      },
+      "kind": "baseline",
+      "remediation": "Delete the suspicious entry and regenerate the lockfile from the official registry (npm install --package-lock-only), then compare integrity hashes before merging."
+    }
+  ]
+}

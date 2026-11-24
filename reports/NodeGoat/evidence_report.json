@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-11-24T05:50:50.503840+00:00",
+  "repo": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\target\\NodeGoat",
+  "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+  "metrics": {
+    "total_components": 1488,
+    "npm_packages": 1479,
+    "direct_dependencies": 36,
+    "transitive_dependencies": 1443,
+    "sbom_components": 419,
+    "graph_nodes": 1480,
+    "graph_edges": 2295,
+    "vulnerabilities": 311,
+    "vulnerabilities_by_severity": {
+      "critical": 33,
+      "high": 169,
+      "moderate": 91,
+      "low": 17,
+      "unknown": 1
+    },
+    "vulnerable_prod": 61,
+    "suspicious_changes": 0,
+    "baseline_observations": 6
+  },
+  "trace": {
+    "vulnerability": "GHSA-4g88-fppr-53pp",
+    "package": "set-value@0.4.3",
+    "severity": "critical",
+    "scope": "prod",
+    "shortest_path": [
+      "owasp-nodejs-goat@1.3.0",
+      "nodemon@1.19.1",
+      "chokidar@2.1.6",
+      "braces@2.3.2",
+      "snapdragon@0.8.2",
+      "base@0.11.2",
+      "cache-base@1.0.1",
+      "union-value@1.0.0",
+      "set-value@0.4.3"
+    ],
+    "introduced_via_direct_dependencies": [
+      "forever@2.0.0",
+      "grunt-cli@1.3.2",
+      "nodemon@1.19.1"
+    ],
+    "example_paths": [
+      [
+        "owasp-nodejs-goat@1.3.0",
+        "forever@2.0.0",
+        "forever-monitor@2.0.0",
+        "chokidar@2.1.8",
+        "anymatch@2.0.0",
+        "micromatch@3.1.10",
+        "snapdragon@0.8.2",
+        "base@0.11.2",
+        "cache-base@1.0.1",
+        "union-value@1.0.0",
+        "set-value@0.4.3"
+      ],
+      [
+        "owasp-nodejs-goat@1.3.0",
+        "forever@2.0.0",
+        "forever-monitor@2.0.0",
+        "chokidar@2.1.8",
+        "anymatch@2.0.0",
+        "micromatch@3.1.10",
+        "braces@2.3.2",
+        "snapdragon@0.8.2",
+        "base@0.11.2",
+        "cache-base@1.0.1",
+        "union-value@1.0.0",
+        "set-value@0.4.3"
+      ],
+      [
+        "owasp-nodejs-goat@1.3.0",
+        "forever@2.0.0",
+        "forever-monitor@2.0.0",
+        "chokidar@2.1.8",
+        "anymatch@2.0.0",
+        "micromatch@3.1.10",
+        "extglob@2.0.4",
+        "snapdragon@0.8.2",
+        "base@0.11.2",
+        "cache-base@1.0.1",
+        "union-value@1.0.0",
+        "set-value@0.4.3"
+      ],
+      [
+        "owasp-nodejs-goat@1.3.0",
+        "forever@2.0.0",
+        "forever-monitor@2.0.0",
+        "chokidar@2.1.8",
+        "anymatch@2.0.0",
+        "micromatch@3.1.10",
+        "nanomatch@1.2.13",
+        "snapdragon@0.8.2",
+        "base@0.11.2",
+        "cache-base@1.0.1",
+        "union-value@1.0.0",
+        "set-value@0.4.3"
+      ],
+      [
+        "owasp-nodejs-goat@1.3.0",
+        "forever@2.0.0",
+        "forever-monitor@2.0.0",
+        "chokidar@2.1.8",
+        "anymatch@2.0.0",
+        "micromatch@3.1.10",
+        "extglob@2.0.4",
+        "expand-brackets@2.1.4",
+        "snapdragon@0.8.2",
+        "base@0.11.2",
+        "cache-base@1.0.1",
+        "union-value@1.0.0",
+        "set-value@0.4.3"
+      ]
+    ],
+    "fixed_version": "2.0.1",
+    "evidence_source": "OSV-Scanner (osv.dev)"
+  },
+  "interpretation": {
+    "text": "**Scope:** 1479 npm packages (36 direct, 1443 transitive) from package-lock.json.\n**Vulnerabilities (osv):** 311 findings \u2014 critical: 33, high: 169, moderate: 91, low: 17, unknown: 1. 61 affect production (shipped) packages.\n**Highest-priority shipped findings:**\n- GHSA-v8w9-2789-6hhr in bson@1.0.9 (critical, transitive via mongodb@2.2.36); fix: 1.1.4\n- GHSA-xvch-5gv4-984h in minimist@0.0.10 (critical, transitive via forever@2.0.0, swig@1.4.2); fix: 1.2.6\n- GHSA-xvch-5gv4-984h in minimist@0.0.8 (critical, transitive via cypress@3.3.1, forever@2.0.0); fix: 1.2.6\n- GHSA-xvch-5gv4-984h in minimist@1.2.5 (critical, transitive via forever@2.0.0); fix: 1.2.6\n- GHSA-fhjf-83wg-r2j9 in mixin-deep@1.3.1 (critical, transitive via forever@2.0.0, grunt-cli@1.3.2); fix: 1.3.2\n**Trace:** set-value@0.4.3 (GHSA-4g88-fppr-53pp) reaches the app through owasp-nodejs-goat@1.3.0 \u2192 nodemon@1.19.1 \u2192 chokidar@2.1.6 \u2192 braces@2.3.2 \u2192 snapdragon@0.8.2 \u2192 base@0.11.2 \u2192 cache-base@1.0.1 \u2192 union-value@1.0.0 \u2192 set-value@0.4.3.\n**Anomalies:** none relative to the base ref.",
+    "source": "deterministic template (no ANTHROPIC_API_KEY set)"
+  },
+  "scanner": "osv",
+  "scanner_notes": [],
+  "sbom": {
+    "path": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\reports\\NodeGoat\\NodeGoat-sbom.json",
+    "tool": "syft",
+    "format": "CycloneDX",
+    "spec_version": "1.6",
+    "component_count": 419,
+    "npm_component_count": 413,
+    "matched_inventory": 380,
+    "sbom_only": [
+      "owasp-nodejs-goat@1.3.0"
+    ],
+    "note": "SBOM lists shipped (non-dev) npm packages. Inventory has 380 unique non-dev name@version pairs; 380 match the SBOM."
+  },
+  "agent_log": [
+    {
+      "agent": "1. Repository Discovery Agent",
+      "status": "ok",
+      "message": "6 manifests, 1479 npm packages (36 direct), 9 container/CI components"
+    },
+    {
+      "agent": "2. SBOM Agent",
+      "status": "ok",
+      "message": "CycloneDX 1.6 via syft: 419 components"
+    },
+    {
+      "agent": "3. Dependency Analysis Agent",
+      "status": "ok",
+      "message": "1480 nodes, 2295 edges"
+    },
+    {
+      "agent": "4. Vulnerability Detection Agent",
+      "status": "ok",
+      "message": "311 findings via osv"
+    },
+    {
+      "agent": "5. Anomaly Detection Agent",
+      "status": "ok",
+      "message": "0 anomalies vs HEAD, 6 baseline observations"
+    }
+  ],
+  "errors": [],
+  "fix_summary": {
+    "No patch published": 6,
+    "Upgrade the package": 7,
+    "Upgrade the parent": 118
+  }
+}

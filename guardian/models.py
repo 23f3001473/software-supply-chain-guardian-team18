@@ -98,3 +98,82 @@ class AgentLog(BaseModel):
     agent: str
     status: str
     message: str
+
+
+# ---------------- Day 2 ----------------
+class FactorScore(BaseModel):
+    factor: str            # severity, exploitability, reachability, exposure
+    points: float
+    max_points: float
+    reason: str            # one plain sentence built from evidence
+
+
+class RiskItem(BaseModel):
+    id: str                # RISK-001
+    kind: str              # vulnerability or supply-chain
+    subject: str           # package@version, or file for supply-chain items
+    package: Optional[str] = None
+    version: Optional[str] = None
+    lock_path: Optional[str] = None
+    advisories: list[str] = []
+    worst_severity: str
+    score: float           # 0-100
+    tier: str              # Critical, High, Medium, Low
+    factors: list[FactorScore]
+    confidence: float      # 0-1
+    confidence_label: str
+    confidence_reasons: list[str]
+    evidence: dict = Field(default_factory=dict)
+    reasoning: str = ""    # why it is severe (LLM or rule-based)
+    reasoning_source: str = ""
+
+
+class Investigation(BaseModel):
+    id: str                # INV-001
+    category: str
+    title: str
+    subject: str
+    verdict: str           # Suspicious, Needs review, Expected
+    severity: str
+    verified_evidence: list[dict]   # {"fact": ..., "source": ...}
+    inference: str = ""
+    inference_source: str = ""
+    remedy: str = ""
+    day1_ref: Optional[str] = None
+
+
+class Change(BaseModel):
+    file: str
+    op: str                # set-dependency, add-override, remove-dependency, set-json, replace-text
+    target: str            # package name, json key or text to find
+    value: Optional[str] = None
+    section: Optional[str] = None
+
+
+class RemediationAction(BaseModel):
+    id: str                # ACT-001
+    type: str              # upgrade, upgrade-parent, pin-override, replace-remove, update-base-image, pin-action, block, escalate, harden-config
+    title: str
+    covers_packages: list[str] = []
+    covers_risks: list[str] = []
+    advisories_cleared: int = 0
+    severity_cleared: dict = Field(default_factory=dict)
+    changes: list[Change] = []
+    auto_applicable: bool = False
+    expected_risk_reduction: dict = Field(default_factory=dict)
+    compatibility: dict = Field(default_factory=dict)
+    rollback: str = ""
+    rationale: str = ""
+    rationale_source: str = ""
+    priority: str = ""
+    confidence: float = 0.0
+
+
+class Decision(BaseModel):
+    action_id: str
+    decision: str          # approve, reject, accept-risk, escalate
+    reviewer: str
+    comment: str = ""
+    expires: Optional[str] = None
+    at: str
+    plan_hash: str

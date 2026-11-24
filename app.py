@@ -14,7 +14,7 @@ import networkx as nx
 import pandas as pd
 import streamlit as st
 
-from guardian import analysis, vuln_graph
+from guardian import analysis, ui_day2, vuln_graph
 from guardian.repo_fetch import FetchError, fetch, out_dir_for
 from guardian.tree_html import tree_html
 from guardian.workflow import run_stream
@@ -29,8 +29,6 @@ SEV_COLOR = {"critical": RED, "high": ORANGE, "moderate": AMBER, "medium": AMBER
 GRADE_COLOR = {"A": GREEN, "B": GREEN, "C": AMBER, "D": ORANGE, "F": RED}
 AGENTS = ["1. Repository Discovery Agent", "2. SBOM Agent", "3. Dependency Analysis Agent",
           "4. Vulnerability Detection Agent", "5. Anomaly Detection Agent"]
-NAV = ["Overview", "1 · Components", "2 · Supply chain view", "3 · Vulnerabilities", "4 · Suspicious changes",
-       "5 · Evidence & report", "Compare repositories"]
 CHECKS = [("unexpected_dependency", "Unexpected dependency"), ("suspicious_package_name", "Typosquatted (look-alike) name"),
           ("suspicious_version_change", "Suspicious version change"), ("lifecycle_script", "Unsafe install script"),
           ("unpinned_container_image", "Untrusted or unpinned image"), ("lockfile_modified", "Modified lockfile"),
@@ -248,7 +246,6 @@ names = [p.name for p in repos]
 if st.session_state.get("repo_choice") not in names:
     st.session_state["repo_choice"] = "juice-shop" if "juice-shop" in names else names[0]
 repo = TARGETS / st.sidebar.selectbox("Repository", names, key="repo_choice")
-page = st.sidebar.radio("Go to", NAV, key="page")
 with st.sidebar.expander("Inspection settings"):
     commits = recent_commits(repo)
     base_label = st.selectbox("Compare changes against", [c[0] for c in commits], index=0,
@@ -280,13 +277,57 @@ gpath = out / "dependency_graph.json"
 pdf_path = out / "evidence_report.pdf"
 vuln_pkgs = len({(f["package"], f["installed_version"]) for f in findings})
 
-# ---------------- header with PDF button (every page) ----------------
+# ---------------- navigation (grouped: Day 1, Day 2, Evaluate) ----------------
+def p_overview(): overview()
+def p_components(): components_page()
+def p_supply(): supply_chain_page()
+def p_vulns(): vulnerabilities_page()
+def p_changes(): changes_page()
+def p_evidence(): evidence_page()
+def p_day2(): ui_day2.mission(repo, out)
+def p_risks(): ui_day2.risks_page(repo, out)
+def p_investigate(): ui_day2.investigate_page(repo, out)
+def p_approve(): ui_day2.approval_page(repo, out)
+def p_validate(): ui_day2.validation_page(repo, out)
+def p_journey(): ui_day2.journey_page(repo, out)
+def p_report2(): ui_day2.report_page(repo, out)
+def p_compare(): compare_page()
+def p_bench(): ui_day2.benchmark_page(ROOT)
+
+
+nav = st.navigation({
+    "Day 1 · See what's inside": [
+        st.Page(p_overview, title="Overview", url_path="overview", default=True),
+        st.Page(p_components, title="1 · Components", url_path="components"),
+        st.Page(p_supply, title="2 · Supply chain view", url_path="supply-chain"),
+        st.Page(p_vulns, title="3 · Vulnerabilities", url_path="vulnerabilities"),
+        st.Page(p_changes, title="4 · Suspicious changes", url_path="changes"),
+        st.Page(p_evidence, title="5 · Evidence & report", url_path="evidence")],
+    "Day 2 · Act on it": [
+        st.Page(p_day2, title="Day 2 overview", url_path="day2"),
+        st.Page(p_risks, title="6 · Risk priorities", url_path="risks"),
+        st.Page(p_investigate, title="7 · Investigate changes", url_path="investigate"),
+        st.Page(p_approve, title="8 · Remediation & approval", url_path="approve"),
+        st.Page(p_validate, title="9 · Validation", url_path="validate"),
+        st.Page(p_report2, title="10 · Verified report", url_path="verified-report"),
+        st.Page(p_journey, title="Detection → verified fix", url_path="journey")],
+    "Evaluate": [
+        st.Page(p_compare, title="Compare repositories", url_path="compare"),
+        st.Page(p_bench, title="Benchmark vs other tools", url_path="benchmark")],
+}, expanded=True)
+day2_page = nav.url_path in ("day2", "risks", "investigate", "approve", "validate", "verified-report", "journey")
+
+# ---------------- header with the right PDF button for the section ----------------
 left, right = st.columns([4.6, 1.6], vertical_alignment="bottom")
 with left:
-    st.markdown('<div class="kicker">Inspection manifest</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="kicker">{"Day 2 · remediation" if day2_page else "Inspection manifest"}</div>', unsafe_allow_html=True)
     st.markdown(f"# {repo.name}")
 with right:
-    if pdf_path.exists():
+    pdf2 = out / "day2" / "verified_report.pdf"
+    if day2_page and pdf2.exists():
+        st.download_button("⬇  Verified report PDF", pdf2.read_bytes(), f"{repo.name}-verified-remediation.pdf",
+                           "application/pdf", type="primary", width="stretch", key="pdf2_top")
+    elif pdf_path.exists():
         st.download_button("⬇  Evidence report PDF", pdf_path.read_bytes(), f"{repo.name}-evidence-report.pdf",
                            "application/pdf", type="primary", width="stretch", key="pdf_top")
     elif st.button("Create evidence report (PDF)", type="primary", width="stretch"):
@@ -701,7 +742,4 @@ def compare_page():
             legend=alt.Legend(orient="bottom", title=None))).properties(height=alt.Step(42)), width="stretch")
 
 
-render = {"Overview": overview, "1 · Components": components_page, "2 · Supply chain view": supply_chain_page,
- "3 · Vulnerabilities": vulnerabilities_page, "4 · Suspicious changes": changes_page,
- "5 · Evidence & report": evidence_page, "Compare repositories": compare_page}[page]
-render()
+nav.run()

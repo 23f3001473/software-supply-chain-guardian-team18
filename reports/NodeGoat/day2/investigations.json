@@ -1,0 +1,329 @@
+{
+  "registry": "npm registry metadata read for 143 of 143 packages",
+  "items": [
+    {
+      "id": "INV-001",
+      "category": "integrity",
+      "title": "Lockfile hashes differ from the registry",
+      "subject": "package-lock.json",
+      "verdict": "Suspicious",
+      "severity": "critical",
+      "verified_evidence": [
+        {
+          "fact": "Compared the integrity hash of 131 locked packages with the hash the npm registry publishes",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "75 mismatch: adm-zip@0.4.4, ansi-regex@3.0.0, bcrypt-nodejs@0.0.3, bl@1.0.3, body-parser@1.18.3, ansi-regex@3.0.0, nconf@0.6.9, debug@2.2.0",
+          "source": "package-lock.json vs registry"
+        }
+      ],
+      "inference": "A hash that differs from the registry means the lockfile points at different bytes than the published release: either the lockfile was edited or the package came from somewhere else.",
+      "inference_source": "rule-based inference",
+      "remedy": "Delete the affected entries, regenerate the lockfile from the registry and investigate who changed it.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-002",
+      "category": "provenance",
+      "title": "Where every package is downloaded from \u2014 non-registry sources found",
+      "subject": "package-lock.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "Download sources in the lockfile: registry.npmjs.org (963), (bundled) (515), github.com (1)",
+          "source": "package-lock.json resolved fields"
+        },
+        {
+          "fact": "0 packages have no integrity hash; 646 only have a SHA-1 hash",
+          "source": "package-lock.json integrity fields"
+        }
+      ],
+      "inference": "Packages from git URLs, other hosts or without integrity hashes bypass the registry's checks, so a changed upstream repo or a compromised host could swap the code without the lockfile noticing.",
+      "inference_source": "rule-based inference",
+      "remedy": "Replace git/URL dependencies with registry releases and regenerate the lockfile so every entry has a sha512 integrity hash.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-003",
+      "category": "deprecated",
+      "title": "29 installed packages are deprecated by their maintainers",
+      "subject": "npm registry",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "bcrypt-nodejs@0.0.3: \"bcrypt-nodejs is no longer actively maintained. Please use bcrypt or bcryptjs. See https://github.com/kelektiv/node.bcrypt.js/wiki/bcrypt-vs\"",
+          "source": "https://registry.npmjs.org/bcrypt-nodejs"
+        },
+        {
+          "fact": "bson@1.0.9: \"Fixed a critical issue with BSON serialization documented in CVE-2019-2391, see https://bit.ly/2KcpXdo for more details\"",
+          "source": "https://registry.npmjs.org/bson"
+        },
+        {
+          "fact": "consolidate@0.14.5: \"Please upgrade to consolidate v1.0.0+ as it has been modernized with several long-awaited fixes implemented. Maintenance is supported by For\"",
+          "source": "https://registry.npmjs.org/consolidate"
+        },
+        {
+          "fact": "csurf@1.9.0: \"This package is archived and no longer maintained. For support, visit https://github.com/expressjs/express/discussions\"",
+          "source": "https://registry.npmjs.org/csurf"
+        },
+        {
+          "fact": "debug@3.2.6: \"Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you u\"",
+          "source": "https://registry.npmjs.org/debug"
+        },
+        {
+          "fact": "debug@4.1.1: \"Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you u\"",
+          "source": "https://registry.npmjs.org/debug"
+        },
+        {
+          "fact": "fsevents@1.2.9: \"Upgrade to fsevents v2 to mitigate potential security issues\"",
+          "source": "https://registry.npmjs.org/fsevents"
+        },
+        {
+          "fact": "fstream@1.0.10: \"This package is no longer supported.\"",
+          "source": "https://registry.npmjs.org/fstream"
+        },
+        {
+          "fact": "hawk@1.0.0: \"This module moved to @hapi/hawk. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critic\"",
+          "source": "https://registry.npmjs.org/hawk"
+        },
+        {
+          "fact": "hawk@3.1.3: \"This module moved to @hapi/hawk. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critic\"",
+          "source": "https://registry.npmjs.org/hawk"
+        }
+      ],
+      "inference": "Deprecated packages no longer get security fixes, so any future vulnerability in them stays open (CWE-1104).",
+      "inference_source": "rule-based inference",
+      "remedy": "Replace each with the alternative its maintainer recommends in the deprecation message.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-004",
+      "category": "loose-range",
+      "title": "2 dependencies accept any future version",
+      "subject": "package.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "grunt-env: \"latest\" (devDependencies)",
+          "source": "package.json"
+        },
+        {
+          "fact": "grunt-if: \"https://github.com/binarymist/grunt-if/tarball/master\" (devDependencies)",
+          "source": "package.json"
+        }
+      ],
+      "inference": "An unbounded range lets the next published release in automatically; if that release is malicious (a hijacked maintainer account), a fresh install picks it up.",
+      "inference_source": "rule-based inference",
+      "remedy": "Use a caret or exact range and rely on the lockfile; review upgrades deliberately.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-005",
+      "category": "unpinned_container_image",
+      "title": "3 container images are referenced by tag, not by digest",
+      "subject": "Dockerfile, docker-compose.yml",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "node:12-alpine (tag)",
+          "source": "Dockerfile"
+        },
+        {
+          "fact": "node:12-alpine (tag)",
+          "source": "Dockerfile"
+        },
+        {
+          "fact": "mongo:4.4 (tag)",
+          "source": "docker-compose.yml"
+        }
+      ],
+      "inference": "Mutable tags can be repointed upstream. A tag such as 'latest' or '24' can be moved to a different image at any time, so two builds of the same commit may ship different operating-system packages.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Pin the image by digest (image@sha256:...) so the same bytes are used every build, and update the digest deliberately.",
+      "day1_ref": "SC-001, SC-002, SC-003"
+    },
+    {
+      "id": "INV-006",
+      "category": "lockfile_modified",
+      "title": "1 lockfile entries resolve outside registry.npmjs.org",
+      "subject": "package-lock.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "1 lockfile entries resolve outside registry.npmjs.org",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "node_modules/grunt-if -> https://github.com/binarymist/grunt-if/tarball/master",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Non-registry sources bypass registry integrity guarantees.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Delete the suspicious entry and regenerate the lockfile from the official registry (npm install --package-lock-only), then compare integrity hashes before merging.",
+      "day1_ref": "SC-006"
+    },
+    {
+      "id": "INV-007",
+      "category": "install-script",
+      "title": "cypress@3.3.1 runs code when installed (download)",
+      "subject": "cypress@3.3.1",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks cypress@3.3.1 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/cypress"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node index.js --exec install",
+          "source": "https://registry.npmjs.org/cypress/3.3.1"
+        },
+        {
+          "fact": "Reaches the app through owasp-nodejs-goat@1.3.0 \u2192 cypress@3.3.1",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-008",
+      "category": "install-script",
+      "title": "fsevents@1.2.9 runs code when installed (other)",
+      "subject": "fsevents@1.2.9",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks fsevents@1.2.9 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/fsevents"
+        },
+        {
+          "fact": "Used in: production, optional (only installed on some platforms)",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: install: node install",
+          "source": "https://registry.npmjs.org/fsevents/1.2.9"
+        },
+        {
+          "fact": "Reaches the app through owasp-nodejs-goat@1.3.0 \u2192 nodemon@1.19.1 \u2192 chokidar@2.1.6 \u2192 fsevents@1.2.9",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script runs code we could not classify; read it before allowing it.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Read the script before installing; install with --ignore-scripts until reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-009",
+      "category": "install-script",
+      "title": "nodemon@1.19.1 runs code when installed (other)",
+      "subject": "nodemon@1.19.1",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks nodemon@1.19.1 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/nodemon"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node bin/postinstall || exit 0",
+          "source": "https://registry.npmjs.org/nodemon/1.19.1"
+        },
+        {
+          "fact": "Reaches the app through owasp-nodejs-goat@1.3.0 \u2192 nodemon@1.19.1",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script runs code we could not classify; read it before allowing it.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Read the script before installing; install with --ignore-scripts until reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-010",
+      "category": "provenance-attestation",
+      "title": "16 of 16 production dependencies have no build provenance",
+      "subject": "package.json",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "0 direct production dependencies publish an npm provenance attestation (built by CI from a known repo)",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "Without attestation: bcrypt-nodejs@0.0.3, body-parser@1.18.3, consolidate@0.14.5, csurf@1.9.0, dont-sniff-mimetype@1.0.0, express@4.16.4, express-session@1.15.6, forever@2.0.0, helmet@2.3.0, marked@0.3.5, mongodb@2.2.36, needle@2.2.4, node-esapi@0.0.1, serve-favicon@2.5.0, swig@1.4.2\u2026",
+          "source": "https://registry.npmjs.org"
+        }
+      ],
+      "inference": "A package without provenance was uploaded from someone's machine, so nobody can prove the tarball matches the source repository. That is normal for older packages, but it is the gap attackers use when they steal a maintainer's npm token.",
+      "inference_source": "rule-based inference",
+      "remedy": "Prefer versions with provenance when upgrading; for critical packages, compare the tarball with the tagged source.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-011",
+      "category": "unexpected_ci_dependency",
+      "title": "4 CI actions not SHA-pinned",
+      "subject": ".github/workflows",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "4 CI actions not SHA-pinned",
+          "source": ".github/workflows"
+        },
+        {
+          "fact": "actions/cache@v2, actions/checkout@v2, actions/setup-node@v1, actions/upload-artifact@v2",
+          "source": ".github/workflows"
+        }
+      ],
+      "inference": "Tag-pinned actions can be changed by their owners.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Review the action's source, pin it to a full commit SHA, and give the workflow the minimum token permissions it needs.",
+      "day1_ref": "SC-004"
+    },
+    {
+      "id": "INV-012",
+      "category": "manifest-lockfile",
+      "title": "package.json and the lockfile agree",
+      "subject": "package.json \u2194 package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "16 production and 20 development dependencies declared",
+          "source": "package.json"
+        },
+        {
+          "fact": "Every declared dependency is locked",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Installs are reproducible: every declared dependency is pinned by the lockfile.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    }
+  ]
+}

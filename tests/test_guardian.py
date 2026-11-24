@@ -99,7 +99,7 @@ def need(path: Path):
 
 def test_inventory_matches_lockfile():
     inv = need(BASE / "dependency_inventory.json")
-    lock = json.loads((ROOT / "target/juice-shop/package-lock.json").read_text(encoding="utf-8"))["packages"]
+    lock = need(ROOT / "target/juice-shop/package-lock.json")["packages"]
     assert len(inv["dependencies"]) == len([p for p in lock if p])
     assert inv["summary"]["direct"] > 0 and inv["summary"]["transitive"] > inv["summary"]["direct"]
 

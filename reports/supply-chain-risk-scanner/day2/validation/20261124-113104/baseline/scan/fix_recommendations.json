@@ -1,0 +1,362 @@
+[
+  {
+    "package": "zod",
+    "installed_version": "3.25.76",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-mrhx-c7xc-m3w5"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "zod@3.25.76"
+    ],
+    "fixed_in": "4.6.6",
+    "action": "Upgrade the package",
+    "headline": "Upgrade zod 3.25.76 \u2192 4.6.6",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade zod from 3.25.76 to 4.6.6 or later in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tinypool",
+    "installed_version": "1.1.1",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-5gmw-xhrv-c9v3",
+      "GHSA-85c8-ppgw-ccpr"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "2.1.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin tinypool 2.1.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on tinypool 2.1.2 or later.",
+      "Or force tinypool to 2.1.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "vitest",
+    "installed_version": "3.2.4",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-5xrq-8626-4rwp",
+      "GHSA-82fw-gwwq-j7x9"
+    ],
+    "scope": "dev",
+    "direct": true,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "4.1.11",
+    "action": "Upgrade the package",
+    "headline": "Upgrade vitest 3.2.4 \u2192 4.1.11",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade vitest from 3.2.4 to 4.1.11 or later in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "brace-expansion",
+    "installed_version": "1.1.15",
+    "worst_severity": "high",
+    "advisories": 6,
+    "ids": [
+      "GHSA-3jxr-9vmj-r5cp",
+      "GHSA-6j4f-fj2g-mc7p",
+      "GHSA-mh99-v99m-4gvg",
+      "GHSA-q2hr-2g5m-vwhr",
+      "GHSA-qhr7-859c-m2p7",
+      "GHSA-rgw5-rvv9-x895"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "eslint@9.39.4",
+      "typescript-eslint@8.60.0"
+    ],
+    "fixed_in": "5.0.12",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade eslint@9.39.4 or pin brace-expansion 5.0.12+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade eslint@9.39.4, typescript-eslint@8.60.0 to a release that depends on brace-expansion 5.0.12 or later.",
+      "Or force brace-expansion to 5.0.12 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "brace-expansion",
+    "installed_version": "5.0.6",
+    "worst_severity": "high",
+    "advisories": 6,
+    "ids": [
+      "GHSA-3jxr-9vmj-r5cp",
+      "GHSA-6j4f-fj2g-mc7p",
+      "GHSA-mh99-v99m-4gvg",
+      "GHSA-q2hr-2g5m-vwhr",
+      "GHSA-qhr7-859c-m2p7",
+      "GHSA-rgw5-rvv9-x895"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "typescript-eslint@8.60.0"
+    ],
+    "fixed_in": "5.0.12",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade typescript-eslint@8.60.0 or pin brace-expansion 5.0.12+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade typescript-eslint@8.60.0 to a release that depends on brace-expansion 5.0.12 or later.",
+      "Or force brace-expansion to 5.0.12 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "js-yaml",
+    "installed_version": "4.1.1",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-2883-xcg3-v3hh",
+      "GHSA-52cp-r559-cp3m",
+      "GHSA-5p4m-2wfm-xmqj",
+      "GHSA-h67p-54hq-rp68"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "eslint@9.39.4",
+      "typescript-eslint@8.60.0"
+    ],
+    "fixed_in": "4.3.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade eslint@9.39.4 or pin js-yaml 4.3.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade eslint@9.39.4, typescript-eslint@8.60.0 to a release that depends on js-yaml 4.3.2 or later.",
+      "Or force js-yaml to 4.3.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "nanoid",
+    "installed_version": "3.3.12",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-28wg-ghj8-5hjv",
+      "GHSA-2v37-7h3g-55p8"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "3.3.18",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin nanoid 3.3.18+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on nanoid 3.3.18 or later.",
+      "Or force nanoid to 3.3.18 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "postcss",
+    "installed_version": "8.5.15",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-fxqj-rqcc-2cmp",
+      "GHSA-r28c-9q8g-f849"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "8.5.23",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin postcss 8.5.23+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on postcss 8.5.23 or later.",
+      "Or force postcss to 8.5.23 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "source-map-js",
+    "installed_version": "1.2.1",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-68fv-2mgg-jv7q"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "1.2.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin source-map-js 1.2.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on source-map-js 1.2.2 or later.",
+      "Or force source-map-js to 1.2.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "vite",
+    "installed_version": "7.3.3",
+    "worst_severity": "high",
+    "advisories": 7,
+    "ids": [
+      "GHSA-587h-7wmj-h5pm",
+      "GHSA-698v-4r3x-3vcv",
+      "GHSA-9jrq-w75r-8gcw",
+      "GHSA-fx2h-pf6j-xcff",
+      "GHSA-r825-w8mm-5pxw",
+      "GHSA-rq7h-c2jc-7f22",
+      "GHSA-v6wh-96g9-6wx3"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "8.3.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin vite 8.3.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on vite 8.3.3 or later.",
+      "Or force vite to 8.3.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "@vitest/mocker",
+    "installed_version": "3.2.4",
+    "worst_severity": "moderate",
+    "advisories": 2,
+    "ids": [
+      "GHSA-82fw-gwwq-j7x9",
+      "GHSA-qxg6-89mg-rqv8"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "4.1.12",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin @vitest/mocker 4.1.12+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on @vitest/mocker 4.1.12 or later.",
+      "Or force @vitest/mocker to 4.1.12 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimatch",
+    "installed_version": "10.2.5",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-g3hv-75wg-m249"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "typescript-eslint@8.60.0"
+    ],
+    "fixed_in": "11.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade typescript-eslint@8.60.0 or pin minimatch 11.0.1+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade typescript-eslint@8.60.0 to a release that depends on minimatch 11.0.1 or later.",
+      "Or force minimatch to 11.0.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "esbuild",
+    "installed_version": "0.27.7",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-g7r4-m6w7-qqqr"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "0.28.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade vitest@3.2.4 or pin esbuild 0.28.1+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade vitest@3.2.4 to a release that depends on esbuild 0.28.1 or later.",
+      "Or force esbuild to 0.28.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "esbuild",
+    "installed_version": "0.28.0",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-g7r4-m6w7-qqqr"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "tsx@4.22.3",
+      "vitest@3.2.4"
+    ],
+    "fixed_in": "0.28.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade tsx@4.22.3 or pin esbuild 0.28.1+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade tsx@4.22.3, vitest@3.2.4 to a release that depends on esbuild 0.28.1 or later.",
+      "Or force esbuild to 0.28.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  }
+]

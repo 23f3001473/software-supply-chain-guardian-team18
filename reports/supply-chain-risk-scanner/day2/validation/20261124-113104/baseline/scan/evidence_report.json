@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-11-24T06:02:27.084096+00:00",
+  "repo": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\sandbox\\supply-chain-risk-scanner\\20261124-113104-baseline",
+  "commit": "9ee92d0e5cfc6736069857708e76279f7f46d55e",
+  "metrics": {
+    "total_components": 240,
+    "npm_packages": 236,
+    "direct_dependencies": 11,
+    "transitive_dependencies": 225,
+    "sbom_components": 6,
+    "graph_nodes": 237,
+    "graph_edges": 335,
+    "vulnerabilities": 38,
+    "vulnerabilities_by_severity": {
+      "critical": 3,
+      "high": 19,
+      "moderate": 13,
+      "low": 3
+    },
+    "vulnerable_prod": 1,
+    "suspicious_changes": 0,
+    "baseline_observations": 5
+  },
+  "trace": {
+    "vulnerability": "GHSA-5gmw-xhrv-c9v3",
+    "package": "tinypool@1.1.1",
+    "severity": "critical",
+    "scope": "dev",
+    "shortest_path": [
+      "supply-chain-risk-scanner@0.1.0",
+      "vitest@3.2.4",
+      "tinypool@1.1.1"
+    ],
+    "introduced_via_direct_dependencies": [
+      "vitest@3.2.4"
+    ],
+    "example_paths": [
+      [
+        "supply-chain-risk-scanner@0.1.0",
+        "vitest@3.2.4",
+        "tinypool@1.1.1"
+      ]
+    ],
+    "fixed_version": "2.1.1",
+    "evidence_source": "OSV-Scanner (osv.dev)"
+  },
+  "interpretation": {
+    "text": "**Scope:** 236 npm packages (11 direct, 225 transitive) from package-lock.json.\n**Vulnerabilities (osv):** 38 findings \u2014 critical: 3, high: 19, moderate: 13, low: 3. 1 affect production (shipped) packages.\n**Highest-priority shipped findings:**\n- GHSA-mrhx-c7xc-m3w5 in zod@3.25.76 (high, direct); fix: 4.6.6\n**Trace:** tinypool@1.1.1 (GHSA-5gmw-xhrv-c9v3) reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 vitest@3.2.4 \u2192 tinypool@1.1.1.\n**Anomalies:** none relative to the base ref.",
+    "source": "deterministic template (no ANTHROPIC_API_KEY set)"
+  },
+  "scanner": "osv",
+  "scanner_notes": [],
+  "sbom": {
+    "path": "C:\\Users\\rohit\\Downloads\\software-supply-chain-guardian-day2\\software-supply-chain-guardian\\reports\\supply-chain-risk-scanner\\day2\\validation\\20261124-113104\\baseline\\scan\\20261124-113104-baseline-sbom.json",
+    "tool": "syft",
+    "format": "CycloneDX",
+    "spec_version": "1.6",
+    "component_count": 6,
+    "npm_component_count": 4,
+    "matched_inventory": 3,
+    "sbom_only": [
+      "supply-chain-risk-scanner@0.1.0"
+    ],
+    "note": "SBOM lists shipped (non-dev) npm packages. Inventory has 3 unique non-dev name@version pairs; 3 match the SBOM."
+  },
+  "agent_log": [
+    {
+      "agent": "1. Repository Discovery Agent",
+      "status": "ok",
+      "message": "6 manifests, 236 npm packages (11 direct), 4 container/CI components"
+    },
+    {
+      "agent": "2. SBOM Agent",
+      "status": "ok",
+      "message": "CycloneDX 1.6 via syft: 6 components"
+    },
+    {
+      "agent": "3. Dependency Analysis Agent",
+      "status": "ok",
+      "message": "237 nodes, 335 edges"
+    },
+    {
+      "agent": "4. Vulnerability Detection Agent",
+      "status": "ok",
+      "message": "38 findings via osv"
+    },
+    {
+      "agent": "5. Anomaly Detection Agent",
+      "status": "ok",
+      "message": "0 anomalies vs 9ee92d0e5cfc6736069857708e76279f7f46d55e, 5 baseline observations"
+    }
+  ],
+  "errors": [],
+  "fix_summary": {
+    "Upgrade the package": 2,
+    "Upgrade the parent": 12
+  }
+}

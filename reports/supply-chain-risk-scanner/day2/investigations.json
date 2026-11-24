@@ -1,0 +1,249 @@
+{
+  "registry": "npm registry metadata read for 17 of 17 packages",
+  "items": [
+    {
+      "id": "INV-001",
+      "category": "provenance",
+      "title": "Where every package is downloaded from \u2014 non-registry sources found",
+      "subject": "package-lock.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "Download sources in the lockfile: packages.applied-caas-gateway1.internal.api.openai.org (236)",
+          "source": "package-lock.json resolved fields"
+        },
+        {
+          "fact": "0 packages have no integrity hash; 0 only have a SHA-1 hash",
+          "source": "package-lock.json integrity fields"
+        }
+      ],
+      "inference": "Packages from git URLs, other hosts or without integrity hashes bypass the registry's checks, so a changed upstream repo or a compromised host could swap the code without the lockfile noticing.",
+      "inference_source": "rule-based inference",
+      "remedy": "Replace git/URL dependencies with registry releases and regenerate the lockfile so every entry has a sha512 integrity hash.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-002",
+      "category": "unpinned_container_image",
+      "title": "2 container images are referenced by tag, not by digest",
+      "subject": "Dockerfile",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "node:22-slim (tag)",
+          "source": "Dockerfile"
+        },
+        {
+          "fact": "node:22-slim (tag)",
+          "source": "Dockerfile"
+        }
+      ],
+      "inference": "Mutable tags can be repointed upstream. A tag such as 'latest' or '24' can be moved to a different image at any time, so two builds of the same commit may ship different operating-system packages.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Pin the image by digest (image@sha256:...) so the same bytes are used every build, and update the digest deliberately.",
+      "day1_ref": "SC-001, SC-002"
+    },
+    {
+      "id": "INV-003",
+      "category": "lockfile_modified",
+      "title": "236 lockfile entries resolve outside registry.npmjs.org",
+      "subject": "package-lock.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "236 lockfile entries resolve outside registry.npmjs.org",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "node_modules/@esbuild/aix-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/aix-ppc64/-/aix-ppc64-0.28.0.tgz, node_modules/@esbuild/android-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm/-/android-arm-0.28.0.tgz, node_modules/@esbuild/android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm64/-/android-arm64-0.28.0.tgz, node_modules/@esbuild/android-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-x64/-/android-x64-0.28.0.tgz, node_modules/@esbuild/darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-arm64/-/darwin-arm64-0.28.0.tgz, node_modules/@esbuild/darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-x64/-/darwin-x64-0.28.0.tgz, node_modules/@esbuild/freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-arm64/-/freebsd-arm64-0.28.0.tgz, node_modules/@esbuild/freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-x64/-/freebsd-x64-0.28.0.tgz, node_modules/@esbuild/linux-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm/-/linux-arm-0.28.0.tgz, node_modules/@esbuild/linux-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm64/-/linux-arm64-0.28.0.tgz, node_modules/@esbuild/linux-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ia32/-/linux-ia32-0.28.0.tgz, node_modules/@esbuild/linux-loong64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-loong64/-/linux-loong64-0.28.0.tgz, node_modules/@esbuild/linux-mips64el -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-mips64el/-/linux-mips64el-0.28.0.tgz, node_modules/@esbuild/linux-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ppc64/-/linux-ppc64-0.28.0.tgz, node_modules/@esbuild/linux-riscv64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-riscv64/-/linux-riscv64-0.28.0.tgz, node_modules/@esbuild/linux-s390x -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-s390x/-/linux-s390x-0.28.0.tgz, node_modules/@esbuild/linux-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-x64/-/linux-x64-0.28.0.tgz, node_modules/@esbuild/netbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-arm64/-/netbsd-arm64-0.28.0.tgz, node_modules/@esbuild/netbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-x64/-/netbsd-x64-0.28.0.tgz, node_modules/@esbuild/openbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-arm64/-/openbsd-arm64-0.28.0.tgz, node_modules/@esbuild/openbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-x64/-/openbsd-x64-0.28.0.tgz, node_modules/@esbuild/openharmony-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openharmony-arm64/-/openharmony-arm64-0.28.0.tgz, node_modules/@esbuild/sunos-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/sunos-x64/-/sunos-x64-0.28.0.tgz, node_modules/@esbuild/win32-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-arm64/-/win32-arm64-0.28.0.tgz, node_modules/@esbuild/win32-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-ia32/-/win32-ia32-0.28.0.tgz, node_modules/@esbuild/win32-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz, node_modules/@eslint-community/eslint-utils -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/eslint-utils/-/eslint-utils-4.9.1.tgz, node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz, node_modules/@eslint-community/regexpp -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/regexpp/-/regexpp-4.12.2.tgz, node_modules/@eslint/config-array -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-array/-/config-array-0.21.2.tgz, node_modules/@eslint/config-helpers -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-helpers/-/config-helpers-0.4.2.tgz, node_modules/@eslint/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/core/-/core-0.17.0.tgz, node_modules/@eslint/eslintrc -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/eslintrc/-/eslintrc-3.3.5.tgz, node_modules/@eslint/js -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/js/-/js-9.39.4.tgz, node_modules/@eslint/object-schema -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/object-schema/-/object-schema-2.1.7.tgz, node_modules/@eslint/plugin-kit -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz, node_modules/@humanfs/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/core/-/core-0.19.2.tgz, node_modules/@humanfs/node -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/node/-/node-0.16.8.tgz, node_modules/@humanfs/types -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/types/-/types-0.15.0.tgz, node_modules/@humanwhocodes/module-importer -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz, node_modules/@humanwhocodes/retry -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/retry/-/retry-0.4.3.tgz, node_modules/@jridgewell/sourcemap-codec -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz, node_modules/@rollup/rollup-android-arm-eabi -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.60.4.tgz, node_modules/@rollup/rollup-android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.60.4.tgz, node_modules/@rollup/rollup-darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.60.4.tgz, node_modules/@rollup/rollup-darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.60.4.tgz, node_modules/@rollup/rollup-freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.60.4.tgz, node_modules/@rollup/rollup-freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.60.4.tgz, node_modules/@rollup/rollup-linux-arm-gnueabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.60.4.tgz, node_modules/@rollup/rollup-linux-arm-musleabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.60.4.tgz",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Non-registry sources bypass registry integrity guarantees.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Delete the suspicious entry and regenerate the lockfile from the official registry (npm install --package-lock-only), then compare integrity hashes before merging.",
+      "day1_ref": "SC-005"
+    },
+    {
+      "id": "INV-004",
+      "category": "install-script",
+      "title": "esbuild@0.28.0 runs code when installed (download)",
+      "subject": "esbuild@0.28.0",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks esbuild@0.28.0 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/esbuild"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node install.js",
+          "source": "https://registry.npmjs.org/esbuild/0.28.0"
+        },
+        {
+          "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 tsx@4.22.3 \u2192 esbuild@0.28.0",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-005",
+      "category": "install-script",
+      "title": "esbuild@0.27.7 runs code when installed (download)",
+      "subject": "esbuild@0.27.7",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks esbuild@0.27.7 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/vite/node_modules/esbuild"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node install.js",
+          "source": "https://registry.npmjs.org/esbuild/0.27.7"
+        },
+        {
+          "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 vitest@3.2.4 \u2192 vite@7.3.3 \u2192 esbuild@0.27.7",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-006",
+      "category": "provenance-attestation",
+      "title": "2 of 3 production dependencies have no build provenance",
+      "subject": "package.json",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "1 direct production dependencies publish an npm provenance attestation (built by CI from a known repo)",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "Without attestation: commander@12.1.0, picomatch@4.0.4",
+          "source": "https://registry.npmjs.org"
+        }
+      ],
+      "inference": "A package without provenance was uploaded from someone's machine, so nobody can prove the tarball matches the source repository. That is normal for older packages, but it is the gap attackers use when they steal a maintainer's npm token.",
+      "inference_source": "rule-based inference",
+      "remedy": "Prefer versions with provenance when upgrading; for critical packages, compare the tarball with the tagged source.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-007",
+      "category": "unexpected_ci_dependency",
+      "title": "2 CI actions not SHA-pinned",
+      "subject": ".github/workflows",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "2 CI actions not SHA-pinned",
+          "source": ".github/workflows"
+        },
+        {
+          "fact": "actions/checkout@v4, actions/setup-node@v4",
+          "source": ".github/workflows"
+        }
+      ],
+      "inference": "Tag-pinned actions can be changed by their owners.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Review the action's source, pin it to a full commit SHA, and give the workflow the minimum token permissions it needs.",
+      "day1_ref": "SC-003"
+    },
+    {
+      "id": "INV-008",
+      "category": "install-script",
+      "title": "fsevents@2.3.3 runs code when installed (native build)",
+      "subject": "fsevents@2.3.3",
+      "verdict": "Expected",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks fsevents@2.3.3 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/fsevents"
+        },
+        {
+          "fact": "Used in: development only, optional (only installed on some platforms)",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: install: node-gyp rebuild",
+          "source": "https://registry.npmjs.org/fsevents/2.3.3"
+        },
+        {
+          "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 tsx@4.22.3 \u2192 fsevents@2.3.3",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script compiles native code (normal for database or XML drivers), but it still runs arbitrary build commands on the machine.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Allow-list it explicitly (e.g. npm's --ignore-scripts plus a reviewed rebuild step) and keep it updated.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-009",
+      "category": "integrity",
+      "title": "Lockfile hashes match the registry (17 packages checked)",
+      "subject": "package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "Compared the integrity hash of 17 locked packages with the hash the npm registry publishes",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "0 mismatches",
+          "source": "package-lock.json vs registry"
+        }
+      ],
+      "inference": "The locked bytes are exactly what the registry published for these versions; no sign of lockfile tampering.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-010",
+      "category": "manifest-lockfile",
+      "title": "package.json and the lockfile agree",
+      "subject": "package.json \u2194 package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "3 production and 8 development dependencies declared",
+          "source": "package.json"
+        },
+        {
+          "fact": "Every declared dependency is locked",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Installs are reproducible: every declared dependency is pinned by the lockfile.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    }
+  ]
+}

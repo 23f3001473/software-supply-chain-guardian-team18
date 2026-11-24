@@ -1,6 +1,6 @@
 # Supply Chain Guardian — Evidence Report
-Repo: `C:\Users\rohit\Downloads\software-supply-chain-guardian-day1 (1)\software-supply-chain-guardian\target\juice-shop`  Commit: `c9f99228d9d56afb5f5ca7925376292f7fa44b13`
-Generated: 2026-11-23T12:02:35.446748+00:00
+Repo: `C:\Users\rohit\Downloads\software-supply-chain-guardian-day2\software-supply-chain-guardian\target\juice-shop`  Commit: `c9f99228d9d56afb5f5ca7925376292f7fa44b13`
+Generated: 2026-11-24T05:44:14.392477+00:00
 
 ## Interpretation
 _Source: deterministic template (no ANTHROPIC_API_KEY set)_
@@ -21,7 +21,7 @@ _Source: deterministic template (no ANTHROPIC_API_KEY set)_
 - npm_packages: 1249
 - direct_dependencies: 98
 - transitive_dependencies: 1151
-- sbom_components: 585
+- sbom_components: 584
 - graph_nodes: 1250
 - graph_edges: 2269
 - vulnerabilities: 54
@@ -36,7 +36,7 @@ _Source: deterministic template (no ANTHROPIC_API_KEY set)_
 
 ## Agent log
 - 1. Repository Discovery Agent: ok — 24 manifests, 1249 npm packages (98 direct), 104 container/CI components
-- 2. SBOM Agent: ok — CycloneDX 1.6 via syft: 585 components
+- 2. SBOM Agent: ok — CycloneDX 1.6 via syft: 584 components
 - 3. Dependency Analysis Agent: ok — 1250 nodes, 2269 edges
 - 4. Vulnerability Detection Agent: ok — 54 findings via osv
 - 5. Anomaly Detection Agent: ok — 0 anomalies vs HEAD, 12 baseline observations

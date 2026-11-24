@@ -1,0 +1,3391 @@
+[
+  {
+    "package": "bson",
+    "installed_version": "1.0.9",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-4jwp-vfvf-657p",
+      "GHSA-v8w9-2789-6hhr"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "mongodb@2.2.36"
+    ],
+    "fixed_in": "1.1.4",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade mongodb@2.2.36 or pin bson 1.1.4+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade mongodb@2.2.36 to a release that depends on bson 1.1.4 or later.",
+      "Or force bson to 1.1.4 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimist",
+    "installed_version": "0.0.10",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-vh95-rmgr-6w4m",
+      "GHSA-xvch-5gv4-984h"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "swig@1.4.2"
+    ],
+    "fixed_in": "1.2.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin minimist 1.2.6+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0, swig@1.4.2 to a release that depends on minimist 1.2.6 or later.",
+      "Or force minimist to 1.2.6 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimist",
+    "installed_version": "0.0.8",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-vh95-rmgr-6w4m",
+      "GHSA-xvch-5gv4-984h"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "forever@2.0.0",
+      "grunt-concurrent@2.3.1",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-mocha-test@0.12.7",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3",
+      "mocha@2.5.3"
+    ],
+    "fixed_in": "1.2.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin minimist 1.2.6+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade cypress@3.3.1, forever@2.0.0 to a release that depends on minimist 1.2.6 or later.",
+      "Or force minimist to 1.2.6 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimist",
+    "installed_version": "1.2.5",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-xvch-5gv4-984h"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0"
+    ],
+    "fixed_in": "1.2.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin minimist 1.2.6+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0 to a release that depends on minimist 1.2.6 or later.",
+      "Or force minimist to 1.2.6 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "mixin-deep",
+    "installed_version": "1.3.1",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-fhjf-83wg-r2j9"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "grunt-cli@1.3.2",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "1.3.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin mixin-deep 1.3.2+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0, grunt-cli@1.3.2 to a release that depends on mixin-deep 1.3.2 or later.",
+      "Or force mixin-deep to 1.3.2 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "proxy-addr",
+    "installed_version": "2.0.4",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-jqcg-44mw-7w3h"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express@4.16.4"
+    ],
+    "fixed_in": "2.0.8",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade express@4.16.4 or pin proxy-addr 2.0.8+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade express@4.16.4 to a release that depends on proxy-addr 2.0.8 or later.",
+      "Or force proxy-addr to 2.0.8 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "set-value",
+    "installed_version": "0.4.3",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-4g88-fppr-53pp",
+      "GHSA-4jqc-8m5r-9rpr"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "grunt-cli@1.3.2",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "4.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin set-value 4.0.1+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0, grunt-cli@1.3.2 to a release that depends on set-value 4.0.1 or later.",
+      "Or force set-value to 4.0.1 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "set-value",
+    "installed_version": "2.0.0",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-4g88-fppr-53pp",
+      "GHSA-4jqc-8m5r-9rpr"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "grunt-cli@1.3.2",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "4.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin set-value 4.0.1+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0, grunt-cli@1.3.2 to a release that depends on set-value 4.0.1 or later.",
+      "Or force set-value to 4.0.1 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "underscore",
+    "installed_version": "1.9.1",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-cf4h-3jhx-xvhq",
+      "GHSA-qpx9-hpmf-5gmw"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "underscore@1.9.1"
+    ],
+    "fixed_in": "1.13.8",
+    "action": "Upgrade the package",
+    "headline": "Upgrade underscore 1.9.1 \u2192 1.13.8",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade underscore from 1.9.1 to 1.13.8 or later in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "body-parser",
+    "installed_version": "1.18.3",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-27r3-jxmh-p828",
+      "GHSA-qwcr-r2fm-qrc7",
+      "GHSA-v422-hmwv-36x6"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "body-parser@1.18.3"
+    ],
+    "fixed_in": "2.4.0",
+    "action": "Upgrade the package",
+    "headline": "Upgrade body-parser 1.18.3 \u2192 2.4.0",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade body-parser from 1.18.3 to 2.4.0 or later in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "brace-expansion",
+    "installed_version": "1.1.11",
+    "worst_severity": "high",
+    "advisories": 8,
+    "ids": [
+      "GHSA-3jxr-9vmj-r5cp",
+      "GHSA-6j4f-fj2g-mc7p",
+      "GHSA-f886-m6hf-6m8v",
+      "GHSA-mh99-v99m-4gvg",
+      "GHSA-q2hr-2g5m-vwhr",
+      "GHSA-qhr7-859c-m2p7",
+      "GHSA-rgw5-rvv9-x895",
+      "GHSA-v6h2-p8h4-qcjw"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "forever@2.0.0",
+      "grunt-concurrent@2.3.1",
+      "grunt-contrib-jshint@3.2.0",
+      "grunt-contrib-watch@1.1.0",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3",
+      "jshint@2.12.0",
+      "nodemon@1.19.1",
+      "selenium-webdriver@2.53.3"
+    ],
+    "fixed_in": "5.0.12",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin brace-expansion 5.0.12+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade cypress@3.3.1, forever@2.0.0 to a release that depends on brace-expansion 5.0.12 or later.",
+      "Or force brace-expansion to 5.0.12 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "braces",
+    "installed_version": "2.3.2",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-grv7-fg5c-xmjg"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "3.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin braces 3.0.3+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0, nodemon@1.19.1 to a release that depends on braces 3.0.3 or later.",
+      "Or force braces to 3.0.3 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "decode-uri-component",
+    "installed_version": "0.2.0",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-qr28-fpjm-wq7f",
+      "GHSA-vcc3-ghjq-m6fr",
+      "GHSA-w573-4hg7-7wgq"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "grunt-cli@1.3.2",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "0.5.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin decode-uri-component 0.5.1+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0, grunt-cli@1.3.2 to a release that depends on decode-uri-component 0.5.1 or later.",
+      "Or force decode-uri-component to 0.5.1 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "i",
+    "installed_version": "0.3.6",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-x55w-vjjp-222r"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0"
+    ],
+    "fixed_in": "0.3.7",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin i 0.3.7+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0 to a release that depends on i 0.3.7 or later.",
+      "Or force i to 0.3.7 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "ini",
+    "installed_version": "1.3.5",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-qqgx-2p2h-9c37"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "forever@2.0.0",
+      "grunt-cli@1.3.2",
+      "grunt-env@1.0.1",
+      "grunt-jsbeautifier@0.2.13",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "1.3.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin ini 1.3.6+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade cypress@3.3.1, forever@2.0.0 to a release that depends on ini 1.3.6 or later.",
+      "Or force ini to 1.3.6 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "marked",
+    "installed_version": "0.3.5",
+    "worst_severity": "high",
+    "advisories": 6,
+    "ids": [
+      "GHSA-5v2h-r2cx-5xgj",
+      "GHSA-7px7-7xjx-hxm8",
+      "GHSA-p9wx-2529-fp83",
+      "GHSA-rrrm-qjm4-v8hf",
+      "GHSA-vfvf-mqq8-rwqc",
+      "GHSA-x5pg-88wf-qq4p"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "marked@0.3.5"
+    ],
+    "fixed_in": "4.0.10",
+    "action": "Upgrade the package",
+    "headline": "Upgrade marked 0.3.5 \u2192 4.0.10",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade marked from 0.3.5 to 4.0.10 or later in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimatch",
+    "installed_version": "3.0.4",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-23c5-xmqv-rm74",
+      "GHSA-3ppc-4f35-3m26",
+      "GHSA-7r86-cg39-jmmj",
+      "GHSA-f8q6-p94x-37v3"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "forever@2.0.0",
+      "grunt-concurrent@2.3.1",
+      "grunt-contrib-jshint@3.2.0",
+      "grunt-contrib-watch@1.1.0",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3",
+      "jshint@2.12.0",
+      "nodemon@1.19.1",
+      "selenium-webdriver@2.53.3"
+    ],
+    "fixed_in": "10.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin minimatch 10.2.3+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade cypress@3.3.1, forever@2.0.0 to a release that depends on minimatch 10.2.3 or later.",
+      "Or force minimatch to 10.2.3 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "mongodb",
+    "installed_version": "2.2.36",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-mh5c-679w-hh4r"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "mongodb@2.2.36"
+    ],
+    "fixed_in": "3.1.13",
+    "action": "Upgrade the package",
+    "headline": "Upgrade mongodb 2.2.36 \u2192 3.1.13",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade mongodb from 2.2.36 to 3.1.13 or later in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "nconf",
+    "installed_version": "0.10.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-6xwr-q98w-rvg7"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0"
+    ],
+    "fixed_in": "0.11.4",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin nconf 0.11.4+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0 to a release that depends on nconf 0.11.4 or later.",
+      "Or force nconf to 0.11.4 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "nconf",
+    "installed_version": "0.6.9",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-6xwr-q98w-rvg7"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0"
+    ],
+    "fixed_in": "0.11.4",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin nconf 0.11.4+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0 to a release that depends on nconf 0.11.4 or later.",
+      "Or force nconf to 0.11.4 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "path-to-regexp",
+    "installed_version": "0.1.7",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-37ch-88jc-xwx2",
+      "GHSA-rhx6-c78j-4q9w"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express@4.16.4"
+    ],
+    "fixed_in": "0.1.13",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade express@4.16.4 or pin path-to-regexp 0.1.13+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade express@4.16.4 to a release that depends on path-to-regexp 0.1.13 or later.",
+      "Or force path-to-regexp to 0.1.13 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "qs",
+    "installed_version": "6.5.2",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-4mjr-xmp4-gh2g",
+      "GHSA-6rw7-vpxm-498p",
+      "GHSA-hrpp-h998-j3pp"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "body-parser@1.18.3",
+      "cypress@3.3.1",
+      "express@4.16.4",
+      "grunt-contrib-watch@1.1.0"
+    ],
+    "fixed_in": "6.16.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade body-parser@1.18.3 or pin qs 6.16.0+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade body-parser@1.18.3, cypress@3.3.1 to a release that depends on qs 6.16.0 or later.",
+      "Or force qs to 6.16.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "semver",
+    "installed_version": "5.6.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c2qf-rxjj-qqgw"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "grunt-concurrent@2.3.1",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3",
+      "mongodb@2.2.36",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "7.5.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin semver 7.5.2+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade cypress@3.3.1, grunt-concurrent@2.3.1 to a release that depends on semver 7.5.2 or later.",
+      "Or force semver to 7.5.2 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "swig",
+    "installed_version": "1.4.2",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-2rq5-699j-x7p6"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "swig@1.4.2"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched swig exists. Replace or remove it",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "No fixed version is listed. Replace or remove swig, or isolate the code that uses it."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "uglify-js",
+    "installed_version": "2.4.24",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c9f4-xj24-8jqx"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "swig@1.4.2"
+    ],
+    "fixed_in": "2.6.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade swig@1.4.2 or pin uglify-js 2.6.0+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade swig@1.4.2 to a release that depends on uglify-js 2.6.0 or later.",
+      "Or force uglify-js to 2.6.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "y18n",
+    "installed_version": "3.2.1",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c4w7-xm78-47vh"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0"
+    ],
+    "fixed_in": "3.2.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin y18n 3.2.2+",
+    "priority": "P1 \u2014 fix first",
+    "steps": [
+      "Upgrade forever@2.0.0 to a release that depends on y18n 3.2.2 or later.",
+      "Or force y18n to 3.2.2 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "babel-traverse",
+    "installed_version": "6.11.4",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-67hx-6x53-jw92"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched babel-traverse exists. Replace or remove it",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "No fixed version is listed. Replace or remove babel-traverse, or isolate the code that uses it.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "form-data",
+    "installed_version": "0.1.4",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-fjxv-7rqg-78g4",
+      "GHSA-hmw2-7cc7-3qxx"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "2.5.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin form-data 2.5.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on form-data 2.5.6 or later.",
+      "Or force form-data to 2.5.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "form-data",
+    "installed_version": "1.0.1",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-fjxv-7rqg-78g4",
+      "GHSA-hmw2-7cc7-3qxx"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "2.5.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-retire@0.3.12 or pin form-data 2.5.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-retire@0.3.12 to a release that depends on form-data 2.5.6 or later.",
+      "Or force form-data to 2.5.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "form-data",
+    "installed_version": "2.0.0",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-fjxv-7rqg-78g4",
+      "GHSA-hmw2-7cc7-3qxx"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "2.5.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin form-data 2.5.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on form-data 2.5.6 or later.",
+      "Or force form-data to 2.5.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "form-data",
+    "installed_version": "2.1.4",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-fjxv-7rqg-78g4",
+      "GHSA-hmw2-7cc7-3qxx"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "2.5.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin form-data 2.5.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on form-data 2.5.6 or later.",
+      "Or force form-data to 2.5.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "form-data",
+    "installed_version": "2.3.3",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-fjxv-7rqg-78g4",
+      "GHSA-hmw2-7cc7-3qxx"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "2.5.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin form-data 2.5.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on form-data 2.5.6 or later.",
+      "Or force form-data to 2.5.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "fsevents",
+    "installed_version": "1.2.9",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-8r6j-v8pm-fqw3",
+      "MAL-2023-462"
+    ],
+    "scope": "optional",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "1.2.11",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin fsevents 1.2.11+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade forever@2.0.0, nodemon@1.19.1 to a release that depends on fsevents 1.2.11 or later.",
+      "Or force fsevents to 1.2.11 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "getobject",
+    "installed_version": "0.1.0",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-957j-59c2-j692"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-concurrent@2.3.1",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3"
+    ],
+    "fixed_in": "1.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-concurrent@2.3.1 or pin getobject 1.0.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-concurrent@2.3.1, grunt-if@0.2.0 to a release that depends on getobject 1.0.0 or later.",
+      "Or force getobject to 1.0.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "growl",
+    "installed_version": "1.9.2",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-qh2h-chj9-jffq"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-mocha-test@0.12.7",
+      "mocha@2.5.3"
+    ],
+    "fixed_in": "1.10.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-mocha-test@0.12.7 or pin growl 1.10.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-mocha-test@0.12.7, mocha@2.5.3 to a release that depends on growl 1.10.0 or later.",
+      "Or force growl to 1.10.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "handlebars",
+    "installed_version": "4.0.5",
+    "worst_severity": "critical",
+    "advisories": 20,
+    "ids": [
+      "GHSA-2cf5-4w76-r9qv",
+      "GHSA-2qvq-rjwj-gvw9",
+      "GHSA-2w6w-674q-4c4q",
+      "GHSA-3cqr-58rm-57f8",
+      "GHSA-3mfm-83xf-c92r",
+      "GHSA-442j-39wm-28r2",
+      "GHSA-62gr-4qp9-h98f",
+      "GHSA-765h-qjxv-5f44",
+      "GHSA-8r5x-fm3f-whwj",
+      "GHSA-9cx6-37pm-9jff",
+      "GHSA-f2jv-r9rf-7988",
+      "GHSA-f52g-6jhx-586p",
+      "GHSA-g9r4-xpmj-mj65",
+      "GHSA-p8wg-vrv2-v86f",
+      "GHSA-q2c6-c6pm-g3gh",
+      "GHSA-q42p-pg8m-cqh6",
+      "GHSA-w457-6q6x-cgp9",
+      "GHSA-xhpv-hc6g-r9c6",
+      "GHSA-xjpj-3mr7-gcpf",
+      "GHSA-xw65-4hp5-5hc7"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "4.7.10",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin handlebars 4.7.10+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on handlebars 4.7.10 or later.",
+      "Or force handlebars to 4.7.10 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "json-schema",
+    "installed_version": "0.2.3",
+    "worst_severity": "critical",
+    "advisories": 1,
+    "ids": [
+      "GHSA-896r-f27r-55mw"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "0.4.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin json-schema 0.4.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cypress@3.3.1, grunt-if@0.2.0 to a release that depends on json-schema 0.4.0 or later.",
+      "Or force json-schema to 0.4.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "lodash",
+    "installed_version": "2.4.2",
+    "worst_severity": "critical",
+    "advisories": 4,
+    "ids": [
+      "GHSA-35jh-r3h4-6jhm",
+      "GHSA-4xc9-xhrj-v574",
+      "GHSA-fvqr-27wr-82fm",
+      "GHSA-jf85-cpcp-j695"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "4.17.21",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin lodash 4.17.21+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on lodash 4.17.21 or later.",
+      "Or force lodash to 4.17.21 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "lodash",
+    "installed_version": "4.13.1",
+    "worst_severity": "critical",
+    "advisories": 9,
+    "ids": [
+      "GHSA-29mw-wpgm-hmr9",
+      "GHSA-35jh-r3h4-6jhm",
+      "GHSA-4xc9-xhrj-v574",
+      "GHSA-fvqr-27wr-82fm",
+      "GHSA-jf85-cpcp-j695",
+      "GHSA-p6mc-m468-83gw",
+      "GHSA-r5fr-rjxr-66jc",
+      "GHSA-x5rq-j2xg-h7qm",
+      "GHSA-xxjr-mmjv-4gpg"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "4.18.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin lodash 4.18.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on lodash 4.18.0 or later.",
+      "Or force lodash to 4.18.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "lodash",
+    "installed_version": "4.17.11",
+    "worst_severity": "critical",
+    "advisories": 6,
+    "ids": [
+      "GHSA-29mw-wpgm-hmr9",
+      "GHSA-35jh-r3h4-6jhm",
+      "GHSA-jf85-cpcp-j695",
+      "GHSA-p6mc-m468-83gw",
+      "GHSA-r5fr-rjxr-66jc",
+      "GHSA-xxjr-mmjv-4gpg"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "async@2.6.1",
+      "cypress@3.3.1",
+      "grunt-concurrent@2.3.1",
+      "grunt-contrib-watch@1.1.0",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3"
+    ],
+    "fixed_in": "4.18.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade async@2.6.1 or pin lodash 4.18.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade async@2.6.1, cypress@3.3.1 to a release that depends on lodash 4.18.0 or later.",
+      "Or force lodash to 4.18.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimist",
+    "installed_version": "1.2.0",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-vh95-rmgr-6w4m",
+      "GHSA-xvch-5gv4-984h"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "1.2.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin minimist 1.2.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on minimist 1.2.6 or later.",
+      "Or force minimist to 1.2.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tar",
+    "installed_version": "2.2.1",
+    "worst_severity": "critical",
+    "advisories": 16,
+    "ids": [
+      "GHSA-23hp-3jrh-7fpw",
+      "GHSA-34x7-hfp2-rc4v",
+      "GHSA-3jfq-g458-7qm9",
+      "GHSA-5955-9wpr-37jh",
+      "GHSA-83g3-92jg-28cx",
+      "GHSA-8qq5-rm4j-mr97",
+      "GHSA-8x88-c5mf-7j5w",
+      "GHSA-9ppj-qmqm-q256",
+      "GHSA-f5x3-32g6-xq36",
+      "GHSA-gvwx-54wh-qm9j",
+      "GHSA-j44m-qm6p-hp7m",
+      "GHSA-qffp-2rhf-9h96",
+      "GHSA-r292-9mhp-454m",
+      "GHSA-r6q2-hw4h-h46w",
+      "GHSA-vmf3-w455-68vh",
+      "GHSA-w8wr-v893-vjvp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "7.5.21",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin tar 7.5.21+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on tar 7.5.21 or later.",
+      "Or force tar to 7.5.21 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tar",
+    "installed_version": "4.4.8",
+    "worst_severity": "critical",
+    "advisories": 18,
+    "ids": [
+      "GHSA-23hp-3jrh-7fpw",
+      "GHSA-34x7-hfp2-rc4v",
+      "GHSA-3jfq-g458-7qm9",
+      "GHSA-5955-9wpr-37jh",
+      "GHSA-83g3-92jg-28cx",
+      "GHSA-8qq5-rm4j-mr97",
+      "GHSA-8x88-c5mf-7j5w",
+      "GHSA-9ppj-qmqm-q256",
+      "GHSA-9r2w-394v-53qc",
+      "GHSA-f5x3-32g6-xq36",
+      "GHSA-gvwx-54wh-qm9j",
+      "GHSA-qffp-2rhf-9h96",
+      "GHSA-qq89-hq3f-393p",
+      "GHSA-r292-9mhp-454m",
+      "GHSA-r628-mhmh-qjhw",
+      "GHSA-r6q2-hw4h-h46w",
+      "GHSA-vmf3-w455-68vh",
+      "GHSA-w8wr-v893-vjvp"
+    ],
+    "scope": "optional",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "7.5.21",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin tar 7.5.21+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade forever@2.0.0, nodemon@1.19.1 to a release that depends on tar 7.5.21 or later.",
+      "Or force tar to 7.5.21 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "underscore",
+    "installed_version": "1.8.3",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-cf4h-3jhx-xvhq",
+      "GHSA-qpx9-hpmf-5gmw"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "1.13.8",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-retire@0.3.12 or pin underscore 1.13.8+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-retire@0.3.12 to a release that depends on underscore 1.13.8 or later.",
+      "Or force underscore to 1.13.8 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "websocket-driver",
+    "installed_version": "0.7.0",
+    "worst_severity": "critical",
+    "advisories": 2,
+    "ids": [
+      "GHSA-mp7j-qc5w-4988",
+      "GHSA-xv26-6w52-cph6"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-contrib-watch@1.1.0"
+    ],
+    "fixed_in": "0.7.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-contrib-watch@1.1.0 or pin websocket-driver 0.7.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-contrib-watch@1.1.0 to a release that depends on websocket-driver 0.7.5 or later.",
+      "Or force websocket-driver to 0.7.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "adm-zip",
+    "installed_version": "0.4.4",
+    "worst_severity": "high",
+    "advisories": 8,
+    "ids": [
+      "GHSA-3v6h-hqm4-2rg6",
+      "GHSA-7q85-xj36-vmfc",
+      "GHSA-8238-w5pm-2374",
+      "GHSA-c6fg-446q-cg94",
+      "GHSA-j5f4-cc29-5x44",
+      "GHSA-p634-w6r4-rjp2",
+      "GHSA-rcw4-f5rp-g42v",
+      "GHSA-xcpc-8h2w-3j85"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "selenium-webdriver@2.53.3"
+    ],
+    "fixed_in": "0.6.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade selenium-webdriver@2.53.3 or pin adm-zip 0.6.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade selenium-webdriver@2.53.3 to a release that depends on adm-zip 0.6.1 or later.",
+      "Or force adm-zip to 0.6.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "ansi-regex",
+    "installed_version": "3.0.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-93q8-gq69-wqmw"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "6.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade nodemon@1.19.1 or pin ansi-regex 6.0.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade nodemon@1.19.1 to a release that depends on ansi-regex 6.0.1 or later.",
+      "Or force ansi-regex to 6.0.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "async",
+    "installed_version": "2.6.1",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-fwr7-v2mv-hh25"
+    ],
+    "scope": "dev",
+    "direct": true,
+    "introduced_via": [
+      "async@2.6.1"
+    ],
+    "fixed_in": "3.2.2",
+    "action": "Upgrade the package",
+    "headline": "Upgrade async 2.6.1 \u2192 3.2.2",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade async from 2.6.1 to 3.2.2 or later in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "brace-expansion",
+    "installed_version": "1.1.6",
+    "worst_severity": "high",
+    "advisories": 9,
+    "ids": [
+      "GHSA-3jxr-9vmj-r5cp",
+      "GHSA-6j4f-fj2g-mc7p",
+      "GHSA-832h-xg76-4gv6",
+      "GHSA-f886-m6hf-6m8v",
+      "GHSA-mh99-v99m-4gvg",
+      "GHSA-q2hr-2g5m-vwhr",
+      "GHSA-qhr7-859c-m2p7",
+      "GHSA-rgw5-rvv9-x895",
+      "GHSA-v6h2-p8h4-qcjw"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "5.0.12",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin brace-expansion 5.0.12+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on brace-expansion 5.0.12 or later.",
+      "Or force brace-expansion to 5.0.12 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "braces",
+    "installed_version": "1.8.5",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-grv7-fg5c-xmjg"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "3.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin braces 3.0.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on braces 3.0.3 or later.",
+      "Or force braces to 3.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "cross-spawn",
+    "installed_version": "4.0.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-3xgq-45jj-v275"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "7.0.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin cross-spawn 7.0.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on cross-spawn 7.0.5 or later.",
+      "Or force cross-spawn to 7.0.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "cross-spawn",
+    "installed_version": "4.0.2",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-3xgq-45jj-v275"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "7.0.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin cross-spawn 7.0.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on cross-spawn 7.0.5 or later.",
+      "Or force cross-spawn to 7.0.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "cross-spawn",
+    "installed_version": "5.1.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-3xgq-45jj-v275"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "7.0.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade nodemon@1.19.1 or pin cross-spawn 7.0.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade nodemon@1.19.1 to a release that depends on cross-spawn 7.0.5 or later.",
+      "Or force cross-spawn to 7.0.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "cross-spawn",
+    "installed_version": "6.0.5",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-3xgq-45jj-v275"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "7.0.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin cross-spawn 7.0.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on cross-spawn 7.0.5 or later.",
+      "Or force cross-spawn to 7.0.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "cross-spawn",
+    "installed_version": "7.0.3",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-3xgq-45jj-v275"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cross-env@7.0.2"
+    ],
+    "fixed_in": "7.0.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cross-env@7.0.2 or pin cross-spawn 7.0.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cross-env@7.0.2 to a release that depends on cross-spawn 7.0.5 or later.",
+      "Or force cross-spawn to 7.0.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "debug",
+    "installed_version": "2.2.0",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-9vvw-cc9w-f27h",
+      "GHSA-gxpj-cx7g-858c"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-mocha-test@0.12.7",
+      "mocha@2.5.3"
+    ],
+    "fixed_in": "3.1.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-mocha-test@0.12.7 or pin debug 3.1.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-mocha-test@0.12.7, mocha@2.5.3 to a release that depends on debug 3.1.0 or later.",
+      "Or force debug to 3.1.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "diff",
+    "installed_version": "1.4.0",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-73rr-hh4g-fpgx",
+      "GHSA-h6ch-v84p-w6p9"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-mocha-test@0.12.7",
+      "mocha@2.5.3"
+    ],
+    "fixed_in": "8.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin diff 8.0.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-mocha-test@0.12.7 to a release that depends on diff 8.0.3 or later.",
+      "Or force diff to 8.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "dot-prop",
+    "installed_version": "4.2.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-ff7x-qrg7-qggm"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "4.2.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade nodemon@1.19.1 or pin dot-prop 4.2.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade nodemon@1.19.1 to a release that depends on dot-prop 4.2.1 or later.",
+      "Or force dot-prop to 4.2.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "extract-zip",
+    "installed_version": "1.6.7",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-7pqw-9j4j-h8q3",
+      "GHSA-jmr9-qjv8-65gv"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched extract-zip exists. Replace or remove it",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "No fixed version is listed. Replace or remove extract-zip, or isolate the code that uses it.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "fstream",
+    "installed_version": "1.0.10",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-xf7w-r453-m56c"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "1.0.12",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin fstream 1.0.12+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on fstream 1.0.12 or later.",
+      "Or force fstream to 1.0.12 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "grunt",
+    "installed_version": "1.0.3",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-j383-35pm-c5h4",
+      "GHSA-m5pj-vjjf-4m3h",
+      "GHSA-rm36-94g8-835r"
+    ],
+    "scope": "dev",
+    "direct": true,
+    "introduced_via": [
+      "grunt@1.0.3"
+    ],
+    "fixed_in": "1.5.3",
+    "action": "Upgrade the package",
+    "headline": "Upgrade grunt 1.0.3 \u2192 1.5.3",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt from 1.0.3 to 1.5.3 or later in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "hawk",
+    "installed_version": "1.0.0",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-44pw-h2cw-w3vq",
+      "GHSA-jcpv-g9rr-qxrc"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "9.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin hawk 9.0.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on hawk 9.0.1 or later.",
+      "Or force hawk to 9.0.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "hawk",
+    "installed_version": "3.1.3",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-44pw-h2cw-w3vq"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "9.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin hawk 9.0.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on hawk 9.0.1 or later.",
+      "Or force hawk to 9.0.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "hoek",
+    "installed_version": "0.9.1",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-c429-5p7v-vgjp",
+      "GHSA-jp4x-w63m-7wgm"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "5.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin hoek 5.0.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on hoek 5.0.3 or later.",
+      "Or force hoek to 5.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "hoek",
+    "installed_version": "2.16.3",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-c429-5p7v-vgjp",
+      "GHSA-jp4x-w63m-7wgm"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "5.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin hoek 5.0.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on hoek 5.0.3 or later.",
+      "Or force hoek to 5.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "ini",
+    "installed_version": "1.3.4",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-qqgx-2p2h-9c37"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "1.3.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin ini 1.3.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on ini 1.3.6 or later.",
+      "Or force ini to 1.3.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "js-yaml",
+    "installed_version": "3.5.5",
+    "worst_severity": "high",
+    "advisories": 7,
+    "ids": [
+      "GHSA-2883-xcg3-v3hh",
+      "GHSA-2pr6-76vf-7546",
+      "GHSA-52cp-r559-cp3m",
+      "GHSA-5p4m-2wfm-xmqj",
+      "GHSA-8j8c-7jfh-h6hx",
+      "GHSA-h67p-54hq-rp68",
+      "GHSA-mh29-5h37-fv8m"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-concurrent@2.3.1",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3"
+    ],
+    "fixed_in": "4.3.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-concurrent@2.3.1 or pin js-yaml 4.3.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-concurrent@2.3.1, grunt-if@0.2.0 to a release that depends on js-yaml 4.3.2 or later.",
+      "Or force js-yaml to 4.3.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "js-yaml",
+    "installed_version": "3.6.1",
+    "worst_severity": "high",
+    "advisories": 7,
+    "ids": [
+      "GHSA-2883-xcg3-v3hh",
+      "GHSA-2pr6-76vf-7546",
+      "GHSA-52cp-r559-cp3m",
+      "GHSA-5p4m-2wfm-xmqj",
+      "GHSA-8j8c-7jfh-h6hx",
+      "GHSA-h67p-54hq-rp68",
+      "GHSA-mh29-5h37-fv8m"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "4.3.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin js-yaml 4.3.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on js-yaml 4.3.2 or later.",
+      "Or force js-yaml to 4.3.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "kind-of",
+    "installed_version": "6.0.2",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-6c8f-qphg-qjgp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-cli@1.3.2"
+    ],
+    "fixed_in": "6.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-cli@1.3.2 or pin kind-of 6.0.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-cli@1.3.2 to a release that depends on kind-of 6.0.3 or later.",
+      "Or force kind-of to 6.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "lodash",
+    "installed_version": "4.17.20",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-29mw-wpgm-hmr9",
+      "GHSA-35jh-r3h4-6jhm",
+      "GHSA-r5fr-rjxr-66jc",
+      "GHSA-xxjr-mmjv-4gpg"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-env@1.0.1"
+    ],
+    "fixed_in": "4.18.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-env@1.0.1 or pin lodash 4.18.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-env@1.0.1 to a release that depends on lodash 4.18.0 or later.",
+      "Or force lodash to 4.18.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "lodash",
+    "installed_version": "4.17.21",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-r5fr-rjxr-66jc",
+      "GHSA-xxjr-mmjv-4gpg"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "jshint@2.12.0"
+    ],
+    "fixed_in": "4.18.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade jshint@2.12.0 or pin lodash 4.18.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade jshint@2.12.0 to a release that depends on lodash 4.18.0 or later.",
+      "Or force lodash to 4.18.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "mime",
+    "installed_version": "1.2.11",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-wrvr-8mpx-r7pp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "2.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin mime 2.0.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on mime 2.0.3 or later.",
+      "Or force mime to 2.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimatch",
+    "installed_version": "0.3.0",
+    "worst_severity": "high",
+    "advisories": 5,
+    "ids": [
+      "GHSA-23c5-xmqv-rm74",
+      "GHSA-3ppc-4f35-3m26",
+      "GHSA-7r86-cg39-jmmj",
+      "GHSA-f8q6-p94x-37v3",
+      "GHSA-hxm2-r34f-qmc5"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-mocha-test@0.12.7",
+      "mocha@2.5.3"
+    ],
+    "fixed_in": "10.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-mocha-test@0.12.7 or pin minimatch 10.2.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-mocha-test@0.12.7, mocha@2.5.3 to a release that depends on minimatch 10.2.3 or later.",
+      "Or force minimatch to 10.2.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimatch",
+    "installed_version": "3.0.2",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-23c5-xmqv-rm74",
+      "GHSA-3ppc-4f35-3m26",
+      "GHSA-7r86-cg39-jmmj",
+      "GHSA-f8q6-p94x-37v3"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "10.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin minimatch 10.2.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on minimatch 10.2.3 or later.",
+      "Or force minimatch to 10.2.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "minimatch",
+    "installed_version": "3.0.3",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-23c5-xmqv-rm74",
+      "GHSA-3ppc-4f35-3m26",
+      "GHSA-7r86-cg39-jmmj",
+      "GHSA-f8q6-p94x-37v3"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "10.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin minimatch 10.2.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on minimatch 10.2.3 or later.",
+      "Or force minimatch to 10.2.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "moment",
+    "installed_version": "2.24.0",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-8hfj-j24r-96c4",
+      "GHSA-wc69-rhjr-hc9g"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "2.29.4",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin moment 2.29.4+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on moment 2.29.4 or later.",
+      "Or force moment to 2.29.4 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "npm",
+    "installed_version": "3.10.10",
+    "worst_severity": "high",
+    "advisories": 5,
+    "ids": [
+      "GHSA-4328-8hgf-7wjr",
+      "GHSA-93f3-23rq-pjfp",
+      "GHSA-m6cx-g6qm-p2cx",
+      "GHSA-ph34-pc88-72gc",
+      "GHSA-x8qc-rrcw-4r46"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "6.14.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin npm 6.14.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on npm 6.14.6 or later.",
+      "Or force npm to 6.14.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "npm-user-validate",
+    "installed_version": "0.1.5",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-pw54-mh39-w3hc"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "1.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin npm-user-validate 1.0.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on npm-user-validate 1.0.1 or later.",
+      "Or force npm-user-validate to 1.0.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "qs",
+    "installed_version": "0.6.6",
+    "worst_severity": "high",
+    "advisories": 5,
+    "ids": [
+      "GHSA-6rw7-vpxm-498p",
+      "GHSA-f9cm-p3w6-xvr3",
+      "GHSA-gqgv-6jq5-jjj9",
+      "GHSA-hrpp-h998-j3pp",
+      "GHSA-jjv7-qpx3-h62q"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "6.14.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin qs 6.14.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on qs 6.14.1 or later.",
+      "Or force qs to 6.14.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "qs",
+    "installed_version": "5.2.1",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-4mjr-xmp4-gh2g",
+      "GHSA-6rw7-vpxm-498p",
+      "GHSA-gqgv-6jq5-jjj9",
+      "GHSA-hrpp-h998-j3pp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "6.16.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-retire@0.3.12 or pin qs 6.16.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-retire@0.3.12 to a release that depends on qs 6.16.0 or later.",
+      "Or force qs to 6.16.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "qs",
+    "installed_version": "6.2.1",
+    "worst_severity": "high",
+    "advisories": 4,
+    "ids": [
+      "GHSA-4mjr-xmp4-gh2g",
+      "GHSA-6rw7-vpxm-498p",
+      "GHSA-gqgv-6jq5-jjj9",
+      "GHSA-hrpp-h998-j3pp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "6.16.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin qs 6.16.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on qs 6.16.0 or later.",
+      "Or force qs to 6.16.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "qs",
+    "installed_version": "6.3.2",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-4mjr-xmp4-gh2g",
+      "GHSA-6rw7-vpxm-498p",
+      "GHSA-hrpp-h998-j3pp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "6.16.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin qs 6.16.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on qs 6.16.0 or later.",
+      "Or force qs to 6.16.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "semver",
+    "installed_version": "5.3.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c2qf-rxjj-qqgw"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "7.5.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin semver 7.5.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on semver 7.5.2 or later.",
+      "Or force semver to 7.5.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "semver",
+    "installed_version": "5.7.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c2qf-rxjj-qqgw"
+    ],
+    "scope": "optional",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "7.5.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin semver 7.5.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade forever@2.0.0, nodemon@1.19.1 to a release that depends on semver 7.5.2 or later.",
+      "Or force semver to 7.5.2 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "shelljs",
+    "installed_version": "0.3.0",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-4rq4-32rv-6wp6",
+      "GHSA-64g7-mvw6-v9qj"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "jshint@2.12.0"
+    ],
+    "fixed_in": "0.8.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin shelljs 0.8.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, jshint@2.12.0 to a release that depends on shelljs 0.8.5 or later.",
+      "Or force shelljs to 0.8.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "sshpk",
+    "installed_version": "1.10.1",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-2m39-62fm-q8r3"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "1.13.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin sshpk 1.13.2+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on sshpk 1.13.2 or later.",
+      "Or force sshpk to 1.13.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tmp",
+    "installed_version": "0.0.24",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-52f5-9888-hmc6",
+      "GHSA-ph9p-34f9-6g65"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "selenium-webdriver@2.53.3"
+    ],
+    "fixed_in": "0.2.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade selenium-webdriver@2.53.3 or pin tmp 0.2.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade selenium-webdriver@2.53.3 to a release that depends on tmp 0.2.6 or later.",
+      "Or force tmp to 0.2.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tmp",
+    "installed_version": "0.1.0",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-52f5-9888-hmc6",
+      "GHSA-ph9p-34f9-6g65"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "0.2.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin tmp 0.2.6+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on tmp 0.2.6 or later.",
+      "Or force tmp to 0.2.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tough-cookie",
+    "installed_version": "2.2.2",
+    "worst_severity": "high",
+    "advisories": 3,
+    "ids": [
+      "GHSA-72xf-g2v4-qvf3",
+      "GHSA-g7q5-pjjr-gqvp",
+      "GHSA-qhv9-728r-6jqg"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "4.1.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-retire@0.3.12 or pin tough-cookie 4.1.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-retire@0.3.12 to a release that depends on tough-cookie 4.1.3 or later.",
+      "Or force tough-cookie to 4.1.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tough-cookie",
+    "installed_version": "2.3.1",
+    "worst_severity": "high",
+    "advisories": 2,
+    "ids": [
+      "GHSA-72xf-g2v4-qvf3",
+      "GHSA-g7q5-pjjr-gqvp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "4.1.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin tough-cookie 4.1.3+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on tough-cookie 4.1.3 or later.",
+      "Or force tough-cookie to 4.1.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "trim-newlines",
+    "installed_version": "1.0.0",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-7p7h-4mm5-852v"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-concurrent@2.3.1",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3"
+    ],
+    "fixed_in": "3.0.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-concurrent@2.3.1 or pin trim-newlines 3.0.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-concurrent@2.3.1, grunt-if@0.2.0 to a release that depends on trim-newlines 3.0.1 or later.",
+      "Or force trim-newlines to 3.0.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "websocket-extensions",
+    "installed_version": "0.1.3",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-g78m-2chm-r7qv"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-contrib-watch@1.1.0"
+    ],
+    "fixed_in": "0.1.4",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-contrib-watch@1.1.0 or pin websocket-extensions 0.1.4+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade grunt-contrib-watch@1.1.0 to a release that depends on websocket-extensions 0.1.4 or later.",
+      "Or force websocket-extensions to 0.1.4 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "ws",
+    "installed_version": "1.1.5",
+    "worst_severity": "high",
+    "advisories": 1,
+    "ids": [
+      "GHSA-96hv-2xvq-fx4p"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "selenium-webdriver@2.53.3"
+    ],
+    "fixed_in": "5.2.5",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade selenium-webdriver@2.53.3 or pin ws 5.2.5+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade selenium-webdriver@2.53.3 to a release that depends on ws 5.2.5 or later.",
+      "Or force ws to 5.2.5 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "express",
+    "installed_version": "4.16.4",
+    "worst_severity": "moderate",
+    "advisories": 2,
+    "ids": [
+      "GHSA-qw6h-vgh9-j6wx",
+      "GHSA-rv95-896h-c2vc"
+    ],
+    "scope": "prod",
+    "direct": true,
+    "introduced_via": [
+      "express@4.16.4"
+    ],
+    "fixed_in": "4.20.0",
+    "action": "Upgrade the package",
+    "headline": "Upgrade express 4.16.4 \u2192 4.20.0",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade express from 4.16.4 to 4.20.0 or later in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "helmet-csp",
+    "installed_version": "1.2.2",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c3m8-x3cg-qm2c"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "helmet@2.3.0"
+    ],
+    "fixed_in": "2.9.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade helmet@2.3.0 or pin helmet-csp 2.9.1+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade helmet@2.3.0 to a release that depends on helmet-csp 2.9.1 or later.",
+      "Or force helmet-csp to 2.9.1 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "cookie",
+    "installed_version": "0.3.1",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-pxg6-pf52-xh8x"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "csurf@1.9.0",
+      "express-session@1.15.6",
+      "express@4.16.4"
+    ],
+    "fixed_in": "0.7.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade csurf@1.9.0 or pin cookie 0.7.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade csurf@1.9.0, express-session@1.15.6 to a release that depends on cookie 0.7.0 or later.",
+      "Or force cookie to 0.7.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "on-headers",
+    "installed_version": "1.0.1",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-76c9-3jph-rj3q"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express-session@1.15.6"
+    ],
+    "fixed_in": "1.1.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade express-session@1.15.6 or pin on-headers 1.1.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade express-session@1.15.6 to a release that depends on on-headers 1.1.0 or later.",
+      "Or force on-headers to 1.1.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "send",
+    "installed_version": "0.16.2",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-m6fv-jmcg-4jfg"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express@4.16.4"
+    ],
+    "fixed_in": "0.19.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade express@4.16.4 or pin send 0.19.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade express@4.16.4 to a release that depends on send 0.19.0 or later.",
+      "Or force send to 0.19.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "serve-static",
+    "installed_version": "1.13.2",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-cm22-4g7w-348p"
+    ],
+    "scope": "prod",
+    "direct": false,
+    "introduced_via": [
+      "express@4.16.4"
+    ],
+    "fixed_in": "1.16.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade express@4.16.4 or pin serve-static 1.16.0+",
+    "priority": "P2 \u2014 fix soon",
+    "steps": [
+      "Upgrade express@4.16.4 to a release that depends on serve-static 1.16.0 or later.",
+      "Or force serve-static to 1.16.0 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "ajv",
+    "installed_version": "6.10.0",
+    "worst_severity": "moderate",
+    "advisories": 2,
+    "ids": [
+      "GHSA-2g4f-4pwh-qvx6",
+      "GHSA-v88g-cgmw-v5xw"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "8.18.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin ajv 8.18.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on ajv 8.18.0 or later.",
+      "Or force ajv to 8.18.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "bl",
+    "installed_version": "1.0.3",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-pp7h-53gx-mx7r"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "1.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-retire@0.3.12 or pin bl 1.2.3+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-retire@0.3.12 to a release that depends on bl 1.2.3 or later.",
+      "Or force bl to 1.2.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "bl",
+    "installed_version": "1.1.2",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-pp7h-53gx-mx7r"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "1.2.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin bl 1.2.3+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on bl 1.2.3 or later.",
+      "Or force bl to 1.2.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "extend",
+    "installed_version": "3.0.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-qrmc-fj45-qfc2"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "3.0.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin extend 3.0.2+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on extend 3.0.2 or later.",
+      "Or force extend to 3.0.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "got",
+    "installed_version": "6.7.1",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-pfrx-2q88-qq97"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "12.1.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade nodemon@1.19.1 or pin got 12.1.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade nodemon@1.19.1 to a release that depends on got 12.1.0 or later.",
+      "Or force got to 12.1.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "hosted-git-info",
+    "installed_version": "2.1.5",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-43f8-2h32-f4cj"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "2.8.9",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin hosted-git-info 2.8.9+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on hosted-git-info 2.8.9 or later.",
+      "Or force hosted-git-info to 2.8.9 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "hosted-git-info",
+    "installed_version": "2.7.1",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-43f8-2h32-f4cj"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-concurrent@2.3.1",
+      "grunt-if@0.2.0",
+      "grunt-jsbeautifier@0.2.13",
+      "grunt-npm-install@0.3.1",
+      "grunt-retire@0.3.12",
+      "grunt@1.0.3"
+    ],
+    "fixed_in": "2.8.9",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-concurrent@2.3.1 or pin hosted-git-info 2.8.9+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-concurrent@2.3.1, grunt-if@0.2.0 to a release that depends on hosted-git-info 2.8.9 or later.",
+      "Or force hosted-git-info to 2.8.9 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "is-my-json-valid",
+    "installed_version": "2.15.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-4hpf-3wq7-5rpr"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "2.17.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin is-my-json-valid 2.17.2+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on is-my-json-valid 2.17.2 or later.",
+      "Or force is-my-json-valid to 2.17.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "jsonpointer",
+    "installed_version": "4.0.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-282f-qqgm-c34q"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "5.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin jsonpointer 5.0.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on jsonpointer 5.0.0 or later.",
+      "Or force jsonpointer to 5.0.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "jsonpointer",
+    "installed_version": "4.0.1",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-282f-qqgm-c34q"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "5.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin jsonpointer 5.0.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on jsonpointer 5.0.0 or later.",
+      "Or force jsonpointer to 5.0.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "micromatch",
+    "installed_version": "2.3.11",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-952p-6rrq-rcjv"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "4.0.8",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin micromatch 4.0.8+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on micromatch 4.0.8 or later.",
+      "Or force micromatch to 4.0.8 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "micromatch",
+    "installed_version": "3.1.10",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-952p-6rrq-rcjv"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-cli@1.3.2"
+    ],
+    "fixed_in": "4.0.8",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-cli@1.3.2 or pin micromatch 4.0.8+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-cli@1.3.2 to a release that depends on micromatch 4.0.8 or later.",
+      "Or force micromatch to 4.0.8 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "ms",
+    "installed_version": "0.7.1",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-w9mr-4mfr-499f"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-mocha-test@0.12.7",
+      "mocha@2.5.3"
+    ],
+    "fixed_in": "2.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-mocha-test@0.12.7 or pin ms 2.0.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-mocha-test@0.12.7, mocha@2.5.3 to a release that depends on ms 2.0.0 or later.",
+      "Or force ms to 2.0.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "path-parse",
+    "installed_version": "1.0.5",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-hj48-42vr-x3v9"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "1.0.7",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin path-parse 1.0.7+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on path-parse 1.0.7 or later.",
+      "Or force path-parse to 1.0.7 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "randomatic",
+    "installed_version": "1.1.5",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-6g33-f262-xjp4"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "3.0.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin randomatic 3.0.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on randomatic 3.0.0 or later.",
+      "Or force randomatic to 3.0.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "request",
+    "installed_version": "2.36.0",
+    "worst_severity": "moderate",
+    "advisories": 2,
+    "ids": [
+      "GHSA-7xfp-9c55-5vqj",
+      "GHSA-p8p7-x288-28g6"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "2.68.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade zaproxy@0.2.0 or pin request 2.68.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade zaproxy@0.2.0 to a release that depends on request 2.68.0 or later.",
+      "Or force request to 2.68.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "request",
+    "installed_version": "2.67.0",
+    "worst_severity": "moderate",
+    "advisories": 2,
+    "ids": [
+      "GHSA-7xfp-9c55-5vqj",
+      "GHSA-p8p7-x288-28g6"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "2.68.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-retire@0.3.12 or pin request 2.68.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-retire@0.3.12 to a release that depends on request 2.68.0 or later.",
+      "Or force request to 2.68.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "request",
+    "installed_version": "2.75.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-p8p7-x288-28g6"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched request exists. Replace or remove it",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "No fixed version is listed. Replace or remove request, or isolate the code that uses it.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "request",
+    "installed_version": "2.79.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-p8p7-x288-28g6"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched request exists. Replace or remove it",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "No fixed version is listed. Replace or remove request, or isolate the code that uses it.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "request",
+    "installed_version": "2.88.0",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-p8p7-x288-28g6"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": null,
+    "action": "No patch published",
+    "headline": "No patched request exists. Replace or remove it",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "No fixed version is listed. Replace or remove request, or isolate the code that uses it.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "stringstream",
+    "installed_version": "0.0.5",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-mf6x-7mm4-x2g7"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "0.0.6",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin stringstream 0.0.6+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on stringstream 0.0.6 or later.",
+      "Or force stringstream to 0.0.6 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tough-cookie",
+    "installed_version": "2.3.4",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-72xf-g2v4-qvf3"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12",
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "4.1.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin tough-cookie 4.1.3+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on tough-cookie 4.1.3 or later.",
+      "Or force tough-cookie to 4.1.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tough-cookie",
+    "installed_version": "2.4.3",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-72xf-g2v4-qvf3"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "4.1.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin tough-cookie 4.1.3+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on tough-cookie 4.1.3 or later.",
+      "Or force tough-cookie to 4.1.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "tunnel-agent",
+    "installed_version": "0.4.3",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-xc7v-wxcw-j472"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12",
+      "zaproxy@0.2.0"
+    ],
+    "fixed_in": "0.6.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin tunnel-agent 0.6.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0, grunt-retire@0.3.12 to a release that depends on tunnel-agent 0.6.0 or later.",
+      "Or force tunnel-agent to 0.6.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "undefsafe",
+    "installed_version": "2.0.2",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-332q-7ff2-57h2"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "2.0.3",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade nodemon@1.19.1 or pin undefsafe 2.0.3+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade nodemon@1.19.1 to a release that depends on undefsafe 2.0.3 or later.",
+      "Or force undefsafe to 2.0.3 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "uuid",
+    "installed_version": "3.3.2",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-w5hq-g745-h8pq"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1",
+      "grunt-if@0.2.0",
+      "grunt-retire@0.3.12"
+    ],
+    "fixed_in": "11.1.1",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin uuid 11.1.1+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade cypress@3.3.1, grunt-if@0.2.0 to a release that depends on uuid 11.1.1 or later.",
+      "Or force uuid to 11.1.1 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "xml2js",
+    "installed_version": "0.4.4",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-776f-qx25-q3cc"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "selenium-webdriver@2.53.3"
+    ],
+    "fixed_in": "0.5.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade selenium-webdriver@2.53.3 or pin xml2js 0.5.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade selenium-webdriver@2.53.3 to a release that depends on xml2js 0.5.0 or later.",
+      "Or force xml2js to 0.5.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "yargs-parser",
+    "installed_version": "2.4.1",
+    "worst_severity": "moderate",
+    "advisories": 1,
+    "ids": [
+      "GHSA-p9pc-299p-vxgp"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-if@0.2.0"
+    ],
+    "fixed_in": "13.1.2",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-if@0.2.0 or pin yargs-parser 13.1.2+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-if@0.2.0 to a release that depends on yargs-parser 13.1.2 or later.",
+      "Or force yargs-parser to 13.1.2 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "chownr",
+    "installed_version": "1.0.1",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-c6rq-rjc2-86v2"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "1.1.0",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin chownr 1.1.0+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on chownr 1.1.0 or later.",
+      "Or force chownr to 1.1.0 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "debug",
+    "installed_version": "3.2.6",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-gxpj-cx7g-858c"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "cypress@3.3.1"
+    ],
+    "fixed_in": "2.6.9",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade cypress@3.3.1 or pin debug 2.6.9+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade cypress@3.3.1 to a release that depends on debug 2.6.9 or later.",
+      "Or force debug to 2.6.9 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "debug",
+    "installed_version": "4.1.1",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-gxpj-cx7g-858c"
+    ],
+    "scope": "optional",
+    "direct": false,
+    "introduced_via": [
+      "forever@2.0.0",
+      "nodemon@1.19.1"
+    ],
+    "fixed_in": "2.6.9",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade forever@2.0.0 or pin debug 2.6.9+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade forever@2.0.0, nodemon@1.19.1 to a release that depends on debug 2.6.9 or later.",
+      "Or force debug to 2.6.9 or later with an \"overrides\" entry in package.json."
+    ],
+    "source": "advisory fixed versions"
+  },
+  {
+    "package": "es5-ext",
+    "installed_version": "0.10.12",
+    "worst_severity": "low",
+    "advisories": 1,
+    "ids": [
+      "GHSA-4gmj-3p3h-gm8h"
+    ],
+    "scope": "dev",
+    "direct": false,
+    "introduced_via": [
+      "grunt-npm-install@0.3.1"
+    ],
+    "fixed_in": "0.10.63",
+    "action": "Upgrade the parent",
+    "headline": "Upgrade grunt-npm-install@0.3.1 or pin es5-ext 0.10.63+",
+    "priority": "P3 \u2014 plan",
+    "steps": [
+      "Upgrade grunt-npm-install@0.3.1 to a release that depends on es5-ext 0.10.63 or later.",
+      "Or force es5-ext to 0.10.63 or later with an \"overrides\" entry in package.json.",
+      "Dev-only: it isn't shipped to users, so this is lower priority."
+    ],
+    "source": "advisory fixed versions"
+  }
+]

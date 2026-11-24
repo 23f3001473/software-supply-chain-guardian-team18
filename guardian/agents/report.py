@@ -1,3 +1,4 @@
+import os
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -99,13 +100,14 @@ def build_report(state: dict, out_dir: Path) -> dict:
               "fix_summary": {k: sum(r["action"] == k for r in recs) for k in sorted({r["action"] for r in recs})}}
     (out_dir / "evidence_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     (out_dir / "evidence_report.md").write_text(to_markdown(report), encoding="utf-8")
-    try:
-        from guardian.pdf_report import build_pdf
-        build_pdf(out_dir)
-    except ImportError:
-        print("[report] reportlab not installed; PDF skipped (pip install reportlab)")
-    except Exception as err:  # a PDF problem must never break the scan
-        print(f"[report] PDF not generated: {err}")
+    if not os.getenv("GUARDIAN_NO_PDF"):  # sandbox rescans during Day 2 validation skip their own PDF
+        try:
+            from guardian.pdf_report import build_pdf
+            build_pdf(out_dir)
+        except ImportError:
+            print("[report] reportlab not installed; PDF skipped (pip install reportlab)")
+        except Exception as err:  # a PDF problem must never break the scan
+            print(f"[report] PDF not generated: {err}")
     with open(out_dir / "history.jsonl", "a", encoding="utf-8") as fh:
         fh.write(json.dumps({"at": report["generated_at"], "commit": inv.commit,
                              "base_ref": state.get("base_ref"), "scanner": state.get("scanner"),

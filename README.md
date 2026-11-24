@@ -1,25 +1,79 @@
-# Software Supply Chain Guardian — Day 1: The Guardian's Eyes
+# Software Supply Chain Guardian — Day 1 (Eyes) + Day 2 (Brain & Shield)
 
 > Know what you build. Trust what you ship.
 
-Five LangGraph agents scan **OWASP Juice Shop**. Together they produce an inventory, a CycloneDX SBOM, a dependency graph, real vulnerability findings and anomaly findings. A Streamlit dashboard presents the results.
-Facts come from tools (lockfile parser, Syft, OSV-Scanner / npm audit, git diff). The LLM (optional) only explains them.
+Team 18. An agentic AI guardian for npm applications, built and tested on **OWASP Juice Shop**.
+Day 1 discovers the supply chain, detects risks and explains them with evidence. Day 2 prioritises the risks,
+investigates non-CVE changes, recommends safe fixes, **waits for a human decision**, then validates each approved fix in a
+sandbox (build, unit tests, rescan, before/after SBOM) and writes a verified report with a tamper-evident audit trail.
+A benchmark compares the Guardian with npm audit, OSV-Scanner, Grype and Trivy on the same repositories.
 
 ## Architecture
 
 ```
-START → 1. Repository Discovery → 2. SBOM → 3. Dependency Analysis → 4. Vulnerability Detection → 5. Anomaly Detection → report → END
+Day 1 (LangGraph)  START → 1 Repository Discovery → 2 SBOM → 3 Dependency Analysis → 4 Vulnerability Detection
+                         → 5 Anomaly Detection → report step → END
+
+Day 2 (LangGraph)  START ─(phase=plan)→ 6 Risk Prioritisation → 7 Suspicious Change Investigator → 8 Remediation
+                                                                                                    ↓
+                         ┌──────────────────────────── Human approval gate (named reviewer) ◄────────┘
+                         │ approved?  yes → 9 Validation (sandbox: apply, install, build, test, rescan) → 10 Verification & Report → END
+                         │            no  → plan stops and waits; phase=validate re-enters at the gate
 ```
 
-| # | Agent | Tool / source of truth | Output |
+| # | Agent | Source of truth | Output (in `reports/`, Day 2 in `reports/day2/`) |
 |---|---|---|---|
 | 1 | Repository Discovery | `package-lock.json`, `package.json`, Dockerfiles, compose, workflows | `inventory.json`, `dependency_inventory.json` |
-| 2 | SBOM | Syft (fallback: `@cyclonedx/cyclonedx-npm`) | `juice-shop-sbom.json` (CycloneDX 1.6) |
-| 3 | Dependency Analysis | lockfile + Node resolution rules, NetworkX, tree explorer | `dependency_graph.json`, `dependency_graph.html` |
-| 4 | Vulnerability Detection | OSV-Scanner (fallback: `npm audit` → GitHub Advisory DB) | `vulnerability_findings.json`, `raw/` |
-| 5 | Anomaly Detection | `git show <base>:file` vs working tree, static inspection | `suspicious_changes.json` |
+| 2 | SBOM | Syft (fallback `@cyclonedx/cyclonedx-npm`) | `juice-shop-sbom.json` (CycloneDX 1.6) |
+| 3 | Dependency Analysis | lockfile + Node resolution, NetworkX | `dependency_graph.json/.html`, `vulnerability_graph.svg` |
+| 4 | Vulnerability Detection | OSV-Scanner (fallback npm audit / GitHub Advisory DB) | `vulnerability_findings.json`, `raw/` |
+| 5 | Anomaly Detection | `git show <base>:file` vs working tree | `suspicious_changes.json` |
+| 6 | Risk Prioritisation | CVSS, CISA KEV, FIRST EPSS, source-code imports, scope | `risk_priorities.json` |
+| 7 | Suspicious Change Investigator | lockfile, npm registry (scripts, integrity, provenance, deprecation), git | `investigations.json` |
+| 8 | Remediation | npm audit fix data, advisory fixed versions, lockfile parent ranges | `remediation_plan.json` |
+| – | Human approval gate | a named reviewer, in the dashboard or CLI | `decisions.json`, `audit_log.jsonl` |
+| 9 | Validation | git worktree branch, `npm ci --ignore-scripts`, build, unit tests, Day 1 agents again | `validation/<run>/…`, `.patch` files |
+| 10 | Verification & Report | all of the above | `verified_report.json/.md/.pdf` |
 
-The final `report` step is part of the workflow, not an agent. It combines the agents' structured results into `evidence_report.json/.md`. Agents pass Pydantic models (`guardian/models.py`) through the LangGraph state. If an LLM key is set and its text mentions a CVE/GHSA ID or `pkg@version` that isn't in the evidence, the text is rejected (`guardian/llm.py`).
+### Day 2 in one paragraph each
+
+**Prioritise.** Score = severity (CVSS × 4, max 40) + exploitability (CISA KEV 25, else EPSS percentile, else the CVSS vector, max 18) +
+reachability (imported by app code 20, via an imported dependency 14, shipped but not imported 6, dev only 2) + exposure
+(production web server 15). Tiers: Critical ≥ 80, High ≥ 65, Medium ≥ 45. Each point carries a one-line reason, and a confidence
+says how much evidence was real (vector published? EPSS/KEV available? import found?). Non-CVE risks are scored on the same scale.
+
+**Investigate (non-CVE).** Install scripts are downloaded as text from the registry and classified (telemetry, binary download,
+native build, risky patterns). Lockfile hashes are compared with the registry. Build provenance (npm attestations), deprecated packages,
+download hosts, loose ranges, manifest/lockfile drift, image and CI pinning, and every change since the baseline are checked.
+**Verified evidence** (fact + source) is always shown apart from **inference** (labelled AI or rule-based).
+
+**Remediate.** For every vulnerable copy the agent works out which direct dependencies must move for that copy to disappear
+(e.g. `jws` is shared by `jsonwebtoken` *and* `express-jwt`), then merges copies that share a change into one action. Actions are:
+upgrade, upgrade the parent, pin with npm `overrides`, replace/remove, pin a container image by digest, pin a CI action to a SHA,
+turn off install telemetry, block (revert a suspicious change), or escalate. Each states the exact change, expected risk reduction,
+compatibility impact (semver jump + files that import it) and rollback.
+
+**Human approval.** Approve, reject, accept the risk (reason + review date) or escalate. A reviewer name is required. Decisions are
+tied to the action's content hash, so a changed plan needs a new decision. Nothing is applied without approval, and nothing is ever
+merged, pushed or deployed automatically.
+
+**Validate.** For a baseline and for each approved action, the agent creates a branch `guardian/<run>-<action>` in a sandbox
+worktree (`sandbox/`, outside your copy). It commits a snapshot, applies the change, re-resolves the lockfile with scripts off,
+runs `npm ci --ignore-scripts`, builds (`build:server`/`build`/`tsc`), runs unit tests (`test:server`/`test:unit`/`test`), loads each
+changed package once, and rescans with the Day 1 agents. Results are compared with the baseline: advisories resolved and newly
+introduced, before/after CycloneDX SBOM, added/removed packages, new install scripts, and build/test regressions. All passing
+actions are then validated together as a release candidate. Logs and a `.patch` are kept; rollback = `git revert <commit>`.
+
+**Verify & report.** Each finding's journey: evidence → priority → action → decision → build & test → rescan → final status.
+Remaining and accepted risk, final confidence with reasons, the audit trail (each entry hashes the previous one) and a
+Responsible-AI note go into `verified_report.pdf`.
+
+### LLM reasoning (optional) and its guard rails
+Set `ANTHROPIC_API_KEY`, or any OpenAI-compatible endpoint (`GUARDIAN_LLM_BASE_URL`, `GUARDIAN_LLM_API_KEY`, `GUARDIAN_LLM_MODEL`,
+e.g. Groq or a local Ollama). The LLM writes "why it is severe", the suspicious-change inference and each fix's rationale. Every answer
+is checked: if it names an advisory id or `package@version` that is not in that item's evidence, it is rejected and the rule-based
+text is kept. Only package names, versions, advisory text and public registry data are sent. Prompts and responses go to
+`reports/day2/llm_log.jsonl`. Without a key everything still works and is labelled "rule-based".
 
 ## Setup on Windows (CMD)
 
@@ -31,89 +85,58 @@ setup.bat
 run.bat
 ```
 
-`setup.bat` handles the whole setup:
-- creates `.venv` and installs the Python requirements
-- downloads `syft.exe` and `osv-scanner.exe` into `tools\`
-- enables git long paths
-- clones Juice Shop and generates its lockfile with `npm install --package-lock-only --ignore-scripts`, which runs no install scripts
+- `setup.bat` (once): `.venv`, Python packages, `syft.exe` + `osv-scanner.exe` in `tools\`, git long paths, Juice Shop clone, lockfile.
+- `run.bat`: Day 1 scan, Day 2 plan (stops at the approval gate), tests, then the dashboard on http://localhost:8501.
+- `benchmark_tools.bat` (optional, once): downloads Grype and Trivy into `tools\` for the benchmark.
 
-`run.bat` scans Juice Shop, runs the tests, then starts the dashboard at http://localhost:8501.
+## Commands
 
-## Scan any public GitHub repo
-
-**Dashboard:** paste a link such as `https://github.com/expressjs/express` into **Scan a GitHub repository**, then click **Fetch & scan**. You'll see each agent finish live, and the repo is added to the list and to the **All repositories** comparison.
-
-**CMD:** `python -m guardian.cli --github https://github.com/expressjs/express` (add `--refresh` to re-clone).
-
-Here's what happens:
-1. The URL is validated: `github.com/owner/repo` only.
-2. The repo is cloned into `target\` with its last 200 commits and long paths enabled.
-3. If there's no `package-lock.json`, it's generated with `npm --package-lock-only --ignore-scripts`. **No code from the repo is executed.**
-4. The 5 agents run, and results go to `reports\<repo>\`.
-5. Non-npm repos (Python, Java, Go…), private or missing repos, and npm resolution failures get a clear message. Rejected clones are deleted.
-
-Limits: public repos only, with `package.json` at the repo root (monorepos aren't supported yet).
-
-## Setup on Linux / macOS
-
-```bash
-./setup.sh
+```cmd
+.venv\Scripts\activate
+python -m guardian.cli --repo target\juice-shop                  :: Day 1 (agents 1-5)
+python -m guardian.day2 plan                                     :: Day 2 agents 6-8, stops for approval
+python -m guardian.day2 review --reviewer "Your Name"            :: approve / reject / accept / escalate in the terminal
+python -m guardian.day2 validate                                 :: agents 9-10 for approved actions (each, then together)
+python -m guardian.day2 validate --mode together                 :: faster: all approved actions in one sandbox run
+python -m guardian.day2 status                                   :: plan, decisions, audit chain
+python -m guardian.benchmark                                     :: compare tools on every repo in target\
+python -m pytest -q                                              :: 38 tests
+streamlit run app.py
 ```
 
-## Run
+Scan any public GitHub npm repo: paste its link under **Add a repository from GitHub** in the sidebar, or
+`python -m guardian.cli --github https://github.com/OWASP/NodeGoat`, then `python -m guardian.day2 plan --repo target\NodeGoat`.
 
-```bash
-python3 -m guardian.cli                                    # baseline Juice Shop → reports/
-python3 -m guardian.cli --base-ref HEAD~49                 # anomalies in the last 49 real commits
-python3 -m pytest                                          # 25 tests
-streamlit run app.py                                       # dashboard on http://localhost:8501
-```
+## Dashboard
 
-Pick a scanner with `--scanner auto|osv|npm-audit`. `auto` tries OSV first and records why if it falls back.
+| Group | Page | What it shows |
+|---|---|---|
+| Day 1 | Overview, 1–5 | Grade stamp, checkpoint, components, SBOM, supply-chain view, vulnerabilities, suspicious changes, evidence PDF |
+| Day 2 | Day 2 overview | The six-station belt: prioritised risk → recommended fix → human approval → build & test → rescan → verified remediation; run buttons |
+| Day 2 | 6 · Risk priorities | Stacked score bars (severity/exploitability/reachability/exposure), why each is severe, evidence, confidence |
+| Day 2 | 7 · Investigate changes | Non-CVE findings: verified evidence (green) beside inference (violet), verdict, remedy |
+| Day 2 | 8 · Remediation & approval | Change requests with exact edit, risk reduction, compatibility, rollback; the decision form |
+| Day 2 | 9 · Validation | Run the sandbox, release-candidate verdict, before/after numbers, per-fix steps, failing tests, SBOM diff, new advisories, patch, logs |
+| Day 2 | 10 · Verified report | Final confidence, finding-by-finding status, remaining/accepted risk, audit trail with chain check, Responsible AI, PDF |
+| Day 2 | Detection → verified fix | The final demonstration: one finding followed through all seven stops |
+| Evaluate | Compare repositories / Benchmark | Grades side by side; precision/recall/F1 vs other tools, agreement, controlled non-CVE test, capabilities |
 
-## Fix recommendations and the vulnerability map
+## Benchmark method
 
-Every scan also writes:
-- `fix_recommendations.json` / `.csv`: one entry per vulnerable package, with a priority (P1–P3), the action and exact steps. They come from npm audit's own `fixAvailable` data and each advisory's fixed version. Unsafe automatic fixes, such as npm suggesting a *downgrade* of the parent, are flagged, and an `overrides` pin is recommended instead. Nothing is applied automatically.
-- `vulnerability_graph.svg`: a radial dependency graph. The project is in the centre, then a ring of direct dependencies, with indirect levels shaded outward. Vulnerable packages are red, and the orange paths show how each one gets in. It's drawn in pure Python, so Graphviz isn't needed.
-
-## Dashboard (dark theme, follows the Day 1 brief)
-
-| Page | What it shows |
-|---|---|
-| Overview | Inspection stamp (grade A–F, formula shown), the Day 1 checkpoint answered (what is in it, what changed, what appears risky), "fix these first", and a checklist of the five steps |
-| 1 · Components | Package lookup (versions, why it's installed, licence, install scripts, remediation), filterable package list, manifests, licences, version sprawl |
-| 2 · Supply chain view | CycloneDX SBOM, where components come from, radial vulnerability map, heaviest dependencies, depth, trace any package to its origin, container images and CI workflows inspected, full tree browser |
-| 3 · Vulnerabilities | Severity counts, remediation package by package (priority, steps, advisories with CVE, CVSS and source links), all advisories with filters |
-| 4 · Suspicious changes | The seven checks with counts (since baseline and in current code), each change with before/after, evidence and remediation, standing observations with remediation |
-| 5 · Evidence & report | PDF download, summary, agent run, every evidence file with its SHA-256 hash, all downloads, inspection history |
-| Compare repositories | Every inspected repo with its grade |
-
-**Evidence report PDF:** a "Evidence report PDF" button sits on every page. The report is generated on every scan (`reports/evidence_report.pdf`) and contains:
-- a cover page with the grade and checkpoint
-- an executive summary and grade breakdown
-- method, components and the supply chain view, with the vulnerability map
-- every advisory, with CVSS, CWE and path
-- the remediation plan
-- suspicious changes and observations, with remediation
-- licences
-- an appendix of evidence files with their SHA-256 hashes
-
-## Demo script (step by step)
-
-1. **Summary.** The stamp (Juice Shop is deliberately insecure, so it gets an F) and the reasons behind it. Open "How this grade is calculated".
-2. **Packages.** Look up `crypto-js`: why it's installed, its licence and its 2 advisories. Then scroll to "Same package, several versions".
-3. **Dependency map.** Heaviest dependencies, then trace `crypto-js` back to `pdfkit`. In the tree browser, click **Show every route to an advisory**.
-4. **Vulnerabilities.** Filter to production and "Fixed version available".
-5. **Changes.** Under *Inspection settings*, pick an older commit (e.g. 49 commits back) and click **Inspect again** to see real changes.
-6. **Licences.** The shipped packages with undeclared or copyleft licences.
-7. **Add a repository from GitHub.** Paste `https://github.com/expressjs/express`, click **Fetch and inspect**, watch the agents run, then open **All repositories**.
-8. **Report.** Download everything as a ZIP.
+All installed tools scan the same `package.json` + `package-lock.json`. Findings are normalised to (package, version, vulnerability),
+merging CVE/GHSA ids via the aliases the tools report (plus osv.dev lookups). The reference set is the consensus of independent
+databases: reported by at least two of npm audit, OSV-Scanner, Grype and Trivy. The Guardian does not vote (it reuses OSV/npm audit).
+Reported per tool: TP/FP/FN, precision, recall, F1 (overall and production-only), severity agreement, % with a fix, % with a path,
+duplicates merged, runtime, and pairwise Jaccard agreement. Trivy runs with `--include-dev-deps` so scopes match.
+A separate **controlled test** plants 8 non-CVE attacks (typosquat, install script, lockfile host, integrity, `:latest` image,
+unpinned CI action, downgrade, unexpected dependency) plus 2 harmless controls in a throwaway local git repo, and records which
+tools notice. It measures coverage of attack types, not real-world accuracy, and is labelled that way.
 
 ## Honesty notes
-
-- Vulnerabilities come only from the scanner's raw output, saved in `reports/raw/`. A test checks that every reported ID appears there.
-- In `npm audit` mode, IDs are GHSA (no CVE aliases). The fixed version is derived from the advisory's `<X` upper bound and labeled as derived. OSV mode adds CVE aliases and explicit fixed versions.
-- Anomalies come only from real git history: `git show <baseline>:file` compared with the current files. No changes are injected, and scripts are only read, never run.
-- The unit tests build small throwaway repos in a temp folder to check the detectors. These are never written to `reports/` and never appear in the dashboard.
-- Day 2 (remediation, patches, PRs, deployment) is out of scope.
+- Every finding comes from a tool's raw output (`reports/raw/`, `reports/day2/validation/…`). Nothing is synthetic.
+- Day 2 validation runs the application's **own** build and unit tests inside the sandbox copy (that is what validating a fix means);
+  dependency install scripts never run. Native modules (e.g. sqlite3) are therefore not built, and the load check says so.
+- Juice Shop is deliberately vulnerable: some fixes (e.g. upgrading `jsonwebtoken`/`express-jwt`) break its training challenges.
+  Validation reports exactly that, with the failing tests, instead of claiming success.
+- Precision/recall are only meaningful with at least two independent scanners installed; the dashboard warns otherwise.
+- Stretch goals (function-level reachability, automatic PRs, Sigstore/SLSA verification, policy-as-code, continuous monitoring) are not included.

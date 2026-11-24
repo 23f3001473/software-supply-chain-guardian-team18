@@ -26,4 +26,10 @@ echo "==> Resolve dependency tree (no install scripts are run)"
 (cd target/juice-shop && npm install --package-lock-only --ignore-scripts --package-lock=true --no-audit --no-fund)
 
 
-echo "Done. Next: python3 -m guardian.cli   |   streamlit run app.py"
+if [[ "${WITH_BENCHMARK_TOOLS:-0}" == "1" ]]; then
+  echo "==> Grype and Trivy for the benchmark"
+  [[ -x tools/grype ]] || curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b tools
+  [[ -x tools/trivy ]] || curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b tools
+fi
+
+echo "Done. Next: python3 -m guardian.cli && python3 -m guardian.day2 plan && streamlit run app.py"

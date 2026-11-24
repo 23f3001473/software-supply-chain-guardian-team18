@@ -1,0 +1,1488 @@
+{
+  "repo": "supply-chain-risk-scanner",
+  "generated_at": "2026-11-24T06:03:35+00:00",
+  "summary": {
+    "risks_total": 21,
+    "risks_resolved": 0,
+    "risks_remaining": 21,
+    "accepted": 0,
+    "decisions": {
+      "actions": 16,
+      "decided": 1,
+      "pending": 15,
+      "approve": 1,
+      "reject": 0,
+      "accept-risk": 0,
+      "escalate": 0
+    },
+    "before": {
+      "grade": null,
+      "advisories": null,
+      "by_severity": null,
+      "risk_points": 1015.5
+    },
+    "after": {
+      "grade": null,
+      "advisories": null,
+      "by_severity": null,
+      "risk_points": 1015.5
+    },
+    "release_candidate": null,
+    "final_confidence": 0.5,
+    "final_confidence_label": "Low",
+    "final_confidence_reasons": [
+      "nothing has been validated yet",
+      "0 of 1 critical/high risks verified as resolved",
+      "audit trail hash chain intact"
+    ]
+  },
+  "journeys": [
+    {
+      "risk": "RISK-001",
+      "subject": "zod@3.25.76",
+      "kind": "vulnerability",
+      "tier": "High",
+      "score": 66.8,
+      "confidence": 0.7,
+      "factors": {
+        "severity": 32.8,
+        "exploitability": 18.0,
+        "reachability": 6.0,
+        "exposure": 10.0
+      },
+      "why": "zod@3.25.76 is rated High because its worst advisory (GHSA-mrhx-c7xc-m3w5: Zod can exhaust memory while validating oversized constrained collections) means an attacker can make the service use unbounded memory or disk. CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction. It is shipped, but no import from application code was found, and shipped in production.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-001",
+      "action_title": "Upgrade zod 3.25.76 \u2192 4.6.6",
+      "decision": {
+        "action_id": "ACT-001",
+        "decision": "approve",
+        "reviewer": "Rohit",
+        "comment": "",
+        "expires": null,
+        "at": "2026-11-24T06:00:52+00:00",
+        "plan_hash": "a23f2240492a37a2"
+      },
+      "validation": null,
+      "status": "Approved, not validated yet"
+    },
+    {
+      "risk": "RISK-002",
+      "subject": "vitest@3.2.4",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 62.1,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 39.2,
+        "exploitability": 17.9,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "vitest@3.2.4 is rated Medium because its worst advisory (GHSA-5xrq-8626-4rwp: When Vitest UI server is listening, arbitrary file can be read and executed) means an attacker can read or write files outside the intended folder. EPSS 1.03% chance of exploitation in 30 days (higher than 65% of all CVEs). It is development/test tooling only (used in 1 test or tooling files), and not shipped: development dependency. 1 more advisory affects the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-003",
+      "action_title": "Upgrade vitest 3.2.4 \u2192 4.1.11",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-003",
+      "subject": "2 container images are referenced by tag, not by digest",
+      "kind": "supply-chain",
+      "tier": "Medium",
+      "score": 61.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 22.0,
+        "exploitability": 12.0,
+        "reachability": 15.0,
+        "exposure": 12.0
+      },
+      "why": "Mutable tags can be repointed upstream. A tag such as 'latest' or '24' can be moved to a different image at any time, so two builds of the same commit may ship different operating-system packages.",
+      "why_source": "rule-based inference (Agent 5 rule)",
+      "action": "ACT-004",
+      "action_title": "Pin 2 container image(s) by digest",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-004",
+      "subject": "tinypool@1.1.1",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 56.7,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 38.0,
+        "exploitability": 13.7,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "tinypool@1.1.1 is rated Medium because its worst advisory (GHSA-5gmw-xhrv-c9v3: Tinypool: Prototype Pollution gadget in worker options leads to Remote Code Execution) means an attacker can change properties of every object in the app, leading to bypasses or code execution. EPSS 0.50% chance of exploitation in 30 days (higher than 43% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-005",
+      "action_title": "Pin tinypool to 2.1.2 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-005",
+      "subject": "vite@7.3.3",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 55.5,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 30.0,
+        "exploitability": 20.5,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "vite@7.3.3 is rated Medium because its worst advisory (GHSA-587h-7wmj-h5pm: launch-editor: `fs.existsSync()` existence check can be bypassed on Windows) means an attacker can run commands through the affected function. EPSS 1.69% chance of exploitation in 30 days (higher than 78% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 6 more advisories affect the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-006",
+      "action_title": "Pin vite to 8.3.3 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-006",
+      "subject": "js-yaml@4.1.1",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 53.0,
+      "confidence": 0.85,
+      "factors": {
+        "severity": 30.0,
+        "exploitability": 18.0,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "js-yaml@4.1.1 is rated Medium because its worst advisory (GHSA-5p4m-2wfm-xmqj: JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported) means crafted input makes processing extremely slow. CVSS vector: exploitable over the network, low complexity, no login needed, no user interaction. It is development/test tooling only, and not shipped: development dependency. 3 more advisories affect the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-007",
+      "action_title": "Pin js-yaml to 4.3.2 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-007",
+      "subject": "source-map-js@1.2.1",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 52.9,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 34.8,
+        "exploitability": 13.1,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "source-map-js@1.2.1 is rated Medium because its worst advisory (GHSA-68fv-2mgg-jv7q: source-map-js allows event-loop denial of service through indexed source-map section offsets) means the advisory describes the impact. EPSS 0.46% chance of exploitation in 30 days (higher than 40% of all CVEs). It is development/test tooling only, and not shipped: development dependency.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-008",
+      "action_title": "Pin source-map-js to 1.2.2 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-008",
+      "subject": "236 lockfile entries resolve outside registry.npmjs.org",
+      "kind": "supply-chain",
+      "tier": "Medium",
+      "score": 52.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 22.0,
+        "exploitability": 8.0,
+        "reachability": 10.0,
+        "exposure": 12.0
+      },
+      "why": "Non-registry sources bypass registry integrity guarantees.",
+      "why_source": "rule-based inference (Agent 5 rule)",
+      "action": null,
+      "action_title": null,
+      "decision": null,
+      "validation": null,
+      "status": "No action planned"
+    },
+    {
+      "risk": "RISK-009",
+      "subject": "Where every package is downloaded from \u2014 non-registry sources found",
+      "kind": "supply-chain",
+      "tier": "Medium",
+      "score": 52.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 22.0,
+        "exploitability": 8.0,
+        "reachability": 10.0,
+        "exposure": 12.0
+      },
+      "why": "Packages from git URLs, other hosts or without integrity hashes bypass the registry's checks, so a changed upstream repo or a compromised host could swap the code without the lockfile noticing.",
+      "why_source": "rule-based inference",
+      "action": null,
+      "action_title": null,
+      "decision": null,
+      "validation": null,
+      "status": "No action planned"
+    },
+    {
+      "risk": "RISK-010",
+      "subject": "brace-expansion@1.1.15",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 50.4,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 30.0,
+        "exploitability": 15.4,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "brace-expansion@1.1.15 is rated Medium because its worst advisory (GHSA-mh99-v99m-4gvg: brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash) means a crafted request can exhaust CPU or memory (denial of service). EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 5 more advisories affect the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-002",
+      "action_title": "Pin brace-expansion to 5.0.12 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-011",
+      "subject": "brace-expansion@5.0.6",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 50.4,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 30.0,
+        "exploitability": 15.4,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "brace-expansion@5.0.6 is rated Medium because its worst advisory (GHSA-mh99-v99m-4gvg: brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash) means a crafted request can exhaust CPU or memory (denial of service). EPSS 0.64% chance of exploitation in 30 days (higher than 52% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 5 more advisories affect the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-002",
+      "action_title": "Pin brace-expansion to 5.0.12 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-012",
+      "subject": "postcss@8.5.15",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 49.1,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 30.0,
+        "exploitability": 14.1,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "postcss@8.5.15 is rated Medium because its worst advisory (GHSA-r28c-9q8g-f849: PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File\u2026) means an attacker can read or write files outside the intended folder. EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-009",
+      "action_title": "Pin postcss to 8.5.23 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-013",
+      "subject": "nanoid@3.3.12",
+      "kind": "vulnerability",
+      "tier": "Medium",
+      "score": 48.1,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 32.8,
+        "exploitability": 10.3,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "nanoid@3.3.12 is rated Medium because its worst advisory (GHSA-28wg-ghj8-5hjv: nanoid: non-secure generators can loop indefinitely with negative size) means crafted input hangs the process. EPSS 0.33% chance of exploitation in 30 days (higher than 27% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-010",
+      "action_title": "Pin nanoid to 3.3.18 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-014",
+      "subject": "2 CI actions not SHA-pinned",
+      "kind": "supply-chain",
+      "tier": "Medium",
+      "score": 48.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 12.0,
+        "exploitability": 12.0,
+        "reachability": 12.0,
+        "exposure": 12.0
+      },
+      "why": "Tag-pinned actions can be changed by their owners.",
+      "why_source": "rule-based inference (Agent 5 rule)",
+      "action": "ACT-014",
+      "action_title": "Pin 2 CI action(s) to a commit SHA",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-015",
+      "subject": "minimatch@10.2.5",
+      "kind": "vulnerability",
+      "tier": "Low",
+      "score": 44.8,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 27.6,
+        "exploitability": 12.2,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "minimatch@10.2.5 is rated Low because its worst advisory (GHSA-g3hv-75wg-m249: minimatch has potential denial of service via globparts amplification) means a small request causes a lot of work (denial of service). EPSS 0.41% chance of exploitation in 30 days (higher than 36% of all CVEs). It is development/test tooling only, and not shipped: development dependency.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-011",
+      "action_title": "Pin minimatch to 11.0.1 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-016",
+      "subject": "@vitest/mocker@3.2.4",
+      "kind": "vulnerability",
+      "tier": "Low",
+      "score": 42.7,
+      "confidence": 0.99,
+      "factors": {
+        "severity": 23.6,
+        "exploitability": 14.1,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "@vitest/mocker@3.2.4 is rated Low because its worst advisory (GHSA-82fw-gwwq-j7x9: Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock) means an attacker can read or write files outside the intended folder. EPSS 0.53% chance of exploitation in 30 days (higher than 46% of all CVEs). It is development/test tooling only, and not shipped: development dependency. 1 more advisory affects the same version.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-013",
+      "action_title": "Pin @vitest/mocker to 4.1.12 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-017",
+      "subject": "2 of 3 production dependencies have no build provenance",
+      "kind": "supply-chain",
+      "tier": "Low",
+      "score": 42.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 12.0,
+        "exploitability": 8.0,
+        "reachability": 10.0,
+        "exposure": 12.0
+      },
+      "why": "A package without provenance was uploaded from someone's machine, so nobody can prove the tarball matches the source repository. That is normal for older packages, but it is the gap attackers use when they steal a maintainer's npm token.",
+      "why_source": "rule-based inference",
+      "action": null,
+      "action_title": null,
+      "decision": null,
+      "validation": null,
+      "status": "No action planned"
+    },
+    {
+      "risk": "RISK-018",
+      "subject": "esbuild@0.27.7 runs code when installed (download)",
+      "kind": "supply-chain",
+      "tier": "Low",
+      "score": 42.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 12.0,
+        "exploitability": 14.0,
+        "reachability": 10.0,
+        "exposure": 6.0
+      },
+      "why": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "why_source": "rule-based inference (pattern match on the script text)",
+      "action": "ACT-015",
+      "action_title": "Security review: install script in esbuild@0.27.7",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-019",
+      "subject": "esbuild@0.28.0 runs code when installed (download)",
+      "kind": "supply-chain",
+      "tier": "Low",
+      "score": 42.0,
+      "confidence": 0.65,
+      "factors": {
+        "severity": 12.0,
+        "exploitability": 14.0,
+        "reachability": 10.0,
+        "exposure": 6.0
+      },
+      "why": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "why_source": "rule-based inference (pattern match on the script text)",
+      "action": "ACT-016",
+      "action_title": "Security review: install script in esbuild@0.28.0",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-020",
+      "subject": "esbuild@0.27.7",
+      "kind": "vulnerability",
+      "tier": "Low",
+      "score": 22.0,
+      "confidence": 0.85,
+      "factors": {
+        "severity": 10.0,
+        "exploitability": 7.0,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "esbuild@0.27.7 is rated Low because its worst advisory (GHSA-g7r4-m6w7-qqqr: esbuild allows arbitrary file read when running the development server on Windows) means an attacker can read or write files outside the intended folder. CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction. It is development/test tooling only, and not shipped: development dependency.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-012",
+      "action_title": "Pin esbuild to 0.28.1 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    },
+    {
+      "risk": "RISK-021",
+      "subject": "esbuild@0.28.0",
+      "kind": "vulnerability",
+      "tier": "Low",
+      "score": 22.0,
+      "confidence": 0.85,
+      "factors": {
+        "severity": 10.0,
+        "exploitability": 7.0,
+        "reachability": 2.0,
+        "exposure": 3.0
+      },
+      "why": "esbuild@0.28.0 is rated Low because its worst advisory (GHSA-g7r4-m6w7-qqqr: esbuild allows arbitrary file read when running the development server on Windows) means an attacker can read or write files outside the intended folder. CVSS vector: exploitable with local access, high complexity, needs a login, no user interaction. It is development/test tooling only, and not shipped: development dependency.",
+      "why_source": "rule-based reasoning (LLM call failed: HTTPError)",
+      "action": "ACT-012",
+      "action_title": "Pin esbuild to 0.28.1 with npm overrides",
+      "decision": null,
+      "validation": null,
+      "status": "Waiting for a human decision"
+    }
+  ],
+  "investigations": [
+    {
+      "id": "INV-001",
+      "category": "provenance",
+      "title": "Where every package is downloaded from \u2014 non-registry sources found",
+      "subject": "package-lock.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "Download sources in the lockfile: packages.applied-caas-gateway1.internal.api.openai.org (236)",
+          "source": "package-lock.json resolved fields"
+        },
+        {
+          "fact": "0 packages have no integrity hash; 0 only have a SHA-1 hash",
+          "source": "package-lock.json integrity fields"
+        }
+      ],
+      "inference": "Packages from git URLs, other hosts or without integrity hashes bypass the registry's checks, so a changed upstream repo or a compromised host could swap the code without the lockfile noticing.",
+      "inference_source": "rule-based inference",
+      "remedy": "Replace git/URL dependencies with registry releases and regenerate the lockfile so every entry has a sha512 integrity hash.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-002",
+      "category": "unpinned_container_image",
+      "title": "2 container images are referenced by tag, not by digest",
+      "subject": "Dockerfile",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "node:22-slim (tag)",
+          "source": "Dockerfile"
+        },
+        {
+          "fact": "node:22-slim (tag)",
+          "source": "Dockerfile"
+        }
+      ],
+      "inference": "Mutable tags can be repointed upstream. A tag such as 'latest' or '24' can be moved to a different image at any time, so two builds of the same commit may ship different operating-system packages.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Pin the image by digest (image@sha256:...) so the same bytes are used every build, and update the digest deliberately.",
+      "day1_ref": "SC-001, SC-002"
+    },
+    {
+      "id": "INV-003",
+      "category": "lockfile_modified",
+      "title": "236 lockfile entries resolve outside registry.npmjs.org",
+      "subject": "package-lock.json",
+      "verdict": "Needs review",
+      "severity": "medium",
+      "verified_evidence": [
+        {
+          "fact": "236 lockfile entries resolve outside registry.npmjs.org",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "node_modules/@esbuild/aix-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/aix-ppc64/-/aix-ppc64-0.28.0.tgz, node_modules/@esbuild/android-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm/-/android-arm-0.28.0.tgz, node_modules/@esbuild/android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-arm64/-/android-arm64-0.28.0.tgz, node_modules/@esbuild/android-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/android-x64/-/android-x64-0.28.0.tgz, node_modules/@esbuild/darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-arm64/-/darwin-arm64-0.28.0.tgz, node_modules/@esbuild/darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-x64/-/darwin-x64-0.28.0.tgz, node_modules/@esbuild/freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-arm64/-/freebsd-arm64-0.28.0.tgz, node_modules/@esbuild/freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/freebsd-x64/-/freebsd-x64-0.28.0.tgz, node_modules/@esbuild/linux-arm -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm/-/linux-arm-0.28.0.tgz, node_modules/@esbuild/linux-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-arm64/-/linux-arm64-0.28.0.tgz, node_modules/@esbuild/linux-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ia32/-/linux-ia32-0.28.0.tgz, node_modules/@esbuild/linux-loong64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-loong64/-/linux-loong64-0.28.0.tgz, node_modules/@esbuild/linux-mips64el -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-mips64el/-/linux-mips64el-0.28.0.tgz, node_modules/@esbuild/linux-ppc64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-ppc64/-/linux-ppc64-0.28.0.tgz, node_modules/@esbuild/linux-riscv64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-riscv64/-/linux-riscv64-0.28.0.tgz, node_modules/@esbuild/linux-s390x -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-s390x/-/linux-s390x-0.28.0.tgz, node_modules/@esbuild/linux-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/linux-x64/-/linux-x64-0.28.0.tgz, node_modules/@esbuild/netbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-arm64/-/netbsd-arm64-0.28.0.tgz, node_modules/@esbuild/netbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/netbsd-x64/-/netbsd-x64-0.28.0.tgz, node_modules/@esbuild/openbsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-arm64/-/openbsd-arm64-0.28.0.tgz, node_modules/@esbuild/openbsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openbsd-x64/-/openbsd-x64-0.28.0.tgz, node_modules/@esbuild/openharmony-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/openharmony-arm64/-/openharmony-arm64-0.28.0.tgz, node_modules/@esbuild/sunos-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/sunos-x64/-/sunos-x64-0.28.0.tgz, node_modules/@esbuild/win32-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-arm64/-/win32-arm64-0.28.0.tgz, node_modules/@esbuild/win32-ia32 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-ia32/-/win32-ia32-0.28.0.tgz, node_modules/@esbuild/win32-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz, node_modules/@eslint-community/eslint-utils -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/eslint-utils/-/eslint-utils-4.9.1.tgz, node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz, node_modules/@eslint-community/regexpp -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint-community/regexpp/-/regexpp-4.12.2.tgz, node_modules/@eslint/config-array -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-array/-/config-array-0.21.2.tgz, node_modules/@eslint/config-helpers -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/config-helpers/-/config-helpers-0.4.2.tgz, node_modules/@eslint/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/core/-/core-0.17.0.tgz, node_modules/@eslint/eslintrc -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/eslintrc/-/eslintrc-3.3.5.tgz, node_modules/@eslint/js -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/js/-/js-9.39.4.tgz, node_modules/@eslint/object-schema -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/object-schema/-/object-schema-2.1.7.tgz, node_modules/@eslint/plugin-kit -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz, node_modules/@humanfs/core -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/core/-/core-0.19.2.tgz, node_modules/@humanfs/node -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/node/-/node-0.16.8.tgz, node_modules/@humanfs/types -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanfs/types/-/types-0.15.0.tgz, node_modules/@humanwhocodes/module-importer -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz, node_modules/@humanwhocodes/retry -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@humanwhocodes/retry/-/retry-0.4.3.tgz, node_modules/@jridgewell/sourcemap-codec -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz, node_modules/@rollup/rollup-android-arm-eabi -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.60.4.tgz, node_modules/@rollup/rollup-android-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.60.4.tgz, node_modules/@rollup/rollup-darwin-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.60.4.tgz, node_modules/@rollup/rollup-darwin-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.60.4.tgz, node_modules/@rollup/rollup-freebsd-arm64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.60.4.tgz, node_modules/@rollup/rollup-freebsd-x64 -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.60.4.tgz, node_modules/@rollup/rollup-linux-arm-gnueabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.60.4.tgz, node_modules/@rollup/rollup-linux-arm-musleabihf -> https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.60.4.tgz",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Non-registry sources bypass registry integrity guarantees.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Delete the suspicious entry and regenerate the lockfile from the official registry (npm install --package-lock-only), then compare integrity hashes before merging.",
+      "day1_ref": "SC-005"
+    },
+    {
+      "id": "INV-004",
+      "category": "install-script",
+      "title": "esbuild@0.28.0 runs code when installed (download)",
+      "subject": "esbuild@0.28.0",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks esbuild@0.28.0 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/esbuild"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node install.js",
+          "source": "https://registry.npmjs.org/esbuild/0.28.0"
+        },
+        {
+          "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 tsx@4.22.3 \u2192 esbuild@0.28.0",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-005",
+      "category": "install-script",
+      "title": "esbuild@0.27.7 runs code when installed (download)",
+      "subject": "esbuild@0.27.7",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks esbuild@0.27.7 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/vite/node_modules/esbuild"
+        },
+        {
+          "fact": "Used in: development only",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: postinstall: node install.js",
+          "source": "https://registry.npmjs.org/esbuild/0.27.7"
+        },
+        {
+          "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 vitest@3.2.4 \u2192 vite@7.3.3 \u2192 esbuild@0.27.7",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script downloads or unpacks a binary at install time. That binary is not covered by the lockfile's integrity hash, so it is a provenance gap.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-006",
+      "category": "provenance-attestation",
+      "title": "2 of 3 production dependencies have no build provenance",
+      "subject": "package.json",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "1 direct production dependencies publish an npm provenance attestation (built by CI from a known repo)",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "Without attestation: commander@12.1.0, picomatch@4.0.4",
+          "source": "https://registry.npmjs.org"
+        }
+      ],
+      "inference": "A package without provenance was uploaded from someone's machine, so nobody can prove the tarball matches the source repository. That is normal for older packages, but it is the gap attackers use when they steal a maintainer's npm token.",
+      "inference_source": "rule-based inference",
+      "remedy": "Prefer versions with provenance when upgrading; for critical packages, compare the tarball with the tagged source.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-007",
+      "category": "unexpected_ci_dependency",
+      "title": "2 CI actions not SHA-pinned",
+      "subject": ".github/workflows",
+      "verdict": "Needs review",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "2 CI actions not SHA-pinned",
+          "source": ".github/workflows"
+        },
+        {
+          "fact": "actions/checkout@v4, actions/setup-node@v4",
+          "source": ".github/workflows"
+        }
+      ],
+      "inference": "Tag-pinned actions can be changed by their owners.",
+      "inference_source": "rule-based inference (Agent 5 rule)",
+      "remedy": "Review the action's source, pin it to a full commit SHA, and give the workflow the minimum token permissions it needs.",
+      "day1_ref": "SC-003"
+    },
+    {
+      "id": "INV-008",
+      "category": "install-script",
+      "title": "fsevents@2.3.3 runs code when installed (native build)",
+      "subject": "fsevents@2.3.3",
+      "verdict": "Expected",
+      "severity": "low",
+      "verified_evidence": [
+        {
+          "fact": "package-lock.json marks fsevents@2.3.3 with hasInstallScript: true",
+          "source": "package-lock.json \u2192 node_modules/fsevents"
+        },
+        {
+          "fact": "Used in: development only, optional (only installed on some platforms)",
+          "source": "package-lock.json"
+        },
+        {
+          "fact": "Install script published on npm: install: node-gyp rebuild",
+          "source": "https://registry.npmjs.org/fsevents/2.3.3"
+        },
+        {
+          "fact": "Reaches the app through supply-chain-risk-scanner@0.1.0 \u2192 tsx@4.22.3 \u2192 fsevents@2.3.3",
+          "source": "dependency graph (Agent 3)"
+        }
+      ],
+      "inference": "The install script compiles native code (normal for database or XML drivers), but it still runs arbitrary build commands on the machine.",
+      "inference_source": "rule-based inference (pattern match on the script text)",
+      "remedy": "Allow-list it explicitly (e.g. npm's --ignore-scripts plus a reviewed rebuild step) and keep it updated.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-009",
+      "category": "integrity",
+      "title": "Lockfile hashes match the registry (17 packages checked)",
+      "subject": "package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "Compared the integrity hash of 17 locked packages with the hash the npm registry publishes",
+          "source": "https://registry.npmjs.org"
+        },
+        {
+          "fact": "0 mismatches",
+          "source": "package-lock.json vs registry"
+        }
+      ],
+      "inference": "The locked bytes are exactly what the registry published for these versions; no sign of lockfile tampering.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    },
+    {
+      "id": "INV-010",
+      "category": "manifest-lockfile",
+      "title": "package.json and the lockfile agree",
+      "subject": "package.json \u2194 package-lock.json",
+      "verdict": "Expected",
+      "severity": "info",
+      "verified_evidence": [
+        {
+          "fact": "3 production and 8 development dependencies declared",
+          "source": "package.json"
+        },
+        {
+          "fact": "Every declared dependency is locked",
+          "source": "package-lock.json"
+        }
+      ],
+      "inference": "Installs are reproducible: every declared dependency is pinned by the lockfile.",
+      "inference_source": "rule-based inference",
+      "remedy": "No action needed.",
+      "day1_ref": null
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-001",
+      "type": "upgrade",
+      "title": "Upgrade zod 3.25.76 \u2192 4.6.6",
+      "covers_packages": [
+        "zod@3.25.76"
+      ],
+      "covers_risks": [
+        "RISK-001"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "zod",
+          "value": "^4.6.6",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 66.8,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (73)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). projected grade C (67) \u2192 C (73). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "zod: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of zod for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.7,
+      "hash": "a23f2240492a37a2"
+    },
+    {
+      "id": "ACT-002",
+      "type": "pin-override",
+      "title": "Pin brace-expansion to 5.0.12 with npm overrides",
+      "covers_packages": [
+        "brace-expansion@1.1.15",
+        "brace-expansion@5.0.6"
+      ],
+      "covers_risks": [
+        "RISK-010",
+        "RISK-011"
+      ],
+      "advisories_cleared": 12,
+      "severity_cleared": {
+        "high": 10,
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "brace-expansion",
+          "value": "5.0.12",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 12,
+        "risk_points_removed": 100.8,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "B (77)",
+        "statement": "Clears 12 advisories (10 high, 2 moderate) in 2 package(s). projected grade C (67) \u2192 B (77). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of brace-expansion to 5.0.12; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of brace-expansion for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "eslint, typescript-eslint have no safe upgrade that drops brace-expansion 1.1.15 (npm audit would downgrade it), so brace-expansion is pinned to 5.0.12 with npm overrides instead. typescript-eslint has no safe upgrade that drops brace-expansion 5.0.6 (npm audit would downgrade it), so brace-expansion is pinned to 5.0.12 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "34e122c50ed20466"
+    },
+    {
+      "id": "ACT-003",
+      "type": "upgrade",
+      "title": "Upgrade vitest 3.2.4 \u2192 4.1.11",
+      "covers_packages": [
+        "vitest@3.2.4"
+      ],
+      "covers_risks": [
+        "RISK-002"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "vitest",
+          "value": "^4.1.11",
+          "section": "devDependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 62.1,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 2 advisories (1 critical, 1 moderate) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "vitest: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of vitest for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "cc8bed933b0abbdb"
+    },
+    {
+      "id": "ACT-004",
+      "type": "update-base-image",
+      "title": "Pin 2 container image(s) by digest",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-003"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:22-slim",
+          "value": "node:22-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee",
+          "section": null
+        },
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:22-slim",
+          "value": "node:22-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee",
+          "section": null
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 61.0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Removes a non-CVE supply-chain risk; the rescan confirms the finding disappears."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Same image as today, but frozen: future base-image security patches need a deliberate digest update.",
+        "check": "Rebuild the container; schedule digest refreshes (e.g. Renovate/Dependabot)."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore Dockerfile from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.8,
+      "hash": "2f7d64514ffc72d9"
+    },
+    {
+      "id": "ACT-005",
+      "type": "pin-override",
+      "title": "Pin tinypool to 2.1.2 with npm overrides",
+      "covers_packages": [
+        "tinypool@1.1.1"
+      ],
+      "covers_risks": [
+        "RISK-004"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "tinypool",
+          "value": "2.1.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 56.7,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (69)",
+        "statement": "Clears 2 advisories (2 critical) in 1 package(s). projected grade C (67) \u2192 C (69). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of tinypool to 2.1.2 although its parent asks for \"^1.1.1\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of tinypool for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops tinypool 1.1.1 (npm audit would downgrade it), so tinypool is pinned to 2.1.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "aa0e711182ba6517"
+    },
+    {
+      "id": "ACT-006",
+      "type": "pin-override",
+      "title": "Pin vite to 8.3.3 with npm overrides",
+      "covers_packages": [
+        "vite@7.3.3"
+      ],
+      "covers_risks": [
+        "RISK-005"
+      ],
+      "advisories_cleared": 7,
+      "severity_cleared": {
+        "high": 1,
+        "moderate": 5,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "vite",
+          "value": "8.3.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 7,
+        "risk_points_removed": 55.5,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 7 advisories (1 high, 5 moderate, 1 low) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of vite to 8.3.3 although its parent asks for \"^5.0.0 || ^6.0.0 || ^7.0.0-0\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of vite for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops vite 7.3.3 (npm audit would downgrade it), so vite is pinned to 8.3.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "ac03372e89251c6a"
+    },
+    {
+      "id": "ACT-007",
+      "type": "pin-override",
+      "title": "Pin js-yaml to 4.3.2 with npm overrides",
+      "covers_packages": [
+        "js-yaml@4.1.1"
+      ],
+      "covers_risks": [
+        "RISK-006"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "high": 3,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "js-yaml",
+          "value": "4.3.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 53.0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (70)",
+        "statement": "Clears 4 advisories (3 high, 1 moderate) in 1 package(s). projected grade C (67) \u2192 C (70). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of js-yaml to 4.3.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of js-yaml for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "eslint, typescript-eslint have no safe upgrade that drops js-yaml 4.1.1 (npm audit would downgrade it), so js-yaml is pinned to 4.3.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.81,
+      "hash": "7c58b660b43ed4ff"
+    },
+    {
+      "id": "ACT-008",
+      "type": "pin-override",
+      "title": "Pin source-map-js to 1.2.2 with npm overrides",
+      "covers_packages": [
+        "source-map-js@1.2.1"
+      ],
+      "covers_risks": [
+        "RISK-007"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "source-map-js",
+          "value": "1.2.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 52.9,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of source-map-js to 1.2.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of source-map-js for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops source-map-js 1.2.1 (npm audit would downgrade it), so source-map-js is pinned to 1.2.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "4e7bfc94b623be06"
+    },
+    {
+      "id": "ACT-009",
+      "type": "pin-override",
+      "title": "Pin postcss to 8.5.23 with npm overrides",
+      "covers_packages": [
+        "postcss@8.5.15"
+      ],
+      "covers_risks": [
+        "RISK-012"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "postcss",
+          "value": "8.5.23",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 49.1,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 2 advisories (1 high, 1 moderate) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of postcss to 8.5.23; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of postcss for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops postcss 8.5.15 (npm audit would downgrade it), so postcss is pinned to 8.5.23 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "62716934662ec6e8"
+    },
+    {
+      "id": "ACT-010",
+      "type": "pin-override",
+      "title": "Pin nanoid to 3.3.18 with npm overrides",
+      "covers_packages": [
+        "nanoid@3.3.12"
+      ],
+      "covers_risks": [
+        "RISK-013"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "nanoid",
+          "value": "3.3.18",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 48.1,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (69)",
+        "statement": "Clears 2 advisories (2 high) in 1 package(s). projected grade C (67) \u2192 C (69). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of nanoid to 3.3.18; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of nanoid for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops nanoid 3.3.12 (npm audit would downgrade it), so nanoid is pinned to 3.3.18 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "8f9af6773b545bd5"
+    },
+    {
+      "id": "ACT-011",
+      "type": "pin-override",
+      "title": "Pin minimatch to 11.0.1 with npm overrides",
+      "covers_packages": [
+        "minimatch@10.2.5"
+      ],
+      "covers_risks": [
+        "RISK-015"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "minimatch",
+          "value": "11.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 44.8,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of minimatch to 11.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of minimatch for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "typescript-eslint has no safe upgrade that drops minimatch 10.2.5 (npm audit would downgrade it), so minimatch is pinned to 11.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "e6b4f5ad3d99cc0b"
+    },
+    {
+      "id": "ACT-012",
+      "type": "pin-override",
+      "title": "Pin esbuild to 0.28.1 with npm overrides",
+      "covers_packages": [
+        "esbuild@0.27.7",
+        "esbuild@0.28.0"
+      ],
+      "covers_risks": [
+        "RISK-020",
+        "RISK-021"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "low": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "esbuild",
+          "value": "0.28.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 44.0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Clears 2 advisories (2 low) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of esbuild to 0.28.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of esbuild for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops esbuild 0.27.7 (npm audit would downgrade it), so esbuild is pinned to 0.28.1 with npm overrides instead. tsx, vitest have no safe upgrade that drops esbuild 0.28.0 (npm audit would downgrade it), so esbuild is pinned to 0.28.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.81,
+      "hash": "24e21f549bd6c038"
+    },
+    {
+      "id": "ACT-013",
+      "type": "pin-override",
+      "title": "Pin @vitest/mocker to 4.1.12 with npm overrides",
+      "covers_packages": [
+        "@vitest/mocker@3.2.4"
+      ],
+      "covers_risks": [
+        "RISK-016"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "@vitest/mocker",
+          "value": "4.1.12",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 42.7,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Clears 2 advisories (2 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of @vitest/mocker to 4.1.12 although its parent asks for \"3.2.4\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of @vitest/mocker for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops @vitest/mocker 3.2.4 (npm audit would downgrade it), so @vitest/mocker is pinned to 4.1.12 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "d4450b2d41c7ff1f"
+    },
+    {
+      "id": "ACT-014",
+      "type": "pin-action",
+      "title": "Pin 2 CI action(s) to a commit SHA",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-014"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Runs the exact same action code as today, but it can no longer change underneath you.",
+        "check": "Let a bot (Dependabot) propose SHA updates."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "SHA lookup unavailable for: actions/checkout@v4, actions/setup-node@v4. Pin by hand from each action's release page.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.6,
+      "hash": "1b90f18b55c7c7b4"
+    },
+    {
+      "id": "ACT-015",
+      "type": "escalate",
+      "title": "Security review: install script in esbuild@0.27.7",
+      "covers_packages": [
+        "esbuild@0.27.7"
+      ],
+      "covers_risks": [
+        "RISK-018"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "9af5478aa288efe2"
+    },
+    {
+      "id": "ACT-016",
+      "type": "escalate",
+      "title": "Security review: install script in esbuild@0.28.0",
+      "covers_packages": [
+        "esbuild@0.28.0"
+      ],
+      "covers_risks": [
+        "RISK-019"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "44fe432ea7e368dc"
+    }
+  ],
+  "decisions": {
+    "ACT-001": {
+      "action_id": "ACT-001",
+      "decision": "approve",
+      "reviewer": "Rohit",
+      "comment": "",
+      "expires": null,
+      "at": "2026-11-24T06:00:52+00:00",
+      "plan_hash": "a23f2240492a37a2"
+    }
+  },
+  "validation": null,
+  "expired_acceptances": [],
+  "audit": {
+    "ok": true,
+    "message": "9 entries, chain intact",
+    "entries": 9
+  },
+  "responsible_ai": {
+    "provider": "openai/gpt-oss-20b via https://api.groq.com/openai/v1",
+    "calls": 3,
+    "failed_calls": 3,
+    "accepted_answers": 0,
+    "controls": [
+      "Agents 1-10 find, score and validate with deterministic tools; the LLM only explains evidence they produced.",
+      "Every AI answer is grounding-checked: any advisory id or package@version not in the evidence gets the answer rejected.",
+      "AI text is labelled as inference and shown next to, never mixed with, the verified evidence.",
+      "No change is applied without a named human approval; nothing is merged, pushed or deployed automatically.",
+      "Validation runs in a separate git worktree with dependency install scripts disabled.",
+      "Only package names, versions, advisory text and public registry data are sent to the LLM; no secrets, tokens or source files.",
+      "All prompts and responses are logged in day2/llm_log.jsonl; all decisions in a hash-chained audit log."
+    ]
+  }
+}

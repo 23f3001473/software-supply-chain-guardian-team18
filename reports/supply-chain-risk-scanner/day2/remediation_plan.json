@@ -1,0 +1,726 @@
+{
+  "actions": [
+    {
+      "id": "ACT-001",
+      "type": "upgrade",
+      "title": "Upgrade zod 3.25.76 \u2192 4.6.6",
+      "covers_packages": [
+        "zod@3.25.76"
+      ],
+      "covers_risks": [
+        "RISK-001"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "zod",
+          "value": "^4.6.6",
+          "section": "dependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 66.8,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (73)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). projected grade C (67) \u2192 C (73). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "zod: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of zod for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "High",
+      "confidence": 0.7,
+      "hash": "a23f2240492a37a2"
+    },
+    {
+      "id": "ACT-002",
+      "type": "pin-override",
+      "title": "Pin brace-expansion to 5.0.12 with npm overrides",
+      "covers_packages": [
+        "brace-expansion@1.1.15",
+        "brace-expansion@5.0.6"
+      ],
+      "covers_risks": [
+        "RISK-010",
+        "RISK-011"
+      ],
+      "advisories_cleared": 12,
+      "severity_cleared": {
+        "high": 10,
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "brace-expansion",
+          "value": "5.0.12",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 12,
+        "risk_points_removed": 100.8,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "B (77)",
+        "statement": "Clears 12 advisories (10 high, 2 moderate) in 2 package(s). projected grade C (67) \u2192 B (77). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of brace-expansion to 5.0.12; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of brace-expansion for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "eslint, typescript-eslint have no safe upgrade that drops brace-expansion 1.1.15 (npm audit would downgrade it), so brace-expansion is pinned to 5.0.12 with npm overrides instead. typescript-eslint has no safe upgrade that drops brace-expansion 5.0.6 (npm audit would downgrade it), so brace-expansion is pinned to 5.0.12 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "34e122c50ed20466"
+    },
+    {
+      "id": "ACT-003",
+      "type": "upgrade",
+      "title": "Upgrade vitest 3.2.4 \u2192 4.1.11",
+      "covers_packages": [
+        "vitest@3.2.4"
+      ],
+      "covers_risks": [
+        "RISK-002"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "set-dependency",
+          "target": "vitest",
+          "value": "^4.1.11",
+          "section": "devDependencies"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 62.1,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 2 advisories (1 critical, 1 moderate) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "major",
+        "files_using": [],
+        "summary": "vitest: major version jump, not imported directly by application code.",
+        "check": "Read the changelogs of vitest for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.99,
+      "hash": "cc8bed933b0abbdb"
+    },
+    {
+      "id": "ACT-004",
+      "type": "update-base-image",
+      "title": "Pin 2 container image(s) by digest",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-003"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:22-slim",
+          "value": "node:22-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee",
+          "section": null
+        },
+        {
+          "file": "Dockerfile",
+          "op": "replace-text",
+          "target": "node:22-slim",
+          "value": "node:22-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee",
+          "section": null
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 61.0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Removes a non-CVE supply-chain risk; the rescan confirms the finding disappears."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Same image as today, but frozen: future base-image security patches need a deliberate digest update.",
+        "check": "Rebuild the container; schedule digest refreshes (e.g. Renovate/Dependabot)."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore Dockerfile from the baseline commit.",
+      "rationale": "",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.8,
+      "hash": "2f7d64514ffc72d9"
+    },
+    {
+      "id": "ACT-005",
+      "type": "pin-override",
+      "title": "Pin tinypool to 2.1.2 with npm overrides",
+      "covers_packages": [
+        "tinypool@1.1.1"
+      ],
+      "covers_risks": [
+        "RISK-004"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "critical": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "tinypool",
+          "value": "2.1.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 56.7,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (69)",
+        "statement": "Clears 2 advisories (2 critical) in 1 package(s). projected grade C (67) \u2192 C (69). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of tinypool to 2.1.2 although its parent asks for \"^1.1.1\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of tinypool for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops tinypool 1.1.1 (npm audit would downgrade it), so tinypool is pinned to 2.1.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "aa0e711182ba6517"
+    },
+    {
+      "id": "ACT-006",
+      "type": "pin-override",
+      "title": "Pin vite to 8.3.3 with npm overrides",
+      "covers_packages": [
+        "vite@7.3.3"
+      ],
+      "covers_risks": [
+        "RISK-005"
+      ],
+      "advisories_cleared": 7,
+      "severity_cleared": {
+        "high": 1,
+        "moderate": 5,
+        "low": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "vite",
+          "value": "8.3.3",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 7,
+        "risk_points_removed": 55.5,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 7 advisories (1 high, 5 moderate, 1 low) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of vite to 8.3.3 although its parent asks for \"^5.0.0 || ^6.0.0 || ^7.0.0-0\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of vite for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops vite 7.3.3 (npm audit would downgrade it), so vite is pinned to 8.3.3 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "ac03372e89251c6a"
+    },
+    {
+      "id": "ACT-007",
+      "type": "pin-override",
+      "title": "Pin js-yaml to 4.3.2 with npm overrides",
+      "covers_packages": [
+        "js-yaml@4.1.1"
+      ],
+      "covers_risks": [
+        "RISK-006"
+      ],
+      "advisories_cleared": 4,
+      "severity_cleared": {
+        "high": 3,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "js-yaml",
+          "value": "4.3.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 4,
+        "risk_points_removed": 53.0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (70)",
+        "statement": "Clears 4 advisories (3 high, 1 moderate) in 1 package(s). projected grade C (67) \u2192 C (70). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of js-yaml to 4.3.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of js-yaml for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "eslint, typescript-eslint have no safe upgrade that drops js-yaml 4.1.1 (npm audit would downgrade it), so js-yaml is pinned to 4.3.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.81,
+      "hash": "7c58b660b43ed4ff"
+    },
+    {
+      "id": "ACT-008",
+      "type": "pin-override",
+      "title": "Pin source-map-js to 1.2.2 with npm overrides",
+      "covers_packages": [
+        "source-map-js@1.2.1"
+      ],
+      "covers_risks": [
+        "RISK-007"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "high": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "source-map-js",
+          "value": "1.2.2",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 52.9,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 1 advisory (1 high) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of source-map-js to 1.2.2; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of source-map-js for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops source-map-js 1.2.1 (npm audit would downgrade it), so source-map-js is pinned to 1.2.2 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "4e7bfc94b623be06"
+    },
+    {
+      "id": "ACT-009",
+      "type": "pin-override",
+      "title": "Pin postcss to 8.5.23 with npm overrides",
+      "covers_packages": [
+        "postcss@8.5.15"
+      ],
+      "covers_risks": [
+        "RISK-012"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 1,
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "postcss",
+          "value": "8.5.23",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 49.1,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (68)",
+        "statement": "Clears 2 advisories (1 high, 1 moderate) in 1 package(s). projected grade C (67) \u2192 C (68). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of postcss to 8.5.23; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of postcss for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops postcss 8.5.15 (npm audit would downgrade it), so postcss is pinned to 8.5.23 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "62716934662ec6e8"
+    },
+    {
+      "id": "ACT-010",
+      "type": "pin-override",
+      "title": "Pin nanoid to 3.3.18 with npm overrides",
+      "covers_packages": [
+        "nanoid@3.3.12"
+      ],
+      "covers_risks": [
+        "RISK-013"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "high": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "nanoid",
+          "value": "3.3.18",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 48.1,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (69)",
+        "statement": "Clears 2 advisories (2 high) in 1 package(s). projected grade C (67) \u2192 C (69). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of nanoid to 3.3.18; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of nanoid for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops nanoid 3.3.12 (npm audit would downgrade it), so nanoid is pinned to 3.3.18 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.94,
+      "hash": "8f9af6773b545bd5"
+    },
+    {
+      "id": "ACT-011",
+      "type": "pin-override",
+      "title": "Pin minimatch to 11.0.1 with npm overrides",
+      "covers_packages": [
+        "minimatch@10.2.5"
+      ],
+      "covers_risks": [
+        "RISK-015"
+      ],
+      "advisories_cleared": 1,
+      "severity_cleared": {
+        "moderate": 1
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "minimatch",
+          "value": "11.0.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 1,
+        "risk_points_removed": 44.8,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Clears 1 advisory (1 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of minimatch to 11.0.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of minimatch for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "typescript-eslint has no safe upgrade that drops minimatch 10.2.5 (npm audit would downgrade it), so minimatch is pinned to 11.0.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "e6b4f5ad3d99cc0b"
+    },
+    {
+      "id": "ACT-012",
+      "type": "pin-override",
+      "title": "Pin esbuild to 0.28.1 with npm overrides",
+      "covers_packages": [
+        "esbuild@0.27.7",
+        "esbuild@0.28.0"
+      ],
+      "covers_risks": [
+        "RISK-020",
+        "RISK-021"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "low": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "esbuild",
+          "value": "0.28.1",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 44.0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Clears 2 advisories (2 low) in 2 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of esbuild to 0.28.1; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of esbuild for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops esbuild 0.27.7 (npm audit would downgrade it), so esbuild is pinned to 0.28.1 with npm overrides instead. tsx, vitest have no safe upgrade that drops esbuild 0.28.0 (npm audit would downgrade it), so esbuild is pinned to 0.28.1 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.81,
+      "hash": "24e21f549bd6c038"
+    },
+    {
+      "id": "ACT-013",
+      "type": "pin-override",
+      "title": "Pin @vitest/mocker to 4.1.12 with npm overrides",
+      "covers_packages": [
+        "@vitest/mocker@3.2.4"
+      ],
+      "covers_risks": [
+        "RISK-016"
+      ],
+      "advisories_cleared": 2,
+      "severity_cleared": {
+        "moderate": 2
+      },
+      "changes": [
+        {
+          "file": "package.json",
+          "op": "add-override",
+          "target": "@vitest/mocker",
+          "value": "4.1.12",
+          "section": "overrides"
+        }
+      ],
+      "auto_applicable": true,
+      "expected_risk_reduction": {
+        "advisories_cleared": 2,
+        "risk_points_removed": 42.7,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "Clears 2 advisories (2 moderate) in 1 package(s). To be confirmed by the sandbox rescan."
+      },
+      "compatibility": {
+        "level": "Medium",
+        "semver": "override",
+        "files_using": [],
+        "summary": "Forces every copy of @vitest/mocker to 4.1.12 although its parent asks for \"3.2.4\"; the parent may rely on the old behaviour.",
+        "check": "Read the changelogs of @vitest/mocker for breaking changes; the sandbox build and tests show what actually breaks."
+      },
+      "rollback": "Tested on its own branch in a sandbox copy; your working copy is untouched. If merged later, undo it with git revert on the fix commit (its id is recorded after validation), or restore package.json from the baseline commit.",
+      "rationale": "vitest has no safe upgrade that drops @vitest/mocker 3.2.4 (npm audit would downgrade it), so @vitest/mocker is pinned to 4.1.12 with npm overrides instead.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.94,
+      "hash": "d4450b2d41c7ff1f"
+    },
+    {
+      "id": "ACT-014",
+      "type": "pin-action",
+      "title": "Pin 2 CI action(s) to a commit SHA",
+      "covers_packages": [],
+      "covers_risks": [
+        "RISK-014"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Low",
+        "semver": "pin",
+        "files_using": [],
+        "summary": "Runs the exact same action code as today, but it can no longer change underneath you.",
+        "check": "Let a bot (Dependabot) propose SHA updates."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "SHA lookup unavailable for: actions/checkout@v4, actions/setup-node@v4. Pin by hand from each action's release page.",
+      "rationale_source": "rule-based",
+      "priority": "Medium",
+      "confidence": 0.6,
+      "hash": "1b90f18b55c7c7b4"
+    },
+    {
+      "id": "ACT-015",
+      "type": "escalate",
+      "title": "Security review: install script in esbuild@0.27.7",
+      "covers_packages": [
+        "esbuild@0.27.7"
+      ],
+      "covers_risks": [
+        "RISK-018"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "9af5478aa288efe2"
+    },
+    {
+      "id": "ACT-016",
+      "type": "escalate",
+      "title": "Security review: install script in esbuild@0.28.0",
+      "covers_packages": [
+        "esbuild@0.28.0"
+      ],
+      "covers_risks": [
+        "RISK-019"
+      ],
+      "advisories_cleared": 0,
+      "severity_cleared": {},
+      "changes": [],
+      "auto_applicable": false,
+      "expected_risk_reduction": {
+        "advisories_cleared": 0,
+        "risk_points_removed": 0,
+        "risk_points_total": 1015.5,
+        "grade_before": "C (67)",
+        "grade_after_projected": "C (67)",
+        "statement": "No automatic change: risk only goes down once a human replaces, removes or accepts it."
+      },
+      "compatibility": {
+        "level": "Unknown",
+        "semver": "n/a",
+        "files_using": [],
+        "summary": "Blocking scripts globally (--ignore-scripts) would also stop native modules like sqlite3 from building.",
+        "check": "Decide per package: allow, disable or replace."
+      },
+      "rollback": "Nothing is changed automatically, so there is nothing to roll back.",
+      "rationale": "Pin the binary version, verify its checksum, and build with --ignore-scripts in CI, allowing scripts only for packages you have reviewed.",
+      "rationale_source": "rule-based",
+      "priority": "Low",
+      "confidence": 0.7,
+      "hash": "44fe432ea7e368dc"
+    }
+  ],
+  "baseline": {
+    "grade": "C (67)",
+    "risk_points_total": 1015.5,
+    "advisories": 38
+  }
+}

@@ -1,0 +1,1 @@
+{"at": "2026-11-24T05:59:32.581487+00:00", "commit": "728c946611fbe0913a6a0e7f9f17bd4aa2954b2d", "base_ref": "HEAD", "scanner": "osv", "npm_packages": 236, "direct_dependencies": 11, "transitive_dependencies": 225, "vulnerabilities": 38, "suspicious_changes": 0, "by_severity": {"critical": 3, "high": 19, "moderate": 13, "low": 3}}
